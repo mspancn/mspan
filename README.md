@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
+* Get the repo
+  $ git clone https://github.com/mspancn/mspan.git
+  $ cd mspan
 
 * Database creation
+  $ rake db:create
 
-* Database initialization
+* Start server
+  $ rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Visit site
+  $ http://localhost:3000
