@@ -28,6 +28,12 @@ test:
   <<: *default
   database: mspan_test
 
+ppe:
+  <<: *default
+  database: mspan_ppe
+  username: mspan
+  password: <%= ENV['MSPAN_DATABASE_PASSWORD'] %>
+
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
