@@ -1,1 +1,12 @@
-<div>Footer</div>
+<footer class="footer">
+  <div class="container">
+    <% if current_student %>
+      <%= render "layouts/student_footer" %>
+    <% elsif current_teacher %>
+      <%= render "layouts/teacher_footer" %>
+    <% end %>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a class="text-muted copyright">MsPan <span class="glyphicon glyphicon-copyright-mark"></span> <%= Date.today.year %></a></li>
+    </ul>
+  </div>
+</footer>
