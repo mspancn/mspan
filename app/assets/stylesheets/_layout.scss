@@ -1,0 +1,29 @@
+.student-header {
+  font-size: 110%;
+}
+
+.v-divider {
+  border-left: 1px solid #8c8f96;
+}
+
+.navbar-grey {
+  background-color: #787b83;
+  border: none;
+}
+
+// TODO find alternative for !important
+.navbar-brand {
+  color: #fff !important;
+}
+
+.navbar li a {
+  color: #fff !important;
+}
+
+.dropdown-menu li a {
+  color: #787b83 !important;
+}
+
+.navbar-default .navbar-nav .open .dropdown-toggle {
+  background-color: #8c8f96 !important;
+}
