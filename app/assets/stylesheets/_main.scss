@@ -1,6 +1,13 @@
+@import "sidebar";
+
 @import "header";
 @import "footer";
 
 body {
   color: $header-grey;
+  background-color: #f8f8f8;
+}
+
+.main-row {
+  margin-top: 20px;
 }

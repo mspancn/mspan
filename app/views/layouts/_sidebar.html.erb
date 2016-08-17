@@ -1,0 +1,20 @@
+<div class="sidebar hidden-xs">
+  <%= render 'layouts/profile' %>
+
+  <div class="statistics">
+    <% if current_student %>
+      <%= render 'layouts/student_statistics' %>
+    <% elsif current_teacher %>
+      <%= render 'layouts/teacher_statistics' %>
+    <% end %>
+  </div>
+
+  <div class="quick-links">
+    <div class="quick-links-label">Quick Links</div>
+    <% if current_student %>
+      <%= render 'layouts/student_quick_links' %>
+    <% elsif current_teacher %>
+      <%= render 'layouts/teacher_quick_links' %>
+    <% end %>
+  </div>
+</div>
