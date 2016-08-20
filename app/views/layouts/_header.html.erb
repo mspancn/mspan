@@ -8,7 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">MsPan</a>
+      <% if current_student %>
+        <%= link_to("MsPan", student_root_path, { class: "navbar-brand" }) %>
+      <% elsif current_teacher %>
+        <%= link_to("MsPan", teacher_root_path, { class: "navbar-brand" }) %>
+      <% else %>
+        <%= link_to("MsPan", root_path, { class: "navbar-brand" }) %>
+      <% end %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
