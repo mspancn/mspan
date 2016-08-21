@@ -18,8 +18,10 @@
             <%= yield %>
           </div>
           <div class="col-sm-4">
-            <% if current_student or current_teacher %>
-              <%= render 'layouts/sidebar' %>
+            <% if current_student %>
+              <%= render 'layouts/student_sidebar' %>
+            <% elsif current_teacher %>
+              <%= render 'layouts/teacher_sidebar' %>
             <% end %>
           </div>
         </div>
