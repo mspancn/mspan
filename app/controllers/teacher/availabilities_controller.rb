@@ -2,6 +2,11 @@ class Teacher::AvailabilitiesController < ApplicationController
   before_action :authenticate_teacher!
 
   def index
+    @availabilities = Availability.all.map(&:to_datetime_json)
+    respond_to do |format|
+      format.html
+      format.json { render json: @availabilities}
+    end
   end
 
   def create

@@ -4,7 +4,11 @@
       <h3 class="panel-title">Availability</h3>
     </div>
     <div class="panel-body">
-      <div id="preview-calendar"></div>
+      <div id="preview-calendar"
+        data-mintime=<%= @earliest %>
+        data-maxtime=<%= @latest %>
+        data-availabilities=<%= @availabilities.to_json %>
+      ></div>
     </div>
   </div>
   <div class="text-center">

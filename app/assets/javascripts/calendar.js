@@ -5,10 +5,17 @@ $(document).on('turbolinks:load', function() {
     "header": false,
     "allDaySlot": false,
     "selectable": false,
+    eventSources: [
+      {
+        events: $('#preview-calendar').data("availabilities"),
+        color: '#8DC63B',
+        textColor: 'white'
+      }
+    ],
     "slotDuration": "01:00:00",
-    "minTime": "09:00:00",
-    "maxTime": "18:00:00",
-    "height": 220
+    "minTime": $('#preview-calendar').data("mintime"),
+    "maxTime": $('#preview-calendar').data("maxtime"),
+    "height": 'auto'
   });
 });
 
@@ -32,7 +39,19 @@ $(document).on('turbolinks:load', function() {
         }
       });
     },
+    eventSources: [
+      {
+        url: '/teacher/availabilities',
+        type: 'GET',
+        dataType: 'json',
+        error: function() {
+          alert('there was an error while fetching events!');
+        },
+        color: '#8DC63B',
+        textColor: 'white'
+      }
+    ],
     "slotDuration": "01:00:00",
-    "height": 593
+    "height": 'auto'
   });
 });
