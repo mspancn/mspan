@@ -3,4 +3,19 @@ class Teacher::AvailabilitiesController < ApplicationController
 
   def index
   end
+
+  def create
+    availability = Availability.create(availability_params)
+    if availability
+      render json: { status: 200, availability: availability.to_json }
+    else
+      render json: { status: 500 }
+    end
+  end
+
+  private
+
+    def availability_params
+      params.permit(:start, :end).merge(teacher_id: current_teacher.id)
+    end
 end

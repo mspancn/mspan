@@ -18,8 +18,19 @@ $(document).on('turbolinks:load', function() {
     "firstDay":0,
     "allDaySlot": false,
     "selectable": true,
-    "select": function(start,end){
-      alert("start: " + start + "; end: " + end);
+    "select": function(start, end){
+      $.ajax({
+        url: '/teacher/availabilities',
+        dataType: 'json',
+        method: 'POST',
+        data: {
+          start: start.unix(),
+          end: end.unix()
+        },
+        success: function(json) {
+          alert(json.availability);
+        }
+      });
     },
     "slotDuration": "01:00:00",
     "height": 593
