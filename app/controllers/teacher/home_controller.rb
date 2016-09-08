@@ -2,7 +2,9 @@ class Teacher::HomeController < ApplicationController
   before_action :authenticate_teacher!
 
   def dashboard
-    @availabilities = Availability.all.map(&:to_datetime_json)
+    @availabilities = current_teacher
+      .availabilities_between(Date.today.to_s, 7.days.from_now.to_date.to_s)
+      .map(&:to_datetime_json)
     @earliest =
       @availabilities.map { |a|
         a["start"].strftime("%H:%M:%S")

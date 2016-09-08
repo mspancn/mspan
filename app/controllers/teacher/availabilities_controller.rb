@@ -2,8 +2,12 @@ class Teacher::AvailabilitiesController < ApplicationController
   before_action :authenticate_teacher!
 
   def index
-    # TODO: retrieve availabilities for current week only
-    @availabilities = current_teacher.availabilities.map(&:to_datetime_json)
+    @availabilities =
+      if params[:start] && params[:end]
+        current_teacher.availabilities_between(params[:start], params[:end]).map(&:to_datetime_json)
+      else
+        current_teacher.availabilities_between(Date.today.to_s, 7.days.from_now.to_date.to_s).map(&:to_datetime_json)
+      end
     respond_to do |format|
       format.html
       format.json { render json: @availabilities}
