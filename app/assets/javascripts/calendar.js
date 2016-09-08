@@ -1,3 +1,4 @@
+// TODO: always show next seven days
 $(document).on('turbolinks:load', function() {
   $('#preview-calendar').fullCalendar({
     "defaultView":"agendaWeek",
@@ -51,6 +52,26 @@ $(document).on('turbolinks:load', function() {
         textColor: 'white'
       }
     ],
+    eventRender: function(event, element) {
+      $(element).tooltip({ title: "Click delete", placement: "right" });
+    },
+    // TODO: update the view when deletion successful
+    eventClick: function(event, element) {
+      $.ajax({
+        url: '/teacher/availabilities/' + event.id,
+        method: 'DELETE',
+        success: function(json) {
+          if (json.status == 200) {
+            alert("remove the event");
+          } else {
+            alert("Error. Please try again later.");
+          }
+        },
+        error: function(json) {
+          alert("Error. Please try again later.");
+        }
+      });
+    },
     "slotDuration": "01:00:00",
     "height": 'auto'
   });
