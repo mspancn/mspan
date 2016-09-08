@@ -1,8 +1,7 @@
-// TODO: always show next seven days
 $(document).on('turbolinks:load', function() {
   $('#preview-calendar').fullCalendar({
     "defaultView":"agendaWeek",
-    "firstDay":0,
+    "firstDay": $('#preview-calendar').data("today"),
     "header": false,
     "allDaySlot": false,
     "selectable": false,
