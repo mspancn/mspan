@@ -3,7 +3,7 @@ class Teacher::HomeController < ApplicationController
 
   def dashboard
     @availabilities = current_teacher
-      .availabilities_between(Date.today.to_s, 7.days.from_now.to_date.to_s)
+      .availabilities_between(Date.yesterday.to_time, 6.days.from_now.to_date.to_time)
       .map(&:to_datetime_json)
     @earliest =
       @availabilities.map { |a|

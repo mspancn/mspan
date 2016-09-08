@@ -4,9 +4,11 @@ class Teacher::AvailabilitiesController < ApplicationController
   def index
     @availabilities =
       if params[:start] && params[:end]
-        current_teacher.availabilities_between(params[:start], params[:end]).map(&:to_datetime_json)
+        current_teacher
+          .availabilities_between(DateTime.parse(params[:start]), DateTime.parse(params[:end]))
+          .map(&:to_datetime_json)
       else
-        current_teacher.availabilities_between(Date.today.to_s, 7.days.from_now.to_date.to_s).map(&:to_datetime_json)
+        []
       end
     respond_to do |format|
       format.html

@@ -11,6 +11,6 @@ class Teacher < ApplicationRecord
   end
 
   def availabilities_between(start_date, end_date)
-    availabilities.where('start > ? and end < ?', DateTime.parse(start_date).to_i, DateTime.parse(end_date).to_i)
+    availabilities.where('start > ? and end < ?', start_date.to_i, end_date.to_i)
   end
 end
