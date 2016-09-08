@@ -55,14 +55,14 @@ $(document).on('turbolinks:load', function() {
     eventRender: function(event, element) {
       $(element).tooltip({ title: "Click delete", placement: "right" });
     },
-    // TODO: update the view when deletion successful
     eventClick: function(event, element) {
+      $('.tooltip').hide();
       $.ajax({
         url: '/teacher/availabilities/' + event.id,
         method: 'DELETE',
         success: function(json) {
           if (json.status == 200) {
-            alert("remove the event");
+            $('#editable-calendar').fullCalendar('removeEvents',event._id);
           } else {
             alert("Error. Please try again later.");
           }
