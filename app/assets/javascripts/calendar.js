@@ -9,8 +9,7 @@ $(document).on('turbolinks:load', function() {
     eventSources: [
       {
         events: $('#preview-calendar').data("availabilities"),
-        color: '#8DC63B',
-        textColor: 'white'
+        color: '#8DC63B'
       }
     ],
     "slotDuration": "01:00:00",
@@ -36,7 +35,14 @@ $(document).on('turbolinks:load', function() {
           end: end.unix()
         },
         success: function(json) {
-          alert(json.availability);
+          if (json.status == 200) {
+            $('#editable-calendar').fullCalendar( 'renderEvent', $.extend({}, json.availability, {color: '#8DC63B'}), true);
+          } else {
+            alert("Error. Please try again later.");
+          }
+        },
+        error: function(json) {
+          alert("Error. Please try again later.");
         }
       });
     },

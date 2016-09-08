@@ -12,10 +12,9 @@ class Teacher::AvailabilitiesController < ApplicationController
   end
 
   def create
-    # TODO: add new availability to the calendar after creation
     availability = Availability.create(availability_params)
     if availability
-      render json: { status: 200, availability: availability.to_json }
+      render json: { status: 200, availability: availability.to_datetime_json }
     else
       render json: { status: 500 }
     end
