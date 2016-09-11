@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   namespace :student do
     root 'home#dashboard'
+
+    resources :teachers, only: [:index, :create, :destroy]
   end
 
   namespace :teacher do

@@ -1,0 +1,9 @@
+<div>
+  <div class="card-list-header">全部教师</div>
+  <div class="card-list">
+    <%= render partial: "student/shared/teacher", collection: @teachers %>
+  </div>
+  <div class="text-center">
+    <%= link_to("返回我的主页", student_root_path, { class: "btn btn-primary" }) %>
+  </div>
+</div>

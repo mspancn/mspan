@@ -1,2 +1,11 @@
-<div>Student dashboard</div>
-<%= current_student.email %>
+<div>
+  <div class="card-list-header">我的教师列表</div>
+  <div class="card-list">
+    <%= render partial: "student/shared/teacher", collection: @teachers %>
+  </div>
+  <div>
+    <%= link_to student_teachers_path do %>
+      <i class="fa fa-plus" aria-hidden="true"></i> 添加教师
+    <% end %>
+  </div>
+</div>
