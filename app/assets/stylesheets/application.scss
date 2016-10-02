@@ -18,6 +18,11 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import "bootstrap-material-design.min";
+@import "ripples.min";
+
+@import "font-awesome";
 @import "fullcalendar";
 
 @import "main";
