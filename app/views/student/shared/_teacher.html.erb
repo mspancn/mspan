@@ -1,4 +1,4 @@
-<div class=<%= "card" %>>
+<div class="card main-card">
   <div class="profile">
     <div class="pic">
       <%= image_tag("no_profile_image") %>
@@ -6,7 +6,7 @@
     <div class="info"><%= teacher.full_name %></div>
   </div>
   <div class="actions">
-    <%= link_to("预约课程", "#", { class: "btn btn-primary" }) %>
+    <%= link_to("预约课程", "#", { class: "btn btn-default btn-raised" }) %>
 
     <% existing = current_student.teachers.include?(teacher) %>
     <%= link_to('移除列表',
@@ -14,14 +14,14 @@
       method: "delete",
       remote: true,
       id: "remove-teacher-#{teacher.id}",
-      "hidden": !existing
+      class: "btn btn-link #{!existing ? "hidden" : ""}"
     )%>
     <%= link_to('加入列表',
       student_teachers_path(teacher_id: teacher.id),
       method: "post",
       remote: true,
       id: "add-teacher-#{teacher.id}",
-      "hidden": existing
+      class: "btn btn-link #{existing ? "hidden" : ""}"
     )%>
   </div>
 </div>

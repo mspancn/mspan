@@ -14,10 +14,10 @@
       <div class="container">
         <%= render 'layouts/messages' %>
         <div class="row main-row">
-          <div class="col-sm-8">
+          <div class="col-sm-7">
             <%= yield %>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-5">
             <% if current_student %>
               <%= render 'layouts/student_sidebar' %>
             <% elsif current_teacher %>
