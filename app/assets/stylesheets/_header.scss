@@ -1,0 +1,52 @@
+$header-grey: #787b83;
+$header-divider-color: #8c8f96;
+$light-grey: #ddd;
+
+$large-screen: 768px;
+$small-screen: 767px;
+
+.student-header {
+  font-size: 110%;
+}
+
+.navbar-grey {
+  background-color: $header-grey;
+  border: none;
+  margin-bottom: 0px;
+
+  .v-divider {
+    border-left: 1px solid $header-divider-color;
+  }
+
+  .navbar-brand {
+    color: white;
+  }
+
+  .navbar-nav li a {
+    color: white;
+  }
+
+  .dropdown-menu li a {
+    @media screen and (min-width: $large-screen) {
+      color: $header-grey;
+    }
+  }
+
+  .navbar-nav .open .dropdown-menu li a {
+    @media screen and (max-width: $small-screen) {
+      color: white;
+    }
+  }
+
+  .navbar-toggle:hover {
+    background-color: $header-divider-color;
+  }
+
+  .navbar-toggle:focus {
+    background-color: $header-divider-color;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: $light-grey;
+  }
+}

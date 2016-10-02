@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mspan</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="main-content">
+      <div class="container">
+        <%= render 'layouts/messages' %>
+        <div class="row main-row">
+          <div class="col-sm-7">
+            <%= yield %>
+          </div>
+          <div class="col-sm-5">
+            <% if current_student %>
+              <%= render 'layouts/student_sidebar' %>
+            <% elsif current_teacher %>
+              <%= render 'layouts/teacher_sidebar' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>
