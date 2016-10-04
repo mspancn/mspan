@@ -6,7 +6,7 @@
     <div class="info"><%= teacher.full_name %></div>
   </div>
   <div class="actions">
-    <%= link_to("预约课程", "#", { class: "btn btn-default btn-raised" }) %>
+    <%= link_to("预约课程", new_student_appointment_path(teacher_id: teacher.id), remote: true, class: "btn btn-default btn-raised", data: { toggle: "modal", target: "#appointment-modal" }) %>
 
     <% existing = current_student.teachers.include?(teacher) %>
     <%= link_to('移除列表',

@@ -6,4 +6,10 @@ class Availability < ApplicationRecord
       "end" => DateTime.strptime(self.end.to_s, '%s')
     })
   end
+
+  def time_slots
+    (self.start...self.end).step(3600).map do |i|
+      DateTime.strptime(i.to_s,'%s')
+    end
+  end
 end

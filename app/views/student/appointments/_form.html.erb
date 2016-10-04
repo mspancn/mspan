@@ -1,0 +1,12 @@
+<div class="appointment-form-table">
+  <table class="vertical-table">
+    <% @grouped_time_slots.each do |date, times| %>
+      <tr>
+        <th><%= date.to_s %></th>
+        <% times.each do |time| %>
+          <td><%= time.strftime("%H:%M") %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>

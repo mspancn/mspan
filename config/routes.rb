@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     root 'home#dashboard'
 
     resources :teachers, only: [:index, :create, :destroy]
+    resources :appointments, only: [:new]
   end
 
   namespace :teacher do
