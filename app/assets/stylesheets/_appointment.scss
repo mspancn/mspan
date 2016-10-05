@@ -3,15 +3,26 @@
   margin-right: auto;
 
   th {
-    height: 35px;
-  }
-
-  td {
     height: 30px;
   }
 
+  td {
+    height: 32px;
+  }
+
   th, td {
-    padding: 12px;
     text-align: center;
+  }
+
+  .appointment-time-slot {
+    padding: 6px 12px;
+  }
+
+  .btn {
+    border: 1px solid white;
+  }
+
+  .success-border {
+    border: 1px solid #4caf50;
   }
 }

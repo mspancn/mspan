@@ -5,6 +5,7 @@ class Student < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_and_belongs_to_many :teachers
+  has_many :appointments
 
   def add_teacher(teacher)
     if teachers.size < 3
