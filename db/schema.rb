@@ -13,15 +13,15 @@
 ActiveRecord::Schema.define(version: 20161004002803) do
 
   create_table "appointments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "student_id",                      null: false
-    t.integer  "teacher_id",                      null: false
-    t.datetime "scheduled_start",                 null: false
-    t.datetime "scheduled_end",                   null: false
-    t.string   "state",           default: "New", null: false
-    t.string   "creator_type",                    null: false
-    t.integer  "creator_id",                      null: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.integer  "student_id",      null: false
+    t.integer  "teacher_id",      null: false
+    t.datetime "scheduled_start", null: false
+    t.datetime "scheduled_end",   null: false
+    t.string   "state",           null: false
+    t.string   "creator_type",    null: false
+    t.integer  "creator_id",      null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["student_id", "scheduled_start"], name: "index_appointments_on_student_id_and_scheduled_start", unique: true, using: :btree
     t.index ["student_id", "state", "scheduled_start"], name: "index_appointments_on_student_id_and_state_and_scheduled_start", using: :btree
     t.index ["teacher_id", "scheduled_start"], name: "index_appointments_on_teacher_id_and_scheduled_start", unique: true, using: :btree

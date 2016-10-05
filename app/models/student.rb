@@ -24,7 +24,7 @@ class Student < ApplicationRecord
   end
 
   def scheduled_appointments
-    appointments.where(state: "New")
+    appointments.where(state: :new)
   end
 
   def next_scheduled_appointment

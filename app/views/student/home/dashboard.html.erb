@@ -6,7 +6,7 @@
       <%= render partial: "student/shared/appointment", locals: { appointment: @next_scheduled_appointment } %>
     </div>
     <div>
-      <%= link_to student_appointments_path(state: "New"), { class: "btn btn-link pull-right" } do %>
+      <%= link_to student_appointments_path(state: :new), { class: "btn btn-link pull-right" } do %>
         全部预约的课程
       <% end %>
     </div>

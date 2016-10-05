@@ -7,7 +7,7 @@ class CreateAppointments < ActiveRecord::Migration[5.0]
       t.datetime :scheduled_start, null: false
       t.datetime :scheduled_end, null: false
 
-      t.string  :state, null: false, default: 'New'
+      t.string  :state, null: false
 
       t.string :creator_type, null: false
       t.integer :creator_id, null: false

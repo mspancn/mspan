@@ -43,6 +43,9 @@ gem 'devise'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
+# Enumerated attributes with I18n and ActiveRecord/Mongoid/MongoMapper/Sequel support
+gem 'enumerize'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

@@ -11,7 +11,7 @@
     </div>
 
     <%= link_to('取消预约',
-      student_appointment_path(appointment, next_state: "Canceled"),
+      student_appointment_path(appointment, next_state: :canceled),
       method: "put",
       remote: true,
       class: "btn btn-link"
