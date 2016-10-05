@@ -38,4 +38,11 @@ class Student < ApplicationRecord
   def canceled_appointments
     appointments.where(state: :canceled)
   end
+
+  def booked?(scheduled_start)
+    appointments
+      .where(scheduled_start: scheduled_start)
+      .where('state <> ?', "canceled")
+      .exists?
+  end
 end

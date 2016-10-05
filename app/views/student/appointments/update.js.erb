@@ -1,1 +1,2 @@
 $("#cancel-appointment-<%= @appointment.id %>").addClass("hidden");
+$.jGrowl('<%= escape_javascript @notification %>');

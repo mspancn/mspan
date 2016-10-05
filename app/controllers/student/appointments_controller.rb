@@ -17,12 +17,16 @@ class Student::AppointmentsController < ApplicationController
 
   def create
     # TODO return error notification when failed to create
-    @start = DateTime.parse(params[:start])
-    current_student.appointments.create(
-      teacher: Teacher.find(params[:teacher_id]),
-      scheduled_start: @start,
-      creator: current_student
-    )
+    @appointment = AppointmentService.new(
+      Teacher.find(params[:teacher_id]),
+      current_student,
+      DateTime.parse(params[:start]),
+      current_student
+    ).create
+
+    if @appointment[:error]
+      render 'shared/error', locals: { error: @appointment[:error] }
+    end
   end
 
   def update
