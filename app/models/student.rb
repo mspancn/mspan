@@ -28,6 +28,6 @@ class Student < ApplicationRecord
   end
 
   def next_scheduled_appointment
-    scheduled_appointments.order(:scheduled_start).last
+    scheduled_appointments.order(:scheduled_start).first
   end
 end
