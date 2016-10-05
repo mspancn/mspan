@@ -5,6 +5,7 @@ class Student::AppointmentsController < ApplicationController
   end
 
   def new
+    # TODO return error notification when teacher not existing
     @teacher = Teacher.find(params[:teacher_id])
     time_slots = @teacher.availabilities_between(Time.now, 7.days.from_now.midnight)
       .map(&:time_slots).flatten
@@ -17,6 +18,7 @@ class Student::AppointmentsController < ApplicationController
   end
 
   def create
+    # TODO return error notification when failed to create
     @start = DateTime.parse(params[:start])
     current_student.appointments.create(
       teacher: Teacher.find(params[:teacher_id]),
@@ -26,5 +28,8 @@ class Student::AppointmentsController < ApplicationController
   end
 
   def update
+    # TODO return error notification when appointment not existing or updating failed
+    @appointment = current_student.appointments.find(params[:id])
+    @appointment.update_attributes!(state: params[:state])
   end
 end
