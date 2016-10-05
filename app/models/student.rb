@@ -22,4 +22,12 @@ class Student < ApplicationRecord
       false
     end
   end
+
+  def scheduled_appointments
+    appointments.where(state: "New")
+  end
+
+  def next_scheduled_appointment
+    scheduled_appointments.order(:scheduled_start).last
+  end
 end

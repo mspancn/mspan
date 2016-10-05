@@ -1,0 +1,20 @@
+<div class="card main-card">
+  <div class="profile">
+    <div class="pic">
+      <%= image_tag("no_profile_image") %>
+    </div>
+    <div class="info"><%= appointment.teacher.full_name %></div>
+  </div>
+  <div class="actions">
+    <div>
+      <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
+    </div>
+
+    <%= link_to('取消预约',
+      student_appointment_path(appointment, next_state: "Canceled"),
+      method: "put",
+      remote: true,
+      class: "btn btn-link"
+    )%>
+  </div>
+</div>

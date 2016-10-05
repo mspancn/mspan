@@ -1,3 +1,7 @@
+.card-list-wrapper {
+  margin-bottom: 60px;
+}
+
 .main-card {
   height: 150px;
   max-width: 530px;
@@ -34,6 +38,13 @@
     float: right;
     width: 130px;
     height: 100%;
-    margin-top: 20px;
+    padding-top: 20px;
+
+    div {
+      text-align: center;
+      padding-right: 15px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   }
 }
