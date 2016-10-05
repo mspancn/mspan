@@ -30,4 +30,12 @@ class Student < ApplicationRecord
   def next_scheduled_appointment
     scheduled_appointments.order(:scheduled_start).first
   end
+
+  def completed_appointments
+    appointments.where(state: :completed)
+  end
+
+  def canceled_appointments
+    appointments.where(state: :canceled)
+  end
 end

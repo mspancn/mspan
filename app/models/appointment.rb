@@ -9,6 +9,14 @@ class Appointment < ApplicationRecord
 
   before_create :set_defaults
 
+  def cancel
+    if state.new?
+      update_attributes(state: :canceled)
+    else
+      false
+    end
+  end
+
   private
 
     def set_defaults

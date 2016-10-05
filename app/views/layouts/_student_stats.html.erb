@@ -1,3 +1,21 @@
-<div><strong>0</strong><small>预约的课程</small></div>
-<div class="v-divider"><strong>121</strong><small>完成的课程</small></div>
-<div class="v-divider"><strong>3</strong><small>取消的课程</small></div>
+<!-- TODO: these numbers should be updating automatically -->
+<div>
+<%= link_to student_appointments_path(state: :new), class: "btn" do %>
+  <strong><%= current_student.scheduled_appointments.count %></strong>
+  <small>预约的课程</small>
+<% end %>
+</div>
+
+<div class="v-divider">
+<%= link_to student_appointments_path(state: :completed), class: "btn" do %>
+  <strong><%= current_student.completed_appointments.count %></strong>
+  <small>完成的课程</small>
+<% end %>
+</div>
+
+<div class="v-divider">
+<%= link_to student_appointments_path(state: :canceled), class: "btn" do %>
+  <strong><%= current_student.canceled_appointments.count %></strong>
+  <small>取消的课程</small>
+<% end %>
+</div>

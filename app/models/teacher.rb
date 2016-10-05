@@ -15,7 +15,15 @@ class Teacher < ApplicationRecord
     availabilities.where('start > ? and end < ?', start_date.to_i, end_date.to_i)
   end
 
+  def recent_availabilities
+    availabilities_between(Time.now + 2.hours, 7.days.from_now.midnight)
+  end
+
   def appointments_between(start_time, end_time)
     appointments.where('scheduled_start between ? and ?', start_time, end_time)
+  end
+
+  def recent_appointments
+    appointments_between(Time.now + 2.hours, 7.days.from_now.midnight).where(state: :new)
   end
 end

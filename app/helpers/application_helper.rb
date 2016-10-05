@@ -29,4 +29,15 @@ module ApplicationHelper
 
     classes
   end
+
+  def student_appointment_list_title(state)
+    case state
+    when "new"
+      "预约的课程"
+    when "canceled"
+      "取消的课程"
+    when "completed"
+      "完成的课程"
+    end
+  end
 end

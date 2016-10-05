@@ -1,5 +1,5 @@
 <div>
-  <h4 class="card-list-header">全部预约的课程</h4>
+  <h4 class="card-list-header"><%= student_appointment_list_title(params[:state]) %></h4>
   <div class="card-list">
     <%= render partial: "student/shared/appointment", collection: @appointments %>
   </div>

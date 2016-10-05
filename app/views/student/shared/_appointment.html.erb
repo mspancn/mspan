@@ -6,16 +6,32 @@
     <div class="info"><%= appointment.teacher.full_name %></div>
   </div>
   <div class="actions">
-    <div class="text-center">
-      <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
-    </div>
 
-    <%= link_to('取消预约',
-      student_appointment_path(appointment, state: :canceled),
-      method: "put",
-      remote: true,
-      id: "cancel-appointment-#{appointment.id}",
-      class: "btn btn-link"
-    )%>
+    <% if appointment.state.new? %>
+      <div class="text-center">
+        <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
+      </div>
+
+      <%= link_to('取消预约',
+        student_appointment_path(appointment, state: :canceled),
+        method: "put",
+        remote: true,
+        id: "cancel-appointment-#{appointment.id}",
+        class: "btn btn-link"
+      )%>
+    <% end %>
+
+    <% if appointment.state.canceled? %>
+      <%= link_to("重新预约",
+        new_student_appointment_path(teacher_id: appointment.teacher.id),
+        remote: true,
+        class: "btn btn-default btn-raised",
+        data: { toggle: "modal", target: "#appointment-modal" }
+      )%>
+
+      <div class="text-center small">
+        <span><%= appointment.updated_at.strftime("%m-%d %H:%M") + " 被取消" %></span>
+      </div>
+    <% end %>
   </div>
 </div>
