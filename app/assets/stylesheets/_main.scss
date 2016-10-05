@@ -23,3 +23,12 @@ body {
   tr { display: block; float: left; }
   th, td { display: block; }
 }
+
+div.jGrowl div.jGrowl-notification {
+  background-color: #ccc;
+  color: #3d3d3d;
+}
+
+div.jGrowl div.jGrowl-notification.error {
+  color: red;
+}
