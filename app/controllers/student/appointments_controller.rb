@@ -16,7 +16,6 @@ class Student::AppointmentsController < ApplicationController
   end
 
   def create
-    # TODO return error notification when failed to create
     @appointment = AppointmentService.new(
       Teacher.find(params[:teacher_id]),
       current_student,
@@ -30,9 +29,10 @@ class Student::AppointmentsController < ApplicationController
   end
 
   def update
-    # TODO return error notification when appointment not existing or updating failed
     # TODO release the time slot once it's canceled or completed
     @appointment = current_student.appointments.find(params[:id])
-    @appointment.cancel
+    if !@appointment.cancel
+      render 'shared/error', locals: { error: "Error." }
+    end
   end
 end
