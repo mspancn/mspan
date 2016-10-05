@@ -4,12 +4,21 @@ var title       =   '.modal-title',
     dataRemote  =   'a[data-remote=true]',
     toolbar     =   'div.modal-footer',
     closeButton =   'button.modal-close',
+    crossButton =   'button.close';
     modal       =   '#ajax-modal';
 
 //i set the title through a helper function
 $(title).html('预约课程');
 // set the button text
-$(closeButton).html('关闭');
+// TODO: update the page via ajax call
+$(closeButton).html('关闭').click(function() {
+  location.reload();
+});
+
+// TODO: update the page via ajax call
+$(crossButton).click(function() {
+  location.reload();
+});
 
 //hides the modal and shows the ajax content
 $(loader).fadeToggle('fast', function() {
