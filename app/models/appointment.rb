@@ -25,7 +25,7 @@ class Appointment < ApplicationRecord
   def cancel
     # TODO should not be able to cancel when it's close to start time
     if state.new?
-      update_attributes(state: :canceled)
+      update_attributes(state: :canceled, in_use: nil)
     else
       false
     end

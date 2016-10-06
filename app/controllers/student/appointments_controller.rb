@@ -29,7 +29,6 @@ class Student::AppointmentsController < ApplicationController
   end
 
   def update
-    # TODO release the time slot once it's canceled or completed
     @appointment = current_student.appointments.find(params[:id])
 
     if params[:state] == "canceled" and !@appointment.cancel
