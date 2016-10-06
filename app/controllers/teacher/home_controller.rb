@@ -17,5 +17,8 @@ class Teacher::HomeController < ApplicationController
       }.max_by { |t|
         Time.parse(t).hour
       }
+
+    @next_scheduled_appointment = current_teacher.next_scheduled_appointment
+    @uncompleted_appointments = current_teacher.uncompleted_appointments
   end
 end

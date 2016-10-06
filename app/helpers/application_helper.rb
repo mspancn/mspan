@@ -40,4 +40,15 @@ module ApplicationHelper
       "完成的课程"
     end
   end
+
+  def teacher_appointment_list_title(state)
+    case state
+    when "new"
+      "Scheduled"
+    when "canceled"
+      "Canceled"
+    when "completed"
+      "Completed"
+    end
+  end
 end

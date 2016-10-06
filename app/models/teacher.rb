@@ -27,6 +27,26 @@ class Teacher < ApplicationRecord
     appointments_between(Time.now + 2.hours, 7.days.from_now.midnight).where(state: :new)
   end
 
+  def scheduled_appointments
+    appointments.where(state: :new)
+  end
+
+  def next_scheduled_appointment
+    scheduled_appointments.where('scheduled_start > ?', Time.now).order(:scheduled_start).first
+  end
+
+  def uncompleted_appointments
+    scheduled_appointments.where('scheduled_end < ?', Time.now)
+  end
+
+  # def completed_appointments
+  #   appointments.where(state: :completed)
+  # end
+
+  # def canceled_appointments
+  #   appointments.where(state: :canceled)
+  # end
+
   def booked?(time)
     appointments
       .where(scheduled_start: time)

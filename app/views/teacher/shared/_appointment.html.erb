@@ -1,0 +1,36 @@
+<div class="card main-card english-card">
+  <div class="profile">
+    <div class="pic">
+      <%= image_tag("no_profile_image") %>
+    </div>
+    <div class="info"><%= appointment.student.full_name %></div>
+  </div>
+  <div class="actions">
+
+    <% if appointment.cancelable? %>
+      <%= render partial: 'teacher/shared/cancel_actions', locals: { appointment: appointment } %>
+    <% end %>
+
+    <% if appointment.ongoing? %>
+      <div class="text-center">
+        <span>Ongoing</span>
+      </div>
+    <% end %>
+
+    <% if appointment.uncompleted? %>
+      <%= render partial: 'teacher/shared/complete_actions', locals: { appointment: appointment } %>
+    <% end %>
+
+    <% if appointment.state.canceled? %>
+      <div class="text-center small">
+        <span><%= "Canceled at"%></span>
+        <br >
+        <span><%= appointment.updated_at.strftime("%a %m-%d %I:%M%P") %></span>
+      </div>
+    <% end %>
+
+    <% if appointment.state.completed? %>
+      <%= render partial: 'teacher/shared/followup_actions', locals: { appointment: appointment } %>
+    <% end %>
+  </div>
+</div>

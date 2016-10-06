@@ -1,0 +1,18 @@
+<div class="availability-preview">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Next 7 Days</h3>
+    </div>
+    <div class="panel-body">
+      <div id="preview-calendar"
+        data-mintime=<%= @earliest %>
+        data-maxtime=<%= @latest %>
+        data-availabilities=<%= @availabilities.to_json %>
+        data-today=<%= Date.today.wday %>
+      ></div>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= link_to("Update my availability", teacher_availabilities_path, { class: "btn btn-primary" }) %>
+  </div>
+</div>

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     root 'home#dashboard'
 
     resources :availabilities, only: [:index, :create, :destroy]
+    resources :appointments, only: [:index, :update]
   end
 
   root to: 'home#index'
