@@ -39,13 +39,13 @@ class Teacher < ApplicationRecord
     scheduled_appointments.where('scheduled_end < ?', Time.now)
   end
 
-  # def completed_appointments
-  #   appointments.where(state: :completed)
-  # end
+  def completed_appointments
+    appointments.where(state: :completed)
+  end
 
-  # def canceled_appointments
-  #   appointments.where(state: :canceled)
-  # end
+  def canceled_appointments
+    appointments.where(state: :canceled)
+  end
 
   def booked?(time)
     appointments
