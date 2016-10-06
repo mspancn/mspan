@@ -31,6 +31,10 @@ class Student < ApplicationRecord
     scheduled_appointments.order(:scheduled_start).first
   end
 
+  def uncompleted_appointments
+    scheduled_appointments.where('scheduled_end < ?', Time.now)
+  end
+
   def completed_appointments
     appointments.where(state: :completed)
   end

@@ -31,7 +31,12 @@ class Student::AppointmentsController < ApplicationController
   def update
     # TODO release the time slot once it's canceled or completed
     @appointment = current_student.appointments.find(params[:id])
-    if !@appointment.cancel
+
+    if params[:state] == "canceled" and !@appointment.cancel
+      render 'shared/error', locals: { error: "Error." }
+    end
+
+    if params[:state] == "completed" and !@appointment.complete
       render 'shared/error', locals: { error: "Error." }
     end
   end
