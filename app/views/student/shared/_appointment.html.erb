@@ -1,0 +1,32 @@
+<div class="card main-card">
+  <div class="profile">
+    <div class="pic">
+      <%= image_tag("no_profile_image") %>
+    </div>
+    <div class="info"><%= appointment.teacher.full_name %></div>
+  </div>
+  <div class="actions">
+
+    <% if appointment.cancelable? %>
+      <%= render partial: 'student/shared/cancel_actions', locals: { appointment: appointment } %>
+    <% end %>
+
+    <% if appointment.ongoing? %>
+      <div class="text-center">
+        <span>正在进行</span>
+      </div>
+    <% end %>
+
+    <% if appointment.uncompleted? %>
+      <%= render partial: 'student/shared/complete_actions', locals: { appointment: appointment } %>
+    <% end %>
+
+    <% if appointment.state.canceled? %>
+      <%= render partial: 'student/shared/reschedule_actions', locals: { appointment: appointment } %>
+    <% end %>
+
+    <% if appointment.state.completed? %>
+      <%= render partial: 'student/shared/followup_actions', locals: { appointment: appointment } %>
+    <% end %>
+  </div>
+</div>

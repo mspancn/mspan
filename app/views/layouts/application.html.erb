@@ -12,7 +12,6 @@
     <%= render 'layouts/header' %>
     <div class="main-content">
       <div class="container">
-        <%= render 'layouts/messages' %>
         <div class="row main-row">
           <div class="col-sm-7">
             <%= yield %>
@@ -28,5 +27,7 @@
       </div>
     </div>
     <%= render 'layouts/footer' %>
+    <%= render 'layouts/j_growl_notification' %>
+    <%= render 'layouts/modal' %>
   </body>
 </html>

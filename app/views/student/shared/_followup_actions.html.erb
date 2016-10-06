@@ -1,0 +1,10 @@
+<%= link_to("预约后续",
+  new_student_appointment_path(teacher_id: appointment.teacher.id),
+  remote: true,
+  class: "btn btn-default btn-raised",
+  data: { toggle: "modal", target: "#appointment-modal" }
+)%>
+
+<div class="text-center small">
+  <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
+</div>

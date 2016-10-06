@@ -1,0 +1,9 @@
+<div>
+  <h4 class="card-list-header"><%= student_appointment_list_title(params[:state]) %></h4>
+  <div class="card-list">
+    <%= render partial: "student/shared/appointment", collection: @appointments %>
+  </div>
+  <div class="text-center">
+    <%= link_to("返回我的主页", student_root_path, { class: "btn btn-primary" }) %>
+  </div>
+</div>

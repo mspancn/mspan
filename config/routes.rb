@@ -7,12 +7,14 @@ Rails.application.routes.draw do
     root 'home#dashboard'
 
     resources :teachers, only: [:index, :create, :destroy]
+    resources :appointments, only: [:index, :new, :create, :update]
   end
 
   namespace :teacher do
     root 'home#dashboard'
 
     resources :availabilities, only: [:index, :create, :destroy]
+    resources :appointments, only: [:index, :update]
   end
 
   root to: 'home#index'

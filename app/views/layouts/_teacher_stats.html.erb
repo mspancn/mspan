@@ -1,3 +1,21 @@
-<div><strong>0</strong><small>scheduled</small></div>
-<div class="v-divider"><strong>121</strong><small>finished</small></div>
-<div class="v-divider"><strong>3</strong><small>cancelled</small></div>
+<!-- TODO: these numbers should be updating automatically -->
+<div>
+<%= link_to teacher_appointments_path(state: :new), class: "btn" do %>
+  <strong><%= current_teacher.scheduled_appointments.count %></strong>
+  <small>Scheduled</small>
+<% end %>
+</div>
+
+<div class="v-divider">
+<%= link_to teacher_appointments_path(state: :completed), class: "btn" do %>
+  <strong><%= current_teacher.completed_appointments.count %></strong>
+  <small>Completed</small>
+<% end %>
+</div>
+
+<div class="v-divider">
+<%= link_to teacher_appointments_path(state: :canceled), class: "btn" do %>
+  <strong><%= current_teacher.canceled_appointments.count %></strong>
+  <small>Canceled</small>
+<% end %>
+</div>

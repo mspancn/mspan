@@ -1,0 +1,32 @@
+.appointment-form-table table {
+  margin-left: auto;
+  margin-right: auto;
+
+  th {
+    height: 30px;
+  }
+
+  td {
+    height: 32px;
+  }
+
+  th, td {
+    text-align: center;
+  }
+
+  .appointment-time-slot {
+    padding: 6px 12px;
+  }
+
+  .btn {
+    border: 1px solid white;
+  }
+
+  .success-border {
+    border: 1px solid #4caf50;
+  }
+
+  .disabled-border {
+    border: 1px solid #ccc;
+  }
+}

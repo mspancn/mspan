@@ -1,0 +1,11 @@
+<%= link_to("确认完成",
+  student_appointment_path(appointment, state: :completed),
+  method: "put",
+  remote: true,
+  id: "complete-appointment-#{appointment.id}",
+  class: "btn btn-default btn-raised"
+)%>
+
+<div class="text-center">
+  <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
+</div>

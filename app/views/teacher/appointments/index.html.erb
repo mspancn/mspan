@@ -1,0 +1,9 @@
+<div>
+  <h4 class="card-list-header"><%= teacher_appointment_list_title(params[:state]) %></h4>
+  <div class="card-list">
+    <%= render partial: "teacher/shared/appointment", collection: @appointments %>
+  </div>
+  <div class="text-center">
+    <%= link_to("Back to home", teacher_root_path, { class: "btn btn-primary" }) %>
+  </div>
+</div>

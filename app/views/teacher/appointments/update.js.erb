@@ -1,0 +1,9 @@
+<% if @appointment.state.canceled? %>
+  $("#cancel-appointment-<%= @appointment.id %>").addClass("hidden");
+  $.jGrowl('Canceled successfully');
+<% end %>
+
+<% if @appointment.state.completed? %>
+  $("#complete-appointment-<%= @appointment.id %>").addClass("hidden");
+  $.jGrowl('Completed successfully');
+<% end %>

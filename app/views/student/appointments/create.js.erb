@@ -1,0 +1,3 @@
+$("table").find("[data-start='" + <%= @appointment.scheduled_start.to_i %> + "']")
+  .addClass("btn-success disabled success-border");
+$.jGrowl('预约成功!');

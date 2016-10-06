@@ -1,0 +1,12 @@
+<div class="appointment-form-table">
+  <table class="vertical-table">
+    <% @grouped_time_slots.each do |date, times| %>
+      <tr>
+        <th><%= date.to_s %></th>
+        <% times.each do |time| %>
+          <td><%= link_to(time.strftime("%H:%M"), student_appointments_path(teacher_id: @teacher.id, start: time), remote: true, method: :post, class: appointment_time_slot_classes(time, @appointments, current_student), data: { start: time.to_i }) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
