@@ -1,36 +1,11 @@
 <div>
   <% if @uncompleted_appointments.present? %>
-  <div class="card-list-wrapper">
-    <h4 class="card-list-header">最近课程</h4>
-    <div class="card-list">
-      <%= render partial: "student/shared/appointment", collection: @uncompleted_appointments %>
-    </div>
-  </div>
+    <%= render 'uncompleted_appointments' %>
   <% end %>
 
   <% if @next_scheduled_appointment.present? %>
-  <div class="card-list-wrapper">
-    <h4 class="card-list-header">下节预约课程</h4>
-    <div class="card-list">
-      <%= render partial: "student/shared/appointment", locals: { appointment: @next_scheduled_appointment } %>
-    </div>
-    <div>
-      <%= link_to student_appointments_path(state: :new), { class: "btn btn-link pull-right" } do %>
-        全部预约的课程
-      <% end %>
-    </div>
-  </div>
+    <%= render 'next_scheduled_appointment' %>
   <% end %>
 
-  <div class="card-list-wrapper">
-    <h4 class="card-list-header">我的教师列表</h4>
-    <div class="card-list">
-      <%= render partial: "student/shared/teacher", collection: @teachers %>
-    </div>
-    <div>
-      <%= link_to student_teachers_path, { class: "btn btn-link pull-right" } do %>
-        <i class="fa fa-plus" aria-hidden="true"></i> 添加教师
-      <% end %>
-    </div>
-  </div>
+  <%= render 'my_teachers' %>
 </div>

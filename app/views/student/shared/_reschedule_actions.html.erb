@@ -1,0 +1,10 @@
+<%= link_to("重新预约",
+  new_student_appointment_path(teacher_id: appointment.teacher.id),
+  remote: true,
+  class: "btn btn-default btn-raised",
+  data: { toggle: "modal", target: "#appointment-modal" }
+)%>
+
+<div class="text-center small">
+  <span><%= appointment.updated_at.strftime("%m-%d %H:%M") + " 被取消" %></span>
+</div>

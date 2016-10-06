@@ -9,6 +9,19 @@ class Appointment < ApplicationRecord
 
   before_create :set_defaults
 
+  def cancelable?
+    # TODO need to redefine this business logic
+    state.new? and scheduled_start > Time.now
+  end
+
+  def ongoing?
+    state.new? and scheduled_start <= Time.now and scheduled_end > Time.now
+  end
+
+  def uncompleted?
+    state.new? and scheduled_end < Time.now
+  end
+
   def cancel
     # TODO should not be able to cancel when it's close to start time
     if state.new?

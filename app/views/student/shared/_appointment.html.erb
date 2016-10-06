@@ -7,65 +7,26 @@
   </div>
   <div class="actions">
 
-    <% if appointment.state.new? and appointment.scheduled_start > Time.now %>
-      <div class="text-center">
-        <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
-      </div>
-
-      <%= link_to('取消预约',
-        student_appointment_path(appointment, state: :canceled),
-        method: "put",
-        remote: true,
-        id: "cancel-appointment-#{appointment.id}",
-        class: "btn btn-link",
-        data: { confirm: "确定要取消预约么？" }
-      )%>
+    <% if appointment.cancelable? %>
+      <%= render partial: 'student/shared/cancel_actions', locals: { appointment: appointment } %>
     <% end %>
 
-    <% if appointment.state.new? and appointment.scheduled_start <= Time.now and appointment.scheduled_end > Time.now %>
+    <% if appointment.ongoing? %>
       <div class="text-center">
         <span>正在进行</span>
       </div>
     <% end %>
 
-    <% if appointment.state.new? and appointment.scheduled_end < Time.now %>
-      <%= link_to("确认完成",
-        student_appointment_path(appointment, state: :completed),
-        method: "put",
-        remote: true,
-        id: "complete-appointment-#{appointment.id}",
-        class: "btn btn-default btn-raised"
-      )%>
-
-      <div class="text-center">
-        <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
-      </div>
+    <% if appointment.uncompleted? %>
+      <%= render partial: 'student/shared/complete_actions', locals: { appointment: appointment } %>
     <% end %>
 
     <% if appointment.state.canceled? %>
-      <%= link_to("重新预约",
-        new_student_appointment_path(teacher_id: appointment.teacher.id),
-        remote: true,
-        class: "btn btn-default btn-raised",
-        data: { toggle: "modal", target: "#appointment-modal" }
-      )%>
-
-      <div class="text-center small">
-        <span><%= appointment.updated_at.strftime("%m-%d %H:%M") + " 被取消" %></span>
-      </div>
+      <%= render partial: 'student/shared/reschedule_actions', locals: { appointment: appointment } %>
     <% end %>
 
     <% if appointment.state.completed? %>
-      <%= link_to("预约后续",
-        new_student_appointment_path(teacher_id: appointment.teacher.id),
-        remote: true,
-        class: "btn btn-default btn-raised",
-        data: { toggle: "modal", target: "#appointment-modal" }
-      )%>
-
-      <div class="text-center small">
-        <span><%= appointment.scheduled_start.strftime("%m-%d %H:%M") %></span>
-      </div>
+      <%= render partial: 'student/shared/followup_actions', locals: { appointment: appointment } %>
     <% end %>
   </div>
 </div>
