@@ -5,10 +5,10 @@
     </div>
     <div class="panel-body">
       <div id="preview-calendar"
-        data-mintime=<%= @earliest %>
-        data-maxtime=<%= @latest %>
-        data-availabilities=<%= @availabilities.to_json %>
-        data-today=<%= Date.today.wday %>
+        data-mintime=<%= time_from_hour(@earliest_hour) %>
+        data-maxtime=<%= time_from_hour(@latest_hour) %>
+        data-availabilities=<%= @availabilities_datetime.to_json %>
+        data-today=<%= Time.zone.today.wday %>
       ></div>
     </div>
   </div>

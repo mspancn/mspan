@@ -1,7 +1,7 @@
-class Teacher::AvailabilitiesController < ApplicationController
-  before_action :authenticate_teacher!
+class Teacher::AvailabilitiesController < TeacherController
 
   def index
+    # TODO: show appointments on calendar
     @availabilities =
       if params[:start] && params[:end]
         current_teacher
@@ -37,6 +37,9 @@ class Teacher::AvailabilitiesController < ApplicationController
   private
 
     def availability_params
-      params.permit(:start, :end).merge(teacher_id: current_teacher.id)
+      params.permit(:start, :end)
+        .merge(teacher_id: current_teacher.id)
+        .merge(start: params[:start].to_i-Time.zone.at(params[:start].to_i).utc_offset)
+        .merge(end: params[:end].to_i-Time.zone.at(params[:end].to_i).utc_offset)
     end
 end

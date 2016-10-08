@@ -1,4 +1,4 @@
-class Teacher::AppointmentsController < ApplicationController
+class Teacher::AppointmentsController < TeacherController
 
   def index
     @appointments = current_teacher.appointments.where(state: params[:state]).includes(:student)

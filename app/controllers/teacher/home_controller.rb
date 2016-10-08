@@ -1,24 +1,14 @@
-class Teacher::HomeController < ApplicationController
-  before_action :authenticate_teacher!
+class Teacher::HomeController < TeacherController
 
   def dashboard
-    @availabilities = current_teacher
-      .availabilities_between(Date.yesterday.to_time, 6.days.from_now.to_date.to_time)
-      .map(&:to_datetime_json)
-    @earliest =
-      @availabilities.map { |a|
-        a["start"].strftime("%H:%M:%S")
-      }.min_by { |t|
-        Time.parse(t).hour
-      }
-    @latest =
-      @availabilities.map { |a|
-        a["end"].strftime("%H:%M:%S")
-      }.max_by { |t|
-        Time.parse(t).hour
-      }
+    availabilities = current_teacher.availabilities_next_7_days
+    @availabilities_datetime = availabilities.map(&:to_datetime_json)
+
+    time_slots = availabilities.map(&:time_slots).flatten
+    @earliest_hour  = time_slots.map(&:hour).min
+    @latest_hour    = time_slots.map(&:hour).max + 1
 
     @next_scheduled_appointment = current_teacher.next_scheduled_appointment
-    @uncompleted_appointments = current_teacher.uncompleted_appointments
+    @uncompleted_appointments   = current_teacher.uncompleted_appointments
   end
 end

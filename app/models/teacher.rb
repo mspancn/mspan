@@ -11,8 +11,14 @@ class Teacher < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
-  def availabilities_between(start_date, end_date)
-    availabilities.where('start > ? and end < ?', start_date.to_i, end_date.to_i)
+  def availabilities_between(start_time, end_time)
+    availabilities.where(start: start_time.to_i..end_time.to_i)
+      .or(availabilities.where(end: start_time.to_i..end_time.to_i))
+      .or(availabilities.where('start < ? and end > ?', start_time.to_i, end_time.to_i))
+  end
+
+  def availabilities_next_7_days
+    availabilities_between(Time.zone.today.to_time, 7.days.from_now.midnight)
   end
 
   def recent_availabilities

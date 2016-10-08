@@ -4,7 +4,9 @@
       <h3 class="panel-title">Edit Availability</h3>
     </div>
     <div class="panel-body">
-      <div id="editable-calendar"></div>
+      <div id="editable-calendar"
+        data-today=<%= Time.zone.today.wday %>
+      ></div>
     </div>
   </div>
   <div class="text-center">

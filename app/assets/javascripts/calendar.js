@@ -21,7 +21,7 @@ $(document).on('turbolinks:load', function() {
 $(document).on('turbolinks:load', function() {
   $('#editable-calendar').fullCalendar({
     "defaultView":"agendaWeek",
-    "firstDay":0,
+    "firstDay": $('#editable-calendar').data("today"),
     "allDaySlot": false,
     "selectable": true,
     "select": function(start, end){
