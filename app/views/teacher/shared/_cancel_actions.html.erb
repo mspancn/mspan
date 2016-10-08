@@ -1,8 +1,0 @@
-<%= link_to('Cancel',
-  teacher_appointment_path(appointment, state: :canceled),
-  method: "put",
-  remote: true,
-  id: "cancel-appointment-#{appointment.id}",
-  class: "btn btn-link",
-  data: { confirm: "Are you sure?" }
-)%>

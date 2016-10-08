@@ -6,33 +6,6 @@
     <div class="info"><%= appointment.teacher.full_name %></div>
   </div>
   <div class="actions">
-
-    <% if appointment.not_started? %>
-      <%= render partial: 'student/shared/scheduled_start', locals: { appointment: appointment } %>
-
-      <% if appointment.cancelable? %>
-        <%= render partial: 'student/shared/cancel_actions', locals: { appointment: appointment } %>
-      <% end %>
-    <% end %>
-
-    <% if appointment.ongoing? %>
-      <div class="text-center">
-        <span>正在进行</span>
-      </div>
-    <% end %>
-
-    <% if appointment.uncompleted? %>
-      <%= render partial: 'student/shared/complete_actions', locals: { appointment: appointment } %>
-      <%= render partial: 'student/shared/scheduled_start', locals: { appointment: appointment } %>
-    <% end %>
-
-    <% if appointment.state.completed? %>
-      <%= render partial: 'student/shared/followup_actions', locals: { appointment: appointment } %>
-      <%= render partial: 'student/shared/scheduled_start', locals: { appointment: appointment } %>
-    <% end %>
-
-    <% if appointment.state.canceled? %>
-      <%= render partial: 'student/shared/reschedule_actions', locals: { appointment: appointment } %>
-    <% end %>
+    <%= render partial: 'student/shared/appointment_actions', locals: { appointment: appointment } %>
   </div>
 </div>
