@@ -10,10 +10,5 @@ class Teacher::AppointmentsController < TeacherController
     if params[:state] == "canceled" and !@appointment.cancel
       render 'shared/error', locals: { error: "Error." }
     end
-
-    # TODO: don't allow teachers to complete
-    if params[:state] == "completed" and !@appointment.complete
-      render 'shared/error', locals: { error: "Error." }
-    end
   end
 end

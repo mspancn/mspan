@@ -22,7 +22,10 @@
     <% end %>
 
     <% if appointment.uncompleted? %>
-      <%= render partial: 'teacher/shared/complete_actions', locals: { appointment: appointment } %>
+      <div class="text-center small">
+        <span>Waiting for completion</span>
+      </div>
+
       <%= render partial: 'teacher/shared/scheduled_start', locals: { appointment: appointment } %>
     <% end %>
 
