@@ -7,24 +7,29 @@ class Appointment < ApplicationRecord
   belongs_to :student
   belongs_to :creator, polymorphic: true
 
+  FREEZE_WINDOW = 24.hours
+  LENGTH = 45.minutes
+
   before_create :set_defaults
 
   def cancelable?
-    # TODO need to redefine this business logic
-    state.new? and scheduled_start > Time.now
+    state.new? and scheduled_start > FREEZE_WINDOW.from_now
+  end
+
+  def not_started?
+    state.new? and scheduled_end > Time.current
   end
 
   def ongoing?
-    state.new? and scheduled_start <= Time.now and scheduled_end > Time.now
+    state.new? and scheduled_start <= Time.current and scheduled_end > Time.current
   end
 
   def uncompleted?
-    state.new? and scheduled_end < Time.now
+    state.new? and scheduled_end < Time.current
   end
 
   def cancel
-    # TODO should not be able to cancel when it's close to start time
-    if state.new?
+    if cancelable?
       update_attributes(state: :canceled, in_use: nil)
     else
       false
@@ -32,7 +37,7 @@ class Appointment < ApplicationRecord
   end
 
   def complete
-    if state.new? and scheduled_end < Time.now
+    if uncompleted?
       update_attributes(state: :completed)
     else
       false
@@ -43,6 +48,6 @@ class Appointment < ApplicationRecord
 
     def set_defaults
       self.state ||= :new
-      self.scheduled_end = scheduled_start + 45.minutes
+      self.scheduled_end = scheduled_start + LENGTH
     end
 end

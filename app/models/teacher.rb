@@ -22,7 +22,13 @@ class Teacher < ApplicationRecord
   end
 
   def recent_availabilities
-    availabilities_between(Time.now + 2.hours, 7.days.from_now.midnight)
+    availabilities_between(Appointment::FREEZE_WINDOW.from_now, 7.days.from_now.midnight)
+  end
+
+  def schedulable_time_slots
+    recent_availabilities.map(&:time_slots).flatten.select do |time_slot|
+      time_slot.between?(Appointment::FREEZE_WINDOW.from_now, 7.days.from_now.midnight)
+    end.sort
   end
 
   def appointments_between(start_time, end_time)
@@ -30,7 +36,7 @@ class Teacher < ApplicationRecord
   end
 
   def recent_appointments
-    appointments_between(Time.now + 2.hours, 7.days.from_now.midnight).where(state: :new)
+    appointments_between(Appointment::FREEZE_WINDOW.from_now, 7.days.from_now.midnight).where(state: :new)
   end
 
   def scheduled_appointments
@@ -38,11 +44,11 @@ class Teacher < ApplicationRecord
   end
 
   def next_scheduled_appointment
-    scheduled_appointments.where('scheduled_start > ?', Time.now).order(:scheduled_start).first
+    scheduled_appointments.where('scheduled_start > ?', Time.current).order(:scheduled_start).first
   end
 
   def uncompleted_appointments
-    scheduled_appointments.where('scheduled_end < ?', Time.now)
+    scheduled_appointments.where('scheduled_end < ?', Time.current)
   end
 
   def completed_appointments
@@ -61,6 +67,6 @@ class Teacher < ApplicationRecord
   end
 
   def available?(time)
-    availabilities.where('start <= ? and end > ?', time.to_i, time.to_i)
+    availabilities.where('start <= ? and end > ?', time.to_i, time.to_i).exists?
   end
 end

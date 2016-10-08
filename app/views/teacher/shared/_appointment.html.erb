@@ -7,8 +7,14 @@
   </div>
   <div class="actions">
 
-    <% if appointment.cancelable? %>
-      <%= render partial: 'teacher/shared/cancel_actions', locals: { appointment: appointment } %>
+    <% if appointment.not_started? %>
+      <div class="text-center small">
+        <span><%= appointment.scheduled_start.strftime("%a %m-%d %I:%M%P") %></span>
+      </div>
+
+      <% if appointment.cancelable? %>
+        <%= render partial: 'teacher/shared/cancel_actions', locals: { appointment: appointment } %>
+      <% end %>
     <% end %>
 
     <% if appointment.ongoing? %>
