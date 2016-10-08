@@ -29,11 +29,11 @@ class Student < ApplicationRecord
   end
 
   def next_scheduled_appointment
-    scheduled_appointments.where('scheduled_start > ?', Time.now).order(:scheduled_start).first
+    scheduled_appointments.where('scheduled_start > ?', Time.current).order(:scheduled_start).first
   end
 
   def uncompleted_appointments
-    scheduled_appointments.where('scheduled_end < ?', Time.now)
+    scheduled_appointments.where('scheduled_end < ?', Time.current)
   end
 
   def completed_appointments

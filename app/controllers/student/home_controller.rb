@@ -1,5 +1,4 @@
-class Student::HomeController < ApplicationController
-  before_action :authenticate_student!
+class Student::HomeController < StudentController
 
   def dashboard
     @teachers = current_student.teachers

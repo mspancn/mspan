@@ -1,4 +1,4 @@
-class Student::AppointmentsController < ApplicationController
+class Student::AppointmentsController < StudentController
 
   def index
     @appointments = current_student.appointments.where(state: params[:state]).includes(:teacher)
@@ -8,9 +8,8 @@ class Student::AppointmentsController < ApplicationController
     # TODO return error notification when teacher not existing
     @teacher = Teacher.find(params[:teacher_id])
 
-    @grouped_time_slots = @teacher.recent_availabilities
-      .map(&:time_slots).flatten.group_by do |ts|
-        ts.strftime("%m-%d")
+    @grouped_time_slots = @teacher.schedulable_time_slots.group_by do |time_slot|
+        time_slot.strftime("%m-%d")
       end
     @appointments = @teacher.recent_appointments
   end

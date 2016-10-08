@@ -15,6 +15,18 @@ module ApplicationHelper
     end
   end
 
+  def time_from_hour(hour)
+    "#{sprintf('%02d', hour)}:00:00"
+  end
+
+  def teacher_format(time)
+    time.strftime("%m-%d %I:%M%P")
+  end
+
+  def student_format(time)
+    time.strftime("%m-%d %H:%M")
+  end
+
   def appointment_time_slot_classes(availability_start, appointments, current_student)
     classes = "btn btn-default appointment-time-slot"
 

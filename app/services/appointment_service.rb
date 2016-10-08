@@ -5,14 +5,14 @@ class AppointmentService
   end
 
   def create
+    if @start < Appointment::FREEZE_WINDOW.from_now
+      return { error: "Can't make an appointment within 24 hours." }
+    end
+
     if @teacher.booked?(@start) ||
       !@teacher.available?(@start) ||
       @student.booked?(@start)
       return { error: "Not available anymore." }
-    end
-
-    if @start < Time.now
-      return { error: "Can't make appointment for the past." }
     end
 
     begin
