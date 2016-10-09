@@ -1,6 +1,7 @@
 class Appointment < ApplicationRecord
   extend Enumerize
 
+  # TODO: add appointment audit
   enumerize :state, in: [:new, :canceled, :completed]
 
   belongs_to :teacher
@@ -31,16 +32,12 @@ class Appointment < ApplicationRecord
   def cancel
     if cancelable?
       update_attributes(state: :canceled, in_use: nil)
-    else
-      false
     end
   end
 
   def complete
     if uncompleted?
       update_attributes(state: :completed)
-    else
-      false
     end
   end
 
