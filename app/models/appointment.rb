@@ -47,7 +47,8 @@ class Appointment < ApplicationRecord
   private
 
     def set_defaults
-      self.state ||= :new
+      self.state = :new
+      self.in_use = true
       self.scheduled_end = scheduled_start + LENGTH
     end
 end
