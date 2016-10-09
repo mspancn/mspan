@@ -5,14 +5,15 @@ class Teacher::AppointmentsController < TeacherController
   end
 
   def update
-    @appointment = current_teacher.appointments.find(params[:id])
+    appointment = current_teacher.appointments.find(params[:id])
 
     if params[:state] == "canceled"
-      if !@appointment.cancel
-        render 'shared/error', locals: { error: "Error." }
-        return
-      end
-      AppointmentMailer.teacher_cancel_appointment_email(@appointment).deliver_later
+      @appointment = AppointmentService.new(appointment).cancel(current_teacher)
+      AppointmentMailer.teacher_cancel_appointment_email(@appointment).deliver_later unless @appointment[:error]
+    end
+
+    if @appointment[:error]
+      render 'shared/error', locals: { error: @appointment[:error] }
     end
   end
 end
