@@ -1,31 +1,46 @@
 class AppointmentService
 
-  def initialize(teacher, student, start, creator)
-    @teacher, @student, @start, @creator = teacher, student, start, creator
+  def initialize(appointment)
+    @appointment = appointment
   end
 
   def create
-    if @start < Appointment::FREEZE_WINDOW.from_now
-      return { error: "Can't make an appointment within 24 hours." }
+    start = @appointment.scheduled_start
+    if start < Appointment::FREEZE_WINDOW.from_now
+      return { error: "不能预约24小时以内课程。" }
     end
 
-    if @teacher.booked?(@start) ||
-      !@teacher.available?(@start) ||
-      @student.booked?(@start)
-      return { error: "Not available anymore." }
+    if @appointment.teacher.booked?(start) ||
+      !@appointment.teacher.available?(start) ||
+      @appointment.student.booked?(start)
+      return { error: "老师或学生不再可约。" }
     end
 
     begin
-      appointment = Appointment.create!(
-        teacher: @teacher,
-        student: @student,
-        scheduled_start: @start,
-        creator: @creator
-      )
+      @appointment.save!
     rescue Exception => e
       return { error: "Error." }
     end
 
-    appointment
+    @appointment
+  end
+
+  def cancel(canceled_by)
+    if !@appointment.cancelable?
+      error = canceled_by == @appointment.student ? "不能取消24小时以内或者已完成预约。" : "Can't cancel an appointment within 24 hours."
+      return { error: error }
+    end
+
+    @appointment.cancel
+    @appointment
+  end
+
+  def complete
+    if !@appointment.uncompleted?
+      return { error: "该预约不能完成。" }
+    end
+
+    @appointment.complete
+    @appointment
   end
 end

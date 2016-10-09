@@ -16,10 +16,12 @@ class Student::AppointmentsController < StudentController
 
   def create
     @appointment = AppointmentService.new(
-      Teacher.find(params[:teacher_id]),
-      current_student,
-      DateTime.parse(params[:start]),
-      current_student
+      Appointment.new(
+        teacher: Teacher.find(params[:teacher_id]),
+        student: current_student,
+        scheduled_start: DateTime.parse(params[:start]),
+        creator: current_student
+      )
     ).create
 
     if @appointment[:error]
@@ -32,18 +34,19 @@ class Student::AppointmentsController < StudentController
   end
 
   def update
-    @appointment = current_student.appointments.find(params[:id])
+    appointment = current_student.appointments.find(params[:id])
 
     if params[:state] == "canceled"
-      if !@appointment.cancel
-        render 'shared/error', locals: { error: "Error." }
-        return
-      end
-      AppointmentMailer.student_cancel_appointment_email(@appointment).deliver_later
+      @appointment = AppointmentService.new(appointment).cancel(current_student)
+      AppointmentMailer.student_cancel_appointment_email(@appointment).deliver_later unless @appointment[:error]
     end
 
-    if params[:state] == "completed" and !@appointment.complete
-      render 'shared/error', locals: { error: "Error." }
+    if params[:state] == "completed"
+      @appointment = AppointmentService.new(appointment).complete
+    end
+
+    if @appointment[:error]
+      render 'shared/error', locals: { error: @appointment[:error] }
     end
   end
 end
