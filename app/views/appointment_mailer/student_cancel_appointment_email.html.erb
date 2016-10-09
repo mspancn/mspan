@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>MsPan Lesson Canceled</h1>
+    <p>
+      Your lesson scheduled on <%= @appointment.scheduled_start.in_time_zone(@teacher.time_zone).strftime("%a, %m/%d at %I:%M%P") %> has been canceled by the student.
+    </p>
+  </body>
+</html>
