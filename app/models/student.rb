@@ -7,23 +7,6 @@ class Student < ApplicationRecord
   has_and_belongs_to_many :teachers
   has_many :appointments
 
-  # TODO: might need a service for this
-  def add_teacher(teacher)
-    if teachers.size < 3
-      teachers << teacher
-    else
-      false
-    end
-  end
-
-  def remove_teacher(teacher)
-    if teachers.include?(teacher)
-      teachers.delete(teacher)
-    else
-      false
-    end
-  end
-
   def scheduled_appointments
     appointments.where(state: :new)
   end
