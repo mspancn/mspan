@@ -1,0 +1,6 @@
+MsPan Lesson Scheduled!
+===============================================
+
+Hi <%= @teacher.first_name %>,
+
+You have a new lesson scheduled on <%= @appointment.scheduled_start.in_time_zone(@teacher.time_zone).strftime("%a, %m/%d at %I:%M%P") %>.

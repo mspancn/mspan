@@ -24,14 +24,22 @@ class Student::AppointmentsController < StudentController
 
     if @appointment[:error]
       render 'shared/error', locals: { error: @appointment[:error] }
+      return
     end
+
+    # TODO: might want to use DelayedJob for this later
+    AppointmentMailer.new_appointment_email(@appointment).deliver_later
   end
 
   def update
     @appointment = current_student.appointments.find(params[:id])
 
-    if params[:state] == "canceled" and !@appointment.cancel
-      render 'shared/error', locals: { error: "Error." }
+    if params[:state] == "canceled"
+      if !@appointment.cancel
+        render 'shared/error', locals: { error: "Error." }
+        return
+      end
+      AppointmentMailer.student_cancel_appointment_email(@appointment).deliver_later
     end
 
     if params[:state] == "completed" and !@appointment.complete

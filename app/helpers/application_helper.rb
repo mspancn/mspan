@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def teacher_format(time)
-    time.strftime("%m-%d %I:%M%P")
+    time.strftime("%a, %m/%d %I:%M%P")
   end
 
   def student_format(time)
