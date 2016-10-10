@@ -30,15 +30,11 @@ class Appointment < ApplicationRecord
   end
 
   def cancel
-    if cancelable?
-      update_attributes(state: :canceled, in_use: nil)
-    end
+    update_attributes!(state: :canceled, in_use: nil)
   end
 
   def complete
-    if uncompleted?
-      update_attributes(state: :completed)
-    end
+    update_attributes!(state: :completed)
   end
 
   private

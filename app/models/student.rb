@@ -33,4 +33,15 @@ class Student < ApplicationRecord
       .where('state <> ?', "canceled")
       .exists?
   end
+
+  def withdrawal(amount)
+    raise "Low Balance" if balance < amount
+    self.balance -= amount
+    save!
+  end
+
+  def deposit(amount)
+    self.balance += amount
+    save!
+  end
 end

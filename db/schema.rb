@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007002546) do
+ActiveRecord::Schema.define(version: 20161009202112) do
 
   create_table "appointments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "student_id",                     null: false
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20161007002546) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.boolean  "in_use",          default: true
+    t.integer  "price",                          null: false
     t.index ["student_id", "scheduled_start", "in_use"], name: "index_student_start_in_use", unique: true, using: :btree
     t.index ["student_id", "state", "scheduled_start"], name: "index_appointments_on_student_id_and_state_and_scheduled_start", using: :btree
     t.index ["teacher_id", "scheduled_start", "in_use"], name: "index_teacher_start_in_use", unique: true, using: :btree
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20161007002546) do
     t.datetime "updated_at",                                 null: false
     t.string   "full_name"
     t.string   "time_zone",              default: "Beijing", null: false
+    t.integer  "balance",                                    null: false
     t.index ["email"], name: "index_students_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true, using: :btree
   end
@@ -83,6 +85,7 @@ ActiveRecord::Schema.define(version: 20161007002546) do
     t.string   "first_name",                                                    null: false
     t.string   "last_name",                                                     null: false
     t.string   "time_zone",              default: "Eastern Time (US & Canada)", null: false
+    t.integer  "rate",                                                          null: false
     t.index ["email"], name: "index_teachers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true, using: :btree
   end

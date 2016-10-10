@@ -16,8 +16,18 @@ class AppointmentService
       return { error: "老师或学生不再可约。" }
     end
 
+    amount = @appointment.teacher.rate
+
+    if @appointment.student.balance <  amount
+      return { error: "余额不足，请联系管理员。" }
+    end
+
     begin
-      @appointment.save!
+      ActiveRecord::Base.transaction do
+        @appointment.price = amount
+        @appointment.save!
+        @appointment.student.withdrawal(amount)
+      end
     rescue Exception => e
       return { error: "Error." }
     end
@@ -31,7 +41,15 @@ class AppointmentService
       return { error: error }
     end
 
-    @appointment.cancel
+    begin
+      ActiveRecord::Base.transaction do
+        @appointment.cancel
+        @appointment.student.deposit(@appointment.price)
+      end
+    rescue Exception => e
+      return { error: "Error." }
+    end
+
     @appointment
   end
 
