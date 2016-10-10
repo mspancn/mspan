@@ -58,7 +58,19 @@ class AppointmentService
       return { error: "该预约不能完成。" }
     end
 
-    @appointment.complete
+    cost = CommissionService.new(@appointment).cost
+
+    begin
+      ActiveRecord::Base.transaction do
+        @appointment.cost = cost
+        @appointment.state = :completed
+        @appointment.save!
+        @appointment.teacher.deposit(cost)
+      end
+    rescue Exception => e
+      return { error: "Error." }
+    end
+
     @appointment
   end
 end

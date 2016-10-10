@@ -69,4 +69,9 @@ class Teacher < ApplicationRecord
   def available?(time)
     availabilities.where('start <= ? and end > ?', time.to_i, time.to_i).exists?
   end
+
+  def deposit(amount)
+    self.balance += amount
+    save!
+  end
 end
