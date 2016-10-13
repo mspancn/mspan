@@ -3,7 +3,13 @@
     <div class="pic">
       <%= image_tag("no_profile_image") %>
     </div>
-    <div class="info"><%= teacher.full_name %></div>
+    <div class="info">
+      <%= teacher.full_name %>
+      <br />
+      <br />
+      <br />
+      <small><%= teacher.rate %>/课</small>
+    </div>
   </div>
   <div class="actions">
     <%= link_to("预约课程",

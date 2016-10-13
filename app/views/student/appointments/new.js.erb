@@ -8,7 +8,9 @@ var title       =   '.modal-title',
     modal       =   '#ajax-modal';
 
 //i set the title through a helper function
-$(title).html('预约课程');
+$(title).html(
+  "预约课程 <small>(<%= @teacher.full_name %> <%= @teacher.rate %>)</small>"
+);
 // set the button text
 // TODO: update the page via ajax call
 $(closeButton).html('关闭').click(function() {
