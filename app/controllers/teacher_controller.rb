@@ -3,6 +3,10 @@ class TeacherController < ApplicationController
 
   around_action :set_time_zone
 
+  def audited_user
+    current_teacher
+  end
+
   private
 
     def set_time_zone

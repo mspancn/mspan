@@ -1,7 +1,8 @@
 class Appointment < ApplicationRecord
   extend Enumerize
 
-  # TODO: add appointment audit
+  audited
+
   enumerize :state, in: [:new, :canceled, :completed]
 
   belongs_to :teacher

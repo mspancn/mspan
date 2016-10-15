@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010224430) do
+ActiveRecord::Schema.define(version: 20161015134206) do
 
   create_table "appointments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "student_id",                     null: false
@@ -29,6 +29,28 @@ ActiveRecord::Schema.define(version: 20161010224430) do
     t.index ["student_id", "state", "scheduled_start"], name: "index_appointments_on_student_id_and_state_and_scheduled_start", using: :btree
     t.index ["teacher_id", "scheduled_start", "in_use"], name: "index_teacher_start_in_use", unique: true, using: :btree
     t.index ["teacher_id", "state", "scheduled_start"], name: "index_appointments_on_teacher_id_and_state_and_scheduled_start", using: :btree
+  end
+
+  create_table "audits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "auditable_id"
+    t.string   "auditable_type"
+    t.integer  "associated_id"
+    t.string   "associated_type"
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.string   "username"
+    t.string   "action"
+    t.text     "audited_changes", limit: 65535
+    t.integer  "version",                       default: 0
+    t.string   "comment"
+    t.string   "remote_address"
+    t.string   "request_uuid"
+    t.datetime "created_at"
+    t.index ["associated_id", "associated_type"], name: "associated_index", using: :btree
+    t.index ["auditable_id", "auditable_type"], name: "auditable_index", using: :btree
+    t.index ["created_at"], name: "index_audits_on_created_at", using: :btree
+    t.index ["request_uuid"], name: "index_audits_on_request_uuid", using: :btree
+    t.index ["user_id", "user_type"], name: "user_index", using: :btree
   end
 
   create_table "availabilities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

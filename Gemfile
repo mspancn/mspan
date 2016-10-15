@@ -46,6 +46,11 @@ gem 'momentjs-rails'
 # Enumerated attributes with I18n and ActiveRecord/Mongoid/MongoMapper/Sequel support
 gem 'enumerize'
 
+# Audited (previously acts_as_audited) is an ORM extension that logs all changes to your models.
+# Audited can also record who made those changes, save comments and associate models related to the changes.
+gem "audited", "~> 4.3"
+gem "rails-observers", github: 'rails/rails-observers'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
