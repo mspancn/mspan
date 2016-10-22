@@ -10,21 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015134206) do
+ActiveRecord::Schema.define(version: 20161022003554) do
 
   create_table "appointments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "student_id",                     null: false
-    t.integer  "teacher_id",                     null: false
-    t.datetime "scheduled_start",                null: false
-    t.datetime "scheduled_end",                  null: false
-    t.string   "state",                          null: false
-    t.string   "creator_type",                   null: false
-    t.integer  "creator_id",                     null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.boolean  "in_use",          default: true
-    t.integer  "price",                          null: false
-    t.integer  "cost"
+    t.integer  "student_id",                                             null: false
+    t.integer  "teacher_id",                                             null: false
+    t.datetime "scheduled_start",                                        null: false
+    t.datetime "scheduled_end",                                          null: false
+    t.string   "state",                                                  null: false
+    t.string   "creator_type",                                           null: false
+    t.integer  "creator_id",                                             null: false
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
+    t.boolean  "in_use",                                  default: true
+    t.integer  "price",                                                  null: false
+    t.integer  "teacher_rate",                                           null: false
+    t.decimal  "cost",            precision: 9, scale: 2
     t.index ["student_id", "scheduled_start", "in_use"], name: "index_student_start_in_use", unique: true, using: :btree
     t.index ["student_id", "state", "scheduled_start"], name: "index_appointments_on_student_id_and_state_and_scheduled_start", using: :btree
     t.index ["teacher_id", "scheduled_start", "in_use"], name: "index_teacher_start_in_use", unique: true, using: :btree
@@ -63,6 +64,21 @@ ActiveRecord::Schema.define(version: 20161015134206) do
     t.index ["teacher_id", "start", "end"], name: "index_availabilities_on_teacher_id_and_start_and_end", unique: true, using: :btree
   end
 
+  create_table "delayed_jobs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "priority",                 default: 0, null: false
+    t.integer  "attempts",                 default: 0, null: false
+    t.text     "handler",    limit: 65535,             null: false
+    t.text     "last_error", limit: 65535
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+  end
+
   create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "",        null: false
     t.string   "encrypted_password",     default: "",        null: false
@@ -93,23 +109,23 @@ ActiveRecord::Schema.define(version: 20161015134206) do
   end
 
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "email",                  default: "",                           null: false
-    t.string   "encrypted_password",     default: "",                           null: false
+    t.string   "email",                                          default: "",                           null: false
+    t.string   "encrypted_password",                             default: "",                           null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,                            null: false
+    t.integer  "sign_in_count",                                  default: 0,                            null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                                    null: false
-    t.datetime "updated_at",                                                    null: false
-    t.string   "first_name",                                                    null: false
-    t.string   "last_name",                                                     null: false
-    t.string   "time_zone",              default: "Eastern Time (US & Canada)", null: false
-    t.integer  "rate",                                                          null: false
-    t.integer  "balance",                                                       null: false
+    t.datetime "created_at",                                                                            null: false
+    t.datetime "updated_at",                                                                            null: false
+    t.string   "first_name",                                                                            null: false
+    t.string   "last_name",                                                                             null: false
+    t.string   "time_zone",                                      default: "Eastern Time (US & Canada)", null: false
+    t.integer  "rate",                                                                                  null: false
+    t.decimal  "balance",                precision: 9, scale: 2,                                        null: false
     t.index ["email"], name: "index_teachers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true, using: :btree
   end

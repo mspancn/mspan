@@ -16,6 +16,6 @@ class CommissionService
       range === @appointment.teacher.completed_appointments.count
     }.last
 
-    (@appointment.price * percentage).ceil
+    (@appointment.teacher_rate * percentage).round(2)
   end
 end
