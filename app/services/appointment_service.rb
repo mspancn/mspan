@@ -34,6 +34,9 @@ class AppointmentService
       return { error: "Error." }
     end
 
+    AppointmentService.new(@appointment)
+      .delay(run_at: 24.hours.from_now(@appointment.scheduled_start))
+      .complete
     @appointment
   end
 

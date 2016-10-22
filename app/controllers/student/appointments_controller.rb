@@ -29,7 +29,6 @@ class Student::AppointmentsController < StudentController
       return
     end
 
-    # TODO: might want to use DelayedJob for this later
     AppointmentMailer.new_appointment_email(@appointment).deliver_later
   end
 
