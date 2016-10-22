@@ -16,7 +16,8 @@ class AppointmentService
       return { error: "老师或学生不再可约。" }
     end
 
-    amount = @appointment.teacher.rate
+    teacher_rate = @appointment.teacher.rate
+    amount = ExchangeService.dollar_to_yuan(teacher_rate)
 
     if @appointment.student.balance <  amount
       return { error: "余额不足，请联系管理员。" }
@@ -25,6 +26,7 @@ class AppointmentService
     begin
       ActiveRecord::Base.transaction do
         @appointment.price = amount
+        @appointment.teacher_rate = teacher_rate
         @appointment.save!
         @appointment.student.withdrawal(amount)
       end

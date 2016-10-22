@@ -9,7 +9,7 @@ var title       =   '.modal-title',
 
 //i set the title through a helper function
 $(title).html(
-  "预约课程 <small>(<%= @teacher.full_name %> <%= @teacher.rate %>)</small>"
+  "预约课程 <small>(<%= @teacher.full_name %> <%= ExchangeService.dollar_to_yuan(@teacher.rate) %>元/课)</small>"
 );
 // set the button text
 // TODO: update the page via ajax call
