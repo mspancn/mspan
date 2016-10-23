@@ -68,8 +68,7 @@ class AppointmentService
     begin
       ActiveRecord::Base.transaction do
         @appointment.cost = cost
-        @appointment.state = :completed
-        @appointment.save!
+        @appointment.complete
         @appointment.teacher.deposit(cost)
       end
     rescue Exception => e

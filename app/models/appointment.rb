@@ -31,11 +31,17 @@ class Appointment < ApplicationRecord
   end
 
   def cancel
-    update_attributes!(state: :canceled, in_use: nil)
+    self.with_lock do
+      raise "Can't cancel" unless cancelable?
+      update_attributes!(state: :canceled, in_use: nil)
+    end
   end
 
   def complete
-    update_attributes!(state: :completed)
+    self.with_lock do
+      raise "Can't complete" unless uncompleted?
+      update_attributes!(state: :completed)
+    end
   end
 
   private
