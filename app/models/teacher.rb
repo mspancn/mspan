@@ -92,8 +92,10 @@ class Teacher < ApplicationRecord
   end
 
   def deposit(amount)
-    self.balance += amount
-    save!
+    self.with_lock do
+      self.balance += amount
+      save!
+    end
   end
 
   private
