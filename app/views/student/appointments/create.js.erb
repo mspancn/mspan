@@ -1,4 +1,4 @@
 $("table").find("[data-start='" + <%= @appointment.scheduled_start.to_i %> + "']")
   .addClass("btn-success disabled success-border");
-$("#balance").html("余额 " + <%= current_student.balance %>);
+$("#balance").html("<%= number_to_currency(@appointment.student.balance, unit: '¥', separator: ',', delimiter: '', precision: 0) %>");
 $.jGrowl('预约成功!');

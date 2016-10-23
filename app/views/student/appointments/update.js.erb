@@ -1,6 +1,6 @@
 <% if @appointment.state.canceled? %>
   $("#cancel-appointment-<%= @appointment.id %>").addClass("hidden");
-  $("#balance").html("<%= number_to_currency(current_student.balance, unit: '¥', separator: ',', delimiter: '', precision: 0) %>");
+  $("#balance").html("<%= number_to_currency(@appointment.student.balance, unit: '¥', separator: ',', delimiter: '', precision: 0) %>");
   $.jGrowl('成功取消预约');
 <% end %>
 
