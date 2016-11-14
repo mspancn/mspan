@@ -54,6 +54,10 @@ gem "rails-observers", github: 'rails/rails-observers'
 # Delayed::Job (or DJ) encapsulates the common pattern of asynchronously executing longer tasks in the background.
 gem 'delayed_job_active_record'
 
+# unicorn is an HTTP server for Rack applications designed to only serve fast clients on low-latency,
+# high-bandwidth connections and take advantage of features in Unix/Unix-like kernels.
+gem 'unicorn'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
