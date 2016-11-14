@@ -17,5 +17,7 @@ Rails.application.routes.draw do
     resources :appointments, only: [:index, :update]
   end
 
+  match 'status', :to => 'home#status', via: :get
+
   root to: 'home#index'
 end
