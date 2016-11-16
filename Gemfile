@@ -54,6 +54,9 @@ gem "rails-observers", github: 'rails/rails-observers'
 # Delayed::Job (or DJ) encapsulates the common pattern of asynchronously executing longer tasks in the background.
 gem 'delayed_job_active_record'
 
+# Daemons provides an easy way to wrap existing ruby scripts (for example a self-written server) to be run as a daemon and to be controlled by simple start/stop/restart commands.
+gem 'daemons'
+
 # unicorn is an HTTP server for Rack applications designed to only serve fast clients on low-latency,
 # high-bandwidth connections and take advantage of features in Unix/Unix-like kernels.
 gem 'unicorn'
