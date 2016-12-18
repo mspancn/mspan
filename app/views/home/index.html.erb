@@ -10,6 +10,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		<!--[if lt IE 9]>
+  			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  			</script>
+		<![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="MsPan致力于为英语爱好者和出国党打造最优质线上一对一北美外教口语平台, 精英引领, 伴随始终。"／>
         <META NAME="AUTHOR" CONTENT="MsPan">
@@ -99,10 +103,12 @@
 
 		<!--Welcome section-->
         <section class="waypoint video-block fullscreen" data-hash="welcome">
-				<video id="womanvideo" autoplay="autoplay" muted="muted" loop="loop" poster="img/woman_front.jpg" 
-				class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
-					<source data-src="video/woman-small.mov" type="video/mp4">
-					<source data-src="video/woman-small.ogm" type="video/ogm">
+<!-- 				<video id="womanvideo" autoplay="autoplay" muted="muted" loop="loop" poster="img/woman_front.jpg" 
+				class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto"> -->
+				<video id="womanvideo" autoplay="autoplay" muted="muted" loop="loop" poster    ="assets/home/woman_front.jpg" 
+			 	    class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
+					<source data-src="assets/home/woman-small.mov" type="video/mp4">
+					<source data-src="assets/home/woman-small.ogm" type="video/ogm">
 			    </video>
 			<div class="text-inner">
 				<div class="container">
@@ -166,10 +172,10 @@
 			</div> -->
 
 			<div class="video-block features-watch alt-bg" style="padding-top:189px; padding-bottom:173px;">
-			    <video id="manvideo" autoplay="autoplay" muted="muted" loop="loop" poster="img/man_front.jpg" 
+			    <video id="manvideo" autoplay="autoplay" muted="muted" loop="loop" poster="assets/home/man_front.jpg" 
 			           class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
-				    <source type="video/mp4" data-src="video/man-small.mov">
-				    <source type="video/ogm" data-src="video/man-small.ogm">
+				    <source type="video/mp4" data-src="assets/home/man-small.mov">
+				    <source type="video/ogm" data-src="assets/home/man-small.ogm">
 			    </video>
 			    <div class="overlay color-2" style="opacity:0.5;"></div>
 		    </div>
@@ -210,7 +216,8 @@
 													<div class="top-title-gallery animated-pf "><h2>Arwen</h2></div>
 													<div class="entry-content animated-pf ">哥伦比亚大学, 188元/小时</div>
 												</div></div></div>
-										<img src="img/teacher1.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher1.jpg", alt: "", class: "img-responsive") %>
+										<!-- <img src="img/teacher1.jpg" class="img-responsive" alt="" /> -->
 								</div>
 							</article>
 							<article class="portfolios_listing full ajaxed alt-animation" data-category="美国名校大学生">
@@ -219,7 +226,8 @@
 													<div class="top-title-gallery animated-pf "><h2>Amia</h2></div>
 													<div class="entry-content animated-pf ">纽约大学, 168元/小时</div>
 												</div></div></div>
-										<img src="img/teacher2.jpg" class="img-responsive" alt="" />
+										<!-- <img src="img/teacher2.jpg" class="img-responsive" alt="" /> -->
+										<%= image_tag("home/teacher2.jpg", alt: "",class: "img-responsive") %>
 								</div>
 							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="专业ESL教师">
 								<div class="entry-image">
@@ -228,7 +236,8 @@
 													<div class="top-title-gallery animated-pf "><h2>Tiffany</h2></div>
 													<div class="entry-content animated-pf ">耶鲁大学，218元/小时</div>
 												</div></div></div>
-										<img src="img/teacher3.jpg" class="img-responsive" alt="" />
+										<!-- <img src="img/teacher3.jpg" class="img-responsive" alt="" /> -->
+										<%= image_tag("home/teacher3.jpg", alt: "",class: "img-responsive") %>
 									<!-- </a> -->
 									</div>
 							</article><article class="portfolios_listing full ajaxed alt-animation" data-category="美国名校大学生">
@@ -237,7 +246,7 @@
 													<div class="top-title-gallery animated-pf "><h2>Rachel</h2></div>
 													<div class="entry-content animated-pf ">芝加哥大学，218元/小时</div>
 												</div></div></div>
-										<img src="img/teacher4.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher4.jpg", alt: "",class: "img-responsive") %>
 								</div>
 							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="美国名校大学生">
 								<div class="entry-image">
@@ -245,7 +254,7 @@
 													<div class="top-title-gallery animated-pf "><h2>Adam</h2></div>
 													<div class="entry-content animated-pf ">普林斯顿大学，168元/小时</div>
 												</div></div></div>
-										<img src="img/teacher5.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher5.jpg", alt: "",class: "img-responsive") %>
 								</div>
 							</article>
 							<article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="美国名校大学生">
@@ -254,7 +263,7 @@
 													<div class="top-title-gallery animated-pf "><h2>Alex</h2></div>
 													<div class="entry-content animated-pf ">波士顿大学，188元/小时</div>
 												</div></div></div>
-										<img src="img/teacher6.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher6.jpg", alt: "",class: "img-responsive") %>
 								</div>
 							</article>
 							<article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="美国名校大学生">
@@ -263,7 +272,7 @@
 													<div class="top-title-gallery animated-pf "><h2>Allie</h2></div>
 													<div class="entry-content animated-pf ">纽约大学，218元/小时</div>
 												</div></div></div>
-										<img src="img/teacher7.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher7.jpg", alt: "",class: "img-responsive") %>
 								</div>
 							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="专业ESL教师">
 								<div class="entry-image">
@@ -271,7 +280,7 @@
 													<div class="top-title-gallery animated-pf "><h2>Michelle</h2></div>
 													<div class="entry-content animated-pf ">哈佛大学，218元/小时</div>
 												</div></div></div>
-										<img src="img/teacher8.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher8.jpg", alt: "",class: "img-responsive") %>
 								</div>
 							</article><article class="portfolios_listing full ajaxed alt-animation" data-category="美国名校大学生">
 								<div class="entry-image">
@@ -279,7 +288,7 @@
 													<div class="top-title-gallery animated-pf "><h2>Bryant</h2></div>
 													<div class="entry-content animated-pf ">康奈尔大学，188元/小时</div>
 												</div></div></div>
-										<img src="img/teacher9.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher9.jpg", alt: "",class: "img-responsive") %>
 								</div>
 							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="专业ESL教师">
 								<div class="entry-image">
@@ -287,7 +296,7 @@
 													<div class="top-title-gallery animated-pf "><h2>Maddie</h2></div>
 													<div class="entry-content animated-pf ">芝加哥大学，168元/小时</div>
 												</div></div></div>
-										<img src="img/teacher10.jpg" class="img-responsive" alt="" />
+										<%= image_tag("home/teacher10.jpg", alt: "",class: "img-responsive") %>
 						                <!-- <img src="http://placehold.it/250x270" class="img-responsive" alt="" /> -->
 								</div>
 							</article>
@@ -338,7 +347,8 @@
 		                                <i class="fa fa-plus fa-3x"></i>
 		                            </div>
 		                        </div>
-		                        <img src="img/dinning.jpg" class="img-responsive" alt="">
+		                        
+		                        <img src="assets/home/dinning.jpg" class="img-responsive" alt="">
 		                    </a>
 		                    <div class="portfolio-caption"><h4>北美吃货</h4></div>
 	                    </div>
@@ -349,7 +359,8 @@
 		                                <i class="fa fa-plus fa-3x"></i>
 		                            </div>
 		                        </div>
-		                        <img src="img/nycmap.jpg" class="img-responsive" alt="">
+		                        <%= image_tag("home/nycmap.jpg", alt: "",class: "img-responsive") %>
+		                        <!-- <img src="img/nycmap.jpg" class="img-responsive" alt=""> -->
 		                    </a>
 		                    <div class="portfolio-caption"><h4>玩转美国</h4></div>
 		                </div>
@@ -361,7 +372,8 @@
 		                                <i class="fa fa-plus fa-3x"></i>
 		                            </div>
 		                        </div>
-		                        <img src="img/campus.jpg" class="img-responsive" alt="">
+		                        <%= image_tag("home/campus.jpg", alt: "",class: "img-responsive") %>
+		                        <!-- <img src="img/campus.jpg" class="img-responsive" alt=""> -->
 		                    </a>
 		                    <div class="portfolio-caption"><h4>美国校园</h4></div>
 		                </div>
@@ -424,7 +436,8 @@
 								<div class="flip-container" data-animation="flipInY slow" data-delay="0.4">
 									<div class="flipper">
 										<div class="front">
-											<img src="img/snow.jpg" class="img-responsive" alt="" />
+										    <%= image_tag("home/snow.jpg", alt: "",class: "img-responsive") %>
+											<!-- <img src="img/snow.jpg" class="img-responsive" alt="" /> -->
 											<span class="author-flip">
 												<a href="#">Ms. Pan</a>
 												<span class="post">Chief Product Designer</span>
@@ -450,7 +463,8 @@
 								<div class="flip-container" data-animation="flipInY slow" data-delay="0.4">
 									<div class="flipper">
 										<div class="front">
-											<img src="img/mike.jpg" class="img-responsive" alt="" />
+										    <%= image_tag("home/mike.jpg", alt: "",class: "img-responsive") %>
+											<!-- <img src="img/mike.jpg" class="img-responsive" alt="" /> -->
 											<span class="author-flip">
 												<a href="#">Mike Chen</a>
 												<span class="post">CEO</span>
@@ -472,7 +486,8 @@
 								<div class="flip-container" data-animation="flipInY slow" data-delay="0.4">
 									<div class="flipper">
 										<div class="front">
-											<img src="img/bo.jpg" class="img-responsive" alt="" />
+										    <%= image_tag("home/bo.jpg", alt: "",class: "img-responsive") %>
+											<!-- <img src="img/bo.jpg" class="img-responsive" alt="" /> -->
 											<span class="author-flip">
 												<a href="#">Bo Liang</a>
 												<span class="post">CTO</span>
@@ -505,7 +520,7 @@
       <!--Clients section-->
 	  <section class="waypoint parallax-section" id="clients" data-hash="clients">
 			<div class="parallax-holder">
-				<div class="paralayer" data-paraspeed="0.5" style="background-image: url(img/nyc.jpg);"></div>
+				<div class="paralayer" data-paraspeed="0.5" style="background-image: url(assets/home/nyc.jpg);"></div>
 			</div>
 			<div class="alt-testimonial testimonial-full alternative-arrows">
 				<div class="testimonials-slideshow" data-cycle-pause-on-hover="true" data-cycle-fx="fade" data-cycle-timeout="10000" data-cycle-slides="> div" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-prev=".prev" data-cycle-next=".next" data-cycle-log="false"  data-animation="fadeIn" data-delay="0">
@@ -708,11 +723,13 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="tAc">
-								<i>
-								    <img src="img/weixinIcon.png" class="img-responsive" style="margin: 0 auto; height:30px; width: 30px " alt="">
+								<i> 
+								    <%= image_tag("home/weixinIcon.png", alt: "", class: "img-responsive", style: "margin: 0 auto; height:30px; width: 30px ") %>
+								    <!-- <img src="img/weixinIcon.png" class="img-responsive" style="margin: 0 auto; height:30px; width: 30px " alt=""> -->
 								</i>
 								<div class="spacer" style="height:35px;"></div>
-                                <img src="img/wechat.jpg" class="img-responsive wechatBarCode" style="margin: 0 auto;" alt="">
+								    <%= image_tag("home/wechat.jpg", alt: "", class: "img-responsive wechatBarCode", style: "margin: 0 auto;") %>
+                                <!-- <img src="img/wechat.jpg" class="img-responsive wechatBarCode" style="margin: 0 auto;" alt=""> -->
 							</div>						
 						</div>
 					</div>
@@ -1116,11 +1133,8 @@
 	        </div>
        </div>
 
-		<!-- <script type="text/javascript" src='js/jquery.min.js'></script>	 -->
+		<script type="text/javascript" src='assets/home/jquery.min.js'></script>	
 		
-
-
-
 		<!-- <script type="text/javascript" src='js/bootstrap.min.js'></script> -->
 		<!-- <script type="text/javascript" src='js/imagesloaded.pkgd.min.js'></script>	
 		<script type="text/javascript" src='js/isotope.min.js'></script>	
@@ -1148,7 +1162,7 @@
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 		
-		<!-- <script>
+		<script>
 			/* <![CDATA[ */
 			var loadPageScripts = [
 				'imagesloaded.pkgd.min.js',
@@ -1171,7 +1185,7 @@
 			/* ]]> */
 		</script>
 
-		<script type="text/javascript" src='js/script.js'></script> -->
+		<script type="text/javascript" src='assets/home/script.js'></script>
 
         <script>
 			$(document).ready(function(){
