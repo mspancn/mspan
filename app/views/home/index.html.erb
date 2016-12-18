@@ -1,4 +1,1235 @@
-<div>Home page</div>
+<!-- <div>Home page</div>
 
 <%= link_to "Teacher Log In", new_teacher_session_path %>
 <%= link_to "Student Log In", new_student_session_path %>
+ -->
+
+
+ <!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MsPan致力于为英语爱好者和出国党打造最优质线上一对一北美外教口语平台, 精英引领, 伴随始终。"／>
+        <META NAME="AUTHOR" CONTENT="MsPan">
+        <META NAME="COPYRIGHT" CONTENT="&copy; 2016 MsPan">
+
+		<title>MsPan － 北美外教线上1对1</title>
+
+<%= csrf_meta_tags %>
+
+        <link rel="shortcut icon" href="assets/home/favicon.png" type="image/png">
+
+		<!-- <link rel="stylesheet" href="css/bootstrap.css" media="screen" />
+		<link rel="stylesheet" href="css/styles.css" media="screen" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" media="screen" />
+		<link rel="stylesheet" href="css/magnific-popup.css" media="screen" />
+		<link rel="stylesheet" href="css/retina.css" media="screen" />
+		<link rel="stylesheet" href="css/media.css" media="screen" />
+		<link rel="stylesheet" href="css/animated.min.css" media="screen" />
+		<link rel="shortcut icon" href="img/mspanicon.jpg" type="image/jpg"> -->	
+
+		<!-- <script type="text/javascript" src='js/modernizr.min.js'></script> -->
+	    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-86757428-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
+<%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
+
+	</head>		
+
+	<body>
+		<div class="loader" style="background-color:black">
+		     <div class="bar" style="text-transform:capitalize;"><strong style="color:#fed136;">MsPan</strong><span class="progress"><span>loading...</span></span></div></div>
+		
+		<!--Welcome section-->
+		<header class="alt"  data-animation="fadeIn fast" data-delay="0"> <!--alt class for no bg -->
+			<div class="container">
+				<div class="row">
+					<!--Company name-->
+					<div class="col-md-3 for-mobile-header-1"><!-- for-menu-header-1 class for fullwidth dropdown menu on devices -->
+						<h1><a href="#pagetop" style="text-transform:capitalize; color:#fed136;">MsPan</a></h1>
+					</div>
+					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix">  <!-- for-menu-header-2 class for fullwidth dropdown menu on devices -->
+							<!--Menu block-->
+							<nav class="main-menu clearfix navbar navbar-default">
+								<!--menu button on responsive -->
+								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
+									<button type="button" class="navbar-toggle">									
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">菜单导航</a> 
+								</div>
+							</nav>
+							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
+								<ul class="sf-menu superfish-li-relative">
+									<li><a href="#services">核心服务</a></li>
+									<li><a href="#portfolio">北美师资</a></li>
+									<li><a href="#course">人气课程</a></li>
+									<li class="dropdown">
+										<a href="#about">关于我们</a>
+										<ul class="submenu"> <!--First level submenu-->
+											<li><a href="#about">关于MsPan</a></li>
+											<li><a href="about.html">更多关于</a></li>
+											<li><a href="guidance.html">学员指南</a></li>
+											<li><a href="contact.html">联系我们</a></li>
+										</ul>
+									</li>				
+									<!-- <li class="menu-item-border"><a href="＃">注册</a></li> <ul class="nav navbar-nav navbar-right"> -->
+									<li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span>申请上课 </a></li>
+                                   <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li>
+                                   <li><a href="#" id="loginBtn" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
+                                   <li><a href="teacher.html" class="link-header link-underline-brand" style="text-transform:capitalize; font-size:13px;">Apply to Teach</a></li>
+								</ul>
+							</div>
+						</div></div>
+				</div>
+			</div>
+		</header>
+
+		<!--Welcome section-->
+        <section class="waypoint video-block fullscreen" data-hash="welcome">
+				<video id="womanvideo" autoplay="autoplay" muted="muted" loop="loop" poster="img/woman_front.jpg" 
+				class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
+					<source data-src="video/woman-small.mov" type="video/mp4">
+					<source data-src="video/woman-small.ogm" type="video/ogm">
+			    </video>
+			<div class="text-inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 clearfix">
+							<ul class="features" data-animation="fadeIn" data-delay="0.4">
+								<li>北美</li><li>常春藤</li><li>名校</li></ul>
+							<h6><a href="#services" class="to-text" data-animation="flipInX" data-delay="0">美国外教线上一对一口语</a></h6>
+							<span class="learn-more"   data-animation="fadeInUp" data-delay="0.6">-  英语当作母语说 -</span>
+							<a id = "applyToTeach" href="teacher.html" target="_blank"><span class="learn-more"   data-animation="fadeInUp" data-delay="0.6">* Apply To Teach *</span></a>
+						</div>
+					</div>
+					<div class="spacer" style="height:80px;"></div>
+                    <button type="button" class="btn btn-lg btn-primary">
+                         <a href="https://www.wenjuan.com/s/6JBJJv/" target="_blank"><span style="color:black">开始学习</span></a>
+                    </button>
+				</div>
+			</div>
+			<div class="overlay color-2" style="opacity:0.5;"></div>
+		</section>
+
+		<!--Services section-->
+		<section class="waypoint" data-hash="services">
+			<!--Features block-->
+			<div class="container">
+				<div class="spacer"  style="height:82px;"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="tAc">
+							<h2 class="big-title"    data-animation="fadeInUp slow" data-delay="0" style="text-transform:capitalize;">我们的核心服务</h2>
+							<!-- <p class="adaptBig" style="max-width:500px; margin:0 auto; padding-bottom:63px;"    data-animation="fadeInUp slow" data-delay="0.2">MsPan为你精心定制美国外教</p> -->
+							<p class="adaptBig" style="max-width:500px; margin:0 auto; padding-bottom:63px;"    data-animation="fadeInUp slow" data-delay="0.2">MsPan 为您精挑细选严格把关</p>
+						</div>
+					</div>
+					<div class="col-sm-4 top-features content-element" >
+					    <i class="fa fa-trophy feature"  data-animation="fadeInUp " data-delay="0.3"></i>
+						<h3 data-animation="fadeInUp " data-delay="0.5">常春藤名校外教一对一</h3>
+						
+						<p  class="adaptBig" data-animation="fadeInUp " data-delay="0.7">
+						MsPan北美教师组严格把关，精挑细选的美国常春藤名校外教，知识广泛，教学严谨，发音标准，亲切幽默。</p>
+					</div>
+					<div class="col-sm-4 top-features content-element">
+						<i class="fa fa-rocket feature"  data-animation="fadeInUp " data-delay="0.3"></i>
+						<h3 data-animation="fadeInUp " data-delay="0.5">量身定制精品课程</h3>
+						<p class="adaptBig" data-animation="fadeInUp " data-delay="0.7" >
+						教学顾问全程陪伴，为每一位学生提供详尽课程计划与建议，架起外教与学生家长之间必要的沟通桥梁。</p>
+					</div>
+					<div class="col-sm-4 top-features content-element" >
+						<i class="fa fa-tablet feature"  data-animation="fadeInUp " data-delay="0.3"></i>
+						<h3 data-animation="fadeInUp " data-delay="0.5">随时随地一键约课</h3>
+						<p class="adaptBig" data-animation="fadeInUp " data-delay="0.7">
+						MsPan教务团队保证每一位教师时间安排一目了然，让您随心所欲，自主选择，高效利用碎片时间，养成自主学习习惯。</p>
+					</div>
+				</div>
+				<div class="spacer" style="height:41px;"></div>
+			</div>
+
+			<!--Img block-->
+			<!-- <div class="img-block features-watch alt-bg" style="padding-top:189px; padding-bottom:173px;">
+				<div class="overlay" style="opacity:0.3;"></div>
+			</div> -->
+
+			<div class="video-block features-watch alt-bg" style="padding-top:189px; padding-bottom:173px;">
+			    <video id="manvideo" autoplay="autoplay" muted="muted" loop="loop" poster="img/man_front.jpg" 
+			           class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
+				    <source type="video/mp4" data-src="video/man-small.mov">
+				    <source type="video/ogm" data-src="video/man-small.ogm">
+			    </video>
+			    <div class="overlay color-2" style="opacity:0.5;"></div>
+		    </div>
+
+
+		</section>
+
+
+		<!--Portfolio section-->
+		<section class="waypoint"  data-hash="portfolio">
+			<div class="container">
+				<div class="spacer" style="height:130px;"></div>
+				<div class="container">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="tAc">
+								<h2 class="big-title"  data-animation="fadeInUp slow" data-delay="0">北美明星教师团队</h2>
+								<p class="adaptBig" style="max-width:800px; margin:0 auto;" data-animation="fadeInUp slow" data-delay="0.2">
+									MsPan 外教均来自于北美常春藤等名校
+								</p>
+								<p class="adaptBig" style="max-width:800px; margin:0 auto;"  data-animation="fadeInUp slow" data-delay="0.2">用认真负责的态度辅导学员学习口语，了解美国文化。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="spacer" style="height:60px;"></div>
+			</div>	
+
+			<!-- <div id="ajaxed_content"></div> -->
+			<div class="portfolio">
+				<!--Images block-->
+				<div class="entry-content">
+					<div class="full isotope-bg">
+						<div class="clearfix portfolioContainer"   data-animation="fadeIn" data-delay="0">
+							<article class="portfolios_listing full ajaxed alt-animation" data-category="专业ESL教师">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Arwen</h2></div>
+													<div class="entry-content animated-pf ">哥伦比亚大学, 188元/小时</div>
+												</div></div></div>
+										<img src="img/teacher1.jpg" class="img-responsive" alt="" />
+								</div>
+							</article>
+							<article class="portfolios_listing full ajaxed alt-animation" data-category="美国名校大学生">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Amia</h2></div>
+													<div class="entry-content animated-pf ">纽约大学, 168元/小时</div>
+												</div></div></div>
+										<img src="img/teacher2.jpg" class="img-responsive" alt="" />
+								</div>
+							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="专业ESL教师">
+								<div class="entry-image">
+								<!-- <a class="thumb" data-title="Porftolio Post with Ajax" data-lightbox="gallery-main-image" href="ajax_portfolio_item_sidebar.html"> -->
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Tiffany</h2></div>
+													<div class="entry-content animated-pf ">耶鲁大学，218元/小时</div>
+												</div></div></div>
+										<img src="img/teacher3.jpg" class="img-responsive" alt="" />
+									<!-- </a> -->
+									</div>
+							</article><article class="portfolios_listing full ajaxed alt-animation" data-category="美国名校大学生">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Rachel</h2></div>
+													<div class="entry-content animated-pf ">芝加哥大学，218元/小时</div>
+												</div></div></div>
+										<img src="img/teacher4.jpg" class="img-responsive" alt="" />
+								</div>
+							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="美国名校大学生">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Adam</h2></div>
+													<div class="entry-content animated-pf ">普林斯顿大学，168元/小时</div>
+												</div></div></div>
+										<img src="img/teacher5.jpg" class="img-responsive" alt="" />
+								</div>
+							</article>
+							<article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="美国名校大学生">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Alex</h2></div>
+													<div class="entry-content animated-pf ">波士顿大学，188元/小时</div>
+												</div></div></div>
+										<img src="img/teacher6.jpg" class="img-responsive" alt="" />
+								</div>
+							</article>
+							<article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="美国名校大学生">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Allie</h2></div>
+													<div class="entry-content animated-pf ">纽约大学，218元/小时</div>
+												</div></div></div>
+										<img src="img/teacher7.jpg" class="img-responsive" alt="" />
+								</div>
+							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="专业ESL教师">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Michelle</h2></div>
+													<div class="entry-content animated-pf ">哈佛大学，218元/小时</div>
+												</div></div></div>
+										<img src="img/teacher8.jpg" class="img-responsive" alt="" />
+								</div>
+							</article><article class="portfolios_listing full ajaxed alt-animation" data-category="美国名校大学生">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Bryant</h2></div>
+													<div class="entry-content animated-pf ">康奈尔大学，188元/小时</div>
+												</div></div></div>
+										<img src="img/teacher9.jpg" class="img-responsive" alt="" />
+								</div>
+							</article><article class="portfolios_listing full ajaxed alt-animation hidden-xs hidden-sm" data-category="专业ESL教师">
+								<div class="entry-image">
+										<div class="overlay-alt"><div class="wrapper"><div class="cell-2">
+													<div class="top-title-gallery animated-pf "><h2>Maddie</h2></div>
+													<div class="entry-content animated-pf ">芝加哥大学，168元/小时</div>
+												</div></div></div>
+										<img src="img/teacher10.jpg" class="img-responsive" alt="" />
+						                <!-- <img src="http://placehold.it/250x270" class="img-responsive" alt="" /> -->
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+				<!-- <a class="arrow-bottom" href="portfolio_all.html"    data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a> -->
+<!-- 				<a class="arrow-bottom" href="#" id="moreTeachers" data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a> -->
+                <a class="arrow-bottom" href="https://www.wenjuan.com/s/6JBJJv/" target="_blank" data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a>
+			</div>
+			<div class="spacer" style="height:79px;"></div>
+		</section>
+
+		<!--Course section -->
+		<section class="waypoint" id="course" data-hash="course">
+			<!--Simple text block-->
+			<div class="container">
+			    <div class="spacer" style="height:100px;"></div>
+				<div id="create">
+					<!-- <div class="spacer" style="height:80px;"></div> -->
+					<div class="container">
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="tAc">
+									<h2 class="big-title"  data-animation="fadeInUp slow" data-delay="0">人气课程</h2>
+									<p class="adaptBig" style="max-width:800px; margin:0 auto;" data-animation="fadeInUp slow" data-delay="0.2">
+										MsPan 精心打造进阶式课程计划
+									</p>
+									<p class="adaptBig" style="max-width:800px; margin:0 auto;" data-animation="fadeInUp slow" data-delay="0.2">
+									    为您提供最有效的方法，最实用的资源，最宝贵的经验。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="spacer" style="height:83px;"></div>
+				</div>
+			</div>
+			<!--Steps block-->
+			<div class="alt-bg-2">
+				<div class="spacer" style="height:60px;"></div>
+				<div class="container">
+					<div class="row">
+					    <div class="col-sm-4 portfolio-item" data-animation="fadeInScale " data-delay="0.4">
+		                    <a href="#courseModal1" class="portfolio-link" data-toggle="modal">
+		                        <div class="portfolio-hover">
+		                            <div class="portfolio-hover-content">
+		                                <i class="fa fa-plus fa-3x"></i>
+		                            </div>
+		                        </div>
+		                        <img src="img/dinning.jpg" class="img-responsive" alt="">
+		                    </a>
+		                    <div class="portfolio-caption"><h4>北美吃货</h4></div>
+	                    </div>
+		                <div class="col-sm-4 portfolio-item" data-animation="fadeInScale " data-delay="0.4">
+		                    <a href="#courseModal2" class="portfolio-link" data-toggle="modal">
+		                        <div class="portfolio-hover">
+		                            <div class="portfolio-hover-content">
+		                                <i class="fa fa-plus fa-3x"></i>
+		                            </div>
+		                        </div>
+		                        <img src="img/nycmap.jpg" class="img-responsive" alt="">
+		                    </a>
+		                    <div class="portfolio-caption"><h4>玩转美国</h4></div>
+		                </div>
+
+		                <div class="col-sm-4 portfolio-item" data-animation="fadeInScale " data-delay="0.4">
+		                    <a href="#courseModal3" class="portfolio-link" data-toggle="modal">
+		                        <div class="portfolio-hover">
+		                            <div class="portfolio-hover-content">
+		                                <i class="fa fa-plus fa-3x"></i>
+		                            </div>
+		                        </div>
+		                        <img src="img/campus.jpg" class="img-responsive" alt="">
+		                    </a>
+		                    <div class="portfolio-caption"><h4>美国校园</h4></div>
+		                </div>
+
+						<div class="tAc">
+							<h3 class="content-title-area black-decor" data-animation="fadeIn slow" data-delay="0.2" style="margin-top:30px">
+							    <!-- <a href="#" id="moreLessons">了解更多</a> -->
+							    <a href="https://www.wenjuan.com/s/6JBJJv/" target="_blank">了解更多</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="spacer" style="height:15px;"></div>
+			</div>
+	    </section>
+    
+        <!--About section 2-->
+	    <section class="waypoint" id="about" data-hash="about">
+			<div class="spacer" style="height:130px;"></div>
+			<!--Simple text block-->
+			<div class="container">
+				<div class="row" id="indexAbout">
+					<div class="tAc">
+						<h2 class="big" style="padding-bottom:33px; text-transform:capitalize;" data-animation="fadeInUp slow" data-delay="0">关于 MsPan</h2>
+						<div class="clearfix">
+							<div class="col-md-6" data-animation="fadeInUp slow" data-delay="0.2">
+							       <p class="adaptBig" style="text-align:justify;">
+							       ＭsPan是一家提供线上外教一对一英语口语浸入式学习体验的教学服务机构，为您的英语能力提升、留学准备和英语学业咨询等方面提供全方位指导。<br>
+									<!-- MsPan是一家致力于为英语爱好者和出国党打造最优质线上一对一外教口语平台的互联网教育公司。 <br> -->
+									MsPan的品牌创始人Ms. Pan毕业于纽约大学教育系，拿到英语教学和对外汉语双硕士学位后成功考取纽约州教师资格证。 
+									毕业后她在纽约顶级公立高中任职一线教师，短短几年她的学生已遍布哈佛，耶鲁等顶尖名校。</p>
+							</div>
+							<div class="col-md-6" data-animation="fadeInUp slow" data-delay="0.2">
+							       <p class="adaptBig" style="text-align:justify;">
+							        MsPan的外教100%来自北美的Native Speaker，经过严格选拔，我们提供两大类外教人群: <br> <br>
+									1）美国常春藤等名校在校大学生，平易近人，年轻风趣，知识渊博， 热情耐心。 <br> 
+									2）ESL Certified老师，专业教师资格认证，多年教学经验，值得信赖托付。 </p>
+							</div>
+						</div>
+						<div class="buttons" style="padding-top:16px;"    data-animation="fadeInUp slow" data-delay="0.3">
+							<a href="about.html" class="button7 btn-1" style="margin-right:6px;">更多关于</a>
+							<a href="#meet_team" class="button5">团队成员</a>
+						</div>
+					</div>
+				</div>
+				<div class="spacer" style="height:80px;"></div>
+			</div>
+	    </section>
+
+	    <section class="waypoint" id="meet_team" data-hash="meet_team">
+	        <div class="alt-bg-3">
+				<!--Flip cards block-->
+				<div class="container">
+					<div class="spacer" style="height:77px;"></div>
+					<div class="row">
+						<div class="tAc">
+							<h2 class="big-title"  data-animation="fadeInUp slow" data-delay="0">团队成员</h2>
+							<div class="spacer" style="height:6px;"></div>
+							<div class="col-sm-4">
+								<div class="flip-container" data-animation="flipInY slow" data-delay="0.4">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/snow.jpg" class="img-responsive" alt="" />
+											<span class="author-flip">
+												<a href="#">Ms. Pan</a>
+												<span class="post">Chief Product Designer</span>
+											</span>
+										</div>
+										<div class="back"><div class="wrapper-tb"><div class="cell-2">
+													<!-- <div class="for-mobile-flip"> -->
+														<h4>Ms. Pan</h4>
+														<span class="post">Chief Product Designer</span>
+														<p class="flip-text">
+														     We help the students on 
+														     improving their English language skills, and we help them prepare 
+														     on the incoming new life style in America. We can do this better
+														     than the others, because 
+														     we’ve been there before, and we know how hard it is. 
+														</p>
+													<!-- </div> -->
+												</div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="flip-container" data-animation="flipInY slow" data-delay="0.4">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/mike.jpg" class="img-responsive" alt="" />
+											<span class="author-flip">
+												<a href="#">Mike Chen</a>
+												<span class="post">CEO</span>
+											</span>
+										</div>
+										<div class="back"><div class="wrapper-tb"><div class="cell-2">
+													<!-- <div class="for-mobile-flip"> -->
+														<h4>Mike Chen</h4>
+														<span class="post">CEO</span>
+														<p class="flip-text">
+														     We develop education products, such as education catalog, topics design, programs targeting language, cultural adaptation, and learning skills. We select tutors who are ESL professionals, students and alumni from IVY-league college and other top schools. 
+														</p>
+													<!-- </div> -->
+												</div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="flip-container" data-animation="flipInY slow" data-delay="0.4">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/bo.jpg" class="img-responsive" alt="" />
+											<span class="author-flip">
+												<a href="#">Bo Liang</a>
+												<span class="post">CTO</span>
+											</span>
+										</div>
+										<div class="back">
+										    <div class="wrapper-tb">
+											    <div class="cell-2">
+														<!-- <div class="for-mobile-flip"> -->
+															<h4>Bo Liang</h4>
+															<span class="post">CTO</span>
+															<p class="flip-text">
+															      We develop online technology platform, where Chinese students can visit and find tutors.
+															      We wanted to make sure everyone gets their best quality of service.
+															</p>
+														<!-- </div> -->
+											    </div>
+										    </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="spacer" style="height:56px;"></div>
+				</div>
+			</div>
+	  </section>
+
+      <!--Clients section-->
+	  <section class="waypoint parallax-section" id="clients" data-hash="clients">
+			<div class="parallax-holder">
+				<div class="paralayer" data-paraspeed="0.5" style="background-image: url(img/nyc.jpg);"></div>
+			</div>
+			<div class="alt-testimonial testimonial-full alternative-arrows">
+				<div class="testimonials-slideshow" data-cycle-pause-on-hover="true" data-cycle-fx="fade" data-cycle-timeout="10000" data-cycle-slides="> div" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-prev=".prev" data-cycle-next=".next" data-cycle-log="false"  data-animation="fadeIn" data-delay="0">
+					<div class="contbox"><div class="container"><div class="row"><div class="col-sm-12">
+									<div class="wrapper-tb"><div class="cell-2">
+											<h2 class="slider-title-3 big">我们的愿景</h2>
+											<span class="slider-text">不管你是英语爱好者，外企职员，还是出国党，有着同样经历的我们可以负责任的告诉你，说好一口流利的口语远比你想象的更重要。 不要让平庸和拖延停止你追求卓越的脚步。即使去了新的工作环境，来到了异国他乡，你也远比你想象的更优秀。人有无穷潜能，流利的口语将给你自信和勇气去面对未知的挑战! 一切，皆为助你找到最好的自己。</span>
+											<div class="no-avatar">
+												<a href="#">&#9473;&#9473 MsPan 团队</a><br />
+												<!-- <em>Creative Director</em> -->
+											</div>
+										</div></div>
+								</div></div></div></div>
+					<div class="contbox"><div class="container"><div class="row"><div class="col-sm-12">
+									<div class="wrapper-tb"><div class="cell-2">
+											<h2 class="slider-title-3 big">我们的品牌</h2>
+											<span class="slider-text">ＭsPan 提供全新线上教学平台，使北美精英大学生和具有TESOL英语教师资格证的美国外教一对一辅导中国学员， 为你的英语能力、留学准备和学业咨询提供全方位指导。 ＭsPan为你精心挑选老师和教育产品，提供高品质的定制英语学习体验， 让你轻松学口语，随时和地道美音外教交流，体验美国本土文化和风情，帮助你认识美国，了解美国，融入美国。 </span>
+											<div class="no-avatar">
+												<a href="#">&#9473;&#9473 MsPan 团队</a><br />
+												<!-- <em>Designer</em> -->
+											</div>
+										</div></div>
+								</div></div></div></div>
+					<a class="tp-leftarrow  default prev"></a>
+					<a class="tp-rightarrow  default next"></a>
+				</div>		
+			</div>
+		</section>
+
+		<!--About section-->
+		<section class="waypoint">
+			<div class="spacer" style="height:130px;"></div>
+			<!--Text and bars block-->
+			<div class="container" id="skills">
+			    <!-- <div class="spacer"  style="height:82px;"></div> -->
+			    <div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="tAc">
+								<!-- <i>
+								    <img src="img/mspan.png" class="img-responsive" style="margin: 0 auto; height:30px; width: 30px " alt="">
+								</i> -->
+									<h2 class="big-title"    data-animation="fadeInUp slow" data-delay="0" style="text-transform:capitalize;">轻松三步与外教一对一</h2>
+							<!-- <p class="adaptBig" style="max-width:500px; margin:0 auto; padding-bottom:63px;"    data-animation="fadeInUp slow" data-delay="0.2">MsPan为你精心定制美国外教</p> -->
+									<p class="adaptBig" style="max-width:500px; margin:0 auto; padding-bottom:63px;"    data-animation="fadeInUp slow" data-delay="0.2">真实的语言环境</p>
+								<!-- <div class="spacer" style="height:35px;"></div> -->
+                                <!-- <img src="img/mspan1.jpg" class="img-responsive" style="margin: 0 auto;" alt=""> -->
+							</div>						
+						</div>
+					</div>
+				</div>
+				<!-- <div class="row">
+					<div class="col-sm-3 col-sm-offset-2">
+						<h2 data-animation="fadeIn slow" data-delay="0">我们的承诺</h2>
+						<div class="spacer" style="height:25px;"></div>
+						<p class="adaptBig" data-animation="fadeInUp slow" data-delay="0.2">精英外教：高品质，严筛选</p>
+						<p class="adaptBig" data-animation="fadeInUp slow" data-delay="0.2">在线上课：很流畅，超自由</p>
+						<p class="adaptBig" data-animation="fadeInUp slow" data-delay="0.2">教学顾问：全方位，软监督</p>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="bars" data-animation="fadeIn faster" data-delay="0">
+							<div class="progressbar" style="background-color: #dcdcdc">			
+								<div class="progress animate_progress" data-percent="45">
+									<div class="bar-outer">
+										<div class="bar" style="background-color: #c2a47d;" data-percent="45"></div>
+										<div class="progressbar-title"><div class="progressbar-title-inner" style="color: #fff">100% 北美国籍外教</div></div>
+									</div>
+								</div>
+							</div>
+							<div class="progressbar" style="background-color: #dcdcdc">			
+								<div class="progress animate_progress" data-percent="90">
+									<div class="bar-outer">
+										<div class="bar" style="background-color: #c2a47d;" data-percent="90"></div>
+										<div class="progressbar-title"><div class="progressbar-title-inner" style="color: #fff">200% 全身心为你量身定制课程 </div></div>
+									</div>
+								</div>
+							</div>
+							<div class="progressbar" style="background-color: #dcdcdc">			
+								<div class="progress animate_progress" data-percent="80">
+									<div class="bar-outer">
+										<div class="bar" style="background-color: #c2a47d;" data-percent="80"></div>
+										<div class="progressbar-title"><div class="progressbar-title-inner" style="color: #fff">90% 名校大学生，10％ESL专业教师</div></div>
+									</div>
+								</div>
+							</div>
+							<div class="progressbar" style="background-color: #dcdcdc">			
+								<div class="progress animate_progress" data-percent="60">
+									<div class="bar-outer">
+										<div class="bar" style="background-color: #c2a47d;" data-percent="60"></div>
+										<div class="progressbar-title"><div class="progressbar-title-inner" style="color: #fff">0％ 风险，高度透明，无忧担保</div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!--Awards block-->
+				<div class="row">
+					<div class="col-md-12" id="awards_block">
+						<!-- <div class="spacer" style="height:59px;"></div> -->
+						<div class="col-sm-4 top-features content-element" >
+						    <i class="fa fa-search feature"  data-animation="fadeInUp " data-delay="0.3"></i>
+							<h3 data-animation="fadeInUp " data-delay="0.5">寻找老师</h3>
+							<p  class="adaptBig" data-animation="fadeInUp " data-delay="0.7">注册后由专属学习顾问为您定制学习计划，匹配最优外教</p>
+						</div>
+						<div class="col-sm-4 top-features content-element">
+							<i class="fa fa-calendar feature"  data-animation="fadeInUp " data-delay="0.3"></i>
+							<h3 data-animation="fadeInUp " data-delay="0.5">预约课程</h3>
+							<p class="adaptBig" data-animation="fadeInUp " data-delay="0.7" >
+							选好外教后，您可以自主选择上课时段，频率，课程，主动参与，一对一，步步进阶</p>
+						</div>
+						<div class="col-sm-4 top-features content-element" >
+							<i class="fa fa-television feature"  data-animation="fadeInUp " data-delay="0.3"></i>
+							<h3 data-animation="fadeInUp " data-delay="0.5">开始学习</h3>
+							<p class="adaptBig" data-animation="fadeInUp " data-delay="0.7">
+							通过高品质线上视频和外教上课。让每一次登录MsPan成为您学习英语的习惯</p>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- <hr style="margin:72px 0 58px 0; border-color:#dadada;" /> -->
+			<div class="spacer" style="height:59px;"></div>
+		</section>
+
+	  <section class="waypoint">
+			<!--Counters block-->
+			<div class="alt-bg-3 clearfix">
+				<div class="spacer" style="height:35px;"></div>
+				<div class="container">
+					<div class="row clearfix">
+						<div class="col-sm-3 content-element for-one-half-md" >
+							<div class="milestone-counter"   data-animation="fadeInUp slow" data-delay="0.2">
+								<i class="fa fa-twitter"></i>
+								<div class="counter" data-from="0" data-to="1534" data-speed="2000" data-refresh-interval="50">0</div>
+								<span class="info">周课时</span>
+							</div>
+						</div>
+						<div class="col-sm-3  content-element for-one-half-md">
+							<div class="milestone-counter"   data-animation="fadeInUp slow" data-delay="0.2">
+								<i class="fa fa-clock-o"></i>
+								<div class="counter"  data-from="0" data-to="110" data-speed="2000" data-refresh-interval="50">0</div>
+								<span class="info">北美名校大学生</span>
+							</div>
+						</div>
+						<div class="col-sm-3  content-element for-one-half-md">
+							<div class="milestone-counter"   data-animation="fadeInUp slow" data-delay="0.2">
+								<i class="fa fa-coffee"></i>
+								<div class="counter"  data-from="0" data-to="83" data-speed="2000" data-refresh-interval="50">0</div>
+								<span class="info">美国ESL专业教师</span>
+							</div>
+						</div>
+						<div class="col-sm-3  content-element for-one-half-md" >
+							<div class="milestone-counter"  data-animation="fadeInUp slow" data-delay="0.2">
+								<i class="fa fa-arrow-circle-down"></i>
+								<div class="counter" data-from="0" data-to="61320" data-speed="2000" data-refresh-interval="534">0</div>
+								<span class="info">24/7/365小时服务</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="spacer" style="height:6px;"></div>
+			</div>
+		</section>
+
+        <section id="final" class="waypoint" >
+			<div>
+				<div class="spacer" style="height:81px;"></div>
+				<!--Contact form block-->
+				<div class="container">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="tAc">
+								<h2 class="big" style="max-width:710px; display:inline-block; color:white" data-animation="fadeInUp slow" data-delay="0">语言，一个通向新世界的窗口</h2><br>
+								<div class="spacer" style="height:30px;"></div>
+								<h3 class="section-subheading text-muted" data-animation="fadeInUp slow" style="color:white;">开始你的征程</h3>
+							</div>
+						</div>
+						<div class="row">
+						    <div class="tAc">
+						        <div class="spacer" style="height:10px;"></div>
+                                <button style="margin-top:10px;padding:10px 20px;font-size:20px;color:black" type="button" class="btn btn-lg btn-primary" data-animation="fadeInUp slow">
+                                <a href="https://www.wenjuan.com/s/6JBJJv/" target="_blank">免费注册</a></button>
+                            </div>
+                        </div>
+					</div>
+				</div>
+				<div class="spacer" style="height:78px;"></div>
+			</div>
+		</section>	
+
+		<!--Footer section-->
+		<section id="footer">
+			<!--Twitter block-->
+			<div class="twitter alt-bg-3">
+				<div class="spacer" style="height:73px;"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="tAc">
+								<i>
+								    <img src="img/weixinIcon.png" class="img-responsive" style="margin: 0 auto; height:30px; width: 30px " alt="">
+								</i>
+								<div class="spacer" style="height:35px;"></div>
+                                <img src="img/wechat.jpg" class="img-responsive wechatBarCode" style="margin: 0 auto;" alt="">
+							</div>						
+						</div>
+					</div>
+				</div>
+				<div class="spacer" style="height:63px;"></div>
+			</div>
+
+			<div class="copyright-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="tAc">
+							    <div style="margin-top: 10px;">
+                                    <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
+                                </div><br>
+                                 <div class="links text-center text-uppercase"><a href="about.html" style="text-decoration: none;">关于我们</a> · <a href="guidance.html" style="text-decoration: none;">学员指南</a> · <a href="contact.html" style="text-decoration: none;">联系我们</a> · <a href="terms.html" rel="nofollow" style="text-decoration: none;">法律声明</a>
+                                  </div>
+                                  <div class="spacer" style="height:20px;"></div>
+								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
+								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
+								- All Rights Reserved.</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="container" >
+			<!-- Modal -->
+		    <div class="modal fade" role="dialog" id="loginModal">
+			    <div class="modal-dialog">
+    
+			      <!-- Modal content-->
+			      <div class="modal-content">
+				        <div class="modal-header" style="padding:35px 50px;">
+					          <button type="button" class="close" data-dismiss="modal">&times;</button>
+					          <h4><span class="fa fa-lock"></span> 登录</h4>
+				        </div>
+				        <div class="modal-body" style="padding:40px 50px;">
+					          <form role="form">
+						            <div class="form-group">
+						              <label for="usrname"><span class="fa fa-user"></span> 用户名</label>
+						              <input type="text" name="email" class="email" id="usrname" placeholder="请输入电子邮箱">
+						            </div>
+						            <div class="form-group">
+						              <label for="psw"><span class="fa fa-eye"></span> 密码</label>
+						              <input type="password" class="form-control" id="psw" placeholder="请输入密码">
+						            </div>
+						            <!-- <div class="myCheckbox">
+						              <label><input type="checkbox" value="" checked>记住我</label>
+						            </div> -->
+						            <button type="submit" class="btn btn-block"><span class="fa fa-power-off"></span> 登录</button>
+					          </form>
+				        </div>
+				        <div class="modal-footer">
+					        <button type="submit" class="btn btn-default pull-left" data-dismiss="modal"><span class="fa fa-remove"></span> 取消</button>
+					        <p>免费加入MsPan? <a href="#">注册</a></p>
+					        <p>忘记 <a href="#">密码?</a></p>
+				        </div>
+				      </div>
+			    </div>
+			</div>
+		</div>
+
+		<!-- Course Modal 1 -->
+		<div class="course-modal modal fade" id="courseModal1" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>北美吃货 Package</h2>
+                                <p class="item-intro text-muted">本系列为您提供“提高口语的唯一途径” &#9473;&#9473; 高效有趣的沉浸式反复操练。</p>
+                                <div class="list-group">
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程介绍</h5>
+                                    <p class="list-group-item-text, text-left">Ms. Pan自主研发科学系统的Content-based课程体系，由浅入深，循序渐进，让你在外教的帮助和鼓励下反复演练。这个课程系列中，每节课你将学到跟主题相关的新鲜内容，你也将有充分的机会运用和演练你的口语。</p>
+                                    <p class="list-group-item-text, text-left">外教的工作不是在你说错的时候不停地打断你，纠正你。 他会像朋友一样耐心的鼓励你，启发你，倾听你，回应你，从而使你对自己的口语越来越自信，可以做到脱口而出，轻松愉快地跟native-speaker交流。希望你能从基础表达到地道交流再到逻辑思辨或得不断练习，从而帮你从根本上提高英语综合实力。</p></a>
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课时安排</h5>
+                                    <p class="list-group-item-text, text-left">17 个课时</p></a>
+
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">适合对象</h5>
+                                        <ul>
+                                            <li class="text-left" type="circle">有一定英语基础，3000～4000词汇量，希望进一步向中高级进阶的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">对自己语音语调不自信，语法结构混乱，逻辑表达不清晰的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">希望了解美国饮食文化，并熟练掌握最地道的日常会话的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">希望通过系统课程有计划地提高口语的同学。</li>
+                                        </ul>
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程目标</h5>
+                                    <p class="list-group-item-text, text-left">不知不觉中大幅提高口语和听力能力，脱口而出地道表达，摆脱Chinglish, 自信跟美国人交流。根据系统课程的推进，你将具体锻炼到下面三大能力：
+                                        <dl class="dl-horizontal">
+                                            <dt>Survival Language Skills</dt>
+                                            <dd class="text-left">饮食主题六大真实场景设置，地道功能性用语，即学即用。</dd>
+                                            <dd class="text-left">前沿文化概览介绍，地道词汇表达积累，听力训练，互动交流。</dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>Interpersonal Skills</dt>
+                                            <dd class="text-left">跟美国人日常交际的能力，如何自如地在对话中询问，回答，反馈，拒绝等。
+                                            </dd>
+                                            <dd class="text-left">场景对话，反复操练，沉浸教学，文化渗透，活学活用，真实实用。
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>Presentation Skills</dt>
+                                            <dd class="text-left">如何用一段逻辑清晰，有理有据的话展示自己的思维和表达能力，比如复述听到的故事，讲述亲身经历，表达喜好和解释原因。</dd>
+                                            <dd class="text-left">经历讲述，经验分享，倾听反馈，自我组织语言，构建逻辑。
+                                            </dd>
+                                        </dl>
+                                    </p></a>
+
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程安排</h5>
+                                    <p class="list-group-item-text">
+                                        <dl class="dl-horizontal">
+                                            <dt>北美吃货必备锦囊</dt>
+                                            <dt>Survival Language Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">你是吃货嘛？</li>
+                                                    <li class="text-left">美国菜单怎么完全看不懂？</li>
+                                                    <li class="text-left">在快餐店点餐可没你想得那么简单。</li>
+                                                    <li class="text-left">去米其林餐厅吃饭是一种什么体验？</li>
+                                                    <li class="text-left">怎么优雅地吃Brunch？</li>
+                                                    <li class="text-left">酒单比菜单还厚，这些单词都是神马？</li>
+                                                    <li class="text-left">再没有比吃甜点更幸福的事了！</li>
+                                                </ul>
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>真实场景实战</dt>
+                                            <dt>Interpersonal Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">怎么在快餐店点餐？</li>
+                                                    <li class="text-left">怎么在高档西餐店就餐？</li>
+                                                    <li class="text-left">怎么在酒吧显得自己很老司机？</li>
+                                                    <li class="text-left">怎么叫外卖？打包怎么说？</li>
+                                                    <li class="text-left">要买单了，这次我请客，下次AA制。</li>
+                                                </ul>
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>你其实很能侃</dt>
+                                            <dt>Presentation Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">麦当劳在中国是什么样的存在？</li>
+                                                    <li class="text-left">你喜欢吃中餐还是西餐？</li>
+                                                    <li class="text-left">一次吃西餐的经历。</li>
+                                                    <li class="text-left">介绍你最喜欢的一道中国菜?</li>
+                                                    <li class="text-left">给我推荐几家附近的好饭馆吧？</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </p></a>
+                                </div>
+
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	            </div>
+	        </div>
+       </div>
+
+       <!-- Course Modal 2 -->
+		<div class="course-modal modal fade" id="courseModal2" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>玩转美国 Package</h2>
+                                <p class="item-intro text-muted">本系列为你提供“提高口语的唯一途径” &#9473;&#9473; 高效有趣的沉浸式反复操练。</p>
+                                <div class="list-group">
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程介绍</h5>
+                                    <p class="list-group-item-text, text-left">Ms. Pan自主研发科学系统的Content-based课程体系，由浅入深，循序渐进，让你在外教的帮助和鼓励下反复演练。这个课程系列中，每节课你将学到跟主题相关的新鲜内容，你也将有充分的机会运用和演练你的口语。</p>
+                                    <p class="list-group-item-text, text-left">外教的工作不是在你说错的时候不停地打断你，纠正你。 他会像朋友一样耐心的鼓励你，启发你，倾听你，回应你，从而使你对自己的口语越来越自信，可以做到脱口而出，轻松愉快地跟native-speaker交流。希望你能从基础表达到地道交流再到逻辑思辨或得不断练习，从而帮你从根本上提高英语综合实力。</p></a>
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课时安排</h5>
+                                    <p class="list-group-item-text, text-left">18 个课时</p></a>
+
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">适合对象</h5>
+                                        <ul>
+                                            <li class="text-left" type="circle">有出境旅游计划的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">希望能在英语国家DIY行程，轻松自助游的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">希望了解美国风土人情，掌握实用日常表达的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">有一定英语基础，希望进一步向中高级进阶的同学。</li>
+                                        </ul>
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程目标</h5>
+                                    <p class="list-group-item-text, text-left">不知不觉中大幅提高口语和听力能力，脱口而出地道表达，摆脱Chinglish, 自信跟美国人交流。根据系统课程的推进，你将具体锻炼到下面三大能力：
+                                        <dl class="dl-horizontal">
+                                            <dt>Survival Language Skills</dt>
+                                            <dd class="text-left">旅游主题六大真实场景设置，地道功能性用语，即学即用。</dd>
+                                            <dd class="text-left">前沿文化概览介绍，地道词汇表达积累，听力训练，互动交流。</dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>Interpersonal Skills</dt>
+                                            <dd class="text-left">跟美国人日常交际的能力，如何自如地在对话中询问，回答，反馈，拒绝等。
+                                            </dd>
+                                            <dd class="text-left">场景对话，反复操练，沉浸教学，文化渗透，活学活用，真实实用。
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>Presentation Skills</dt>
+                                            <dd class="text-left">如何用一段逻辑清晰，有理有据的话展示自己的思维和表达能力，比如复述听到的故事，讲述亲身经历，表达喜好和解释原因。</dd>
+                                            <dd class="text-left">经历讲述，经验分享，倾听反馈，自我组织语言，构建逻辑。
+                                            </dd>
+                                        </dl>
+                                    </p></a>
+
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程安排</h5>
+                                    <p class="list-group-item-text">
+                                        <dl class="dl-horizontal">
+                                            <dt>美国必游景点推荐</dt>
+                                            <dt>Survival Language Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">纽约，纽约！</li>
+                                                    <li class="text-left">美国首府华盛顿之旅。</li>
+                                                    <li class="text-left">名校云集的波士顿。</li>
+                                                    <li class="text-left">沙漠上的纸醉金迷&#9473;&#9473;玩转拉斯维加斯</li>
+                                                    <li class="text-left">最美国家公园攻略。</li>
+                                                    <li class="text-left">加州最高人气地标。</li>
+                                                    <li class="text-left">美国人的度假胜地夏威夷群岛。</li>
+                                                    <li class="text-left">看一次现场NBA球赛。</li>
+                                                </ul>
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>真实场景实战</dt>
+                                            <dt>Interpersonal Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">机场办理登机手续小贴士。</li>
+                                                    <li class="text-left">我想订去纽约的机票和酒店。</li>
+                                                    <li class="text-left">坐地铁公车必备口语。</li>
+                                                    <li class="text-left">带你体验购物天堂。</li>
+                                                    <li class="text-left">自驾游小锦囊。</li>
+                                                    <li class="text-left">在美国餐馆点什么好呢？</li>
+                                                </ul>
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>做个旅游小达人是什么样的经历</dt>
+                                            <dt>Presentation Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">你喜欢旅行吗？为什么？</li>
+                                                    <li class="text-left">你喜欢自助游还是跟旅行团？</li>
+                                                    <li class="text-left">介绍一个你去过的很特别的城市或者景点。</li>
+                                                    <li class="text-left">下个假期你有什么旅行计划?</li>
+                                                    <li class="text-left">你最想去的一个地方是哪里，为什么？</li>
+                                                    <li class="text-left">我要去你的家乡旅游，做我的导游吧！</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </p></a>
+                                </div>
+
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	            </div>
+	        </div>
+       </div>
+
+       <!-- Course Modal 3 -->
+		<div class="course-modal modal fade" id="courseModal3" tabindex="-1" role="dialog" aria-hidden="true">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>美国校园 Package</h2>
+                                <p class="item-intro text-muted">本系列为你提供“提高口语的唯一途径” &#9473;&#9473; 高效有趣的沉浸式反复操练。</p>
+                                <div class="list-group">
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程介绍</h5>
+                                    <p class="list-group-item-text, text-left">Ms. Pan自主研发科学系统的Content-based课程体系，由浅入深，循序渐进，让你在外教的帮助和鼓励下反复演练。这个课程系列中，每节课你将学到跟主题相关的新鲜内容，你也将有充分的机会运用和演练你的口语。</p>
+                                    <p class="list-group-item-text, text-left">外教的工作不是在你说错的时候不停地打断你，纠正你。 他会像朋友一样耐心的鼓励你，启发你，倾听你，回应你，从而使你对自己的口语越来越自信，可以做到脱口而出，轻松愉快地跟native-speaker交流。希望你能从基础表达到地道交流再到逻辑思辨或得不断练习，从而帮你从根本上提高英语综合实力。</p></a>
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课时安排</h5>
+                                    <p class="list-group-item-text, text-left">20 个课时</p></a>
+
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">适合对象</h5>
+                                        <ul>
+                                            <li class="text-left" type="circle">有较好英文基础，词汇量4000-6000的英语小达人。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">因为疏于练习，希望通过系统课程大强度快速提高听力和口语的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">希望了解美国校园文化，人际关系，并熟练运用相关地道日常会话的同学。</li>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <li class="text-left" type="circle">已经通过托福，雅思，希望为留学打好提前量，提高综合实力的同学。</li>
+                                        </ul>
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程目标</h5>
+                                    <p class="list-group-item-text, text-left">
+                                    大强度的系统练习保证学员可以短时高效地大幅提高口语和听力能力，包括语音语调和思维能力。使你脱口而出地道表达，建立兴趣和自信心, 轻松自如跟native speaker交流并做朋友。根据系统课程的推进，你将具体锻炼到下面三大能力：
+                                        <dl class="dl-horizontal">
+                                            <dt>Social Skills</dt>
+                                            <dd class="text-left">跟美国同学和教授日常交际的能力，如何自如地在对话中询问，回答，反馈，拒绝等。</dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>Presentation Skills</dt>
+                                            <dd class="text-left">如何用一段逻辑清晰，有理有据的话展示自己的思维和表达能力，比如复述听到的故事，讲述亲身经历，表达喜好和解释原因。
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>Critical Thinking Skills</dt>
+                                            <dd class="text-left">对抽象话题讨论的能力，比如给出建议和原因，比较和对比不同，评价分析某种现象，说服和劝解他人等</dd>
+                                        </dl>
+                                    </p></a>
+
+                                    <a class="list-group-item list-group-item-action">
+                                    <h5 class="list-group-item-heading">课程安排</h5>
+                                    <p class="list-group-item-text">
+                                        <dl class="dl-horizontal">
+                                            <dt>新生生存手册</dt>
+                                            <dt>Presentation Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">这是我的大学，这是我的日常。</li>
+                                                    <li class="text-left">我为什么选了这个专业？</li>
+                                                    <li class="text-left">我这门课能不能得A, 谁说了算？</li>
+                                                    <li class="text-left">美国大学，人际交往到底有多重要？</li>
+                                                    <li class="text-left">什么时候开始找实习？</li>
+                                                    <li class="text-left">这么忙的情况下，我怎么安排时间？</li>
+                                                </ul>
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>真实场景实战</dt>
+                                            <dt>Social Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">跟新朋友介绍自己。</li>
+                                                    <li class="text-left">约朋友去吃饭逛街。</li>
+                                                    <li class="text-left">跟教授解释为什么晚交paper。</li>
+                                                    <li class="text-left">跟朋友打听有什么实习工作机会。</li>
+                                                    <li class="text-left">自驾游小锦囊。</li>
+                                                    <li class="text-left">跟派对上的陌生人搭话聊天。</li>
+                                                </ul>
+                                            </dd>
+                                            <div class="spacer" style="height:20px;"></div>
+                                            <dt>思辨话题训练</dt>
+                                            <dt>Critical Thinking Skills</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li class="text-left">很内向不敢主动跟别人交朋友怎么办？</li>
+                                                    <li class="text-left">我的拖延症越来越严重了，怎么破？</li>
+                                                    <li class="text-left">被邀请去一个不想去的派对，怎么办？</li>
+                                                    <li class="text-left">时间太少，想健身做什么运动好呢?</li>
+                                                    <li class="text-left">安排暑假计划，你有什么好建议？</li>
+                                                    <li class="text-left">女朋友生日忘记买礼物了。</li>
+                                                    <li class="text-left">宿舍太吵，搬到校外租房子？</li>
+                                                    <li class="text-left">室友总是回来太晚影响我睡觉。</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </p></a>
+                                </div>
+
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	            </div>
+	        </div>
+       </div>
+
+		<!-- <script type="text/javascript" src='js/jquery.min.js'></script>	 -->
+		
+
+
+
+		<!-- <script type="text/javascript" src='js/bootstrap.min.js'></script> -->
+		<!-- <script type="text/javascript" src='js/imagesloaded.pkgd.min.js'></script>	
+		<script type="text/javascript" src='js/isotope.min.js'></script>	
+		
+		<script type="text/javascript" src='js/jquery.cycle2.min.js'></script>	
+		<script type="text/javascript" src='js/jquery.cycle2.swipe.min.js'></script>	
+		<script type="text/javascript" src='js/jquery.flexslider-min.js'></script>
+
+		<script type="text/javascript" src='js/jquery.validate.min.js'></script>	
+		<script type="text/javascript" src='js/jquery.velocity.min.js'></script>	
+	    <script type="text/javascript" src='js/jquery.magnific-popup.min.js'></script>	
+		<script type="text/javascript" src='js/parallax.min.js'></script> -->
+		<!-- <script type="text/javascript" src='js/script.js'></script> -->
+		<!-- <script type="text/javascript" src='js/smoothScroll.min.js'></script>
+		<script type="text/javascript" src='js/superfish.min.js'></script>
+		<script type="text/javascript" src='js/tweets.min.js'></script>
+		<script type="text/javascript" src='js/waypoints.min.js'></script>
+		<script type="text/javascript" src='js/jquery.countTo.min.js'></script>	 -->
+
+		<!-- jQuery -->
+		<!-- <script type="text/javascript" src='js/jquery.min.js'></script> -->
+        <!-- Bootstrap Core JavaScript -->
+        <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+		
+		<!-- <script>
+			/* <![CDATA[ */
+			var loadPageScripts = [
+				'imagesloaded.pkgd.min.js',
+				'bootstrap.min.js',	
+			    // 'jquery.min.js'		
+				'isotope.min.js',
+				'jquery.cycle2.min.js',
+				'jquery.cycle2.swipe.min.js',
+				'jquery.flexslider-min.js',
+				'jquery.validate.min.js',
+				'jquery.velocity.min.js',
+				'jquery.magnific-popup.min.js',
+				'parallax.min.js',
+				'smoothScroll.min.js',
+				'superfish.min.js',
+				'tweets.min.js',
+				'waypoints.min.js',
+				'jquery.countTo.min.js'
+			];
+			/* ]]> */
+		</script>
+
+		<script type="text/javascript" src='js/script.js'></script> -->
+
+        <script>
+			$(document).ready(function(){
+			$("#loginBtn").click(function(){
+	        $("#loginModal").modal();
+		    });
+		});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			$("#moreTeachers").click(function(){
+	        $("#loginModal").modal();
+		    });
+		});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			$("#moreLessons").click(function(){
+	        $("#loginModal").modal();
+		    });
+		});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			$("#startLearning").click(function(){
+	        $("#loginModal").modal();
+		    });
+		});
+		</script>
+
+		<script type="text/javascript">
+			window.mobileAndTabletcheck = function() {
+  				var check = false;
+  				(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+  				return check;
+			};
+
+			var device = window.mobileAndTabletcheck();
+		    if (device == false) 
+			{
+			    var sources_man = document.querySelectorAll('video#manvideo source');
+				var video_man = document.querySelector('video#manvideo');
+				for(var i = 0; i<sources_man.length;i++) {
+				  sources_man[i].setAttribute('src', sources_man[i].getAttribute('data-src'));
+				}
+				video_man.load(); 
+
+				var sources_woman = document.querySelectorAll('video#womanvideo source');
+				var video_woman = document.querySelector('video#womanvideo');
+				for(var i = 0; i<sources_woman.length;i++) {
+				  sources_woman[i].setAttribute('src', sources_woman[i].getAttribute('data-src'));
+				}
+				video_woman.load(); 
+			}
+		</script>
+
+	</body>
+</html>
