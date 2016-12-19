@@ -84,16 +84,20 @@
 										<a href="#about">关于我们</a>
 										<ul class="submenu"> <!--First level submenu-->
 											<li><a href="#about">关于MsPan</a></li>
-											<li><a href="about.html">更多关于</a></li>
+											<li><%= link_to "更多关于", {controller: "home", action: "about"} %></li>
+											<li><%= link_to "学员指南", {controller: "home", action: "guidance"} %></li>
+											<li><%= link_to "联系我们", {controller: "home", action: "contact"} %></li>
+											<!-- <li><a href="about.html">更多关于</a></li>
 											<li><a href="guidance.html">学员指南</a></li>
-											<li><a href="contact.html">联系我们</a></li>
+											<li><a href="contact.html">联系我们</a></li> -->
 										</ul>
 									</li>				
 									<!-- <li class="menu-item-border"><a href="＃">注册</a></li> <ul class="nav navbar-nav navbar-right"> -->
 									<li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span>申请上课 </a></li>
                                    <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li>
                                    <li><a href="#" id="loginBtn" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
-                                   <li><a href="teacher.html" class="link-header link-underline-brand" style="text-transform:capitalize; font-size:13px;">Apply to Teach</a></li>
+                                  <!--  <li><a href="teacher.html" class="link-header link-underline-brand" style="text-transform:capitalize; font-size:13px;">Apply to Teach</a></li> -->
+                                   <li><%= link_to "Apply to Teach", {controller: "home", action: "teacherhome"}, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
 								</ul>
 							</div>
 						</div></div>
@@ -414,7 +418,9 @@
 							</div>
 						</div>
 						<div class="buttons" style="padding-top:16px;"    data-animation="fadeInUp slow" data-delay="0.3">
-							<a href="about.html" class="button7 btn-1" style="margin-right:6px;">更多关于</a>
+						    <%= link_to "更多关于", {controller: "home", action: "about"}, class: "button7 btn-1", style: "margin-right:6px;" %>
+
+							<!-- <a href="about.html" class="button7 btn-1" style="margin-right:6px;">更多关于</a> -->
 							<a href="#meet_team" class="button5">团队成员</a>
 						</div>
 					</div>
@@ -745,7 +751,13 @@
 							    <div style="margin-top: 10px;">
                                     <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
                                 </div><br>
-                                 <div class="links text-center text-uppercase"><a href="about.html" style="text-decoration: none;">关于我们</a> · <a href="guidance.html" style="text-decoration: none;">学员指南</a> · <a href="contact.html" style="text-decoration: none;">联系我们</a> · <a href="terms.html" rel="nofollow" style="text-decoration: none;">法律声明</a>
+                                 <div class="links text-center text-uppercase">
+                                 <%= link_to "关于我们", {controller:"home", action:"about"} %> · 
+                                 <%= link_to "学员指南", {controller:"home", action:"guidance"} %> · 
+                                 <%= link_to "联系我们", {controller:"home", action:"contact"} %> · 
+                                 <%= link_to "法律声明", {controller:"home", action:"terms"} %>
+
+                                 <!-- <a href="about.html" style="text-decoration: none;">关于我们</a> · <a href="guidance.html" style="text-decoration: none;">学员指南</a> · <a href="contact.html" style="text-decoration: none;">联系我们</a> · <a href="terms.html" rel="nofollow" style="text-decoration: none;">法律声明</a> -->
                                   </div>
                                   <div class="spacer" style="height:20px;"></div>
 								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
