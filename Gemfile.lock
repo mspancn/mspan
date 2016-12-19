@@ -124,6 +124,7 @@ GEM
       railties (>= 3.1)
     multi_json (1.12.1)
     mysql2 (0.4.4)
+    newrelic_rpm (3.17.2.327)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -227,6 +228,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   momentjs-rails
   mysql2 (>= 0.3.18, < 0.5)
+  newrelic_rpm
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails-observers!

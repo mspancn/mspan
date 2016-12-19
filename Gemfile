@@ -64,6 +64,9 @@ gem 'unicorn'
 # AWS::SES is a Ruby library for Amazon's Simple Email Service's REST API (aws.amazon.com/ses).
 gem "aws-ses", "~> 0.6.0", :require => 'aws/ses'
 
+# New Relic is a performance management system, developed by New Relic, Inc (http://www.newrelic.com).
+gem 'newrelic_rpm'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
