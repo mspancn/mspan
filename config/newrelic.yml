@@ -44,7 +44,7 @@ test:
 
 ppe:
   <<: *default_settings
-  app_name: MsPan (Staging)
+  app_name: MsPan (PPE)
 
 production:
   <<: *default_settings
