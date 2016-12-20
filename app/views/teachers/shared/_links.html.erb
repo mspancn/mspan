@@ -1,7 +1,4 @@
-<% resource_name = :teacher %>
-<% devise_mapping = Devise.mappings[:teacher] %>
-
-<%- if controller_name != 'sessions' && controller_name != 'home' %>
+<%- if controller_name != 'sessions' %>
   <%= link_to "Log in", new_session_path(resource_name) %><br />
 <% end -%>
 

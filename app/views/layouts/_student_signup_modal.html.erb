@@ -1,35 +1,34 @@
-<div class="modal fade" id="student-login-modal" title="用户登录">
+<div class="modal fade" id="student-signup-modal" title="用户注册">
   <div class="modal-header">
     <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
-    <h4 class="modal-title">用户登录</h4>
+    <h4 class="modal-title">用户注册</h4>
   </div>
   <div class="modal-body">
     <div class="modal-body-content">
-      <%= form_for(Student.new, as: :student, url: session_path(:student)) do |f| %>
+      <%= form_for(Student.new, as: :student, url: registration_path(:student)) do |f| %>
+
         <div class="field">
           <%= f.label :email, '邮箱' %><br />
           <%= f.email_field :email, autofocus: true %>
         </div>
 
         <div class="field">
-          <%= f.label :password, '密码' %><br />
+          <%= f.label :password, '密码' %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
           <%= f.password_field :password, autocomplete: "off" %>
         </div>
 
-        <% if Devise.mappings[:student].rememberable? -%>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me, '记住登录' %>
-          </div>
-        <% end -%>
+        <div class="field">
+          <%= f.label :password_confirmation, '确认密码' %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
 
         <div class="actions">
-          <%= f.submit "登录" %>
+          <%= f.submit "注册" %>
         </div>
       <% end %>
-
-      <%= link_to "用户注册", new_registration_path(:student) %><br />
-      <%= link_to "忘记密码?", new_password_path(:student) %>
     </div>
     <div class="ajax-loader"></div>
   </div>

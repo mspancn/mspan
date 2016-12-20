@@ -1,7 +1,6 @@
 <script type="text/javascript">
   $(document).ready(function() {
     <% flash.each do |key, value| %>
-    <% p flash %>
       <% if key == "error" %>
         $.jGrowl('<%= escape_javascript error %>', { theme: 'error' });
       <% elsif key == "alert" %>

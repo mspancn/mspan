@@ -7,6 +7,8 @@ class Student < ApplicationRecord
   has_and_belongs_to_many :teachers
   has_many :appointments
 
+  before_create :set_defaults
+
   def scheduled_appointments
     appointments.where(state: :new)
   end
@@ -43,5 +45,10 @@ class Student < ApplicationRecord
   def deposit(amount)
     self.balance += amount
     save!
+  end
+
+  def set_defaults
+    self.balance ||= 0
+    self.full_name ||= NameGenerator.new.first_name
   end
 end

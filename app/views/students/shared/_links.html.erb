@@ -1,7 +1,4 @@
-<% resource_name = :student %>
-<% devise_mapping = Devise.mappings[:student] %>
-
-<%- if controller_name != 'sessions' and controller_name != 'home' %>
+<%- if controller_name != 'sessions' %>
   <%= link_to "用户登录", new_session_path(resource_name) %><br />
 <% end -%>
 
