@@ -1,4 +1,8 @@
 <div>Home page</div>
 
 <%= link_to "Teacher Log In", new_teacher_session_path %>
-<%= link_to "Student Log In", new_student_session_path %>
+<%= link_to("Student Log In",
+  "#student_login",
+  class: "btn btn-default",
+  data: { toggle: "modal", target: "#student-login-modal" }
+)%>
