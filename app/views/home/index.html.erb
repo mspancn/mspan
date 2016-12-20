@@ -92,11 +92,17 @@
 											<li><a href="contact.html">联系我们</a></li> -->
 										</ul>
 									</li>				
-									<!-- <li class="menu-item-border"><a href="＃">注册</a></li> <ul class="nav navbar-nav navbar-right"> -->
-									<li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span>申请上课 </a></li>
-                                   <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li>
-                                   <li><a href="#" id="loginBtn" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
-                                  <!--  <li><a href="teacher.html" class="link-header link-underline-brand" style="text-transform:capitalize; font-size:13px;">Apply to Teach</a></li> -->
+									
+									<!-- <li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span>申请上课 </a></li> -->
+                                   <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li> -->
+                                   <!-- <li><a href="#" id="loginBtn" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
+                                   <li><span class="fa fa-user" style="color:white">
+                                      <%= link_to "注册", new_student_session_path, class:"active", style:"color:white" %></span>
+                                   </li>
+                                   <li><span class="fa fa-sign-in" style="color:white">
+                                      <%= link_to "登录", new_student_session_path, class:"active", style:"color:white" %></span>
+                                   </li>
+                                   <li></li>
                                    <li><%= link_to "Apply to Teach", {controller: "home", action: "teacherhome"}, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
 								</ul>
 							</div>
@@ -122,6 +128,7 @@
 								<li>北美</li><li>常春藤</li><li>名校</li></ul>
 							<h6><a href="#services" class="to-text" data-animation="flipInX" data-delay="0">美国外教线上一对一口语</a></h6>
 							<span class="learn-more"   data-animation="fadeInUp" data-delay="0.6">-  英语当作母语说 -</span>
+							
 							<a id = "applyToTeach" href="teacher.html" target="_blank"><span class="learn-more"   data-animation="fadeInUp" data-delay="0.6">* Apply To Teach *</span></a>
 						</div>
 					</div>
@@ -731,11 +738,9 @@
 							<div class="tAc">
 								<i> 
 								    <%= image_tag("home/weixinIcon.png", alt: "", class: "img-responsive", style: "margin: 0 auto; height:30px; width: 30px ") %>
-								    <!-- <img src="img/weixinIcon.png" class="img-responsive" style="margin: 0 auto; height:30px; width: 30px " alt=""> -->
 								</i>
 								<div class="spacer" style="height:35px;"></div>
 								    <%= image_tag("home/wechat.jpg", alt: "", class: "img-responsive wechatBarCode", style: "margin: 0 auto;") %>
-                                <!-- <img src="img/wechat.jpg" class="img-responsive wechatBarCode" style="margin: 0 auto;" alt=""> -->
 							</div>						
 						</div>
 					</div>
@@ -756,8 +761,6 @@
                                  <%= link_to "学员指南", {controller:"home", action:"guidance"} %> · 
                                  <%= link_to "联系我们", {controller:"home", action:"contact"} %> · 
                                  <%= link_to "法律声明", {controller:"home", action:"terms"} %>
-
-                                 <!-- <a href="about.html" style="text-decoration: none;">关于我们</a> · <a href="guidance.html" style="text-decoration: none;">学员指南</a> · <a href="contact.html" style="text-decoration: none;">联系我们</a> · <a href="terms.html" rel="nofollow" style="text-decoration: none;">法律声明</a> -->
                                   </div>
                                   <div class="spacer" style="height:20px;"></div>
 								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
