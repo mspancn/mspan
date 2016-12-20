@@ -1,0 +1,38 @@
+<div class="modal fade" id="teacher-login-modal" title="Teacher Log In">
+  <div class="modal-header">
+    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+    <h4 class="modal-title">Teacher Log In</h4>
+  </div>
+  <div class="modal-body">
+    <div class="modal-body-content">
+      <%= form_for(Teacher.new, as: :teacher, url: session_path(:teacher)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if Devise.mappings[:teacher].rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="actions">
+          <%= f.submit "Log in" %>
+        </div>
+      <% end %>
+
+      <%= render "teachers/shared/links" %>
+    </div>
+    <div class="ajax-loader"></div>
+  </div>
+  <div class="modal-footer">
+    <button aria-hidden="true" class="btn modal-close" data-dismiss="modal">Cancel</button>
+  </div>
+</div>
