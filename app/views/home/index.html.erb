@@ -1,7 +1,11 @@
 <div>Home page</div>
 
-<%= link_to "Teacher Log In", new_teacher_session_path %>
-<%= link_to("Student Log In",
+<%= link_to("Teacher Log In",
+  "#teacher_login",
+  class: "btn btn-default",
+  data: { toggle: "modal", target: "#teacher-login-modal" }
+)%>
+<%= link_to("用户登录",
   "#student_login",
   class: "btn btn-default",
   data: { toggle: "modal", target: "#student-login-modal" }
