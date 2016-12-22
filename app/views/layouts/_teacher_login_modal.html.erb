@@ -5,30 +5,9 @@
   </div>
   <div class="modal-body">
     <div class="modal-body-content">
-      <%= form_for(Teacher.new, as: :teacher, url: session_path(:teacher)) do |f| %>
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
-        </div>
+      <%= render "teachers/shared/login_form" %>
 
-        <div class="field">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-
-        <% if Devise.mappings[:teacher].rememberable? -%>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
-        <% end -%>
-
-        <div class="actions">
-          <%= f.submit "Log in" %>
-        </div>
-      <% end %>
-
-      <%= link_to "Sign up", new_registration_path(:teacher) %><br />
+      <%= link_to "Apply To Teach", new_registration_path(:teacher) %><br />
       <%= link_to "Forgot your password?", new_password_path(:teacher) %>
     </div>
     <div class="ajax-loader"></div>
