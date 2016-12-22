@@ -42,6 +42,19 @@
   </div>
 
   <div class="field">
+    <%= f.label :gender, 'Gender (Optional)' %><br />
+    <%= f.radio_button :gender, 'female' %>
+    <%= f.label :gender_female, 'Female' %>
+    <%= f.radio_button :gender, 'male' %>
+    <%= f.label :gender_male, 'Male' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age_range %><br />
+    <%= f.select :age_range, Teacher::AGE_RANGES, { include_blank: 'Choose not to disclose' } %>
+  </div>
+
+  <div class="field">
     <%= f.label :major %><br />
     <%= f.text_field :major %>
   </div>
@@ -97,6 +110,11 @@
     <%= f.label :internationalization_experience_little, 'Yes. Just a little.' %>
     <%= f.radio_button :internationalization_experience, 'little' %>
     <%= f.label :internationalization_experience_none, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :speech_video, 'What is the YouTube address, Google Drive link OR DropBox link of your speech evaluation video? (For instructions of how to make this video, visit: https://docs.google.com/document/d/e/2PACX-1vR7l1sRjpDEPJhP6rYPA0GQB063DDpiaB80XVQiuJ5d6cPREUrmG2JGFZn_UwoLX1k1vjZ4W5B6iOF8/pub)' %><br />
+    <%= f.text_field :speech_video %>
   </div>
 
   <div class="field">

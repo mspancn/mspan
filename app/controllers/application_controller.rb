@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
           :first_name, :last_name, :phone, :major,
           :degree, :student, :teaching_experience,
           :certificate, :mandarin, :referral,
-          :internationalization_experience, :time_zone
+          :internationalization_experience, :time_zone,
+          :age_range, :gender, :speech_video
         ]
       )
     end

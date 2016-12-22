@@ -4,7 +4,7 @@ class Teacher < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :first_name, :last_name, :phone, :major, :degree,
+  validates :first_name, :last_name, :phone, :major, :degree, :speech_video,
     :teaching_experience, :referral, :internationalization_experience,
     presence: true
   validates_inclusion_of :student, :certificate, :mandarin, :in => [true, false]
@@ -13,6 +13,8 @@ class Teacher < ApplicationRecord
   has_many :appointments
 
   before_create :set_defaults
+
+  AGE_RANGES = ["18-22", "22-25", "25-35", "35-50", "50+"]
 
   def full_name
     "#{first_name} #{last_name}"
