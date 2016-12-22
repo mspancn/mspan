@@ -51,6 +51,11 @@ GEM
       rails-observers (~> 0.1.2)
     autoprefixer-rails (6.4.0.2)
       execjs
+    aws-ses (0.6.0)
+      builder
+      mail (> 2.2.5)
+      mime-types
+      xml-simple
     bcrypt (3.1.11)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -124,7 +129,7 @@ GEM
       railties (>= 3.1)
     multi_json (1.12.1)
     mysql2 (0.4.4)
-    nested_form (0.3.2)
+    newrelic_rpm (3.17.2.327)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -223,12 +228,14 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    xml-simple (1.1.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   audited (~> 4.3)
+  aws-ses (~> 0.6.0)
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
@@ -243,6 +250,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   momentjs-rails
   mysql2 (>= 0.3.18, < 0.5)
+  newrelic_rpm
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails-observers!
