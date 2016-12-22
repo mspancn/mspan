@@ -4,8 +4,15 @@ class Teacher < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :first_name, :last_name, :phone, :major, :degree,
+    :teaching_experience, :referral, :internationalization_experience,
+    presence: true
+  validates_inclusion_of :student, :certificate, :mandarin, :in => [true, false]
+
   has_many :availabilities
   has_many :appointments
+
+  before_create :set_defaults
 
   def full_name
     "#{first_name} #{last_name}"
@@ -74,4 +81,21 @@ class Teacher < ApplicationRecord
     self.balance += amount
     save!
   end
+
+  private
+
+    def set_defaults
+      self.balance ||= 0
+      self.rate ||= default_rate
+    end
+
+    def default_rate
+      if self.certificate?
+        30
+      elsif self.mandarin?
+        25
+      else
+        20
+      end
+    end
 end

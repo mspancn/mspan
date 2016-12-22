@@ -1,11 +1,21 @@
-<h2>Sign up</h2>
+<h2>Apply To Teach</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
@@ -21,8 +31,92 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :time_zone %><br />
+    <%= f.time_zone_select :time_zone, nil %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.telephone_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :major %><br />
+    <%= f.text_field :major %>
+  </div>
+
+  <div class="field">
+    <%= f.label :degree %><br />
+    <%= f.text_field :degree %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student, 'Are you currently a student?' %><br />
+    <%= f.radio_button :student, true %>
+    <%= f.label :student_true, 'Yes' %>
+    <%= f.radio_button :student, false %>
+    <%= f.label :student_false, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :teaching_experience, 'Do you have teaching/tutoring experience?' %><br />
+    <%= f.radio_button :teaching_experience, 'lot' %>
+    <%= f.label :teaching_experience_lot, 'Yes. A lot.' %>
+    <%= f.radio_button :teaching_experience, 'some' %>
+    <%= f.label :teaching_experience_some, 'Yes. Some.' %>
+    <%= f.radio_button :teaching_experience, 'little' %>
+    <%= f.label :teaching_experience_little, 'Yes. Just a little.' %>
+    <%= f.radio_button :teaching_experience, 'little' %>
+    <%= f.label :teaching_experience_none, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :certificate, 'Do you have any English teaching Certificates?' %><br />
+    <%= f.radio_button :certificate, true %>
+    <%= f.label :certificate_true, 'Yes' %>
+    <%= f.radio_button :certificate, false %>
+    <%= f.label :certificate_false, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mandarin, 'Do you speak Mandarin?' %><br />
+    <%= f.radio_button :mandarin, true %>
+    <%= f.label :mandarin_true, 'Yes' %>
+    <%= f.radio_button :mandarin, false %>
+    <%= f.label :mandarin_false, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :internationalization_experience, 'Do you have internalization experience relating to China or Asia countries? (having Chinese or Asian students or colleagues; traveling to China or Asian countries;studying Chinese or Asian culture because of self-interest)' %><br />
+    <%= f.radio_button :internationalization_experience, 'lot' %>
+    <%= f.label :internationalization_experience_lot, 'Yes. A lot.' %>
+    <%= f.radio_button :internationalization_experience, 'some' %>
+    <%= f.label :internationalization_experience_some, 'Yes. Some.' %>
+    <%= f.radio_button :internationalization_experience, 'little' %>
+    <%= f.label :internationalization_experience_little, 'Yes. Just a little.' %>
+    <%= f.radio_button :internationalization_experience, 'little' %>
+    <%= f.label :internationalization_experience_none, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :referral, 'Where did you hear about MsPan?' %><br />
+    <%= f.radio_button :referral, 'email' %>
+    <%= f.label :referral_email, 'Email' %>
+    <%= f.radio_button :referral, 'campus' %>
+    <%= f.label :referral_campus, 'Campus flyer' %>
+    <%= f.radio_button :referral, 'friends' %>
+    <%= f.label :referral_friends, 'Friends' %>
+    <%= f.radio_button :referral, 'facebook' %>
+    <%= f.label :referral_facebook, 'Facebook' %>
+    <%= f.radio_button :referral, 'craiglist' %>
+    <%= f.label :referral_craiglist, 'Craiglist' %>
+    <%= f.radio_button :referral, 'other' %>
+    <%= f.label :referral_other, 'Other' %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Apply" %>
   </div>
 <% end %>
 

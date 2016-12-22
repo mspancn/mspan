@@ -47,8 +47,10 @@ class Student < ApplicationRecord
     save!
   end
 
-  def set_defaults
-    self.balance ||= 0
-    self.full_name ||= NameGenerator.new.first_name
-  end
+  private
+
+    def set_defaults
+      self.balance ||= 0
+      self.full_name ||= NameGenerator.new.first_name
+    end
 end

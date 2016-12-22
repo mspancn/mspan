@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022003554) do
+ActiveRecord::Schema.define(version: 20161220234958) do
 
   create_table "appointments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "student_id",                                             null: false
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 20161022003554) do
     t.datetime "updated_at",                                 null: false
     t.string   "full_name"
     t.string   "time_zone",              default: "Beijing", null: false
-    t.integer  "balance",                                    null: false
+    t.integer  "balance",                                    null: false, unsigned: true
     t.index ["email"], name: "index_students_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true, using: :btree
   end
@@ -109,42 +109,34 @@ ActiveRecord::Schema.define(version: 20161022003554) do
   end
 
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "email",                                          default: "",                           null: false
-    t.string   "encrypted_password",                             default: "",                           null: false
+    t.string   "email",                           default: "",                           null: false
+    t.string   "encrypted_password",              default: "",                           null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                                  default: 0,                            null: false
+    t.integer  "sign_in_count",                   default: 0,                            null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                                                            null: false
-    t.datetime "updated_at",                                                                            null: false
-    t.string   "first_name",                                                                            null: false
-    t.string   "last_name",                                                                             null: false
-    t.string   "time_zone",                                      default: "Eastern Time (US & Canada)", null: false
-    t.integer  "rate",                                                                                  null: false
-    t.decimal  "balance",                precision: 9, scale: 2,                                        null: false
+    t.datetime "created_at",                                                             null: false
+    t.datetime "updated_at",                                                             null: false
+    t.string   "first_name",                                                             null: false
+    t.string   "last_name",                                                              null: false
+    t.string   "time_zone",                       default: "Eastern Time (US & Canada)", null: false
+    t.integer  "rate",                                                                   null: false
+    t.integer  "balance",                                                                null: false, unsigned: true
+    t.string   "phone"
+    t.string   "major"
+    t.string   "degree"
+    t.boolean  "student"
+    t.string   "teaching_experience"
+    t.boolean  "certificate"
+    t.boolean  "mandarin"
+    t.string   "internationalization_experience"
+    t.string   "referral"
     t.index ["email"], name: "index_teachers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true, using: :btree
-  end
-
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end
