@@ -34,6 +34,22 @@ Rails.application.configure do
   # Mailer
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # Configuration for file/image upload
+  Paperclip.options[:command_path] = "/usr/local/bin"
+
+  config.attached_file_options = {
+    :storage => :fog, :fog_credentials => {
+      :provider => "AWS",
+      :aws_access_key_id => 'AKIAJAXPKBQZMSZQQ5IQ',
+      :aws_secret_access_key => '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',
+      :region => 'ap-southeast-1',
+      :scheme => 'https'
+    },
+    :fog_directory => "mspan-dev",
+    :fog_public => true,
+    :fog_host => "https://d2ztlyl3qrfsyn.cloudfront.net"
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

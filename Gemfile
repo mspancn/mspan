@@ -64,6 +64,12 @@ gem 'unicorn'
 # AWS::SES is a Ruby library for Amazon's Simple Email Service's REST API (aws.amazon.com/ses).
 gem "aws-ses", "~> 0.6.0", :require => 'aws/ses'
 
+# Easy file attachment management for ActiveRecord https://thoughtbot.com/open-source
+gem "paperclip", "~> 5.0.0"
+
+# The Ruby cloud services library.
+gem "fog"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

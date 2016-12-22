@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
           :degree, :student, :teaching_experience,
           :certificate, :mandarin, :referral,
           :internationalization_experience, :time_zone,
-          :age_range, :gender, :speech_video
+          :age_range, :gender, :speech_video, :resume
         ]
       )
     end
