@@ -1,8 +1,10 @@
-<div class="profile">
-  <div class="pic">
-    <%= image_tag("no_profile_image") %>
+<%= link_to edit_student_profile_path, class: "no-decor" do %>
+  <div class="profile">
+    <div class="pic">
+      <%= image_tag("no_profile_image") %>
+    </div>
+    <div class="name">
+      <%= current_student.full_name %>
+    </div>
   </div>
-  <div class="name">
-    <%= current_student.full_name %>
-  </div>
-</div>
+<% end %>

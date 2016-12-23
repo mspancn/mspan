@@ -1,0 +1,30 @@
+<div class="card expendable-card">
+  <div class="content">
+    <div class="checkmarks row">
+      <div class="col-sm-6">
+        <div class="text-center">
+          <% if teacher.certificate? %>
+            ESL专业认证 <i class="fa fa-check-circle green" aria-hidden="true"></i>
+          <% elsif teacher.student? %>
+            常春藤名校 <i class="fa fa-check-circle green" aria-hidden="true"></i>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="text-center">
+          <% if teacher.mandarin? %>
+            <p>双语教学 <i class="fa fa-check-circle green" aria-hidden="true"></i></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="intro">
+      <% if teacher.intro.present? %>
+        <%= teacher.intro %>
+      <% else %>
+        <%= render partial: "shared/standard_teacher_intro", locals: { teacher: teacher } %>
+      <% end %>
+    </div>
+  </div>
+</div>

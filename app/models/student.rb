@@ -9,6 +9,8 @@ class Student < ApplicationRecord
 
   before_create :set_defaults
 
+  AGE_RANGES = ["15岁以下", "15-18岁", "19-25岁", "26-30岁", "30岁以上"]
+
   def scheduled_appointments
     appointments.where(state: :new)
   end
@@ -34,6 +36,11 @@ class Student < ApplicationRecord
       .where(scheduled_start: scheduled_start)
       .where('state <> ?', "canceled")
       .exists?
+  end
+
+  def profile_completed?
+    full_name.present? and preferred_teacher_type.present? and
+      preferred_teacher_gender.present? and purposes.present?
   end
 
   def withdrawal(amount)

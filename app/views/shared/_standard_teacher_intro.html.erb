@@ -1,0 +1,5 @@
+<% if teacher.certificate? %>
+Hello, my name is <%= teacher.first_name %>. I'm an ESL certified teacher. With my teaching experience, I can help you understand and speak English better.
+<% elsif teacher.student? %>
+Hi there, I'm <%= teacher.first_name %>. Wondering how American daily life looks like? Wanna chat with native English speakers? I'm always here for you!
+<% end %>
