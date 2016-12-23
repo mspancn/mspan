@@ -38,6 +38,11 @@ class Student < ApplicationRecord
       .exists?
   end
 
+  def profile_completed?
+    full_name.present? and preferred_teacher_type.present? and
+      preferred_teacher_gender.present? and purposes.present?
+  end
+
   def withdrawal(amount)
     raise "Low Balance" if balance < amount
     self.balance -= amount

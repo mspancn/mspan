@@ -1,4 +1,8 @@
 <div>
+  <% if !current_student.profile_completed? %>
+    <%= render 'profile_uncompleted_notification' %>
+  <% end %>
+
   <% if @uncompleted_appointments.present? %>
     <%= render 'uncompleted_appointments' %>
   <% end %>

@@ -32,3 +32,17 @@ div.jGrowl div.jGrowl-notification {
 div.jGrowl div.jGrowl-notification.error {
   color: red;
 }
+
+.no-decor {
+  color: black;
+}
+
+.no-decor:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.no-decor:focus {
+  text-decoration: none;
+  color: black;
+}
