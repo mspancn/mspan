@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
     resources :teachers, only: [:index, :create, :destroy]
     resources :appointments, only: [:index, :new, :create, :update]
+    resource :profile, only: [:edit, :update]
   end
 
   namespace :teacher do

@@ -1,0 +1,60 @@
+<h4>个人信息</h4>
+
+<%= form_for(@profile, url: student_profile_path) do |f| %>
+
+  <div class="field">
+    <%= f.label :full_name, "姓名" %><br />
+    <%= f.text_field :full_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "邮箱" %><br />
+    <%= f.text_field :email, disabled: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time_zone, "时区" %><br />
+    <%= f.time_zone_select :time_zone, nil %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age_range %><br />
+    <%= f.select :age_range, Student::AGE_RANGES, { include_blank: '保密' } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preferred_teacher_type, '理想外教的年龄段' %><br />
+    <%= f.radio_button :preferred_teacher_type, 'student' %>
+    <%= f.label :preferred_teacher_type_student, '常春藤名校在读大学生' %>
+    <%= f.radio_button :preferred_teacher_type, 'certified' %>
+    <%= f.label :preferred_teacher_type_certified, '拥有ESL专业认证的资深持证教师' %>
+    <%= f.radio_button :preferred_teacher_type, 'any' %>
+    <%= f.label :preferred_teacher_type_any, '年龄不是问题' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preferred_teacher_gender, '理想外教的性别' %><br />
+    <%= f.radio_button :preferred_teacher_gender, 'femal' %>
+    <%= f.label :preferred_teacher_gender_female, 'Lady' %>
+    <%= f.radio_button :preferred_teacher_gender, 'male' %>
+    <%= f.label :preferred_teacher_gender_male, 'Gentleman' %>
+    <%= f.radio_button :preferred_teacher_gender, 'either' %>
+    <%= f.label :preferred_teacher_gender_either, '都可以' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :purposes, '希望得到以下教学服务' %><br />
+    <%= f.check_box :purposes, { :multiple => true, :checked => @profile.purposes.include?('tests') }, 'tests', nil %>
+    <%= f.label :purposes_tests, '雅思，托福口语专项训练' %>
+    <%= f.check_box :purposes, { :multiple => true, :checked => @profile.purposes.include?('aboard') }, 'aboard', nil %>
+    <%= f.label :purposes_aboard, '出国留学将会面临的学习，日常交流' %>
+    <%= f.check_box :purposes, { :multiple => true, :checked => @profile.purposes.include?('business') }, 'business', nil %>
+    <%= f.label :purposes_business, '工作需要，希望提高商务英语口语' %>
+    <%= f.check_box :purposes, { :multiple => true, :checked => @profile.purposes.include?('skill') }, 'skill', nil %>
+    <%= f.label :purposes_skill, '提高英语口语素质' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "更新" %>
+  </div>
+<% end %>
