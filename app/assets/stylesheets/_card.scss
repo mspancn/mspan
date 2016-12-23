@@ -50,9 +50,18 @@
       margin-bottom: 10px;
     }
   }
+}
+
+.expended-card {
+  min-height: 100px;
+  max-width: 530px;
 
   .content {
     padding: 20px;
+
+    .checkmarks {
+      margin-bottom: 10px;
+    }
   }
 }
 
