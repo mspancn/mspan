@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MsPan - English Tutor Online</title>
+		<meta name="description" content="">
+
+		<%= csrf_meta_tags %>
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-86757428-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
+		<link rel="stylesheet" href="assets/home/css/bootstrap.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/styles.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/font-awesome.min.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/magnific-popup.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/retina.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/media.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/animated.min.css" media="screen" />
+		<link rel="shortcut icon" href="assets/home/mspanicon.jpg" type="image/jpg">	
+
+		<script type="text/javascript" src='assets/home/modernizr.min.js'></script>
+		
+	</head>		
+	<body>
+		
+		<!--Welcome section-->
+		<header class="alt"  data-animation="fadeIn fast" data-delay="0">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 for-mobile-header-1">
+						<h1><%= link_to "MsPan", "/", style: "text-transform:capitalize; color:#fed136;" %></h1>
+					</div>
+					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix"> 
+							<nav class="main-menu clearfix navbar navbar-default">
+			
+								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
+									<button type="button" class="navbar-toggle">									
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">Menu</a> 
+								</div>
+							</nav>
+							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
+								<ul class="sf-menu superfish-li-relative">
+									<li class="current-menu-item">
+										<a href="#welcome">welcome</a>
+									</li>
+								    <li><%= link_to "FAQ", {controller: "home", action: "teacherfaq"} %></li>
+									<!-- <li><a href="teacher_faq.html">FAQ</a></li> -->
+                                    <li><a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" class="active" target="_blank"><span class="fa fa-user"></span> Join To Teach </a></li>
+                                    <!-- <li><a href="#" class="active"><span class="fa fa-sign-in"></span> Log In </a></li> -->
+								</ul>
+							</div>
+						</div></div>
+				</div>
+			</div>
+		</header>
+
+		<!--Welcome section-->
+		<section class="waypoint fullscreen parallax-section" data-hash="welcome">
+			<div class="parallax-holder">
+				<div class="paralayer" data-paraspeed="0.5" style="background-image: url(../../assets/home/nyc.jpg);"></div>
+			</div>
+			<div class="container fader">
+				<div class="row">
+					<div class="col-sm-12 clearfix tAc">
+						<ul class="features"   data-animation="fadeIn" data-delay="0.4">
+							<li>Teach English</li>
+                            <li>Connect to China</li>
+                            <li>Online</li>
+						</ul>
+						<h6><a href="#services" class="to-text" data-animation="flipInX" data-delay="0">Apply to Teach</a></h6>
+						<span class="learn-more"   data-animation="fadeInUp" data-delay="0.6">-  Earn money by teaching English online. Anytime. Anywhere.  -</span>
+						<div class="spacer" style="height:80px;"></div>
+						<button type="button" class="btn btn-lg btn-primary" id="" >
+	                        <a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" target="_blank"><span style="color:black">Join MsPan</span></a>
+	                    </button>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="overlay" style="opacity:0.3;"></div> -->
+		</section>
+
+		<!--Services section-->
+		<section class="waypoint" data-hash="services">
+			<!--Features block-->
+			<div class="container">
+				<div class="spacer"  style="height:82px;"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="tAc">
+							<h2 class="big-title"    data-animation="fadeInUp slow" data-delay="0">what we do</h2>
+							<p class="adaptBig" style="max-width:500px; margin:0 auto;" data-animation="fadeInUp slow" data-delay="0.2">MsPan provides 1-on-1 online English language class with native speakers to students all over China. Through our carefully designed courses and cutting edge online platform, MsPan teachers/tutors will help students learn English, improve communication skills, and gain cultural awareness. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="spacer" style="height:41px;"></div>
+			</div>
+		</section>	
+
+        <!--Text recipes section-->
+		<section class="waypoint" data-hash="about">
+			<div class="spacer" style="height:83px;"></div>
+			<div class="container">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="tAc">
+							<h2 class="big big-title color-1" style="padding-bottom:33px;" data-animation="fadeInUp slow" data-delay="0">
+							What we believe</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="big-left-bg-2 color-1">
+				<div class="half_left_layout">
+					<div class="section-image" data-animation="fadeInLeft slow" data-delay="0.4">
+
+					</div>
+				</div>
+				<div class="fRight half-layout-container">
+					<div class="spacer spacer-sm-responsive" style="height:80px;"></div>
+						<div class="inner-cont">
+						<h2 class="mid" style="padding-bottom:24px;" data-animation="fadeInUp slow" data-delay="0">Real Conversation</h2>
+						<p class="adaptBig" style="padding-bottom:9px;" data-animation="fadeInUp slow" data-delay="0">We believe that it is crucial for language learners to see the purpose and benefits of learning a foreign language by interacting with native speakers, and to gain self-motivation and confidence.  </p>
+						<p class="adaptBig" style="padding-bottom:9px;" data-animation="fadeInUp slow" data-delay="0">We believe that a better way to master speaking a foreign language is through constant and meaningful practice with native speakers.  </p>
+						<p class="adaptBig" style="padding-bottom:9px;" data-animation="fadeInUp slow" data-delay="0">We believe through the MsPan's method and practice, everyone can master a foreign language. We believe that as teachers you are the key to make this happen.</p>
+					</div>
+					<div class="spacer spacer-sm-responsive" style="height:79px; clear:both;"></div>
+				</div>
+			</div>
+			<div style="overflow:hidden;">
+				<div class="spacer spacer-sm-responsive" style="height:76px;"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7">
+							<h2 class="big" style="padding-bottom:24px;" data-animation="fadeInUp slow" data-delay="0">Why MsPan</h2>
+							<div class="spacer spacer-sm-responsive" style="height:50px;"></div>
+							<div class="col-sm-10 top-features content-element" >
+								<h3 data-animation="fadeInUp " data-delay="0.5">Convenient</h3>
+							<!-- 	<p class="adaptMid" data-animation="fadeInUp " data-delay="0.7">You can earn money from the comfort of your home while experiencing some of the most rewarding moments of your life by receiving sincere appreciations from your students. That is why you choose us a passionate and dedicated education group who truly cares about their students, and you will be joining us to help them grow as their mentor.</p> -->
+							<p class="adaptMid" data-animation="fadeInUp " data-delay="0.7">You can work from the comfort of your own home or any other location of your choice. <br>
+							You can change your calendar anytime according to your own availability. </p>
+							</div>
+							<div class="col-sm-10 top-features content-element">
+								<h3 data-animation="fadeInUp " data-delay="0.5">Flexible</h3>
+								<p class="adaptMid" data-animation="fadeInUp " data-delay="0.7" >You can teach in any capacity: full-time or part-time.</p>
+							</div>
+							<div class="col-sm-10 top-features content-element" >
+								<h3 data-animation="fadeInUp " data-delay="0.5">Rewarding</h3>
+								<p class="adaptMid" data-animation="fadeInUp " data-delay="0.7">
+								 You can gain international teaching experience without leaving home, and experience rewarding moments of your life by receiving sincere appreciations from your students.</p>
+							</div>
+							<div class="col-sm-10 top-features content-element" >
+								<h3 data-animation="fadeInUp " data-delay="0.5">Supported</h3>
+								<p class="adaptMid" data-animation="fadeInUp " data-delay="0.7">
+								 We help you develop teaching materials and lesson plans. That’s why you choose us - a passionate and dedicated education group who truly cares about their students, and you will be joining us to help them grow as their mentor. </p>
+							</div>
+							<div class="col-sm-10 top-features content-element" >
+								<h3 data-animation="fadeInUp " data-delay="0.5">Connecting to China</h3>
+								<p class="adaptMid" data-animation="fadeInUp " data-delay="0.7">
+								 Interested in learning about China and its unique culture as well? Get inspired by your students from the other side of the world. </p>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<!-- <img src="http://placehold.it/450x492" data-animation="fadeInRight slow" data-delay="0.4" alt="" class="img-responsive img-center half-layout-image-indent" /> -->
+							<%= image_tag("home/tutor.jpg", alt: "", class: "img-responsive img-center half-layout-image-indent") %>
+							<!-- <img src="assets/home/tutor.jpg" data-animation="fadeInRight slow" data-delay="0.4" alt="" class="img-responsive img-center half-layout-image-indent" /> -->
+						</div>
+					</div>
+				</div>
+				<div class="spacer spacer-sm-responsive" style="height:80px;"></div>
+			</div>
+		</section>
+
+		<section class="waypoint" data-hash="hiring">
+		    <div class="spacer"  style="height:80px;"></div>
+			<!--Text and bars block-->
+			<div class="container">
+			    <div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="tAc">
+								<h2 class="big-title"    data-animation="fadeInUp slow" data-delay="0" style="text-transform:capitalize;">English Tutors Wanted</h2>
+								<h2 class="mid" style="padding-bottom:24px;" data-animation="fadeInUp slow" data-delay="0">We are hiring!</h2>
+								<!-- <p class="adaptBig" style="max-width:500px; margin:0 auto; padding-bottom:63px;" data-animation="fadeInUp slow" data-delay="0.2">We are hiring!</p> -->
+							</div>						
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="well well-lg" style="box-shadow:0 0 20px black; background-color:#faf7f3; min-height:400px">
+						<h3>Job requirements</h3>
+						    <p class="adaptMid" style="padding-bottom:9px;" data-animation="fadeInUp slow" data-delay="0">
+						    1. Over 18 years old, and The U.S. citizens or permanent residents, who are eligible to work in The U.S.<br>
+						    <br>
+						    2. Currently full-time university student (undergraduate, graduate, or PhD candidate) in any field of study and background, or hold a bachelor's degree or above.  <br><br>
+						    3. Native English proficiency is required, ESL teaching experience or tutoring experience is strongly recommended.
+						    </p>
+					    </div>
+				    </div>
+				    <div class="col-sm-4">
+						<div class="well well-lg" style="box-shadow:0 0 20px black; background-color:#faf7f3; min-height:400px">
+						<!-- <h3>Is it personal?</h3> -->
+						<h3>Payment</h3>
+							    <!-- <p class="adaptBig" style="padding-bottom:9px;" data-animation="fadeInUp slow" data-delay="0">
+							    As a tutor, you will have a personal profile on our website where you can 
+							    publish your educational background, teaching experience, availability, and hourly rate.</p> -->
+							<p class="adaptMid" style="padding-bottom:9px;" data-animation="fadeInUp slow" data-delay="0">
+						    <span style="color:black">Teacher/tutor's rates per 45-min session:</span><br><br>
+						    1. Teachers/tutors may set their own rates for the 1-on-1 lessons. <br><br>
+						    2. The recommended rates are <span style="color:black; font-weight:bold">$20, $25 or $30</span>,
+						    which are depending on the teachers'/tutors' qualifications, such as teaching experience,
+						    Chinese English bilinguality and popularity.  <br><br>
+						    3. The more you teach, the more you can make.
+						    </p>
+					    </div>
+				    </div>
+				    <div class="col-sm-4">
+						<div class="well well-lg" style="box-shadow:0 0 20px black; background-color:#faf7f3; min-height:400px">
+						<h3>Resources</h3>
+						<p class="adaptMid" style="padding-bottom:9px;" data-animation="fadeInUp slow" data-delay="0">
+						    1. MsPan provides supporting materials that are designed by professional educators. 
+						    These materials contain structured topics and learning modules. <br><br>
+						    <!-- 2. The materials and resources provided would help tutors understand basic skills and tips necessary for effectively teaching Chinese students to learn English as a second language. <br> -->
+						    2. We are interested in collaborating with teachers/tutors, and we are looking for teachers/tutors to participate and share individual teaching and learning styles with their students. 
+						    <!-- 3. Tutors should also be able to provide customized teaching service based on individual student’s personal needs. -->
+						</p>
+					    </div>
+				    </div>
+			    </div>
+				<div class="row">
+				    <div class="tAc">
+					    <div class="buttons" style="padding-top:16px;"    data-animation="fadeInUp slow" data-delay="0.3">
+							<a href="teacher_faq.html" class="button7 btn-1" style="margin-right:6px;">Teacher FAQ</a>
+							<a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" target="_blank" class="button5">Join to teach</a>
+						</div> 
+					</div>   
+				</div>
+				
+			</div>
+			<div class="spacer" style="height:130px;"></div>
+		</section>
+
+		<section class="waypoint parallax-section" data-hash="news">
+		    <div class="spacer"  style="height:80px;"></div>
+			<div class="parallax-holder">
+				<div class="paralayer" style="background-image:url('../../assets/home/pc.jpg')" data-paraspeed="0.5"></div>
+				<!-- <div class="paralayer" style="background-image:url('http://placehold.it/1600x501')" data-paraspeed="0.5"></div> -->
+			</div>
+			<div class="container tAc">
+				<div class="row">
+					<div class="col-sm-12 clearfix">
+						<div class="spacer" style="height:186px;"></div>
+						<h2 class="to-text" data-animation="fadeInUp slow" data-delay="0">Teach English, Connect to China</h2>
+						<div class="spacer" style="height:196px;"></div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="overlay" style="opacity:0.3;"></div> -->
+		</section>
+
+		<!--Footer section-->
+		<section id="footer">
+			<div class="alt-bg-3">
+				<div class="spacer" style="height:73px;"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+                            <div class="tAc">
+
+                                <h2 data-animation="fadeInUp slow" data-delay="0">
+                                contact us:  teacher@mspan.cn</h2>
+								<div class="spacer" style="height:35px;"></div> 
+								<%= image_tag("home/mspan.jpg", alt: "", class: "img-responsive wechatBarCode", style:"margin: 0 auto;") %>
+                                <!-- <img src="img/mspan.jpg" class="img-responsive wechatBarCode" style="margin: 0 auto;" alt=""> -->
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="spacer" style="height:63px;"></div>
+			</div>
+
+			<div class="copyright-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="tAc">
+							    <div style="margin-top: 10px;">
+                                    <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
+                                </div><br>
+                                 <div class="links text-center text-uppercase">
+                                    <%= link_to "中文首页", "/" %> · 
+                                    <%= link_to "FAQ", {controller:"home", action:"teacherfaq"} %>
+                                  </div>
+                                  <div class="spacer" style="height:20px;"></div>
+								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
+								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
+								- All Rights Reserved.</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script type="text/javascript" src='assets/home/jquery.min.js'></script>	
+		<script>
+			/* <![CDATA[ */
+			var loadPageScripts = [
+				'imagesloaded.pkgd.min.js',
+				'bootstrap.min.js',				
+				'isotope.min.js',
+				'jquery.cycle2.min.js',
+				'jquery.cycle2.swipe.min.js',
+				'jquery.flexslider-min.js',
+				'jquery.validate.min.js',
+				'jquery.velocity.min.js',
+				'jquery.magnific-popup.min.js',
+				'parallax.min.js',
+				'smoothScroll.min.js',
+				'superfish.min.js',
+				'tweets.min.js',
+				'waypoints.min.js',
+				'jquery.countTo.min.js'
+			];
+			/* ]]> */
+		</script>	
+		<script type="text/javascript" src='assets/home/script.js'></script>
+	</body>
+</html>

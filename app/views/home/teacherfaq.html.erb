@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MsPan致力于为英语爱好者和出国党打造最优质线上一对一北美外教口语平台, 精英引领, 伴随始终。"／>
+        <META NAME="AUTHOR" CONTENT="MsPan">
+        <META NAME="COPYRIGHT" CONTENT="&copy; 2016 MsPan">
+
+		<title>MsPan FAQ</title>
+		<%= csrf_meta_tags %>
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-86757428-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
+        <link rel="shortcut icon" href="assets/home/mspanicon.jpg" type="image/jpg">
+		<link rel="stylesheet" href="assets/home/css/bootstrap.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/styles.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/font-awesome.min.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/magnific-popup.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/retina.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/media.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/animated.min.css" media="screen" />
+		<script type="text/javascript" src='assets/home/modernizr.min.js'></script>
+	    
+	</head>		
+	<body>
+		
+		<!--Welcome section-->
+		<header class="alt"  data-animation="fadeIn fast" data-delay="0"> <!--alt class for no bg -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 for-mobile-header-1">
+						<h1><%= link_to "MsPan", "/", style: "text-transform:capitalize; color:#fed136;" %></h1>
+					</div>
+					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix"> 
+							<nav class="main-menu clearfix navbar navbar-default">
+								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
+									<button type="button" class="navbar-toggle">									
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">Menu</a> 
+								</div>
+							</nav>
+							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
+								<ul class="sf-menu superfish-li-relative">
+                                   <li><%= link_to "welcome", {controller: "home", action: "teacherhome"} %></li>
+								   <li class="current-menu-item"><a href="#">FAQ</a></li>
+                                   <li><a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" class="active" target="_blank"><span class="fa fa-user"></span> Join To Teach </a></li>
+                                   <!-- <li><a href="#" class="active"><span class="fa fa-sign-in"></span> Log In </a></li> -->
+								</ul>
+							</div>
+						</div></div>
+				</div>
+			</div>
+		</header>
+
+		<!--Head img section-->
+		<section class="waypoint" data-hash="head">
+			<!--Img block-->
+			<div class="img-block features-watch alt-bg" style="padding-top:189px; padding-bottom:173px;">
+				<div class="overlay" style="opacity:0.3;"></div>
+			</div>
+		</section>
+
+        <section class="waypoint"  data-hash="faq" id="faq">
+            <div class="spacer" style="height:100px;"></div>
+	        <div class="container">
+	            <div class="row" id="indexAbout">
+	                <div class="tAc">
+	                    <h2 class="big-title" data-animation="fadeInUp slow" data-delay="0" style="text-transform:capitalize;">Frequently Asked Questions</h2>
+	                </div>
+	            </div>
+	        </div>
+            <div class="container">
+            	<div>
+            	    <div class="container faqContainer">
+
+            	        <input type="checkbox" name="expandAll" id="expandAll" checked/>
+            	        <label for="expandAll"><span></span>Expand All</label>
+
+            	        <div class="spacer" style="height:40px;"></div>
+            	        <h2 style="color:#073e64; font-size:26px">General</h2>
+            	        <hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c1">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What is MsPan?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c1" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c1" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    MsPan is an online language-learning institution that connects English language learners in China to qualified native English teachers/tutors in The U.S. for one-on-one sessions through live video chat. 
+						    </p>
+						</div>
+                        <hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c2">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What does MsPan do for you?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c2" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c2" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    MsPan supports student-tutor matching, appointment managing, and payment processing. MsPan distributes payment, originated from students, to teachers/tutors.  MsPan offers convenience and protection in the collection of tutoring payments.
+						    </p>
+						</div>
+						<hr>
+  
+                        <div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">Application/Requirement</h2>
+            	        <hr>
+
+            	        <div class="row" data-toggle="collapse" data-target="#c3">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What is the applicant eligibility?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c3" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c3" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    1. Over 18 years old, and The U.S. citizens or permanent residents, who are eligible to work in The U.S.<br>
+                                2. Currently full-time university student (undergraduate, graduate, or PhD candidate) in any fields of study and backgrounds, or hold a bachelor degree or above. <br>
+                                3. Native English proficiency is required, ESL teaching experience or tutoring experience is strongly recommended.
+						    </p>
+						</div>
+                        <hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c4">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How do I apply to teach on MsPan?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c4" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c4" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    1. You may click “Join Us” or “Apply Now” from the home page. 
+							    Please enter the requested fields on the application signup page. <br>
+							    2. Please upload your resume to Google drive or Dropbox, and share the link on the application signup page.  Alternatively, you may email your resume directly to <span style="color: blue">teacher@mspan.cn</span>. <br>
+							    3. As part of your application package, you are requested to make a demo video.  You may upload the video to Youtube, Google drive, or Dropbox, and share the link on the application signup page.  Alternatively, you may email the video to <span style="color:blue">teacher@mspan.cn</span>.<br>
+                                Please see the instructions of the demo video: 
+                                <a href="https://docs.google.com/document/d/e/2PACX-1vR7l1sRjpDEPJhP6rYPA0GQB063DDpiaB80XVQiuJ5d6cPREUrmG2JGFZn_UwoLX1k1vjZ4W5B6iOF8/pub"
+                                target="_blank" style="color:blue;">here</a>.
+                                <br>
+                                4. MsPan will review your application package and contact you to schedule an interview.
+						    </p>
+						</div>
+						<!-- <hr>
+						<div class="row" data-toggle="collapse" data-target="#c5">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Why do I need to make a demo video?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c5" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c5" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    It is our mission to provide high quality tutor/teachers who are native English speakers to Chinese students who are eager to improve their English speaking skills. Therefore, it is necessary to demonstrate your ability to speak English fluently and clearly. Please follow the instructions on 
+							    <a href="https://docs.google.com/document/d/e/2PACX-1vR7l1sRjpDEPJhP6rYPA0GQB063DDpiaB80XVQiuJ5d6cPREUrmG2JGFZn_UwoLX1k1vjZ4W5B6iOF8/pub"
+							    target="_blank" style="color:blue">here</a>
+						    </p>
+						</div> -->
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c6">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Do I need to know Chinese to conduct my lessons? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c6" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c6" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    No. The lessons are designed to be an English-only “immersion” experience for your students. However, understanding or speaking some Chinese will definitely assist the communication and the explanation especially for the beginner level students. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c7">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What equipment do I need as a MsPan teacher/tutor? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c7" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c7" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    1) High-speed internet. <br>
+							    2) A desktop or a laptop or a tablet with a webcam. <br>
+							    3) A headset with microphone.
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c8">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Do I have to be a university student to apply the job?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c8" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c8" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    You need to be either a currently enrolled university student (undergraduate, graduate, or PhD candidate), or you hold a bachelor's degree or above and with ESL (English as Secondary Language) teaching experience. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c9">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Do I need teaching experience?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c9" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c9" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    We welcome teachers/tutors from all fields of study, however teaching or tutoring experience is strongly recommended and in most cases is required. Exceptions are made on a case-by-case basis. 
+						    </p>
+						</div>
+						<hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c10">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Do I need a teaching certificate?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c10" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c10" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Any type of formal teaching certificate is preferable but not required. 
+						    </p>
+						</div>
+                        <hr>
+
+
+                        <div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">Interview process</h2>
+            	        <hr>
+
+                        <div class="row" data-toggle="collapse" data-target="#c11">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What is the interview process like?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c11" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c11" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    After we review your application package, we will contact you via Email to schedule a time slot for the interview. The interview will be conducted online, via the video conference software Zoom. (Please see below how to use Zoom and equipment requirement).
+						    </p>
+						</div>
+						<hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c12">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How long is the interview and what would be the format?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c12" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c12" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    The interview will be 30 minutes. The interview has three parts. <br>
+								Part I. (10-15 minutes) One-on-one interview. <br>
+								Part II. (10-15 minutes) Teaching demo. <br>
+								Part III. (5 minutes) Q&A.
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c13">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What equipment do I need for the interview? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c13" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c13" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    1) High-speed internet. <br>
+                                2) A desktop or a laptop with a webcam. <br>
+								3) A headset with microphone. <br>
+								Please make sure you test the equipment beforehand.
+								<!-- , as we are also 
+								assessing your equipment to see if your internet connection 
+								is able to maintain a 30-min smooth connection with a server in China. -->
+						    </p>
+						</div>
+						<hr>
+						<div class="row"  data-toggle="collapse" data-target="#c14">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How to set up the video conference software Zoom to conduct interview?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c14" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c14" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    You need to download and install Zoom first. Then you may select "Join a Meeting" or "Sign In."  Before interview meeting starts, we will provide a meeting ID (eg. 73123456) to you.  Either you may enter the ID by clicking “Join a meeting”, or you may launch Zoom by entering https://zoom.us/s/73123456 from the web browser. For more information about how to use Zoom, please visit:
+							    <a href="https://support.zoom.us/hc/en-us/articles/201362033-Getting-Started-on-PC-and-Mac"
+							    target="_blank" style="color:blue">here</a>. 
+							    You will be able to share slides (if any) from Zoom.
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c15">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How will I be evaluated on my teaching demo?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c15" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c15" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    You will be evaluated on how well you've explained and taught the content, how you've engaged the student in a conversation/discussion, and how you've motivated and encouraged the student to speak confidently. <!-- Your ESL teaching skills and your time management skills.    -->
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c16">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How can I prepare for the teaching demo lesson?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c16" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c16" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    You may apply any teaching methods and styles, or you may use the following template to help you prepare for the demo lesson: <br>
+								1.	(5 minutes) Teaching presentation. <br>
+								2.	(5-10 minutes) Interaction with interviewers. <br>
+								please treat us as your students and encourage us to engage in a discussion with you.
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c17">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What topics or content can I choose for my demo? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c17" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c17" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+					    	    You will be provided a list of interesting topics (ranging from food, campus life to traveling) from one of our course packages. You can choose from any one of the topics that is on the list.  
+						    </p>
+						</div>
+						<hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c18">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How to make my lessons easy to follow for the ESL leaners? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c18" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c18" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Simplicity. <br>
+								Articulated delivery. <br>
+								Facial expression. <br>
+								Dynamic tones, pitches, and volumes. <br>
+								Inviting attitude. <br>
+								Showing personal attention.
+						    </p>
+						</div>
+                        <hr>
+						<div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">After hiring</h2>
+            	        <hr>
+                        <div class="row" data-toggle="collapse" data-target="#c19">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What do I expect after a successful interview?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c19" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c19" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    1. You will receive an offer letter from MsPan.<br>
+								2. We will guide you through a formal registration step to complete your profile. You will need to complete, sign, and submit to MsPan an IRS Form W-9.<br>
+								3. You will also need to sign and submit a teacher/tutor agreement to MsPan.<br>
+								4. We also send you a welcome package, including a teacher manual to help you get ready for the lessons. 
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">Begin teaching</h2>
+            	        <hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c20">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How do I find students?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c20" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c20" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    MsPan will help schedule lessons between teacher/tutor and student. Teachers/tutors should provide their general availability for the entire week to MsPan at least one week in advance. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c21">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Is there going to be a trial class with a new student?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c21" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c21" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Yes,  your first meeting with a new student will be a 20-minute trial class. The purpose of the trial class is for the student and the teacher/tutor to try out their chemistry and style. You are requested to fill out an English speaking proficiency evaluation form after the lesson. You may take the trial lesson as an opportunity to engage and acquire new students for additional sessions. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c22">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Is there any benefit for me to take a trial class?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c22" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c22" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Yes. First, the purpose of the trial class is to find you suitable students. Second, you will get paid for the trial class (please see below “Get Paid” session for trial class). Third, to compensate for tutor’s time, MsPan will offer to count 20-minute trial class as a full session (45 minutes), and accumulate the session accordingly for the calculation of commision matrix (please see below “Get Paid” session for commission).
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c23">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How many students do I teach in each session? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c23" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c23" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    All MsPan lessons are one-on-one private sessions at this point. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c24">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How long is each session?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c24" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c24" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Each session is guaranteed 45 minutes of active teaching time. After that, teachers/tutors may take a few minutes to leave comments. The total time commitment is 50 minutes per session, not including preparation time. 3 minutes are allowed for possible techinical problems before a lesson is conducted.
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c25">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Do I need to prepare any teaching materials?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c25" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c25" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    1. We will provide you a teaching manual which helps you get started and effectively teach Chinese students to learn English as a second language.  <br>
+							    2. We also provide Education Products that are designed by professional educators. These Education Products contain structured topics and learning modules. <br>
+							    3. We are interested in collaborating with you, and we are looking for you to participate and share individual teaching and learning styles with their students.
+							    <!-- 3. Needlessly to say, tutors should also be able to provide customized teaching service based on individual student’s personal needs. As long as it’s agreed upon by tutor and student, tutor has the right to deviate from the Education Product’s schedule.  -->
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c26">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Do teachers/tutors always teach the same students?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c26" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c26" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    It is preferable to have teachers/tutors teach the same students in MsPan.<!-- , and it’s good for teachers and students build a long-term relationship. -->
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c27">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What video technology do I use to teach?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c27" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c27" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    All teaching and learning on MsPan is done through Zoom (don’t worry if you are new to Zoom. It’s very easy to get started and easy to use).
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c28">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How many private sessions can I teach?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c28" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c28" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Teachers/tutors can teach an unlimited amount of private lessons on MsPan. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c29">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How does the scheduling work?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c29" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c29" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    At this point, teachers/tutors should provide their general availability for the entire week to MsPan at least one week in advance. Basically, by Saturday 9AM EST, teachers/tutors should mark their availability for the following week on a google calendar shared to them by MsPan.  MsPan will contact students and schedule the lessons. Teachers/tutors can be scheduled for lessons during the week, no less than 24 hours in advance.  MsPan encourages all teachers/tutors to check their emails and their schedule in the system daily. MsPan is working very hard on building an automatic booking system on our website. We will let the teachers/tutors know as soon as new features become available.
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c30">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What hours should teachers/tutors be available to teach?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c30" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c30" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Due to the time difference (eg. 12 hour in summer, 13 hour in winter between EST time and Beijing China time), MsPan recommends teachers/tutors to schedule their lessons during the peak hours. The peak hours refer to 9am-11am and 6pm-10pm Beijing China time. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c31">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What should I do after each teaching session?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c31" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c31" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    MsPan will provide you a link to fill out the start time and end time of each lesson. Upon confirming with the student, MsPan will mark lesson as completed and you will get paid accordingly. <!-- <br>
+								2. Teachers/Tutors are requested to provide feedback on their students' performance. -->
+						    </p>
+						</div>
+						<hr>
+
+						<div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">Get paid</h2>
+            	        <hr>
+
+						<div class="row" data-toggle="collapse" data-target="#c32">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">How do I set my rate? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c32" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c32" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+					    	    Teachers/tutors may set their own rates for the 1-on-1 lessons. Students need to agree on the rate requested from the teachers/tutors after the trial lesson. 
+					    	    The recommended rate that a teacher/tutor may set is $20, $25 or $30, depending on the individual's qualifications, such as teaching experience, Chinese English bilinguality and popularity. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c33">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">I’m getting popular, can I update my rate to a higher level?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c33" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c33" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Yes, but MsPan teachers/tutors are prohibited from collecting or requesting payment directly from MsPan students by any methods. All changes to the agreed-upon schedules or rates should be either mediated through MsPan or reported to us as soon as they are made.
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c34">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Is there any commission that needs to pay to MsPan?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c34" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c34" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Yes. MsPan provides a commission matrix to the teacher/tutor upon hiring.  Depending on the cumulative teaching sessions, MsPan collects commission from the teacher/tutor.  The more cumulative sessions you teach, the more you get paid. 
+						    </p>
+						</div>
+						<hr>
+						<div class="row" data-toggle="collapse" data-target="#c35">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">Will I get paid from the trial lessons? </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c35" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c35" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    Yes.  <br>
+								1. After the trial lesson, if the student decides to book full sessions with the teacher/tutor, the trial lesson will be free for student, and the teacher/tutor will not get paid. 
+								Student will start paying for the subsequent lessons, and teacher/tutor will start earning money. To compensate for the teacher/tutor’s time, MsPan will offer to count the 20-minute trial lesson as a full session (45 minutes) and accumulate the session accordingly for the calculation of commision matrix. <br>
+								2. If the teacher/tutor fails to acquire the student after the trial lesson, MsPan will reimburse the teacher/tutor $5 for each trial class. This will always be the rate for trial lessons regardless of the accumulated teaching hours with MsPan. <br>
+								3. Teachers/tutors should be aware that MsPan cannot guarantee that a student will decide to register for additional lessons after the trial lesson. Teachers/tutors should view the trial lessons as an opportunity to persuade the students to register for regular lessons with them.
+						    </p>
+						</div>
+						<hr>
+
+						<div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">Cancellation and no-show policies</h2>
+            	        <hr>
+
+						<div class="row" data-toggle="collapse" data-target="#c36">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">What if I can not make it for the class?</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c36" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c36" class="teacher_faq_details collapse in">
+					    	<p class="adaptMid">
+							    At this point, if a student or a teacher/tutor needs to cancel a scheduled class, they are required to notify MsPan at least 24 hours via Email (<span style="color:blue">contact@mspan.cn</span>) before the scheduled lesson start time, so that we can notify the other party.  Such notifications will be sent to both parties via the email we have on file.  MsPan is working very hard on building an automatic booking system on our website. We will let you know as soon as new features become available.
+						    </p>
+						</div>
+						<hr>
+
+						<div class="spacer" style="height:200px;"></div>
+					</div>
+				</div>
+            </div>
+        </section>
+
+	    <!--Footer section-->
+	    <section id="footer">
+	        <div class="copyright-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="tAc">
+							    <div style="margin-top: 10px;">
+                                    <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
+                                </div><br>
+                                 <div class="links text-center text-uppercase">
+                                 
+                                 <%= link_to "Home", {controller:"home", action:"teacherhome"} %> · 
+                                 <a href="#pagetop" style="text-decoration: none;">FAQ</a>
+                                  </div>
+                                  <div class="spacer" style="height:20px;"></div>
+								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
+								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
+								- All Rights Reserved.</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<script type="text/javascript" src='assets/home/jquery.min.js'></script>	
+		<script>
+			/* <![CDATA[ */
+			var loadPageScripts = [
+				'imagesloaded.pkgd.min.js',
+				'bootstrap.min.js',				
+				'isotope.min.js',
+				'jquery.cycle2.min.js',
+				'jquery.cycle2.swipe.min.js',
+				'jquery.flexslider-min.js',
+				'jquery.validate.min.js',
+				'jquery.velocity.min.js',
+				'jquery.magnific-popup.min.js',
+				'parallax.min.js',
+				'smoothScroll.min.js',
+				'superfish.min.js',
+				'tweets.min.js',
+				'waypoints.min.js',
+				'jquery.countTo.min.js'
+			];
+			/* ]]> */
+		</script>	
+		<script type="text/javascript" src='assets/home/script.js'></script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c1").on("hide.bs.collapse", function(){
+			    $(".c1").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c1").on("show.bs.collapse", function(){
+			    $(".c1").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c2").on("hide.bs.collapse", function(){
+			    $(".c2").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c2").on("show.bs.collapse", function(){
+			    $(".c2").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c3").on("hide.bs.collapse", function(){
+			    $(".c3").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c3").on("show.bs.collapse", function(){
+			    $(".c3").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c4").on("hide.bs.collapse", function(){
+			    $(".c4").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c4").on("show.bs.collapse", function(){
+			    $(".c4").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<!-- <script>
+			$(document).ready(function(){
+			  $("#c5").on("hide.bs.collapse", function(){
+			    $(".c5").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c5").on("show.bs.collapse", function(){
+			    $(".c5").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script> -->
+
+		<script>
+			$(document).ready(function(){
+			  $("#c6").on("hide.bs.collapse", function(){
+			    $(".c6").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c6").on("show.bs.collapse", function(){
+			    $(".c6").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c7").on("hide.bs.collapse", function(){
+			    $(".c7").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c7").on("show.bs.collapse", function(){
+			    $(".c7").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c8").on("hide.bs.collapse", function(){
+			    $(".c8").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c8").on("show.bs.collapse", function(){
+			    $(".c8").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c9").on("hide.bs.collapse", function(){
+			    $(".c9").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c9").on("show.bs.collapse", function(){
+			    $(".c9").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c10").on("hide.bs.collapse", function(){
+			    $(".c10").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c10").on("show.bs.collapse", function(){
+			    $(".c10").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+				<script>
+			$(document).ready(function(){
+			  $("#c11").on("hide.bs.collapse", function(){
+			    $(".c11").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c11").on("show.bs.collapse", function(){
+			    $(".c11").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c12").on("hide.bs.collapse", function(){
+			    $(".c12").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c12").on("show.bs.collapse", function(){
+			    $(".c12").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c13").on("hide.bs.collapse", function(){
+			    $(".c13").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c13").on("show.bs.collapse", function(){
+			    $(".c13").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c14").on("hide.bs.collapse", function(){
+			    $(".c14").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c14").on("show.bs.collapse", function(){
+			    $(".c14").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c15").on("hide.bs.collapse", function(){
+			    $(".c15").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c15").on("show.bs.collapse", function(){
+			    $(".c15").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c16").on("hide.bs.collapse", function(){
+			    $(".c16").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c16").on("show.bs.collapse", function(){
+			    $(".c16").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c17").on("hide.bs.collapse", function(){
+			    $(".c17").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c17").on("show.bs.collapse", function(){
+			    $(".c17").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c18").on("hide.bs.collapse", function(){
+			    $(".c18").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c18").on("show.bs.collapse", function(){
+			    $(".c18").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c19").on("hide.bs.collapse", function(){
+			    $(".c19").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c19").on("show.bs.collapse", function(){
+			    $(".c19").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c20").on("hide.bs.collapse", function(){
+			    $(".c20").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c20").on("show.bs.collapse", function(){
+			    $(".c20").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c21").on("hide.bs.collapse", function(){
+			    $(".c21").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c21").on("show.bs.collapse", function(){
+			    $(".c21").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c22").on("hide.bs.collapse", function(){
+			    $(".c22").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c22").on("show.bs.collapse", function(){
+			    $(".c22").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c23").on("hide.bs.collapse", function(){
+			    $(".c23").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c23").on("show.bs.collapse", function(){
+			    $(".c23").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c24").on("hide.bs.collapse", function(){
+			    $(".c24").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c24").on("show.bs.collapse", function(){
+			    $(".c24").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c25").on("hide.bs.collapse", function(){
+			    $(".c25").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c25").on("show.bs.collapse", function(){
+			    $(".c25").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c26").on("hide.bs.collapse", function(){
+			    $(".c26").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c26").on("show.bs.collapse", function(){
+			    $(".c26").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c27").on("hide.bs.collapse", function(){
+			    $(".c27").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c27").on("show.bs.collapse", function(){
+			    $(".c27").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c28").on("hide.bs.collapse", function(){
+			    $(".c28").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c28").on("show.bs.collapse", function(){
+			    $(".c28").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c29").on("hide.bs.collapse", function(){
+			    $(".c29").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c29").on("show.bs.collapse", function(){
+			    $(".c29").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c30").on("hide.bs.collapse", function(){
+			    $(".c30").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c30").on("show.bs.collapse", function(){
+			    $(".c30").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+				<script>
+			$(document).ready(function(){
+			  $("#c31").on("hide.bs.collapse", function(){
+			    $(".c31").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c31").on("show.bs.collapse", function(){
+			    $(".c31").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c32").on("hide.bs.collapse", function(){
+			    $(".c32").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c32").on("show.bs.collapse", function(){
+			    $(".c32").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c33").on("hide.bs.collapse", function(){
+			    $(".c33").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c33").on("show.bs.collapse", function(){
+			    $(".c33").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c34").on("hide.bs.collapse", function(){
+			    $(".c34").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c34").on("show.bs.collapse", function(){
+			    $(".c34").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c35").on("hide.bs.collapse", function(){
+			    $(".c35").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c35").on("show.bs.collapse", function(){
+			    $(".c35").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c36").on("hide.bs.collapse", function(){
+			    $(".c36").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c36").on("show.bs.collapse", function(){
+			    $(".c36").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script type="text/javascript">
+			$('#expandAll').change(function() {
+				if (this.checked) {
+					$('.faqContainer .teacher_faq_details').collapse('show')
+				}else{
+					$('.faqContainer .teacher_faq_details').collapse('hide')
+				}
+			});
+		</script>
+		
+	</body>
+</html>

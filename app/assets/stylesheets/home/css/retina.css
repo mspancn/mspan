@@ -1,0 +1,84 @@
+/* Table of Contents
+   - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    RETINA IMAGES
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
+
+#toTop {background-size: 5px 49px;}
+
+.play,
+.play span {background-size: 12px 78px;}
+
+.play.big,
+.play.big span {background-size: 15px 94px;}
+
+.small-blog .post-info .post-comments em, 
+.small-blog .post-info .post-comments:hover em {background-size: 13px 10px;}
+
+.alternative-arrows .tp-leftarrow.default,
+.alternative-arrows .tp-rightarrow.default {background-size: 72px 5px;}
+
+a.close-ajax span,
+a.close-ajax span em {background-size: 11px 45px;}
+
+a.arrow-bottom span,
+a.arrow-bottom span em {background-size: 5px 36px;}
+
+.mfp-close {background-size: 11px 45px;}
+
+label.error {background-size: 23px 23px;}
+
+a.social_links, 
+a.social_links span {background-size: 466px 69px;}
+
+#footer a.social_links,
+#footer a.social_links span,
+.socials.without-border a.social_links,
+.socials.without-border a.social_links span {background-size: 466px 69px;}
+
+.big input.name {background-size: 11px 17px;}
+.big input.email {background-size: 18px 13px;}
+.big input.site {background-size: 17px 17px;}
+
+
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 3/2), only screen and ( min-device-pixel-ratio: 1.5) {	
+
+#toTop {background-image: url('../img/retina/toTop@2.png');}
+
+.play,
+.play span {background-image: url('../img/retina/play@2.png');}
+
+.play.big,
+.play.big span {background-image: url('../img/retina/play-big@2.png');}
+
+.small-blog .post-info .post-comments em {background-image: url('../img/retina/comment-rollover@2.png');}
+.small-blog .post-info .post-comments:hover em {background-image: url('../img/retina/white-comment@2.png');}
+
+.alternative-arrows .tp-leftarrow.default {background-image: url('../img/retina/prev-1@2.png');}
+.alternative-arrows .tp-rightarrow.default {background-image: url('../img/retina/next-1@2.png');}
+
+a.close-ajax span,
+a.close-ajax span em {background-image: url('../img/retina/close-ajax@2.png');}
+
+a.arrow-bottom span,
+a.arrow-bottom span em {background-image: url('../img/retina/arrow-bottom@2.png');}
+
+.mfp-close {background-image: url('../img/retina/close-ajax@2.png');}
+
+label.error {background-image: url('../img/retina/error@2.png');}
+
+#footer a.social_links,
+#footer a.social_links span,
+.socials.without-border a.social_links,
+.socials.without-border a.social_links span {background-image: url('../img/retina/social-sprite-footer@2.png');}
+
+a.social_links, 
+a.social_links span {background-image: url('../img/retina/social-sprite@2.png');}
+
+.big input.name {background-image: url('../img/retina/name-icon@2.png');}
+.big input.email {background-image: url('../img/retina/mail-icon@2.png');}
+.big input.site {background-image: url('../img/retina/site-icon@2.png');}
+
+}

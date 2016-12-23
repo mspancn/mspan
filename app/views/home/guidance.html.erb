@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MsPan致力于为英语爱好者和出国党打造最优质线上一对一北美外教口语平台, 精英引领, 伴随始终。"／>
+        <META NAME="AUTHOR" CONTENT="MsPan">
+        <META NAME="COPYRIGHT" CONTENT="&copy; 2016 MsPan">
+
+		<title>MsPan － 学员指南</title>
+
+		<%= csrf_meta_tags %>
+	
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-86757428-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
+		<link rel="stylesheet" href="assets/home/css/bootstrap.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/styles.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/font-awesome.min.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/magnific-popup.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/retina.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/media.css" media="screen" />
+		<link rel="stylesheet" href="assets/home/css/animated.min.css" media="screen" />
+		<link rel="shortcut icon" href="assets/home/mspanicon.jpg" type="image/jpg">	
+		<script type="text/javascript" src='assets/home/modernizr.min.js'></script>
+
+	</head>		
+	<body>
+		
+		<!--Welcome section-->
+		<header class="alt"  data-animation="fadeIn fast" data-delay="0"> <!--alt class for no bg -->
+			<div class="container">
+				<div class="row">
+					<!--Company name-->
+					<div class="col-md-3 for-mobile-header-1"><!-- for-menu-header-1 class for fullwidth dropdown menu on devices -->
+						<h1><%= link_to "MsPan", "/", style: "text-transform:capitalize; color:#fed136;" %></h1>
+					</div>
+					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix">  <!-- for-menu-header-2 class for fullwidth dropdown menu on devices -->
+							<!--Menu block-->
+							<nav class="main-menu clearfix navbar navbar-default">
+								<!--menu button on responsive -->
+								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
+									<button type="button" class="navbar-toggle">									
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">菜单导航</a> 
+								</div>
+							</nav>
+							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
+								<ul class="sf-menu superfish-li-relative">
+								   <li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span>申请上课 
+								   </a></li>
+								   <li><%= link_to "Apply to Teach", {controller: "home", action: "teacherhome"}, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
+								</ul>
+							</div>
+						</div></div>
+				</div>
+			</div>
+		</header>
+
+		<!--Head img section-->
+		<section class="waypoint" data-hash="head">
+			<!--Img block-->
+			<div class="img-block features-watch alt-bg" style="padding-top:189px; padding-bottom:173px;">
+				<div class="overlay" style="opacity:0.3;"></div>
+			</div>
+		</section>
+ 
+        <!--Contacts section-->
+		<section data-hash="guidance" class="waypoint" >
+            <div class="spacer" style="height:100px;"></div>
+	        <div class="container">
+	            <div class="row" id="indexAbout">
+	                <div class="tAc">
+	                    <h2 class="big-title" data-animation="fadeInUp slow" data-delay="0" style="text-transform:capitalize;">学员指南</h2>
+	                </div>
+	            </div>
+	        </div>
+            <div class="container">
+            	<div>
+            	    <div class="container faqContainer">
+
+            	        <input type="checkbox" name="expandAll" id="expandAll" checked/>
+            	        <label for="expandAll"><span></span>全部展开</label>
+
+            	        <div class="spacer" style="height:40px;"></div>
+            	        <h2 style="color:#073e64; font-size:26px">了解我们</h2>
+            	        <hr>
+            	        <div class="row" data-toggle="collapse" data-target="#c1">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan是什么，我能从MsPan得到什么样的服务？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c1" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c1" class="faq_details collapse in">
+					    	<p class="adaptBig">
+					    	1. ＭsPan是一家提供线上外教一对一英语口语浸入式学习体验的教学服务机构，为您的英语能力提升、留学准备和英语学业咨询等方面提供全方位指导。</p>
+					    	<p class="adaptBig">
+                            2. ＭsPan为您精心挑选了具备TESOL英语教师资格证书和北美常春藤在校精英大学生的强大师资队伍，让您轻松学口语，随时和地道美音外教交流，体验美国本土文化和风情，帮助您认识美国，了解美国，融入美国。</p>
+                            <p class="adaptBig">
+                            3. ＭsPan为您定制高品质的英语学习体验计划，使您能循序渐进，事半功倍，更高效的提升英语水平。
+						    </p>
+						</div>
+                        <hr>
+                        <div class="spacer" style="height:30px;"></div>
+            	        <div class="row" data-toggle="collapse" data-target="#c2">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan的愿景是什么？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c2" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c2" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    1. MsPan希望提供给学员一个最纯净、最真实的学习英语口语的环境。帮助出国留学人员提前做好准备，提升口语能力，了解美国生活、文化、校园，顺利的完成美国学业。
+						    </p>
+						    <p class="adaptBig">
+							    2. MsPan能为国内的英语爱好者、美国文化爱好者、外企职员提供英语口语练习平台，让大家能有机会和美国年轻人多多交流，增进友谊。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+            	        <div class="row" data-toggle="collapse" data-target="#c3">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan如何帮助您解决哑巴英语或者Chglish的困境？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c3" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c3" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    <span style="color:black">1. 问题一：没有合适方法。</span><br>
+							    大部分初学者练习口语只能靠背诵课文，或者看美剧模仿，这样的练习是无目的、无意义的重复和输入。语言最重要的目的是交流和输出，单纯依靠背诵课文和简单的重复只是杯水车薪，无法真正实现交流和输出信息的目的。
+						    </p>
+						    <p class="adaptBig">
+						        <span style="color:black">MsPan解决方案：</span><br>
+							    首先，MsPan帮助学员建立与美国人 （native speaker）深层次交流的桥梁，通过和外教进行交互式对话（interactive conversation）,  达到语言，社交和讲演 ( communication skill, social skill and presentation skill）全方位的提升。
+						    </p>
+						    <p class="adaptBig">
+						        其次，MsPan专业团队根据学员各自英语程度，自主研发具有针对性的一对一系统课程和学习方法，通过正确的引领和与外教的实战练习，让学员在英语口语的练习道路上快速提升，事半功倍。							    
+						    </p>
+						    <p class="adaptBig">
+						        <span style="color:black">2. 问题二：没有资源和时间。</span><br>
+							    目前各类英语培训班很多，如果想找一个外国人聊天上课也不是什么天方夜谭，但是，培训班和外教质量有的可能会参差不齐、费用昂贵，另外，很多出国党和上班族课业和工作已经很辛苦，再舟车劳顿去上课，费时费力，效果堪忧，有时难免会无疾而终。
+						    </p>
+						    <p class="adaptBig">
+						        <span style="color:black">MsPan解决方案：</span><br>
+						        MsPan为您精心选拔，量身定制最优质，最耐心风趣的外教，采用互联网电话会议的形式，让学员足不出户便可与大洋彼岸的北美精英外教进行一对一上课。他们将会成为您长期的良师益友，鼓舞和激励您坚持学习。
+						    </p>
+						</div>
+                        <hr>
+                        <div class="spacer" style="height:30px;"></div>
+            	        <div class="row" data-toggle="collapse" data-target="#c4">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan的团队成员和师资组成如何？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c4" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c4" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							   MsPan的创始成员均毕业于美国Top School，在美国教育，科技，金融，工程领域学习工作多年。MsPan的老师有来自于美国常春藤的精英在校大学生，也有拥有美国教师资格证的优秀老师。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c5">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black"> 我考过了托福，是否需要MsPan？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c5" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c5" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    美国大学学业繁重，时间紧迫，教授讲课内容多、语速快，有很多中国留学生虽然托福高分，但是来到美国后非常不适应。例如，在学校和同学老师不能很顺利的交流沟通，在求职过程中无法完整表达自己的思路和见解。所以在登陆美国之前非常需要找个美国人努力练习口语和听力，尽量多的了解美国文化，让自己更自信地表达，更流畅地应用。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c6">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan的课程计划如何？ </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c6" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c6" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    MsPan提供两种选择，课程时长均可按需安排，完美适应于各个阶段的英语口语学习者。</p>
+							<p class="adaptBig">MsPan课程计划：以实用话题为主，内容涵盖美国校园、商务英语、学霸来美国、玩转美国、北美吃货等。</p>
+                            <p class="adaptBig">私人定制计划：打造独属于您的话题模块。</p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c7">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan的授课模式是什么？ </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c7" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c7" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    MsPan采用互联网电话会议的形式，让学员足不出户，便可与大洋彼岸北美精英大学生和具有英语教师资格证的外教进行一对一上课。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c8">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">为什么选择MsPan？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c8" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c8" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    因为有留美经历的我们，知道您最需要什么。<br> 团队核心成员均毕业于美国常春藤名校，我们每一个人都一步步经历了备考托福雅思的痛苦、申请择校选择专业的迷茫、拿到学校offer后对新生活新环境的不安、 对名校学业压力的恐惧、以及对毕业后是否能留美工作的焦虑。如今回望这段经历，感慨万千，有太多的挣扎和纠结，这期间我们走了不少弯路，也浪费了不少宝贵的时间。正是因为这段人生经历，我们想做的就是：为同样有梦想的您，同样在努力中前进的您，提供最有效的方法，最实用的资源，最宝贵的经验 , 让您 少走弯路。这条路上MsPan与您并肩作战，您最需要的帮助和资源都在这里。We’ve been there before, and we know how hard it is, and that’ why we can help you.
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">关于报名</h2>
+            	        <hr>
+						
+						<div class="row" data-toggle="collapse" data-target="#c9">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">报名－上课流程</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c9" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c9" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    注册－>填写优化信息采集表－>免费咨询－>制定学习计划－>缴纳学费－>报名成功
+						    </p>
+						    <p class="adaptBig">
+							    具体流程：<br>
+							    Step1. 请您在首页点击开始学习，进入注册页面，先免费注册，填取您的基本信息。
+						    </p>
+						    <p class="adaptBig">
+							    Step2. 指导员会跟您联系，预约一对一交流时间。
+						    </p>
+						    <p class="adaptBig">
+							    Step3. 指导员通过跟您的沟通来了解您的需求，为您选择最合适的外教和制定上课计划。
+						    </p>
+						    <p class="adaptBig">
+							    Step4. 您可以与选定的外教预约体验课。如果您满意推荐外教，可以开始付费上课。
+						    </p>
+						    <p class="adaptBig">
+							    Step5. 自主选择上课时间，上课时长，上课频率，学习学习再学习，全面提高口语。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+            	        <div class="row" data-toggle="collapse" data-target="#c10">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">学费支付</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c10" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c10" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    MsPan实行0捆绑0风险式付费方式。您可以完全按照课时结算，在上课之前只要账户有足够一次课的余额，即可开课。一个课时为45分钟，最低结算单位为一个课时。支付宝，微信，银行卡转账均可付款。如果中途选择更改付款方式，可咨询报名时的课程规划师。
+						    </p>
+						</div>
+                        <hr>
+                        <div class="spacer" style="height:30px;"></div>
+
+                        <div class="row" data-toggle="collapse" data-target="#c11">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">体验课</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c11" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c11" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    报名过程中，您可以与外教预约时长为20分钟的体验课。您需要在体验课之前支付50元的定金，如果体验课结束，您选定和这个外教继续上课，本次体验课为免费，定金将充值进您的账户，用于后续课程预约。如果体验课结束，您不能决定继续预约上课，我们将扣除本次50元定金作为外教的体验课课时费以及MsPan的报名手续费。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+            	        <div class="row" data-toggle="collapse" data-target="#c12">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">课时费用</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c12" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c12" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    每位外教费用公开，透明。每课时为45分钟，课时费用分为168元，188元和218元。 课时费由外教个人制定，用户预约外教时自动同意外教的付费标准。
+							    本定价是根据现行的汇率而制定的。如果汇率有所变动，我们也需要做相应调整，届时我们会通知所有学员。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c13">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">如何开始付费上课？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c13" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c13" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    当您结束免费体验课，锁定适合您的外教后，请联系我们（weichat, email) 与外教预约，并根据该外教的定价请您先付一次课的费用。预约成功后您将收到确认信，确认上课时间与视频地址。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row"  data-toggle="collapse" data-target="#c14">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">使用什么方式上课？会不会很麻烦？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c14" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c14" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    MsPan外教将使用ZOOM软件与您交流学习，该软件可实现屏幕分享这一重要功能，方便外教为您同步展示教学资料和课件。
+						    </p>
+						    <p class="adaptBig">
+							    操作方法简便易行：<br>
+							    1. 下载ZOOM软件，无需注册个人账号；(
+							    <a href="http://www.zoom.cn/download/" style="color:blue">点击此处下载ZOOM</a>)<br>
+							    2. 课前MsPan的助教会发送给您一个号码，如7311414994，在ZOOM软件中点击加入会议并输入号码，即可加入您的外教会议室，开始上课。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+                        <div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">学习当中</h2>
+            	        <hr>
+
+						<div class="row" data-toggle="collapse" data-target="#c15">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan的上课形式和内容是什么？我是否能够自主选择课程内容？如何决定适合我的课时？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c15" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c15" class="faq_details collapse in">
+					        <p class="adaptBig">
+							    MsPan提供两种选择，课程时长均可按需安排，完美适应于各个阶段的英语口语学习者。</p>
+							<p class="adaptBig">MsPan课程计划：以实用话题为主，内容涵盖美国校园、商务英语、学霸来美国、玩转美国、北美吃货等。</p>
+                            <p class="adaptBig">私人定制计划：打造独属于您的话题模块。</p>
+                            <p class="adaptBig">两种课程计划收费标准无差别。</p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c16">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">MsPan的外教有保障吗？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c16" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c16" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    MsPan每一位外教均由北美教师组精挑细选严格把关，经过培训、考核后才能接收学生。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c17">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">我是否必须一直跟同一位外教上课？ </p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c17" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c17" class="faq_details collapse in">
+					    	<p class="adaptBig">
+					    	    MsPan认为，稳固的教学关系，可以使得学生与外教在交流过程中更加深入细节，在轻松的氛围中，高效完成学习目标。但是如果您在课程当中发现外教出现不专业行为，可依据MsPan换课办法进行更换。一个课程计划完成之后，也可更换外教。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+            	        <div class="row" data-toggle="collapse" data-target="#c18">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">我学习的时间非常有限，请问Mspan能够确保我能在雅思或托福考前达到目标分数吗？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c18" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c18" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    MsPan以提高英语口语能力为使命，不签订任何形式，与具体考试挂钩的保分协定。
+						    </p>
+						</div>
+                        <hr>
+                        <div class="spacer" style="height:30px;"></div>
+						<!-- <div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">After hiring</h2>
+            	        <hr> -->
+                        <div class="row" data-toggle="collapse" data-target="#c19">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">我是初学者，没有什么和外国人交流的经验，一开始上课听不懂怎么办？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c19" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c19" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    MsPan提供中英双语外教，如果您需要会说中文的外教来帮助您提高听说能力，MsPan会为您匹配双语外教。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<!-- <div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">Begin teaching</h2>
+            	        <hr> -->
+            	        <div class="row" data-toggle="collapse" data-target="#c20">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">美式英语是否对雅思考试有影响？相同的，英式口音会影响托福考试吗？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c20" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c20" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    英式或美式口音都不会影响雅思或托福口语考试的分数。评分标准的是词汇量，语法多样性与回答问题的完整，精确程度。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c21">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">外教使用的授课方式我不能接受，外教气场跟我不合，我应该向谁反应，找谁处理？可以更换外教吗？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c21" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c21" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    在授课过程中有任何问题，请及时联系课程规划师处理。只要有确切理由，可以依据MsPan换课办法更换外教。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c22">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">与外教线上聊天练习口语，会不会很紧张？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c22" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c22" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    根据我们的经验，学员在第一次与外教聊天时可能会表现拘谨，第二次以及之后的课程中，不少学员就能很快体会到与老外交流越来越顺畅， 越来越自信。很多学员在几次课后，就能与外教谈笑风生，不信您试试看。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c23">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">我因个人情况需要更改预约时间怎么办？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c23" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c23" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    学员最少需要提前24小时通知我们。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="spacer" style="height:20px;"></div>
+						<h2 style="color:#073e64; font-size:26px">课程结束</h2>
+            	        <hr>
+						<div class="row" data-toggle="collapse" data-target="#c24">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">课程结束后有没有反馈？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c24" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c24" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    在每节课结束后，外教将针对本次课程为学员填写一个评语，告诉学员需要针对提高的部分。学员也可以为外教写评语，打分，我们将针对学员的需求与外教进行沟通，保证每次课程的质量。
+						    </p>
+						</div>
+						<hr>
+						<div class="spacer" style="height:30px;"></div>
+						<div class="row" data-toggle="collapse" data-target="#c25">
+                            <div class="col-xs-10">
+						        <p style="margin-bottom:18px;font-size:20px; color:black">我的问题不在常见问题里？</p>
+						    </div>
+                            <div class="col-xs-2">
+						  		<button type="button" class="btn pull-right c25" style="background-color:white">
+						     	<span class="fa fa-chevron-up"></span></button>
+						    </div>
+						</div>
+					    <div id="c25" class="faq_details collapse in">
+					    	<p class="adaptBig">
+							    您有任何反馈或问题，请联系我们（电子邮箱：<span style="color:blue">contact@mspan.cn</span>)，您的意见和反馈会帮助MsPan越做越好！
+						    </p>
+						</div>
+						<hr>
+
+						<div class="spacer" style="height:200px;"></div>
+					</div>
+				</div>
+            </div>
+		</section>	
+
+		<!--Footer section-->
+		<section id="footer">
+			<div class="copyright-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="tAc">
+							    <div style="margin-top: 10px;">
+                                    <%= link_to "MsPan", "/", style: "font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136" %>
+                                </div><br>
+                                <div class="links text-center text-uppercase"><%= link_to "首页", "/" %> · 
+                                 <%= link_to "关于我们", {controller:"home", action:"about"} %> · 
+                                 <%= link_to "联系我们", {controller:"home", action:"contact"} %> · 
+                                 <%= link_to "法律声明", {controller:"home", action:"terms"} %> 
+                                </div>
+                                <div class="spacer" style="height:20px;"></div>
+								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
+								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
+								- All Rights Reserved.</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script type="text/javascript" src='assets/home/jquery.min.js'></script>	
+		<script>
+			/* <![CDATA[ */
+			var loadPageScripts = [
+				'imagesloaded.pkgd.min.js',
+				'bootstrap.min.js',				
+				'isotope.min.js',
+				'jquery.cycle2.min.js',
+				'jquery.cycle2.swipe.min.js',
+				'jquery.flexslider-min.js',
+				'jquery.validate.min.js',
+				'jquery.velocity.min.js',
+				'jquery.magnific-popup.min.js',
+				'parallax.min.js',
+				'smoothScroll.min.js',
+				'superfish.min.js',
+				'tweets.min.js',
+				'waypoints.min.js',
+				'jquery.countTo.min.js'
+			];
+			/* ]]> */
+		</script>	
+		<script type="text/javascript" src='assets/home/script.js'></script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c1").on("hide.bs.collapse", function(){
+			    $(".c1").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c1").on("show.bs.collapse", function(){
+			    $(".c1").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c2").on("hide.bs.collapse", function(){
+			    $(".c2").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c2").on("show.bs.collapse", function(){
+			    $(".c2").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c3").on("hide.bs.collapse", function(){
+			    $(".c3").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c3").on("show.bs.collapse", function(){
+			    $(".c3").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c4").on("hide.bs.collapse", function(){
+			    $(".c4").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c4").on("show.bs.collapse", function(){
+			    $(".c4").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c5").on("hide.bs.collapse", function(){
+			    $(".c5").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c5").on("show.bs.collapse", function(){
+			    $(".c5").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c6").on("hide.bs.collapse", function(){
+			    $(".c6").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c6").on("show.bs.collapse", function(){
+			    $(".c6").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c7").on("hide.bs.collapse", function(){
+			    $(".c7").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c7").on("show.bs.collapse", function(){
+			    $(".c7").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c8").on("hide.bs.collapse", function(){
+			    $(".c8").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c8").on("show.bs.collapse", function(){
+			    $(".c8").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c9").on("hide.bs.collapse", function(){
+			    $(".c9").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c9").on("show.bs.collapse", function(){
+			    $(".c9").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c10").on("hide.bs.collapse", function(){
+			    $(".c10").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c10").on("show.bs.collapse", function(){
+			    $(".c10").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+				<script>
+			$(document).ready(function(){
+			  $("#c11").on("hide.bs.collapse", function(){
+			    $(".c11").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c11").on("show.bs.collapse", function(){
+			    $(".c11").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c12").on("hide.bs.collapse", function(){
+			    $(".c12").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c12").on("show.bs.collapse", function(){
+			    $(".c12").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c13").on("hide.bs.collapse", function(){
+			    $(".c13").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c13").on("show.bs.collapse", function(){
+			    $(".c13").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c14").on("hide.bs.collapse", function(){
+			    $(".c14").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c14").on("show.bs.collapse", function(){
+			    $(".c14").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c15").on("hide.bs.collapse", function(){
+			    $(".c15").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c15").on("show.bs.collapse", function(){
+			    $(".c15").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c16").on("hide.bs.collapse", function(){
+			    $(".c16").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c16").on("show.bs.collapse", function(){
+			    $(".c16").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c17").on("hide.bs.collapse", function(){
+			    $(".c17").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c17").on("show.bs.collapse", function(){
+			    $(".c17").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c18").on("hide.bs.collapse", function(){
+			    $(".c18").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c18").on("show.bs.collapse", function(){
+			    $(".c18").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c19").on("hide.bs.collapse", function(){
+			    $(".c19").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c19").on("show.bs.collapse", function(){
+			    $(".c19").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c20").on("hide.bs.collapse", function(){
+			    $(".c20").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c20").on("show.bs.collapse", function(){
+			    $(".c20").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c21").on("hide.bs.collapse", function(){
+			    $(".c21").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c21").on("show.bs.collapse", function(){
+			    $(".c21").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c22").on("hide.bs.collapse", function(){
+			    $(".c22").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c22").on("show.bs.collapse", function(){
+			    $(".c22").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c23").on("hide.bs.collapse", function(){
+			    $(".c23").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c23").on("show.bs.collapse", function(){
+			    $(".c23").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  $("#c24").on("hide.bs.collapse", function(){
+			    $(".c24").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c24").on("show.bs.collapse", function(){
+			    $(".c24").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#c25").on("hide.bs.collapse", function(){
+			    $(".c25").html('<span class="fa fa-chevron-up"></span>');
+			  });
+			  $("#c25").on("show.bs.collapse", function(){
+			    $(".c25").html('<span class="fa fa-chevron-down"></span>');
+			  });
+			});
+		</script>
+
+		<script type="text/javascript">
+			$('#expandAll').change(function() {
+				if (this.checked) {
+					$('.faqContainer .faq_details').collapse('show')
+				}else{
+					$('.faqContainer .faq_details').collapse('hide')
+				}
+			});
+		</script>
+
+	</body>
+</html>
