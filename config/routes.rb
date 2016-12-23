@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
     resources :availabilities, only: [:index, :create, :destroy]
     resources :appointments, only: [:index, :update]
+    resource :profile, only: [:show]
   end
 
   match 'status', :to => 'home#status', via: :get

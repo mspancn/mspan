@@ -50,3 +50,14 @@ div.jGrowl div.jGrowl-notification.error {
   text-decoration: none;
   color: black;
 }
+
+table.info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  td.field-name {
+    text-align: right;
+    width: 135px;
+    padding-right: 5px;
+  }
+}

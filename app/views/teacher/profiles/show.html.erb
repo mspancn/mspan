@@ -1,0 +1,79 @@
+<h4>My Profile</h4>
+<div><small>Please contact <%= mail_to "teacher@mspan.cn", "MsPan admin" %> if any updates needed.</small></div>
+
+<table class="info">
+  <tr>
+    <td class="field-name">Name:</td>
+    <td><%= @profile.first_name %> <%= @profile.last_name %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Rate:</td>
+    <td>$<%= @profile.rate %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Balance:</td>
+    <td>$<%= @profile.balance %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Email:</td>
+    <td><%= @profile.email %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Phone:</td>
+    <td><%= @profile.phone %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Time Zone:</td>
+    <td><%= @profile.time_zone %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Major:</td>
+    <td><%= @profile.major %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Degree:</td>
+    <td><%= @profile.degree %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Currently a Student:</td>
+    <td><%= @profile.student? ? "Yes" : "No" %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Teaching Certificate:</td>
+    <td><%= @profile.certificate? ? "Yes" : "No" %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Mandarin Speaking:</td>
+    <td><%= @profile.mandarin? ? "Yes" : "No" %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Gender:</td>
+    <td><%= @profile.gender.present? ? @profile.gender : "(Not disclosed)" %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Age:</td>
+    <td><%= @profile.age_range.present? ? @profile.age_range : "(Not disclosed)" %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Speech Video:</td>
+    <td><%= @profile.speech_video %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Introduction:</td>
+    <td><%= @profile.intro %></td>
+  </tr>
+</table>

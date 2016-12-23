@@ -4,7 +4,7 @@
   <li class="dropdown v-divider">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_teacher.full_name %> <span class="caret"></span></a>
     <ul class="dropdown-menu">
-      <li><a href="#">Profile</a></li>
+      <li><%= link_to "Profile", teacher_profile_path %></li>
       <li><%= link_to "Scheduled", teacher_appointments_path(state: :new) %></li>
       <li><%= link_to "Completed", teacher_appointments_path(state: :completed) %></li>
       <li><%= link_to "Canceled", teacher_appointments_path(state: :canceled) %></li>
