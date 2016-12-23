@@ -1,16 +1,18 @@
 <div class="card main-card">
-  <div class="profile">
-    <div class="pic">
-      <%= image_tag("no_profile_image") %>
+  <%= link_to student_teacher_path(teacher), :class => "no-decor" do %>
+    <div class="profile">
+      <div class="pic">
+        <%= image_tag("no_profile_image") %>
+      </div>
+      <div class="info">
+        <%= teacher.full_name %>
+        <br />
+        <br />
+        <br />
+        <small><%= ExchangeService.dollar_to_yuan(teacher.rate) %>元/课</small>
+      </div>
     </div>
-    <div class="info">
-      <%= teacher.full_name %>
-      <br />
-      <br />
-      <br />
-      <small><%= ExchangeService.dollar_to_yuan(teacher.rate) %>元/课</small>
-    </div>
-  </div>
+  <% end %>
   <div class="actions">
     <%= link_to("预约课程",
       new_student_appointment_path(teacher_id: teacher.id),
