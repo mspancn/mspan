@@ -27,7 +27,6 @@
 				'parallax.min.js',
 				'smoothScroll.min.js',
 				'superfish.min.js',
-				'tweets.min.js',
 				'waypoints.min.js',
 				'jquery.countTo.min.js'
 			],
