@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
-  layout false
+  layout 'home'
 
   def status
-    render text: ActiveRecord::Migrator.current_version
+    render text: ActiveRecord::Migrator.current_version, layout: false
   end
 end
