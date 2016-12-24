@@ -15,13 +15,8 @@
     <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
 
-    <link rel="stylesheet" href="assets/home/css/bootstrap.css" media="screen" />
-    <link rel="stylesheet" href="assets/home/css/styles.css" media="screen" />
-    <link rel="stylesheet" href="assets/home/css/font-awesome.min.css" media="screen" />
-    <link rel="stylesheet" href="assets/home/css/magnific-popup.css" media="screen" />
-    <link rel="stylesheet" href="assets/home/css/retina.css" media="screen" />
-    <link rel="stylesheet" href="assets/home/css/media.css" media="screen" />
-    <link rel="stylesheet" href="assets/home/css/animated.min.css" media="screen" />
+    <%= stylesheet_link_tag    'home', media: 'screen', 'data-turbolinks-track': 'reload' %>
+
     <link rel="shortcut icon" href="assets/home/mspanicon.jpg" type="image/jpg">
 
     <%= google_analytics_js %>
