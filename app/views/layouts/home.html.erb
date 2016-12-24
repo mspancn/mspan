@@ -15,9 +15,9 @@
     <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'home', media: 'screen', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'home/mspanicon.jpg' %>
 
-    <link rel="shortcut icon" href="assets/home/mspanicon.jpg" type="image/jpg">
+    <%= stylesheet_link_tag    'home', media: 'screen', 'data-turbolinks-track': 'reload' %>
 
     <%= google_analytics_js %>
   </head>
