@@ -196,55 +196,55 @@
 	};
 
 //Count loading progress for site loader
-	var UpdateLoaderCounter = function () {
-		// loaderCounter++;
-		// var percentage = parseInt(loaderCounter / loaderMaxCounter * 100);
-		var percentage = 100;
+	// var UpdateLoaderCounter = function () {
+	// 	// loaderCounter++;
+	// 	// var percentage = parseInt(loaderCounter / loaderMaxCounter * 100);
+	// 	var percentage = 100;
 
-		if (percentage.toString().length == 1) {
-			percentage = '  ' + percentage;
-		} else if (percentage.toString().length == 2) {
-			percentage = ' ' + percentage;
-		}
+	// 	if (percentage.toString().length == 1) {
+	// 		percentage = '  ' + percentage;
+	// 	} else if (percentage.toString().length == 2) {
+	// 		percentage = ' ' + percentage;
+	// 	}
 
-		// Loader.updateProgress(percentage);
+	// 	// Loader.updateProgress(percentage);
 
-		// if (loaderCounter === loadScripts.length) {
-			InitJS();
-		// }
+	// 	// if (loaderCounter === loadScripts.length) {
+	// 		InitJS();
+	// 	// }
 
-	};
+	// };
 
 // AJAX loading of javascripts plugins
-	var LoadJS = function () {
+	// var LoadJS = function () {
 
-		var url = [];
+	// 	var url = [];
 
-		jQuery.each(loadScripts, function (i)
-		{
+	// 	jQuery.each(loadScripts, function (i)
+	// 	{
 
-			if (/(^http:\/\/)|(^https:\/\/)|(^\/\/)|(^www.)/.test(loadScripts[i])) {
-				url[i] = loadScripts[i];
-			} else {
-				// url[i] = sitePath + '/js/' + loadScripts[i]
-				url[i] = sitePath + '/assets/home/' + loadScripts[i]
-			}
+	// 		if (/(^http:\/\/)|(^https:\/\/)|(^\/\/)|(^www.)/.test(loadScripts[i])) {
+	// 			url[i] = loadScripts[i];
+	// 		} else {
+	// 			// url[i] = sitePath + '/js/' + loadScripts[i]
+	// 			url[i] = sitePath + '/assets/home/' + loadScripts[i]
+	// 		}
 
-			jQuery.ajax({
-				url: url[i],
-				dataType: "script",
-				cache: true,
-				success: function () {
-					UpdateLoaderCounter();
-				}
-			});
-
-
+	// 		jQuery.ajax({
+	// 			url: url[i],
+	// 			dataType: "script",
+	// 			cache: true,
+	// 			success: function () {
+	// 				UpdateLoaderCounter();
+	// 			}
+	// 		});
 
 
-		});
 
-	}
+
+	// 	});
+
+	// }
 
 // Smooth anchor scrolling
 	var SmoothScrollTo = {
@@ -1482,7 +1482,6 @@
 
 		if (started !== 1)
 		    // LoadJS();
-		  // UpdateLoaderCounter();
 		  InitJS();
 			started = 1;
 		});
