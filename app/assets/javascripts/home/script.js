@@ -10,28 +10,28 @@
 	var $window, root, 
 			touch = Modernizr.touch,
 			responsive = 993,
-			loaderCounter = 0,
+			// loaderCounter = 0,
 //	Array of javascrripts plugins, support external URLs also
 			loadScriptsDefault = [
-				'imagesloaded.pkgd.min.js',
-				'bootstrap.min.js',
-				'isotope.min.js',
-				'jquery.cycle2.min.js',
-				'jquery.cycle2.swipe.min.js',
-				'jquery.flexslider-min.js',
-				'jquery.themepunch.tools.min.js',
-				'jquery.themepunch.revolution.min.js',
-				'jquery.validate.min.js',
-				'jquery.velocity.min.js',
-				'jquery.magnific-popup.min.js',
-				'parallax.min.js',
-				'smoothScroll.min.js',
-				'superfish.min.js',
-				'waypoints.min.js',
-				'jquery.countTo.min.js'
+				// 'imagesloaded.pkgd.min.js',
+				// 'bootstrap.min.js',
+				// 'isotope.min.js',
+				// 'jquery.cycle2.min.js',
+				// 'jquery.cycle2.swipe.min.js',
+				// 'jquery.flexslider-min.js',
+				// 'jquery.themepunch.tools.min.js',
+				// 'jquery.themepunch.revolution.min.js',
+				// 'jquery.validate.min.js',
+				// 'jquery.velocity.min.js',
+				// 'jquery.magnific-popup.min.js',
+				// 'parallax.min.js',
+				// 'smoothScroll.min.js',
+				// 'superfish.min.js',
+				// 'waypoints.min.js',
+				// 'jquery.countTo.min.js'
 			],
 			loadScripts = (typeof loadPageScripts === "undefined") ? loadScriptsDefault : loadPageScripts,
-			loaderMaxCounter = loadScripts.length + jQuery("body img").length,
+			// loaderMaxCounter = loadScripts.length + jQuery("body img").length,
 			sitePath = window.location.protocol.replace(/\:/g, '') + "://" + window.location.host + window.location.pathname,
 			hash = window.location.hash.replace("#", ""),
 			flexslides = {},
@@ -129,7 +129,7 @@
 			if (value === 100) {
 				setTimeout(function () {
 					Loader.hide();
-				}, 800);
+				}, 100);
 			}
 			
 		},
@@ -196,9 +196,10 @@
 	};
 
 //Count loading progress for site loader
-	var UpdateLoaderCounter = function (url) {
-		loaderCounter++;
-		var percentage = parseInt(loaderCounter / loaderMaxCounter * 100);
+	var UpdateLoaderCounter = function () {
+		// loaderCounter++;
+		// var percentage = parseInt(loaderCounter / loaderMaxCounter * 100);
+		var percentage = 100;
 
 		if (percentage.toString().length == 1) {
 			percentage = '  ' + percentage;
@@ -206,11 +207,11 @@
 			percentage = ' ' + percentage;
 		}
 
-		Loader.updateProgress(percentage);
+		// Loader.updateProgress(percentage);
 
-		if (loaderCounter === loadScripts.length) {
+		// if (loaderCounter === loadScripts.length) {
 			InitJS();
-		}
+		// }
 
 	};
 
@@ -234,7 +235,7 @@
 				dataType: "script",
 				cache: true,
 				success: function () {
-					UpdateLoaderCounter(url[i]);
+					UpdateLoaderCounter();
 				}
 			});
 
@@ -1401,14 +1402,16 @@
 
 
 		// check if imagesloaded.pkgd.min.js loaded
-			if (typeof (jQuery.fn.imagesLoaded) !== 'undefined') {
-				jQuery('body').imagesLoaded().progress(function (instance, image ) {
-					UpdateLoaderCounter(image.img.src);
-				});
-			} else {
-				Loader.updateProgress('100');
-			}
+			// if (typeof (jQuery.fn.imagesLoaded) !== 'undefined') {
+			// 	jQuery('body').imagesLoaded().progress(function (instance, image ) {
+			// 		UpdateLoaderCounter();
+			// 	});
+			// } else {
+			// 	console.log("100");
+			// 	Loader.updateProgress(100);
+			// }
 
+		Loader.updateProgress(100);
 
 		Core.init();
 		
@@ -1430,24 +1433,28 @@
 
 
 		// check if isotope.min.js loaded
-		if (typeof (jQuery.fn.isotope) !== 'undefined') {
-			IsotopeGallery.init();
-		}
+		// if (typeof (jQuery.fn.isotope) !== 'undefined') {
+		// 	console.log("isotope");
+		// 	IsotopeGallery.init();
+		// }
 
 		// check if jquery.flexslider-min.js loaded
-		if (typeof (jQuery.fn.flexslider) !== 'undefined') {
-			Flexsliders.init();
-		}
+		// if (typeof (jQuery.fn.flexslider) !== 'undefined') {
+		// 	console.log("flexslider");
+		// 	Flexsliders.init();
+		// }
 
 		// check if tweets.min.js loaded
-		if (typeof (getTweets) == 'function') {
-			TwitterFeed.init();
-		}
+		// if (typeof (getTweets) == 'function') {
+		// 	console.log("TwitterFeed");
+		// 	TwitterFeed.init();
+		// }
 
 		// check if jquery.validate.min.js loaded
-		if (typeof (jQuery.fn.validate) !== 'undefined') {
-			FormValidation.init();
-		}
+		// if (typeof (jQuery.fn.validate) !== 'undefined') {
+		// 	console.log("FormValidation");
+		// 	FormValidation.init();
+		// }
 
 		// check if jquery.themepunch.revolution.min.js and jquery.themepunch.tools.min.js loaded
 		if (typeof (jQuery.fn.revolution) !== 'undefined' && typeof (punchgs) == 'object') {
@@ -1455,9 +1462,10 @@
 		}
 
 		// check if jquery.magnific-popup.min.js loaded
-		if (typeof (jQuery.fn.magnificPopup) !== 'undefined') {
-			MPopup.init();
-		}
+		// if (typeof (jQuery.fn.magnificPopup) !== 'undefined') {
+		// 	console.log("MPopup");
+		// 	MPopup.init();
+		// }
 
 		BackgroundVideo.init();
 
@@ -1473,7 +1481,9 @@
 		Loader.init(function () {
 
 		if (started !== 1)
-		    LoadJS();
+		    // LoadJS();
+		  // UpdateLoaderCounter();
+		  InitJS();
 			started = 1;
 		});
 	});
