@@ -4,7 +4,7 @@
  * @author Olegnax
  * @website http://olegnax.com
  **************************************************************************/
-(function ($) {
+ $(document).on('turbolinks:load', function () {
 	"use strict";
 //Global variables
 	var $window, root, 
@@ -1486,4 +1486,4 @@
 			started = 1;
 		});
 	});
-})(jQuery);
+});

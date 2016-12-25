@@ -6,7 +6,7 @@
 				<div class="row">
 					<!--Company name-->
 					<div class="col-md-3 for-mobile-header-1"><!-- for-menu-header-1 class for fullwidth dropdown menu on devices -->
-						<h1><%= link_to "MsPan", "/", style: "text-transform:capitalize; color:#fed136;" %></h1>
+						<h1><%= link_to "MsPan", root_path(anchor: 'welcome'), style: "text-transform:capitalize; color:#fed136;" %></h1>
 					</div>
 					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix">  <!-- for-menu-header-2 class for fullwidth dropdown menu on devices -->
 							<!--Menu block-->
@@ -542,7 +542,7 @@
 						<div class="col-md-12">
 							<div class="tAc">
 							    <div style="margin-top: 10px;">
-                                    <%= link_to "MsPan", "/", style: "font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136" %>
+                                    <%= link_to "MsPan", root_path(anchor: 'welcome'), style: "font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136" %>
                                 </div><br>
                                 <div class="links text-center text-uppercase"><%= link_to "首页", "/" %> · 
                                  <%= link_to "关于我们", {controller:"home", action:"about"} %> · 
