@@ -68,6 +68,12 @@ gem "aws-ses", "~> 0.6.0", :require => 'aws/ses'
 # New Relic is a performance management system, developed by New Relic, Inc (http://www.newrelic.com).
 gem 'newrelic_rpm'
 
+# Static page caching for Action Pack (removed from core in Rails 4.0).
+# TODO: point to the main branch when it's merged
+gem "actionpack-page_caching",
+  git: "https://github.com/kord-as/actionpack-page_caching",
+  branch: "rails5"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
