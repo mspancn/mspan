@@ -19,10 +19,22 @@
           </nav>
           <div class="collapse navbar-collapse m-menu" id="top-main-menu">
             <ul class="sf-menu superfish-li-relative">
-              <li class="current-menu-item">
-                <a href="#welcome">welcome</a>
-              </li>
-              <li><%= link_to "FAQ", teacherfaq_path %></li>
+              <% if current_page?(teacherhome_path) %>
+                <li class="current-menu-item">
+                  <a href="#welcome">welcome</a>
+                </li>
+              <% else %>
+                <li><%= link_to "Welcome", teacherhome_path %></li>
+              <% end %>
+
+              <% if current_page?(teacherfaq_path) %>
+                <li class="current-menu-item">
+                  <a href="#">FAQ</a>
+                </li>
+              <% else %>
+                <li><%= link_to "FAQ", teacherfaq_path %></li>
+              <% end %>
+
               <li><a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" class="active" target="_blank"><span class="fa fa-user"></span> Join To Teach </a></li>
             </ul>
           </div>
