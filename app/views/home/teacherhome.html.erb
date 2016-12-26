@@ -1,38 +1,6 @@
 <% content_for :title, "MsPan - English Tutor Online" %>
-		
-		<!--Welcome section-->
-		<header class="alt"  data-animation="fadeIn fast" data-delay="0">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 for-mobile-header-1">
-						<h1><%= link_to "MsPan", root_path(anchor: 'welcome'), style: "text-transform:capitalize; color:#fed136;" %></h1>
-					</div>
-					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix"> 
-							<nav class="main-menu clearfix navbar navbar-default">
-			
-								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
-									<button type="button" class="navbar-toggle">									
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand" href="#">Menu</a> 
-								</div>
-							</nav>
-							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
-								<ul class="sf-menu superfish-li-relative">
-									<li class="current-menu-item">
-										<a href="#welcome">welcome</a>
-									</li>
-								    <li><%= link_to "FAQ", teacherfaq_path %></li>
-                                    <li><a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" class="active" target="_blank"><span class="fa fa-user"></span> Join To Teach </a></li>
-                                    <!-- <li><a href="#" class="active"><span class="fa fa-sign-in"></span> Log In </a></li> -->
-								</ul>
-							</div>
-						</div></div>
-				</div>
-			</div>
-		</header>
+
+<%= render partial: 'teacher_header' %>
 
 		<!--Welcome section-->
 		<section class="waypoint fullscreen parallax-section" data-hash="welcome">
@@ -260,25 +228,5 @@
 				<div class="spacer" style="height:63px;"></div>
 			</div>
 
-			<div class="copyright-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="tAc">
-							    <div style="margin-top: 10px;">
-                                    <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
-                                </div><br>
-                                 <div class="links text-center text-uppercase">
-                                    <%= link_to "中文首页", root_path(anchor: 'welcome') %> · 
-                                    <%= link_to "FAQ", teacherfaq_path %>
-                                  </div>
-                                  <div class="spacer" style="height:20px;"></div>
-								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
-								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
-								- All Rights Reserved.</div></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<%= render partial: 'teacher_copyright_block' %>
 		</section>

@@ -3,59 +3,7 @@
 		<div class="loader" style="background-color:black">
 		     <div class="bar" style="text-transform:capitalize;"><strong style="color:#fed136;">MsPan</strong><span class="progress"><span>loading...</span></span></div></div>
 		
-		<!--Welcome section-->
-		<header class="alt"  data-animation="fadeIn fast" data-delay="0"> <!--alt class for no bg -->
-			<div class="container">
-				<div class="row">
-					<!--Company name-->
-					<div class="col-md-3 for-mobile-header-1"><!-- for-menu-header-1 class for fullwidth dropdown menu on devices -->
-						<h1><a href="#pagetop" style="text-transform:capitalize; color:#fed136;">MsPan</a></h1>
-					</div>
-					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix">  <!-- for-menu-header-2 class for fullwidth dropdown menu on devices -->
-							<!--Menu block-->
-							<nav class="main-menu clearfix navbar navbar-default">
-								<!--menu button on responsive -->
-								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
-									<button type="button" class="navbar-toggle">									
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand" href="#">菜单导航</a> 
-								</div>
-							</nav>
-							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
-								<ul class="sf-menu superfish-li-relative">
-									<li><a href="#services">核心服务</a></li>
-									<li><a href="#portfolio">北美师资</a></li>
-									<li><a href="#course">人气课程</a></li>
-									<li class="dropdown">
-										<a href="#about">关于我们</a>
-										<ul class="submenu"> <!--First level submenu-->
-											<li><a href="#about">关于MsPan</a></li>
-											<li><%= link_to "更多关于", about_path %></li>
-											<li><%= link_to "学员指南", guidance_path %></li>
-											<li><%= link_to "联系我们", contact_path %></li>
-										</ul>
-									</li>				
-									
-									<!-- <li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span>申请上课 </a></li> -->
-                                   <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li> -->
-                                   <!-- <li><a href="#" id="loginBtn" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
-                                   <li><span class="fa fa-user" style="color:white">
-                                      <%= link_to "注册", new_student_session_path, class:"active", style:"color:white" %></span>
-                                   </li>
-                                   <li><span class="fa fa-sign-in" style="color:white">
-                                      <%= link_to "登录", new_student_session_path, class:"active", style:"color:white" %></span>
-                                   </li>
-                                   <li></li>
-                                   <li><%= link_to "Apply to Teach", teacherhome_path, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
-								</ul>
-							</div>
-						</div></div>
-				</div>
-			</div>
-		</header>
+<%= render partial: 'header' %>
 
 		<!--Welcome section-->
         <section class="waypoint video-block fullscreen" data-hash="welcome">
@@ -673,51 +621,7 @@
 			</div>
 		</section>	
 
-		<!--Footer section-->
-		<section id="footer">
-			<!--Twitter block-->
-			<div class="twitter alt-bg-3">
-				<div class="spacer" style="height:73px;"></div>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="tAc">
-								<i> 
-								    <%= image_tag("home/weixinIcon.png", alt: "", class: "img-responsive", style: "margin: 0 auto; height:30px; width: 30px ") %>
-								</i>
-								<div class="spacer" style="height:35px;"></div>
-								    <%= image_tag("home/wechat.jpg", alt: "", class: "img-responsive wechatBarCode", style: "margin: 0 auto;") %>
-							</div>						
-						</div>
-					</div>
-				</div>
-				<div class="spacer" style="height:63px;"></div>
-			</div>
-
-			<div class="copyright-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="tAc">
-							    <div style="margin-top: 10px;">
-                                    <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
-                                </div><br>
-                                 <div class="links text-center text-uppercase">
-                                 <%= link_to "关于我们", about_path %> · 
-                                 <%= link_to "学员指南", guidance_path %> · 
-                                 <%= link_to "联系我们", contact_path %> · 
-                                 <%= link_to "法律声明", terms_path %>
-                                  </div>
-                                  <div class="spacer" style="height:20px;"></div>
-								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
-								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
-								- All Rights Reserved.</div></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<%= render partial: 'footer' %>
 
 		<div class="container" >
 			<!-- Modal -->

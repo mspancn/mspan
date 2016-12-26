@@ -1,39 +1,6 @@
 <% content_for :title, "MsPan － 联系我们" %>
 
-		<!--Welcome section-->
-		<header class="alt"  data-animation="fadeIn fast" data-delay="0"> <!--alt class for no bg -->
-			<div class="container">
-				<div class="row">
-					<!--Company name-->
-					<div class="col-md-3 for-mobile-header-1"><!-- for-menu-header-1 class for fullwidth dropdown menu on devices -->
-						<h1><%= link_to "MsPan", root_path(anchor: 'welcome'), style: "text-transform:capitalize; color:#fed136;" %></h1>
-					</div>
-					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix">  <!-- for-menu-header-2 class for fullwidth dropdown menu on devices -->
-							<!--Menu block-->
-							<nav class="main-menu clearfix navbar navbar-default">
-								<!--menu button on responsive -->
-								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
-									<button type="button" class="navbar-toggle">									
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand" href="#">菜单导航</a> 
-								</div>
-							</nav>
-							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
-								<ul class="sf-menu superfish-li-relative">
-								   <li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span> 申请上课 </a></li>
-                                   <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li>
-                                   <li><a href="#" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
-                                   <!-- <li><a href="teacher.html" class="link-header link-underline-brand" style="text-transform:capitalize; font-size:13px;">Apply to Teach</a></li> -->
-                                   <li><%= link_to "Apply to Teach", teacherhome_path, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
-								</ul>
-							</div>
-						</div></div>
-				</div>
-			</div>
-		</header>
+<%= render partial: 'short_header' %>
 
 		<!--Head img section-->
 		<section class="waypoint" data-hash="head">
@@ -90,33 +57,7 @@
                 </div>
 				<div class="spacer" style="height:78px;"></div>
 			</div>
-		</section>	
-
-		<!--Footer section-->
-		<section id="footer">
-            <div class="copyright-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="tAc">
-							    <div style="margin-top: 10px;">
-							        <%= link_to "MsPan", root_path(anchor: 'welcome'), style: "font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136" %>
-                                    <!-- <a href = "index.html" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a> -->
-                                </div><br>
-                                 <div class="links text-center text-uppercase">
-                                 <%= link_to "首页", root_path(anchor: 'welcome') %> · 
-                                 <%= link_to "关于我们", about_path %> · 
-                                 <%= link_to "学员指南", guidance_path %> · 
-                                 <%= link_to "法律声明", terms_path %>
-                                 <!-- <a href="index.html" style="text-decoration: none;">首页</a> · <a href="about.html" style="text-decoration: none;">关于我们</a> · <a href="guidance.html" style="text-decoration: none;">学员指南</a> · <a href="terms.html" rel="nofollow" style="text-decoration: none;">法律声明</a>  -->
-                                  </div>
-                                  <div class="spacer" style="height:20px;"></div>
-								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
-								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
-								- All Rights Reserved.</div></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</section>
+
+<%= render partial: 'footer' %>
+
