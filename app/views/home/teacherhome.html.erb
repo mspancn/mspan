@@ -24,8 +24,7 @@
 									<li class="current-menu-item">
 										<a href="#welcome">welcome</a>
 									</li>
-								    <li><%= link_to "FAQ", {controller: "home", action: "teacherfaq"} %></li>
-									<!-- <li><a href="teacher_faq.html">FAQ</a></li> -->
+								    <li><%= link_to "FAQ", teacherfaq_path %></li>
                                     <li><a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" class="active" target="_blank"><span class="fa fa-user"></span> Join To Teach </a></li>
                                     <!-- <li><a href="#" class="active"><span class="fa fa-sign-in"></span> Log In </a></li> -->
 								</ul>
@@ -212,7 +211,7 @@
 				<div class="row">
 				    <div class="tAc">
 					    <div class="buttons" style="padding-top:16px;"    data-animation="fadeInUp slow" data-delay="0.3">
-							<a href="teacher_faq.html" class="button7 btn-1" style="margin-right:6px;">Teacher FAQ</a>
+							<%= link_to "Teacher FAQ", teacherfaq_path, class: "button7 btn-1", style: "margin-right:6px;" %>
 							<a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" target="_blank" class="button5">Join to teach</a>
 						</div> 
 					</div>   
@@ -270,8 +269,8 @@
                                     <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
                                 </div><br>
                                  <div class="links text-center text-uppercase">
-                                    <%= link_to "中文首页", "/" %> · 
-                                    <%= link_to "FAQ", {controller:"home", action:"teacherfaq"} %>
+                                    <%= link_to "中文首页", root_path(anchor: 'welcome') %> · 
+                                    <%= link_to "FAQ", teacherfaq_path %>
                                   </div>
                                   <div class="spacer" style="height:20px;"></div>
 								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>

@@ -33,12 +33,9 @@
 										<a href="#about">关于我们</a>
 										<ul class="submenu"> <!--First level submenu-->
 											<li><a href="#about">关于MsPan</a></li>
-											<li><%= link_to "更多关于", {controller: "home", action: "about"} %></li>
-											<li><%= link_to "学员指南", {controller: "home", action: "guidance"} %></li>
-											<li><%= link_to "联系我们", {controller: "home", action: "contact"} %></li>
-											<!-- <li><a href="about.html">更多关于</a></li>
-											<li><a href="guidance.html">学员指南</a></li>
-											<li><a href="contact.html">联系我们</a></li> -->
+											<li><%= link_to "更多关于", about_path %></li>
+											<li><%= link_to "学员指南", guidance_path %></li>
+											<li><%= link_to "联系我们", contact_path %></li>
 										</ul>
 									</li>				
 									
@@ -52,7 +49,7 @@
                                       <%= link_to "登录", new_student_session_path, class:"active", style:"color:white" %></span>
                                    </li>
                                    <li></li>
-                                   <li><%= link_to "Apply to Teach", {controller: "home", action: "teacherhome"}, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
+                                   <li><%= link_to "Apply to Teach", teacherhome_path, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
 								</ul>
 							</div>
 						</div></div>
@@ -374,7 +371,7 @@
 							</div>
 						</div>
 						<div class="buttons" style="padding-top:16px;"    data-animation="fadeInUp slow" data-delay="0.3">
-						    <%= link_to "更多关于", {controller: "home", action: "about"}, class: "button7 btn-1", style: "margin-right:6px;" %>
+						    <%= link_to "更多关于", about_path, class: "button7 btn-1", style: "margin-right:6px;" %>
 
 							<!-- <a href="about.html" class="button7 btn-1" style="margin-right:6px;">更多关于</a> -->
 							<a href="#meet_team" class="button5">团队成员</a>
@@ -706,10 +703,10 @@
                                     <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
                                 </div><br>
                                  <div class="links text-center text-uppercase">
-                                 <%= link_to "关于我们", {controller:"home", action:"about"} %> · 
-                                 <%= link_to "学员指南", {controller:"home", action:"guidance"} %> · 
-                                 <%= link_to "联系我们", {controller:"home", action:"contact"} %> · 
-                                 <%= link_to "法律声明", {controller:"home", action:"terms"} %>
+                                 <%= link_to "关于我们", about_path %> · 
+                                 <%= link_to "学员指南", guidance_path %> · 
+                                 <%= link_to "联系我们", contact_path %> · 
+                                 <%= link_to "法律声明", terms_path %>
                                   </div>
                                   <div class="spacer" style="height:20px;"></div>
 								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>

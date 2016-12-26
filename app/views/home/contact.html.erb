@@ -27,7 +27,7 @@
                                    <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li>
                                    <li><a href="#" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
                                    <!-- <li><a href="teacher.html" class="link-header link-underline-brand" style="text-transform:capitalize; font-size:13px;">Apply to Teach</a></li> -->
-                                   <li><%= link_to "Apply to Teach", {controller: "home", action: "teacherhome"}, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
+                                   <li><%= link_to "Apply to Teach", teacherhome_path, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
 								</ul>
 							</div>
 						</div></div>
@@ -104,10 +104,10 @@
                                     <!-- <a href = "index.html" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a> -->
                                 </div><br>
                                  <div class="links text-center text-uppercase">
-                                 <%= link_to "首页", "/" %> · 
-                                 <%= link_to "关于我们", {controller:"home", action:"about"} %> · 
-                                 <%= link_to "学员指南", {controller:"home", action:"guidance"} %> · 
-                                 <%= link_to "法律声明", {controller:"home", action:"terms"} %>
+                                 <%= link_to "首页", root_path(anchor: 'welcome') %> · 
+                                 <%= link_to "关于我们", about_path %> · 
+                                 <%= link_to "学员指南", guidance_path %> · 
+                                 <%= link_to "法律声明", terms_path %>
                                  <!-- <a href="index.html" style="text-decoration: none;">首页</a> · <a href="about.html" style="text-decoration: none;">关于我们</a> · <a href="guidance.html" style="text-decoration: none;">学员指南</a> · <a href="terms.html" rel="nofollow" style="text-decoration: none;">法律声明</a>  -->
                                   </div>
                                   <div class="spacer" style="height:20px;"></div>
