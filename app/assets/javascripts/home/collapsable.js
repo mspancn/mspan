@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   $('#expandAll').change(function() {
     if (this.checked) {
       $('.collapsable').collapse('show');
