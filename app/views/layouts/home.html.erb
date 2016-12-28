@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+        </script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MsPan致力于为英语爱好者和出国党打造最优质线上一对一北美外教口语平台, 精英引领, 伴随始终。"／>
+    <META NAME="AUTHOR" CONTENT="MsPan">
+    <META NAME="COPYRIGHT" CONTENT="&copy; 2016 MsPan">
+
+    <title><%= yield(:title) %></title>
+    <%= csrf_meta_tags %>
+
+    <%= favicon_link_tag 'home/mspanicon.jpg' %>
+
+    <%= stylesheet_link_tag    'home', media: 'screen', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
+
+    <%= google_analytics_js %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

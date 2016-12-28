@@ -1,110 +1,9 @@
-<!-- <div>Home page</div>
+<% content_for :title, "MsPan － 北美外教线上1对1" %>
 
-<%= link_to "Teacher Log In", new_teacher_session_path %>
-<%= link_to "Student Log In", new_student_session_path %>
- -->
-
-
- <!doctype html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8">
-		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-		<!--[if lt IE 9]>
-  			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-  			</script>
-		<![endif]-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="MsPan致力于为英语爱好者和出国党打造最优质线上一对一北美外教口语平台, 精英引领, 伴随始终。"／>
-        <META NAME="AUTHOR" CONTENT="MsPan">
-        <META NAME="COPYRIGHT" CONTENT="&copy; 2016 MsPan">
-
-		<title>MsPan － 北美外教线上1对1</title>
-
-<%= csrf_meta_tags %>
-
-		<link rel="stylesheet" href="assets/home/css/bootstrap.css" media="screen" />
-		<link rel="stylesheet" href="assets/home/css/styles.css" media="screen" />
-		<link rel="stylesheet" href="assets/home/css/font-awesome.min.css" media="screen" />
-		<link rel="stylesheet" href="assets/home/css/magnific-popup.css" media="screen" />
-		<link rel="stylesheet" href="assets/home/css/retina.css" media="screen" />
-		<link rel="stylesheet" href="assets/home/css/media.css" media="screen" />
-		<link rel="stylesheet" href="assets/home/css/animated.min.css" media="screen" />
-		<link rel="shortcut icon" href="assets/home/mspanicon.jpg" type="image/jpg">	
-
-		<script type="text/javascript" src='assets/home/modernizr.min.js'></script>
-	    <script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-86757428-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
-
-	</head>		
-
-	<body>
 		<div class="loader" style="background-color:black">
 		     <div class="bar" style="text-transform:capitalize;"><strong style="color:#fed136;">MsPan</strong><span class="progress"><span>loading...</span></span></div></div>
 		
-		<!--Welcome section-->
-		<header class="alt"  data-animation="fadeIn fast" data-delay="0"> <!--alt class for no bg -->
-			<div class="container">
-				<div class="row">
-					<!--Company name-->
-					<div class="col-md-3 for-mobile-header-1"><!-- for-menu-header-1 class for fullwidth dropdown menu on devices -->
-						<h1><a href="#pagetop" style="text-transform:capitalize; color:#fed136;">MsPan</a></h1>
-					</div>
-					<div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix">  <!-- for-menu-header-2 class for fullwidth dropdown menu on devices -->
-							<!--Menu block-->
-							<nav class="main-menu clearfix navbar navbar-default">
-								<!--menu button on responsive -->
-								<div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
-									<button type="button" class="navbar-toggle">									
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand" href="#">菜单导航</a> 
-								</div>
-							</nav>
-							<div class="collapse navbar-collapse m-menu" id="top-main-menu">
-								<ul class="sf-menu superfish-li-relative">
-									<li><a href="#services">核心服务</a></li>
-									<li><a href="#portfolio">北美师资</a></li>
-									<li><a href="#course">人气课程</a></li>
-									<li class="dropdown">
-										<a href="#about">关于我们</a>
-										<ul class="submenu"> <!--First level submenu-->
-											<li><a href="#about">关于MsPan</a></li>
-											<li><%= link_to "更多关于", {controller: "home", action: "about"} %></li>
-											<li><%= link_to "学员指南", {controller: "home", action: "guidance"} %></li>
-											<li><%= link_to "联系我们", {controller: "home", action: "contact"} %></li>
-											<!-- <li><a href="about.html">更多关于</a></li>
-											<li><a href="guidance.html">学员指南</a></li>
-											<li><a href="contact.html">联系我们</a></li> -->
-										</ul>
-									</li>				
-									
-									<!-- <li><a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank"><span class="fa fa-user"></span>申请上课 </a></li> -->
-                                   <!-- <li><a href="#" class="active"><span class="fa fa-user"></span> 注册 </a></li> -->
-                                   <!-- <li><a href="#" id="loginBtn" class="active"><span class="fa fa-sign-in"></span> 登录 </a></li> -->
-                                   <li><span class="fa fa-user" style="color:white">
-                                      <%= link_to "注册", new_student_session_path, class:"active", style:"color:white" %></span>
-                                   </li>
-                                   <li><span class="fa fa-sign-in" style="color:white">
-                                      <%= link_to "登录", new_student_session_path, class:"active", style:"color:white" %></span>
-                                   </li>
-                                   <li></li>
-                                   <li><%= link_to "Apply to Teach", {controller: "home", action: "teacherhome"}, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
-								</ul>
-							</div>
-						</div></div>
-				</div>
-			</div>
-		</header>
+<%= render partial: 'header' %>
 
 		<!--Welcome section-->
         <section class="waypoint video-block fullscreen" data-hash="welcome">
@@ -420,7 +319,7 @@
 							</div>
 						</div>
 						<div class="buttons" style="padding-top:16px;"    data-animation="fadeInUp slow" data-delay="0.3">
-						    <%= link_to "更多关于", {controller: "home", action: "about"}, class: "button7 btn-1", style: "margin-right:6px;" %>
+						    <%= link_to "更多关于", about_path, class: "button7 btn-1", style: "margin-right:6px;" %>
 
 							<!-- <a href="about.html" class="button7 btn-1" style="margin-right:6px;">更多关于</a> -->
 							<a href="#meet_team" class="button5">团队成员</a>
@@ -722,51 +621,7 @@
 			</div>
 		</section>	
 
-		<!--Footer section-->
-		<section id="footer">
-			<!--Twitter block-->
-			<div class="twitter alt-bg-3">
-				<div class="spacer" style="height:73px;"></div>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="tAc">
-								<i> 
-								    <%= image_tag("home/weixinIcon.png", alt: "", class: "img-responsive", style: "margin: 0 auto; height:30px; width: 30px ") %>
-								</i>
-								<div class="spacer" style="height:35px;"></div>
-								    <%= image_tag("home/wechat.jpg", alt: "", class: "img-responsive wechatBarCode", style: "margin: 0 auto;") %>
-							</div>						
-						</div>
-					</div>
-				</div>
-				<div class="spacer" style="height:63px;"></div>
-			</div>
-
-			<div class="copyright-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="tAc">
-							    <div style="margin-top: 10px;">
-                                    <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
-                                </div><br>
-                                 <div class="links text-center text-uppercase">
-                                 <%= link_to "关于我们", {controller:"home", action:"about"} %> · 
-                                 <%= link_to "学员指南", {controller:"home", action:"guidance"} %> · 
-                                 <%= link_to "联系我们", {controller:"home", action:"contact"} %> · 
-                                 <%= link_to "法律声明", {controller:"home", action:"terms"} %>
-                                  </div>
-                                  <div class="spacer" style="height:20px;"></div>
-								<div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;"><div>MsPan 精英引领 伴随始终</div>
-								<div class="notranslate" style="font-size:10px;">Copyright &copy; 2016 MsPan
-								- All Rights Reserved.</div></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<%= render partial: 'footer' %>
 
 		<div class="container" >
 			<!-- Modal -->
@@ -1143,92 +998,7 @@
 	        </div>
        </div>
 
-		<script type="text/javascript" src='assets/home/jquery.min.js'></script>	
-		
-		<!-- <script type="text/javascript" src='js/bootstrap.min.js'></script> -->
-		<!-- <script type="text/javascript" src='js/imagesloaded.pkgd.min.js'></script>	
-		<script type="text/javascript" src='js/isotope.min.js'></script>	
-		
-		<script type="text/javascript" src='js/jquery.cycle2.min.js'></script>	
-		<script type="text/javascript" src='js/jquery.cycle2.swipe.min.js'></script>	
-		<script type="text/javascript" src='js/jquery.flexslider-min.js'></script>
-
-		<script type="text/javascript" src='js/jquery.validate.min.js'></script>	
-		<script type="text/javascript" src='js/jquery.velocity.min.js'></script>	
-	    <script type="text/javascript" src='js/jquery.magnific-popup.min.js'></script>	
-		<script type="text/javascript" src='js/parallax.min.js'></script> -->
-		<!-- <script type="text/javascript" src='js/script.js'></script> -->
-		<!-- <script type="text/javascript" src='js/smoothScroll.min.js'></script>
-		<script type="text/javascript" src='js/superfish.min.js'></script>
-		<script type="text/javascript" src='js/tweets.min.js'></script>
-		<script type="text/javascript" src='js/waypoints.min.js'></script>
-		<script type="text/javascript" src='js/jquery.countTo.min.js'></script>	 -->
-
-		<!-- jQuery -->
-		<!-- <script type="text/javascript" src='js/jquery.min.js'></script> -->
-        <!-- Bootstrap Core JavaScript -->
-        <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
-
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-		
-		<script>
-			/* <![CDATA[ */
-			var loadPageScripts = [
-				'imagesloaded.pkgd.min.js',
-				'bootstrap.min.js',	
-			    // 'jquery.min.js'		
-				'isotope.min.js',
-				'jquery.cycle2.min.js',
-				'jquery.cycle2.swipe.min.js',
-				'jquery.flexslider-min.js',
-				'jquery.validate.min.js',
-				'jquery.velocity.min.js',
-				'jquery.magnific-popup.min.js',
-				'parallax.min.js',
-				'smoothScroll.min.js',
-				'superfish.min.js',
-				// 'tweets.min.js',
-				'waypoints.min.js',
-				'jquery.countTo.min.js'
-			];
-			/* ]]> */
-		</script>
-
-		<script type="text/javascript" src='assets/home/script.js'></script>
-
-        <script>
-			$(document).ready(function(){
-			$("#loginBtn").click(function(){
-	        $("#loginModal").modal();
-		    });
-		});
-		</script>
-
-		<script>
-			$(document).ready(function(){
-			$("#moreTeachers").click(function(){
-	        $("#loginModal").modal();
-		    });
-		});
-		</script>
-
-		<script>
-			$(document).ready(function(){
-			$("#moreLessons").click(function(){
-	        $("#loginModal").modal();
-		    });
-		});
-		</script>
-
-		<script>
-			$(document).ready(function(){
-			$("#startLearning").click(function(){
-	        $("#loginModal").modal();
-		    });
-		});
-		</script>
-
+<!-- TODO: refactor this script -->
 		<script type="text/javascript">
 			window.mobileAndTabletcheck = function() {
   				var check = false;
@@ -1254,6 +1024,3 @@
 				video_woman.load(); 
 			}
 		</script>
-
-	</body>
-</html>

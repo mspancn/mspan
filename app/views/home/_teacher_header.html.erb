@@ -1,0 +1,45 @@
+<!--Welcome section-->
+<header class="alt"  data-animation="fadeIn fast" data-delay="0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 for-mobile-header-1">
+        <h1><%= link_to "MsPan", root_path(anchor: 'welcome'), style: "text-transform:capitalize; color:#fed136;" %></h1>
+      </div>
+      <div class="col-md-9 for-mobile-header-2 for-one-page">
+        <div class="mobile-wrapper clearfix">
+          <nav class="main-menu clearfix navbar navbar-default">
+            <div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
+              <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Menu</a>
+            </div>
+          </nav>
+          <div class="collapse navbar-collapse m-menu" id="top-main-menu">
+            <ul class="sf-menu superfish-li-relative">
+              <% if current_page?(teacherhome_path) %>
+                <li class="current-menu-item">
+                  <a href="#welcome">welcome</a>
+                </li>
+              <% else %>
+                <li><%= link_to "Welcome", teacherhome_path %></li>
+              <% end %>
+
+              <% if current_page?(teacherfaq_path) %>
+                <li class="current-menu-item">
+                  <a href="#">FAQ</a>
+                </li>
+              <% else %>
+                <li><%= link_to "FAQ", teacherfaq_path %></li>
+              <% end %>
+
+              <li><a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" class="active" target="_blank"><span class="fa fa-user"></span> Join To Teach </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,34 @@
+<!--Footer section-->
+<div class="copyright-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tAc">
+          <div style="margin-top: 10px;">
+            <a href = "#pagetop" style="font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136">MsPan</a>
+          </div><br>
+          <div class="links text-center text-uppercase">
+            <% if current_page?(teacherhome_path) %>
+              <%= link_to "中文首页", root_path(anchor: 'welcome') %> ·
+            <% else %>
+              <%= link_to "Home", teacherhome_path %> ·
+            <% end %>
+            <% if current_page?(teacherfaq_path) %>
+              <!-- NOTE: we might not want to show the following link on the FAQ page -->
+              <a href="#pagetop" style="text-decoration: none;">FAQ</a>
+            <% else %>
+              <%= link_to "FAQ", teacherfaq_path, style: "text-decoration: none;" %>
+            <% end %>
+          </div>
+          <div class="spacer" style="height:20px;"></div>
+          <div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;">
+            <div>MsPan 精英引领 伴随始终</div>
+            <div class="notranslate" style="font-size:10px;">
+              Copyright &copy; <%= Time.now.year %> MsPan - All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<!--Footer section-->
+<section id="footer">
+  <!--Twitter block-->
+  <div class="twitter alt-bg-3">
+    <div class="spacer" style="height:73px;"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="tAc">
+            <i>
+              <%= image_tag("home/weixinIcon.png", alt: "", class: "img-responsive", style: "margin: 0 auto; height:30px; width: 30px ") %>
+            </i>
+            <div class="spacer" style="height:35px;"></div>
+            <%= image_tag("home/wechat.jpg", alt: "", class: "img-responsive wechatBarCode", style: "margin: 0 auto;") %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spacer" style="height:63px;"></div>
+  </div>
+
+  <div class="copyright-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tAc">
+              <div style="margin-top: 10px;">
+                <%= link_to "MsPan", current_page?(root_path) ? '#pagetop' : root_path(anchor: 'welcome'), style: "font-family:Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; font-size:25px; text-decoration: none; color:#fed136" %>
+              </div><br>
+              <div class="links text-center text-uppercase">
+                <% if !current_page?(root_path) %>
+                  <%= link_to "首页", root_path(anchor: 'welcome') %> ·
+                <% end %>
+                <% if !current_page?(about_path) %>
+                  <%= link_to "关于我们", about_path %> ·
+                <% end %>
+                <% if !current_page?(guidance_path) %>
+                  <%= link_to "学员指南", guidance_path %> ·
+                <% end %>
+                <% if !current_page?(contact_path) %>
+                  <% if current_page?(terms_path) %>
+                    <%= link_to "联系我们", contact_path %>
+                  <% else %>
+                    <%= link_to "联系我们", contact_path %> ·
+                  <% end %>
+                <% end %>
+                <% if !current_page?(terms_path) %>
+                  <%= link_to "法律声明", terms_path %>
+                <% end %>
+              </div>
+              <div class="spacer" style="height:20px;"></div>
+              <div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;">
+                <div>MsPan 精英引领 伴随始终</div>
+                <div class="notranslate" style="font-size:10px;">
+                  Copyright &copy; <%= Time.now.year %> MsPan - All Rights Reserved.
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

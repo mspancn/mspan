@@ -1,0 +1,54 @@
+<!--Welcome section-->
+<header class="alt"  data-animation="fadeIn fast" data-delay="0"> <!--alt class for no bg -->
+  <div class="container">
+    <div class="row">
+      <!--Company name-->
+      <div class="col-md-3 for-mobile-header-1"><!-- for-menu-header-1 class for fullwidth dropdown menu on devices -->
+        <h1><a href="#pagetop" style="text-transform:capitalize; color:#fed136;">MsPan</a></h1>
+      </div>
+      <div class="col-md-9 for-mobile-header-2 for-one-page"><div class="mobile-wrapper clearfix">  <!-- for-menu-header-2 class for fullwidth dropdown menu on devices -->
+          <!--Menu block-->
+          <nav class="main-menu clearfix navbar navbar-default">
+            <!--menu button on responsive -->
+            <div class="navbar-header" data-toggle="collapse" data-target="#top-main-menu">
+              <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">菜单导航</a>
+            </div>
+          </nav>
+          <div class="collapse navbar-collapse m-menu" id="top-main-menu">
+            <ul class="sf-menu superfish-li-relative">
+              <li><a href="#services">核心服务</a></li>
+              <li><a href="#portfolio">北美师资</a></li>
+              <li><a href="#course">人气课程</a></li>
+              <li class="dropdown">
+                <a href="#about">关于我们</a>
+                <ul class="submenu"> <!--First level submenu-->
+                  <li><a href="#about">关于MsPan</a></li>
+                  <li><%= link_to "更多关于", about_path %></li>
+                  <li><%= link_to "学员指南", guidance_path %></li>
+                  <li><%= link_to "联系我们", contact_path %></li>
+                </ul>
+              </li>
+
+              <li>
+                <span class="fa fa-user" style="color:white">
+                  <%= link_to "注册", new_student_session_path, class:"active", style:"color:white" %>
+                </span>
+              </li>
+              <li>
+                <span class="fa fa-sign-in" style="color:white">
+                  <%= link_to "登录", new_student_session_path, class:"active", style:"color:white" %>
+                </span>
+              </li>
+              <li><%= link_to "Apply to Teach", teacherhome_path, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

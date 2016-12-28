@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
-  layout false
+  caches_page :about, :contact, :guidance, :index, :teacherfaq, :teacherhome, :terms
+
+  layout 'home'
 
   def status
-    render text: ActiveRecord::Migrator.current_version
+    render plain: ActiveRecord::Migrator.current_version, layout: false
   end
 end
