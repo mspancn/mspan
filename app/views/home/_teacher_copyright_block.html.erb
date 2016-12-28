@@ -13,8 +13,12 @@
             <% else %>
               <%= link_to "Home", teacherhome_path %> ·
             <% end %>
-            <!-- NOTE: we might not want to show the following link on the FAQ page -->
-            <a href="#pagetop" style="text-decoration: none;">FAQ</a>
+            <% if current_page?(teacherfaq_path) %>
+              <!-- NOTE: we might not want to show the following link on the FAQ page -->
+              <a href="#pagetop" style="text-decoration: none;">FAQ</a>
+            <% else %>
+              <%= link_to "FAQ", teacherfaq_path, style: "text-decoration: none;" %>
+            <% end %>
           </div>
           <div class="spacer" style="height:20px;"></div>
           <div style="font-weight:lighter;color:rgb(131, 128, 128);font-size:13px;">
