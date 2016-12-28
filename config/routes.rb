@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     resource :profile, only: [:show]
   end
 
+  namespace :admin do
+    root 'home#dashboard'
+  end
+
   match 'status', :to => 'home#status', via: :get
   match 'about', :to => 'home#about', via: :get
   match 'contact', :to => 'home#contact', via: :get
