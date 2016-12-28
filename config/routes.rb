@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   namespace :student do
     root 'home#dashboard'
 
-    resources :teachers, only: [:index, :create, :destroy]
+    resources :teachers, only: [:index, :show, :create, :destroy]
     resources :appointments, only: [:index, :new, :create, :update]
+    resource :profile, only: [:edit, :update]
   end
 
   namespace :teacher do
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
 
     resources :availabilities, only: [:index, :create, :destroy]
     resources :appointments, only: [:index, :update]
+    resource :profile, only: [:show]
   end
 
   match 'status', :to => 'home#status', via: :get

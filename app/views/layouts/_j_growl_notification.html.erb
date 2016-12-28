@@ -2,7 +2,9 @@
   $(document).ready(function() {
     <% flash.each do |key, value| %>
       <% if key == "error" %>
-        $.jGrowl('<%= escape_javascript notice %>', { theme: 'error' });
+        $.jGrowl('<%= escape_javascript error %>', { theme: 'error' });
+      <% elsif key == "alert" %>
+        $.jGrowl('<%= escape_javascript alert %>', { theme: 'error' });
       <% else %>
         $.jGrowl('<%= escape_javascript notice %>');
       <% end %>

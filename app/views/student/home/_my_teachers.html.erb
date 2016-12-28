@@ -1,7 +1,11 @@
 <div class="card-list-wrapper">
   <h4 class="card-list-header">我的教师列表</h4>
   <div class="card-list">
-    <%= render partial: "student/shared/teacher", collection: @teachers %>
+    <% if @teachers.blank? %>
+      我的教师列表为空。点击+添加教师，浏览和收藏教师。
+    <% else %>
+      <%= render partial: "student/shared/teacher", collection: @teachers %>
+    <% end %>
   </div>
   <div>
     <%= link_to student_teachers_path, { class: "btn btn-link pull-right" } do %>

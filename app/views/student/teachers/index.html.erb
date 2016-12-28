@@ -3,7 +3,5 @@
   <div class="card-list">
     <%= render partial: "student/shared/teacher", collection: @teachers %>
   </div>
-  <div class="text-center">
-    <%= link_to("返回我的主页", student_root_path, { class: "btn btn-primary" }) %>
-  </div>
+  <%= render partial: "student/shared/back_home_button" %>
 </div>

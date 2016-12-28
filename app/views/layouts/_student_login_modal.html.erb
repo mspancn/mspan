@@ -1,0 +1,18 @@
+<div class="modal fade" id="student-login-modal" title="用户登录">
+  <div class="modal-header">
+    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+    <h4 class="modal-title">用户登录</h4>
+  </div>
+  <div class="modal-body">
+    <div class="modal-body-content">
+      <%= render "students/shared/login_form" %>
+
+      <%= link_to "用户注册", new_registration_path(:student) %><br />
+      <%= link_to "忘记密码?", new_password_path(:student) %>
+    </div>
+    <div class="ajax-loader"></div>
+  </div>
+  <div class="modal-footer">
+    <button aria-hidden="true" class="btn modal-close" data-dismiss="modal">取消</button>
+  </div>
+</div>
