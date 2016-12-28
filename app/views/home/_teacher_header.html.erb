@@ -35,7 +35,11 @@
                 <li><%= link_to "FAQ", teacherfaq_path %></li>
               <% end %>
 
-              <li><a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" class="active" target="_blank"><span class="fa fa-user"></span> Join To Teach </a></li>
+              <li>
+                <%= link_to new_registration_path(:teacher), class: "active" do %>
+                  <span class="fa fa-user"></span> Join To Teach
+                <% end %>
+              </li>
             </ul>
           </div>
         </div>

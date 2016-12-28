@@ -28,7 +28,11 @@
 					</div>
 					<div class="spacer" style="height:80px;"></div>
                     <button type="button" class="btn btn-lg btn-primary">
-                         <a href="https://www.wenjuan.com/s/6JBJJv/" target="_blank"><span style="color:black">开始学习</span></a>
+	                    <%= link_to("开始学习",
+	                      "#student_signup",
+	                      style: "color:black",
+	                      data: { toggle: "modal", target: "#student-signup-modal" }
+	                    )%>
                     </button>
 				</div>
 			</div>
@@ -210,7 +214,12 @@
 				</div>
 				<!-- <a class="arrow-bottom" href="portfolio_all.html"    data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a> -->
 <!-- 				<a class="arrow-bottom" href="#" id="moreTeachers" data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a> -->
-                <a class="arrow-bottom" href="https://www.wenjuan.com/s/6JBJJv/" target="_blank" data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a>
+				<%= link_to("#student_signup",
+				  class: "arrow-bottom",
+				  data: { toggle: "modal", target: "#student-signup-modal", animation: "fadeInUp", delay: "0" }
+				) do %>
+					<span></span><b>查看更多教师资源</b>
+				<% end %>
 			</div>
 			<div class="spacer" style="height:79px;"></div>
 		</section>
@@ -286,7 +295,10 @@
 						<div class="tAc">
 							<h3 class="content-title-area black-decor" data-animation="fadeIn slow" data-delay="0.2" style="margin-top:30px">
 							    <!-- <a href="#" id="moreLessons">了解更多</a> -->
-							    <a href="https://www.wenjuan.com/s/6JBJJv/" target="_blank">了解更多</a>
+							  <%= link_to("了解更多",
+							    "#student_signup",
+							    data: { toggle: "modal", target: "#student-signup-modal" }
+							  )%>
 							</h3>
 						</div>
 					</div>
@@ -612,7 +624,11 @@
 						    <div class="tAc">
 						        <div class="spacer" style="height:10px;"></div>
                                 <button style="margin-top:10px;padding:10px 20px;font-size:20px;color:black" type="button" class="btn btn-lg btn-primary" data-animation="fadeInUp slow">
-                                <a href="https://www.wenjuan.com/s/6JBJJv/" target="_blank">免费注册</a></button>
+																	<%= link_to("免费注册",
+																		"#student_signup",
+																		data: { toggle: "modal", target: "#student-signup-modal" }
+																	)%>
+                                </button>
                             </div>
                         </div>
 					</div>
@@ -622,43 +638,6 @@
 		</section>	
 
 <%= render partial: 'footer' %>
-
-		<div class="container" >
-			<!-- Modal -->
-		    <div class="modal fade" role="dialog" id="loginModal">
-			    <div class="modal-dialog">
-    
-			      <!-- Modal content-->
-			      <div class="modal-content">
-				        <div class="modal-header" style="padding:35px 50px;">
-					          <button type="button" class="close" data-dismiss="modal">&times;</button>
-					          <h4><span class="fa fa-lock"></span> 登录</h4>
-				        </div>
-				        <div class="modal-body" style="padding:40px 50px;">
-					          <form role="form">
-						            <div class="form-group">
-						              <label for="usrname"><span class="fa fa-user"></span> 用户名</label>
-						              <input type="text" name="email" class="email" id="usrname" placeholder="请输入电子邮箱">
-						            </div>
-						            <div class="form-group">
-						              <label for="psw"><span class="fa fa-eye"></span> 密码</label>
-						              <input type="password" class="form-control" id="psw" placeholder="请输入密码">
-						            </div>
-						            <!-- <div class="myCheckbox">
-						              <label><input type="checkbox" value="" checked>记住我</label>
-						            </div> -->
-						            <button type="submit" class="btn btn-block"><span class="fa fa-power-off"></span> 登录</button>
-					          </form>
-				        </div>
-				        <div class="modal-footer">
-					        <button type="submit" class="btn btn-default pull-left" data-dismiss="modal"><span class="fa fa-remove"></span> 取消</button>
-					        <p>免费加入MsPan? <a href="#">注册</a></p>
-					        <p>忘记 <a href="#">密码?</a></p>
-				        </div>
-				      </div>
-			    </div>
-			</div>
-		</div>
 
 		<!-- Course Modal 1 -->
 		<div class="course-modal modal fade" id="courseModal1" tabindex="-1" role="dialog" aria-hidden="true">
