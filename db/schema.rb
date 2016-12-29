@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161228210238) do
+ActiveRecord::Schema.define(version: 20161229214824) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "",                           null: false
@@ -166,6 +166,7 @@ ActiveRecord::Schema.define(version: 20161228210238) do
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
     t.text     "intro",                           limit: 65535
+    t.text     "notes",                           limit: 65535
     t.index ["email"], name: "index_teachers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true, using: :btree
   end

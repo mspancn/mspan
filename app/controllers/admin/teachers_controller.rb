@@ -15,7 +15,7 @@ class Admin::TeachersController < AdminController
 
   def index
     if request.xhr?
-      render json: { data: Teacher.select("id, first_name, last_name, email") }
+      render json: { data: Teacher.select("id, first_name, last_name, email, notes") }
     end
   end
 
@@ -34,7 +34,7 @@ class Admin::TeachersController < AdminController
 
     def teacher_params
       params.require(:teacher).permit(
-        :time_zone, :phone, :major, :degree, :rate, :balance, :speech_video, :intro
+        :time_zone, :phone, :major, :degree, :rate, :balance, :speech_video, :intro, :notes
       )
     end
 end

@@ -6,7 +6,8 @@ $(document).on('turbolinks:load', function () {
     columns: [
       { data: 'first_name' },
       { data: 'last_name' },
-      { data: 'email' }
+      { data: 'email' },
+      { data: 'notes' }
     ]
   });
 
