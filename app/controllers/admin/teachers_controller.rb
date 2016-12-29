@@ -2,8 +2,6 @@ class Admin::TeachersController < AdminController
   # TODO: audit teachers
   # TODO: audit students
   # TODO: audit appointments
-  # TODO: move library assets to vendors
-  # TODO: teacher updates
   # TODO: sign up email for teachers
   # TODO: sign up email for students
   # TODO: memcached
@@ -14,7 +12,7 @@ class Admin::TeachersController < AdminController
   # TODO: accessible https://github.com/plataformatec/devise/wiki/How-to-Setup-Multiple-Devise-User-Models
   # TODO: student note
   # TODO: teacher note
-  # TODO: change old hash style to the new one
+  # TODO: add intro to admin teacher update
 
   def index
     if request.xhr?

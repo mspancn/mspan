@@ -45,23 +45,23 @@
   <div class="field">
     <%= f.label :purposes, '希望得到以下教学服务' %><br />
     <%= f.check_box :purposes, {
-      :multiple => true,
-      :checked => (@profile.purposes.present? and @profile.purposes.include?('tests'))
+      multiple: true,
+      checked: (@profile.purposes.present? and @profile.purposes.include?('tests'))
     }, 'tests', nil %>
     <%= f.label :purposes_tests, '雅思，托福口语专项训练' %>
     <%= f.check_box :purposes, {
-      :multiple => true,
-      :checked => (@profile.purposes.present? and @profile.purposes.include?('aboard'))
+      multiple: true,
+      checked: (@profile.purposes.present? and @profile.purposes.include?('aboard'))
     },'aboard', nil %>
     <%= f.label :purposes_aboard, '出国留学将会面临的学习，日常交流' %>
     <%= f.check_box :purposes, {
-      :multiple => true,
-      :checked => (@profile.purposes.present? and @profile.purposes.include?('business'))
+      multiple: true,
+      checked: (@profile.purposes.present? and @profile.purposes.include?('business'))
     }, 'business', nil %>
     <%= f.label :purposes_business, '工作需要，希望提高商务英语口语' %>
     <%= f.check_box :purposes, {
-      :multiple => true,
-      :checked => (@profile.purposes.present? and @profile.purposes.include?('skill'))
+      multiple: true,
+      checked: (@profile.purposes.present? and @profile.purposes.include?('skill'))
     }, 'skill', nil %>
     <%= f.label :purposes_skill, '提高英语口语素质' %>
   </div>

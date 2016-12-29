@@ -16,7 +16,7 @@ class Student::ProfilesController < StudentController
     def profile_params
       params.require(:student).permit(
         :full_name, :age_range, :time_zone, :preferred_teacher_type,
-        :preferred_teacher_gender, :purposes => []
+        :preferred_teacher_gender, purposes: []
       )
     end
 end
