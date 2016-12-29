@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require bootstrap-modalmanager
+//= require bootstrap-modal
 //= require jquery.dataTables.min
 //= require dataTables.bootstrap.min
 //= require jquery.jgrowl.min
