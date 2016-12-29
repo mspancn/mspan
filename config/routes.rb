@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'home#dashboard'
 
-    resources :teachers, only: [:index]
+    resources :teachers, only: [:index, :edit, :update]
   end
 
   match 'status', :to => 'home#status', via: :get
