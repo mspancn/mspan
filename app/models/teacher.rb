@@ -8,6 +8,7 @@ class Teacher < ApplicationRecord
     :teaching_experience, :referral, :internationalization_experience, :resume,
     presence: true
   validates_inclusion_of :student, :certificate, :mandarin, in: [true, false]
+  validates_inclusion_of :rate, in: ExchangeService::DOLLAR_TO_YUAN.keys
 
   has_many :availabilities
   has_many :appointments

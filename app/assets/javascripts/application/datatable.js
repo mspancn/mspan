@@ -7,7 +7,13 @@ $(document).on('turbolinks:load', function () {
       { data: 'first_name' },
       { data: 'last_name' },
       { data: 'email' },
-      { data: 'notes' }
+      { data: 'notes' },
+      {
+        data: 'active',
+        render: function(data, type, full, meta) {
+          return data ? "Yes" : "No";
+        }
+      }
     ]
   });
 

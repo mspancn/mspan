@@ -4,18 +4,17 @@ class Admin::TeachersController < AdminController
   # TODO: audit appointments
   # TODO: sign up email for teachers
   # TODO: sign up email for students
-  # TODO: memcached
+  # TODO: activated email for teachers
   # TODO: cancancan for admin
-  # TODO: teacher active
   # TODO: cancancan for teacher
   # TODO: cancancan for student
   # TODO: accessible https://github.com/plataformatec/devise/wiki/How-to-Setup-Multiple-Devise-User-Models
-  # TODO: student note
-  # TODO: teacher note
+  # TODO: student notes
+  # TODO: style sign up/sign in forms
 
   def index
     if request.xhr?
-      render json: { data: Teacher.select("id, first_name, last_name, email, notes") }
+      render json: { data: Teacher.select("id, first_name, last_name, email, notes, active") }
     end
   end
 
@@ -34,7 +33,8 @@ class Admin::TeachersController < AdminController
 
     def teacher_params
       params.require(:teacher).permit(
-        :time_zone, :phone, :major, :degree, :rate, :balance, :speech_video, :intro, :notes
+        :time_zone, :phone, :major, :degree, :rate,
+        :speech_video, :intro, :notes, :active
       )
     end
 end
