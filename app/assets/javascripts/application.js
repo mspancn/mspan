@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap.min
+//= require jquery.jgrowl.min
 //= require moment
 //= require fullcalendar
 //= require_tree ./application

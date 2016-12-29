@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'home#dashboard'
+
+    resources :teachers, only: [:index]
   end
 
   match 'status', :to => 'home#status', via: :get
