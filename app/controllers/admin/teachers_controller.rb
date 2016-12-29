@@ -12,7 +12,6 @@ class Admin::TeachersController < AdminController
   # TODO: accessible https://github.com/plataformatec/devise/wiki/How-to-Setup-Multiple-Devise-User-Models
   # TODO: student note
   # TODO: teacher note
-  # TODO: add intro to admin teacher update
 
   def index
     if request.xhr?
@@ -34,6 +33,8 @@ class Admin::TeachersController < AdminController
   private
 
     def teacher_params
-      params.require(:teacher).permit(:time_zone, :phone, :major, :degree, :rate, :balance, :speech_video)
+      params.require(:teacher).permit(
+        :time_zone, :phone, :major, :degree, :rate, :balance, :speech_video, :intro
+      )
     end
 end
