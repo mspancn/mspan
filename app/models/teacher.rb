@@ -23,6 +23,7 @@ class Teacher < ApplicationRecord
     content_type: { content_type: "application/pdf", message: "must be pdf" },
     size: { in: 0..1.megabytes, message: "must be less than 1 megabytes" }
 
+  before_validation :set_default_rate
   before_create :set_defaults
 
   AGE_RANGES = ["18-22", "22-25", "25-35", "35-50", "50+"]
@@ -99,6 +100,9 @@ class Teacher < ApplicationRecord
 
     def set_defaults
       self.balance ||= 0
+    end
+
+    def set_default_rate
       self.rate ||= default_rate
     end
 
