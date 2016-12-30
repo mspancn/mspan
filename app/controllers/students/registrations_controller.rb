@@ -14,6 +14,7 @@ class Students::RegistrationsController < Devise::RegistrationsController
   def create
     super
     StudentMailer.welcome_email(resource).deliver_later unless resource.invalid?
+    SystemMailer.student_joined_email(resource).deliver_later unless resource.invalid?
   end
 
   # GET /resource/edit

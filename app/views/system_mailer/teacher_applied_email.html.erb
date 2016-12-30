@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Teacher <%= @teacher.full_name %> just applied!</p>
+    <p>See <%= link_to "teacher details", edit_admin_teacher_url(@teacher) %>.</p>
+  </body>
+</html>
