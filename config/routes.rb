@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :admins, controllers: { sessions: 'admins/sessions' }
-  devise_for :students, controllers: { sessions: 'students/sessions' }
-  devise_for :teachers, controllers: { sessions: 'teachers/sessions' }
+  devise_for :admins, controllers: { sessions: 'admins/sessions', registrations: 'admins/registrations' }
+  devise_for :students, controllers: { sessions: 'students/sessions', registrations: 'students/registrations' }
+  devise_for :teachers, controllers: { sessions: 'teachers/sessions', registrations: 'teachers/registrations' }
 
   namespace :student do
     root 'home#dashboard'

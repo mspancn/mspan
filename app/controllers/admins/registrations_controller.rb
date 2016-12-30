@@ -1,4 +1,4 @@
-class Students::RegistrationsController < Devise::RegistrationsController
+class Admins::RegistrationsController < Devise::RegistrationsController
   include Accessible
 
   before_action :check_user, only: [:new]

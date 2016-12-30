@@ -1,7 +1,6 @@
 class Admin::TeachersController < AdminController
   # TODO: sign up email for teachers
   # TODO: sign up email for students
-  # TODO: activated email for teachers
 
   load_and_authorize_resource
 
