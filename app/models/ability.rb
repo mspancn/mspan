@@ -33,7 +33,7 @@ class Ability
       alias_action :create, :read, :update, :destroy, to: :crud
 
       # Active Teacher
-      if user.class.name == "Teacher" and user.active
+      if user.class.name == "Teacher" and user.active?
 
         # Can crud their own availabilities
         can :crud, Availability, teacher_id: user.id
@@ -43,7 +43,7 @@ class Ability
       end
 
       # Inactive Teacher
-      if user.class.name == "Teacher" and !user.active
+      if user.class.name == "Teacher" and !user.active?
 
         # Can read their own appointments
         # can [:read], Appointment, teacher_id: user.id
@@ -57,6 +57,13 @@ class Ability
 
         # Can read, create and destroy the relationships with active teachers
         can [:read, :create, :destroy], Teacher, active: true
+      end
+
+      # Admin
+      if user.class.name == "Admin" and user.enabled?
+
+        # Can read and update teachers
+        can [:read, :update], Teacher
       end
     end
   end
