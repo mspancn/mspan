@@ -448,6 +448,8 @@ h2.slider-title-3:after {position:absolute; background:rgba(255,255,255,0.25); l
 }
 /* END OF REVOLUTION SLIDER */
 
+
+
 /*
     - MAIN MENU -
 */
@@ -501,8 +503,51 @@ header.alt .navbar-header {border-color:#fff;}
 header.alt .navbar-header:hover, header.alt .navbar-header.selected {background:#fff; color:#000;}
 header.alt .navbar-header:hover .navbar-brand, header.alt .navbar-header.selected .navbar-brand {color:#000;}
 header.alt .navbar-header:hover .navbar-toggle .icon-bar, header.alt .navbar-header.selected .icon-bar {background-color: #000000;}
-/*a.navbar-brand {font-size:11px; text-transform:uppercase; padding:0 0 0 27px; letter-spacing: -0.07em; display:block;}*/
-a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; letter-spacing: -0.07em; display:block;}
+
+a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; letter-spacing: -0.07em; display:block; float:left; height:20px;}
+
+/*------customized nav bar-----*/
+nav.main-menu .navbar-toggle {
+    border:none;
+    border-radius:0;
+}
+
+nav.main-menu .navbar-toggle .icon-bar {
+  width: 12px;
+  border-radius: 0;
+}
+
+nav.main-menu .navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 2px;
+}
+
+/*@media (min-width: 768px) {
+    .navbar-toggle,
+    .navbar-header {
+        display: none;
+    }
+}*/
+
+nav.navbar-default {
+   background-color: transparent;
+}
+
+nav.navbar-default .navbar-band {
+    color: #000;
+}
+
+header.alt .navbar-default .navbar-brand {color: #fff;}
+
+nav.navbar-default .navbar-toggle {}
+
+nav.navbar-default .navbar-toggle:focus {background-color: none;}
+
+nav.navbar-default .navbar-toggle .icon-bar {background-color: #000000}
+
+header.alt .navbar-default .navbar-toggle .icon-bar {background-color: #fff}
+
+/*-----------*/
+
 .navbar-default .navbar-toggle {margin:0;  padding:0; float:left; position: absolute; left: 11px; top: 10px;outline:0}
 
 
@@ -554,6 +599,7 @@ a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; le
 	transform: rotate(-45deg) translate(2.8px, -2.8px);
 }
 
+
 /* -- Superfish menu -- */
 
 .sf-menu, .sf-menu * {margin: 0; padding: 0; list-style: none; text-align:left;}
@@ -579,6 +625,8 @@ a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; le
     width: 34px;
 }
 /* end of MAIN MENU */
+
+
 
 
 /*
@@ -683,6 +731,7 @@ a.linkedin span, a.linkedin:hover span {background-position:-437px -40px;}
 .socials.without-border a.linkedin, .socials.without-border a.linkedin:hover span {background-position:-437px 10px;}
 .socials.without-border a.linkedin span, .socials.without-border a.linkedin:hover span {background-position:-437px -40px;}
 /* end of SOCIALS */
+
 
 /*  
     - FOOTER -
