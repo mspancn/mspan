@@ -448,6 +448,8 @@ h2.slider-title-3:after {position:absolute; background:rgba(255,255,255,0.25); l
 }
 /* END OF REVOLUTION SLIDER */
 
+
+
 /*
     - MAIN MENU -
 */
@@ -496,17 +498,43 @@ header.alt  ul li > a:hover {border-color:#fff;}
 .navbar-collapse > ul > li.current-menu-item > a {border-bottom:2px solid #d5ba9c; transition: all 10ms ease-in-out 0s;}
 .navbar-collapse > ul > li  a:hover {border-bottom:2px solid #000000; transition: all 10ms ease-in-out 0s;}
 
-.navbar-header {border:2px solid #e3e3e3; color:#000; padding:5px 17px 5px 11px;position: relative; min-width: 35px;height: 34px;}
 header.alt .navbar-header {border-color:#fff;}
 header.alt .navbar-header:hover, header.alt .navbar-header.selected {background:#fff; color:#000;}
 header.alt .navbar-header:hover .navbar-brand, header.alt .navbar-header.selected .navbar-brand {color:#000;}
 header.alt .navbar-header:hover .navbar-toggle .icon-bar, header.alt .navbar-header.selected .icon-bar {background-color: #000000;}
-/*a.navbar-brand {font-size:11px; text-transform:uppercase; padding:0 0 0 27px; letter-spacing: -0.07em; display:block;}*/
-a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; letter-spacing: -0.07em; display:block;}
-.navbar-default .navbar-toggle {margin:0;  padding:0; float:left; position: absolute; left: 11px; top: 10px;outline:0}
 
+/*------customized nav bar-----*/
+.main-menu {
+   background-color: transparent;
+   color: #000;
+}
 
-.navbar-toggle {
+.main-menu .navbar-header-custom {border:2px solid #e3e3e3; color:#000; padding:5px 17px 5px 11px;position: relative; min-width: 35px;height: 34px;}
+.main-menu .navbar-brand-custom {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; letter-spacing: -0.07em; display:block; float:left; height:20px;}
+
+.main-menu .navbar-toggle-custom {
+    border:none;
+    border-radius:0;
+}
+
+.main-menu .navbar-toggle-custom .icon-bar {
+  width: 12px;
+  border-radius: 0;
+  background-color: #000000;
+}
+
+.main-menu .navbar-toggle-custom .icon-bar + .icon-bar {
+    margin-top: 2px;
+}
+
+header.alt .navbar-brand-custom {color: #fff;}
+header.alt .navbar-toggle-custom .icon-bar {background-color: #fff}
+
+.main-menu .navbar-toggle-custom:focus {background-color: none;}
+
+.main-menu .navbar-toggle-custom {margin:0;  padding:0; float:left; position: absolute; left: 11px; top: 10px;outline:0}
+
+.navbar-toggle-custom {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
@@ -519,6 +547,9 @@ a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; le
 	width: 12px;
 	-webkit-tap-highlight-color: transparent;
 }
+
+/*-----------*/
+
 .navbar-toggle span.icon-bar {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -554,6 +585,7 @@ a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; le
 	transform: rotate(-45deg) translate(2.8px, -2.8px);
 }
 
+
 /* -- Superfish menu -- */
 
 .sf-menu, .sf-menu * {margin: 0; padding: 0; list-style: none; text-align:left;}
@@ -579,6 +611,8 @@ a.navbar-brand {font-size:15px; text-transform:uppercase; padding:0 0 0 27px; le
     width: 34px;
 }
 /* end of MAIN MENU */
+
+
 
 
 /*
@@ -683,6 +717,7 @@ a.linkedin span, a.linkedin:hover span {background-position:-437px -40px;}
 .socials.without-border a.linkedin, .socials.without-border a.linkedin:hover span {background-position:-437px 10px;}
 .socials.without-border a.linkedin span, .socials.without-border a.linkedin:hover span {background-position:-437px -40px;}
 /* end of SOCIALS */
+
 
 /*  
     - FOOTER -
