@@ -4,10 +4,7 @@ class Teacher < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  audited except: [
-    :encrypted_password, :sign_in_count, :current_sign_in_at, :last_sign_in_at,
-    :current_sign_in_ip, :last_sign_in_ip, :updated_at, :remember_created_at
-  ]
+  audited only: [:rate, :balance, :notes, :active]
 
   validates :first_name, :last_name, :phone, :major, :degree, :speech_video,
     :teaching_experience, :referral, :internationalization_experience, :resume,
