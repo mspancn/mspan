@@ -1,13 +1,8 @@
 class Admin::TeachersController < AdminController
-  # TODO: audit teachers
-  # TODO: audit students
-  # TODO: audit appointments
   # TODO: sign up email for teachers
   # TODO: sign up email for students
   # TODO: activated email for teachers
   # TODO: accessible https://github.com/plataformatec/devise/wiki/How-to-Setup-Multiple-Devise-User-Models
-  # TODO: student notes
-  # TODO: style sign up/sign in forms
 
   load_and_authorize_resource
 

@@ -12,10 +12,6 @@ class StudentController < ApplicationController
 
   around_action :set_time_zone
 
-  def audited_user
-    current_student
-  end
-
   private
 
     def set_time_zone

@@ -4,6 +4,11 @@ class Student < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  audited except: [
+    :encrypted_password, :sign_in_count, :current_sign_in_at, :last_sign_in_at,
+    :current_sign_in_ip, :last_sign_in_ip, :updated_at
+  ]
+
   has_and_belongs_to_many :teachers
   has_many :appointments
 
