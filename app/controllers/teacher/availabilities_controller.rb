@@ -1,4 +1,5 @@
 class Teacher::AvailabilitiesController < TeacherController
+  load_and_authorize_resource
 
   def index
     # TODO: show appointments on calendar

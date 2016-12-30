@@ -5,6 +5,7 @@ class Student::ProfilesController < StudentController
   end
 
   def update
+    # TODO: handle error
     @profile = current_student
     @profile.update!(profile_params)
     flash[:notice] = '个人信息更新成功'

@@ -6,7 +6,6 @@ class Admin::TeachersController < AdminController
   # TODO: sign up email for students
   # TODO: activated email for teachers
   # TODO: cancancan for admin
-  # TODO: cancancan for teacher
   # TODO: cancancan for student
   # TODO: accessible https://github.com/plataformatec/devise/wiki/How-to-Setup-Multiple-Devise-User-Models
   # TODO: student notes
@@ -23,6 +22,7 @@ class Admin::TeachersController < AdminController
   end
 
   def update
+    # TODO: handle error
     @teacher = Teacher.find(params[:id])
     @teacher.update!(teacher_params)
     flash[:notice] = "Updated successfully"
