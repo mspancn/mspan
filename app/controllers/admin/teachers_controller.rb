@@ -2,7 +2,6 @@ class Admin::TeachersController < AdminController
   # TODO: sign up email for teachers
   # TODO: sign up email for students
   # TODO: activated email for teachers
-  # TODO: accessible https://github.com/plataformatec/devise/wiki/How-to-Setup-Multiple-Devise-User-Models
 
   load_and_authorize_resource
 
