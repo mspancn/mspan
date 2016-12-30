@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for applying MsPan!</h1>
+    <p>Dear <%= @teacher.last_name %>,</p>
+    <p>
+      Thank you for applying <%= link_to "MsPan", root_url %>! We are reviewing your application and will contact you shortly.
+    </p>
+    <p>Please feel free to <%= mail_to "teacher@mspan.cn", "contact us" %>.</p>
+  </body>
+</html>
