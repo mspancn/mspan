@@ -48,6 +48,16 @@ class Ability
         # Can read their own appointments
         # can [:read], Appointment, teacher_id: user.id
       end
+
+      # Student
+      if user.class.name == "Student"
+
+        # Can read, create and update their own appointments
+        can [:read, :create, :update], Appointment, student_id: user.id
+
+        # Can read, create and destroy the relationships with active teachers
+        can [:read, :create, :destroy], Teacher, active: true
+      end
     end
   end
 end

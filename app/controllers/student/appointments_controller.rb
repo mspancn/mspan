@@ -1,10 +1,13 @@
 class Student::AppointmentsController < StudentController
+  load_and_authorize_resource
 
   def index
     @appointments = current_student.appointments.where(state: params[:state]).includes(:teacher)
   end
 
   def new
+    raise CanCan::AccessDenied if !Teacher.find(params[:teacher_id]).active?
+
     # TODO return error notification when teacher not existing
     @teacher = Teacher.find(params[:teacher_id])
 
@@ -15,6 +18,8 @@ class Student::AppointmentsController < StudentController
   end
 
   def create
+    raise CanCan::AccessDenied if !Teacher.find(params[:teacher_id]).active?
+
     @appointment = AppointmentService.new(
       Appointment.new(
         teacher: Teacher.find(params[:teacher_id]),
