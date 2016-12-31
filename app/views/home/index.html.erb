@@ -29,9 +29,9 @@
 					<div class="spacer" style="height:80px;"></div>
                     <button type="button" class="btn btn-lg btn-primary">
 	                    <%= link_to("开始学习",
-	                      "#student_login",
+	                      "#student_signup",
 	                      style: "color:black",
-	                      data: { toggle: "modal", target: "#student-login-modal" }
+	                      data: { toggle: "modal", target: "#student_signup-modal" }
 	                    )%>
                     </button>
 				</div>
@@ -214,9 +214,9 @@
 				</div>
 				<!-- <a class="arrow-bottom" href="portfolio_all.html"    data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a> -->
 <!-- 				<a class="arrow-bottom" href="#" id="moreTeachers" data-animation="fadeInUp" data-delay="0"><span></span><b>查看更多教师资源</b></a> -->
-				<%= link_to("#student_login",
+				<%= link_to("#student_signup",
 				  class: "arrow-bottom",
-				  data: { toggle: "modal", target: "#student-login-modal", animation: "fadeInUp", delay: "0" }
+				  data: { toggle: "modal", target: "#student_signup-modal", animation: "fadeInUp", delay: "0" }
 				) do %>
 					<span></span><b>查看更多教师资源</b>
 				<% end %>
@@ -296,8 +296,8 @@
 							<h3 class="content-title-area black-decor" data-animation="fadeIn slow" data-delay="0.2" style="margin-top:30px">
 							    <!-- <a href="#" id="moreLessons">了解更多</a> -->
 							  <%= link_to("了解更多",
-							    "#student_login",
-							    data: { toggle: "modal", target: "#student-login-modal" }
+							    "#student_signup",
+							    data: { toggle: "modal", target: "#student_signup-modal" }
 							  )%>
 							</h3>
 						</div>

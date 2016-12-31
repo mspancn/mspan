@@ -12,7 +12,6 @@
                     <div class="modal-body-content">
                       <!-- TODO: refactor this form -->
                       <%= form_for(Student.new, as: :student, url: registration_path(:student)) do |f| %>
-
                         <div class="field">
                           <%= f.label :email, '邮箱' %><br />
                           <%= f.email_field :email, autofocus: true %>
