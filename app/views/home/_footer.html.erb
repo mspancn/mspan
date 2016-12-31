@@ -1,23 +1,25 @@
 <!--Footer section-->
 <section id="footer">
-  <!--Twitter block-->
-  <div class="twitter alt-bg-3">
-    <div class="spacer" style="height:73px;"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="tAc">
-            <i>
-              <%= image_tag("home/weixinIcon.png", alt: "", class: "img-responsive", style: "margin: 0 auto; height:30px; width: 30px ") %>
-            </i>
-            <div class="spacer" style="height:35px;"></div>
-            <%= image_tag("home/wechat.jpg", alt: "", class: "img-responsive wechatBarCode", style: "margin: 0 auto;") %>
+  <% if current_page?(root_path) %>
+    <!--Twitter block-->
+    <div class="twitter alt-bg-3">
+      <div class="spacer" style="height:73px;"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="tAc">
+              <i>
+                <%= image_tag("home/weixinIcon.png", alt: "", class: "img-responsive", style: "margin: 0 auto; height:30px; width: 30px ") %>
+              </i>
+              <div class="spacer" style="height:35px;"></div>
+              <%= image_tag("home/wechat.jpg", alt: "", class: "img-responsive wechatBarCode", style: "margin: 0 auto;") %>
+            </div>
           </div>
         </div>
       </div>
+      <div class="spacer" style="height:63px;"></div>
     </div>
-    <div class="spacer" style="height:63px;"></div>
-  </div>
+  <% end %>
 
   <div class="copyright-block">
     <div class="container">

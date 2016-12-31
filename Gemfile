@@ -74,6 +74,12 @@ gem "actionpack-page_caching",
   git: "https://github.com/kord-as/actionpack-page_caching",
   branch: "rails5"
 
+# Easy file attachment management for ActiveRecord https://thoughtbot.com/open-source
+gem "paperclip", "~> 5.0.0"
+
+# The Ruby cloud services library.
+gem "fog"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

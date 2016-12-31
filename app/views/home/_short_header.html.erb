@@ -23,9 +23,12 @@
           <div class="collapse navbar-collapse m-menu" id="top-main-menu">
             <ul class="sf-menu superfish-li-relative">
               <li>
-                <a href="https://www.wenjuan.com/s/6JBJJv/" class="active" target="_blank">
+                <%= link_to("#student_signup",
+                  class: "active",
+                  data: { toggle: "modal", target: "#student-signup-modal", animation: "fadeInUp", delay: "0" }
+                ) do %>
                   <span class="fa fa-user"></span> 申请上课
-                </a>
+                <% end %>
               </li>
               <li>
                 <%= link_to "Apply to Teach", teacherhome_path, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %>

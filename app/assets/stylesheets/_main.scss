@@ -32,3 +32,32 @@ div.jGrowl div.jGrowl-notification {
 div.jGrowl div.jGrowl-notification.error {
   color: red;
 }
+
+.green {
+  color: #55a04a;
+}
+
+.no-decor {
+  color: black;
+}
+
+.no-decor:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.no-decor:focus {
+  text-decoration: none;
+  color: black;
+}
+
+table.info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  td.field-name {
+    text-align: right;
+    width: 135px;
+    padding-right: 5px;
+  }
+}

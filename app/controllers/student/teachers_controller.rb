@@ -4,6 +4,10 @@ class Student::TeachersController < StudentController
     @teachers = Teacher.all
   end
 
+  def show
+    @teacher = Teacher.find_by_id(params[:id])
+  end
+
   def create
     @teacher = Teacher.find_by_id(params[:teacher_id])
     relationship = RelationshipService.new(@teacher, current_student).create

@@ -19,8 +19,8 @@
 						<span class="learn-more"   data-animation="fadeInUp" data-delay="0.6">-  Earn money by teaching English online. Anytime. Anywhere.  -</span>
 						<div class="spacer" style="height:80px;"></div>
 						<button type="button" class="btn btn-lg btn-primary" id="" >
-	                        <a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" target="_blank"><span style="color:black">Join MsPan</span></a>
-	                    </button>
+							<%= link_to "Join MsPan", new_registration_path(:teacher), style: "color:black" %>
+	          </button>
 					</div>
 				</div>
 			</div>
@@ -180,7 +180,7 @@
 				    <div class="tAc">
 					    <div class="buttons" style="padding-top:16px;"    data-animation="fadeInUp slow" data-delay="0.3">
 							<%= link_to "Teacher FAQ", teacherfaq_path, class: "button7 btn-1", style: "margin-right:6px;" %>
-							<a href="https://goo.gl/forms/XWrfauQEUlAXhqe32" target="_blank" class="button5">Join to teach</a>
+							<%= link_to "Join to teach", new_registration_path(:teacher), class: "button5" %>
 						</div> 
 					</div>   
 				</div>
@@ -208,25 +208,4 @@
 		</section>
 
 		<!--Footer section-->
-		<section id="footer">
-			<div class="alt-bg-3">
-				<div class="spacer" style="height:73px;"></div>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-                            <div class="tAc">
-
-                                <h2 data-animation="fadeInUp slow" data-delay="0">
-                                contact us:  teacher@mspan.cn</h2>
-								<div class="spacer" style="height:35px;"></div> 
-								<%= image_tag("home/mspan.jpg", alt: "", class: "img-responsive wechatBarCode", style:"margin: 0 auto;") %>
-                                <!-- <img src="img/mspan.jpg" class="img-responsive wechatBarCode" style="margin: 0 auto;" alt=""> -->
-							</div>	
-						</div>
-					</div>
-				</div>
-				<div class="spacer" style="height:63px;"></div>
-			</div>
-
-			<%= render partial: 'teacher_copyright_block' %>
-		</section>
+		<%= render partial: 'teacher_footer' %>

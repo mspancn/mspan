@@ -1,0 +1,15 @@
+<div>
+  <h4 class="card-list-header">教师简介</h4>
+  <div class="card-list">
+    <%= render partial: "student/shared/teacher", locals: { teacher: @teacher } %>
+  </div>
+</div>
+
+<div>
+  <h4 class="card-list-header">教师详情</h4>
+  <div class="card-list">
+    <%= render partial: "student/shared/teacher_details", locals: { teacher: @teacher } %>
+  </div>
+</div>
+
+<%= render partial: "shared/browser_back_button" %>

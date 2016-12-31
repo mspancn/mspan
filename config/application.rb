@@ -14,6 +14,8 @@ module Mspan
 
     # Load services
     config.autoload_paths += %W(#{config.root}/app/services)
+    # Load libs
+    config.autoload_paths += %W(#{config.root}/lib)
 
     # Set queue adapter for Delayed Job
     config.active_job.queue_adapter = :delayed_job

@@ -74,6 +74,22 @@ Rails.application.configure do
     :access_key_id     => 'AKIAJ6UKP6PQUY3VQGOA',
     :secret_access_key => 'ArUxwe1GJczK4BRVp4d/8A8nUlNuGOk29XzJWHSYE2OD'
 
+  # Configuration for file/image upload
+  Paperclip.options[:command_path] = "/usr/bin"
+
+  config.attached_file_options = {
+    :storage => :fog, :fog_credentials => {
+      :provider => "AWS",
+      :aws_access_key_id => 'AKIAJAXPKBQZMSZQQ5IQ',
+      :aws_secret_access_key => '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',
+      :region => 'ap-southeast-1',
+      :scheme => 'https'
+    },
+    :fog_directory => "mspan-ppe",
+    :fog_public => true,
+    :fog_host => "https://d30utlkw10d9yu.cloudfront.net"
+  }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
