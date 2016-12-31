@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function () {
   });
 
   $('#teachers tbody').on('click', 'tr', function() {
-    let data = table.row(this).data();
+    const data = table.row(this).data();
     window.location.href = url + "/" + data["id"] + "/edit"
   });
 });
