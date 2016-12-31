@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'
 
+# The authorization Gem for Ruby on Rails.
+gem 'cancancan'
+
 # This gem for Ruby on Rails adds the content of the jQuery FullCalendar plugin
 # from Adam Shaw (found here http://arshaw.com/fullcalendar/) within your RoR application
 # such that you do not have to download and install all the FullCalendar assets yourself.

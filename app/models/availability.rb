@@ -2,8 +2,8 @@ class Availability < ApplicationRecord
 
   def to_datetime_json
     JSON::parse(self.to_json).merge({
-      "start" => Time.zone.at(self.start),
-      "end" => Time.zone.at(self.end)
+      "start": Time.zone.at(self.start),
+      "end": Time.zone.at(self.end)
     })
   end
 

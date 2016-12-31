@@ -4,6 +4,8 @@ class Student < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  audited only: [:balance]
+
   has_and_belongs_to_many :teachers
   has_many :appointments
 

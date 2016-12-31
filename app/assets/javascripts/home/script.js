@@ -1432,11 +1432,9 @@
 		FullScreenSection.init();
 
 
-		// check if isotope.min.js loaded
-		// if (typeof (jQuery.fn.isotope) !== 'undefined') {
-		// 	console.log("isotope");
-		// 	IsotopeGallery.init();
-		// }
+		if (typeof (jQuery.fn.isotope) !== 'undefined') {
+			IsotopeGallery.init();
+		}
 
 		// check if jquery.flexslider-min.js loaded
 		// if (typeof (jQuery.fn.flexslider) !== 'undefined') {

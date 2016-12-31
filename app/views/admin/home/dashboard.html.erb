@@ -1,0 +1,7 @@
+<h4>Admin dashboard</h4>
+
+<% if current_admin.enabled? %>
+  <ul>
+    <li><%= link_to "Teacher Management", admin_teachers_path %></li>
+  </ul>
+<% end %>

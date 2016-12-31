@@ -1,6 +1,11 @@
 class Teacher::HomeController < TeacherController
 
   def dashboard
+    if !current_teacher.active?
+      render 'teacher/shared/inactive_message'
+      return
+    end
+
     availabilities = current_teacher.availabilities_next_7_days
     @availabilities_datetime = availabilities.map(&:to_datetime_json)
 

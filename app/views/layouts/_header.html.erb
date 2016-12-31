@@ -12,6 +12,8 @@
         <%= link_to("MsPan", student_root_path, { class: "navbar-brand" }) %>
       <% elsif current_teacher %>
         <%= link_to("MsPan", teacher_root_path, { class: "navbar-brand" }) %>
+      <% elsif current_admin %>
+        <%= link_to("MsPan", admin_root_path, { class: "navbar-brand" }) %>
       <% else %>
         <%= link_to("MsPan", root_path, { class: "navbar-brand" }) %>
       <% end %>
@@ -26,6 +28,8 @@
         <%= render "layouts/student_header_info" %>
       <% elsif current_teacher %>
         <%= render "layouts/teacher_header_info" %>
+      <% elsif current_admin %>
+        <%= render "layouts/admin_header_info" %>
       <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

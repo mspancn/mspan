@@ -1,0 +1,159 @@
+<h2>Edit Teacher</h2>
+
+<%= form_for(@teacher, url: admin_teacher_path) do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, disabled: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, disabled: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email, disabled: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time_zone %><br />
+    <%= f.time_zone_select :time_zone, nil %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.telephone_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender, 'Gender (Optional)' %><br />
+    <%= f.radio_button :gender, 'female', disabled: true %>
+    <%= f.label :gender_female, 'Female' %>
+    <%= f.radio_button :gender, 'male', disabled: true %>
+    <%= f.label :gender_male, 'Male' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age_range %><br />
+    <%= f.select :age_range, Teacher::AGE_RANGES, { include_blank: 'Choose not to disclose' }, { disabled: true } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :major %><br />
+    <%= f.text_field :major %>
+  </div>
+
+  <div class="field">
+    <%= f.label :degree %><br />
+    <%= f.text_field :degree %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rate %><br />
+    <%= f.select :rate, ExchangeService::DOLLAR_TO_YUAN.keys %>
+  </div>
+
+  <div class="field">
+    <%= f.label :balance %><br />
+    <%= f.number_field :balance, disabled: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :intro %><br />
+    <%= f.text_area :intro %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student, 'Are you currently a student?' %><br />
+    <%= f.radio_button :student, true, disabled: true %>
+    <%= f.label :student_true, 'Yes' %>
+    <%= f.radio_button :student, false, disabled: true %>
+    <%= f.label :student_false, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :teaching_experience, 'Do you have teaching/tutoring experience?' %><br />
+    <%= f.radio_button :teaching_experience, 'lot', disabled: true %>
+    <%= f.label :teaching_experience_lot, 'Yes. A lot.' %>
+    <%= f.radio_button :teaching_experience, 'some', disabled: true %>
+    <%= f.label :teaching_experience_some, 'Yes. Some.' %>
+    <%= f.radio_button :teaching_experience, 'little', disabled: true %>
+    <%= f.label :teaching_experience_little, 'Yes. Just a little.' %>
+    <%= f.radio_button :teaching_experience, 'little', disabled: true %>
+    <%= f.label :teaching_experience_none, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :certificate, 'Do you have any English teaching Certificates?' %><br />
+    <%= f.radio_button :certificate, true, disabled: true %>
+    <%= f.label :certificate_true, 'Yes' %>
+    <%= f.radio_button :certificate, false, disabled: true %>
+    <%= f.label :certificate_false, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mandarin, 'Do you speak Mandarin?' %><br />
+    <%= f.radio_button :mandarin, true, disabled: true %>
+    <%= f.label :mandarin_true, 'Yes' %>
+    <%= f.radio_button :mandarin, false, disabled: true %>
+    <%= f.label :mandarin_false, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :internationalization_experience, 'Do you have internalization experience relating to China or Asia countries? (having Chinese or Asian students or colleagues; traveling to China or Asian countries;studying Chinese or Asian culture because of self-interest)' %><br />
+    <%= f.radio_button :internationalization_experience, 'lot', disabled: true %>
+    <%= f.label :internationalization_experience_lot, 'Yes. A lot.' %>
+    <%= f.radio_button :internationalization_experience, 'some', disabled: true %>
+    <%= f.label :internationalization_experience_some, 'Yes. Some.' %>
+    <%= f.radio_button :internationalization_experience, 'little', disabled: true %>
+    <%= f.label :internationalization_experience_little, 'Yes. Just a little.' %>
+    <%= f.radio_button :internationalization_experience, 'little', disabled: true %>
+    <%= f.label :internationalization_experience_none, 'No' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resume, "Resume (pdf only)" %><br />
+    <% if @teacher.resume.present? %>
+      <%= link_to @teacher.resume_file_name, @teacher.resume.url, target: "_blank" %>
+    <% else %>
+      (None)
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :speech_video, 'What is the YouTube address, Google Drive link OR DropBox link of your speech evaluation video? (For instructions of how to make this video, visit: https://docs.google.com/document/d/e/2PACX-1vR7l1sRjpDEPJhP6rYPA0GQB063DDpiaB80XVQiuJ5d6cPREUrmG2JGFZn_UwoLX1k1vjZ4W5B6iOF8/pub)' %><br />
+    <%= f.text_field :speech_video %>
+  </div>
+
+  <div class="field">
+    <%= f.label :referral, 'Where did you hear about MsPan?' %><br />
+    <%= f.radio_button :referral, 'email', disabled: true %>
+    <%= f.label :referral_email, 'Email' %>
+    <%= f.radio_button :referral, 'campus', disabled: true %>
+    <%= f.label :referral_campus, 'Campus flyer' %>
+    <%= f.radio_button :referral, 'friends', disabled: true %>
+    <%= f.label :referral_friends, 'Friends' %>
+    <%= f.radio_button :referral, 'facebook', disabled: true %>
+    <%= f.label :referral_facebook, 'Facebook' %>
+    <%= f.radio_button :referral, 'craiglist', disabled: true %>
+    <%= f.label :referral_craiglist, 'Craiglist' %>
+    <%= f.radio_button :referral, 'other', disabled: true %>
+    <%= f.label :referral_other, 'Other' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.select :active, [["Yes", true], ["No", false]] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

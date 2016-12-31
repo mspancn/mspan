@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :students
-  devise_for :teachers
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :admins, controllers: { sessions: 'admins/sessions', registrations: 'admins/registrations' }
+  devise_for :students, controllers: { sessions: 'students/sessions', registrations: 'students/registrations' }
+  devise_for :teachers, controllers: { sessions: 'teachers/sessions', registrations: 'teachers/registrations' }
 
   namespace :student do
     root 'home#dashboard'
@@ -18,6 +18,12 @@ Rails.application.routes.draw do
     resources :availabilities, only: [:index, :create, :destroy]
     resources :appointments, only: [:index, :update]
     resource :profile, only: [:show]
+  end
+
+  namespace :admin do
+    root 'home#dashboard'
+
+    resources :teachers, only: [:index, :edit, :update]
   end
 
   match 'status', :to => 'home#status', via: :get

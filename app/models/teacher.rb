@@ -4,22 +4,26 @@ class Teacher < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  audited only: [:rate, :balance, :notes, :active]
+
   validates :first_name, :last_name, :phone, :major, :degree, :speech_video,
     :teaching_experience, :referral, :internationalization_experience, :resume,
     presence: true
-  validates_inclusion_of :student, :certificate, :mandarin, :in => [true, false]
+  validates_inclusion_of :student, :certificate, :mandarin, in: [true, false]
+  validates_inclusion_of :rate, in: ExchangeService::DOLLAR_TO_YUAN.keys
 
   has_many :availabilities
   has_many :appointments
 
   has_attached_file :resume, Rails.application.config.attached_file_options.merge({
-    :path => "resume/:id/:basename.:extension"
+    path: "resume/:id/:basename.:extension"
   })
   # TODO: remove duplicate error messages for resume
   validates_attachment :resume, presence: true,
-    content_type: { content_type: "application/pdf", :message => "must be pdf" },
-    size: { in: 0..1.megabytes, :message => "must be less than 1 megabytes" }
+    content_type: { content_type: "application/pdf", message: "must be pdf" },
+    size: { in: 0..1.megabytes, message: "must be less than 1 megabytes" }
 
+  before_validation :set_default_rate
   before_create :set_defaults
 
   AGE_RANGES = ["18-22", "22-25", "25-35", "35-50", "50+"]
@@ -96,6 +100,9 @@ class Teacher < ApplicationRecord
 
     def set_defaults
       self.balance ||= 0
+    end
+
+    def set_default_rate
       self.rate ||= default_rate
     end
 

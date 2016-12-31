@@ -1,4 +1,5 @@
 class Teacher::AppointmentsController < TeacherController
+  load_and_authorize_resource
 
   def index
     @appointments = current_teacher.appointments.where(state: params[:state]).includes(:student)

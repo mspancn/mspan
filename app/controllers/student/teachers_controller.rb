@@ -1,7 +1,8 @@
 class Student::TeachersController < StudentController
+  load_and_authorize_resource
 
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.where(active: true)
   end
 
   def show
