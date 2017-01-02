@@ -27,7 +27,16 @@
                   class: "active",
                   data: { toggle: "modal", target: "#student-signup-modal", animation: "fadeInUp", delay: "0" }
                 ) do %>
-                  <span class="fa fa-user"></span> 申请上课
+                  <span class="fa fa-user"></span> 注册
+                <% end %>
+              </li>
+
+              <li>
+                <%= link_to("#student_login",
+                  class: "active",
+                  data: { toggle: "modal", target: "#student-login-modal", animation: "fadeInUp", delay: "0" }
+                ) do %>
+                  <span class="fa fa-sign-in"></span> 登录
                 <% end %>
               </li>
               <li>

@@ -1530,16 +1530,22 @@ section#final {background-color:#c2a47d;background-image:url(/assets/home/map-im
 .copyright-block a {font-size:15px; color:white;}
 .wechatBarCode {height:100px; width: 100px;}
 
-#loginModal h4 {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
-#loginModal .checkbox {background-color: #f9f9f9;}
-#loginModal .close {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
-/*#loginModal .modal-header {background-color: #5cb85c;color:white !important;text-align: center;font-size: 30px;}*/
-#loginModal .modal-header {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
-#loginModal .modal-body button {background-color: #fed136; color:black;}
-#loginModal .modal-footer {background-color: #f9f9f9;}
-#loginModal .modal-footer button {background-color: #e8dccd; color:black;}
-#loginModal a {color:#668cff;}
-#loginModal a:hover, a:focus, a:active {color:#c2a47d;}
+#student-login-modal h4 {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#student-login-modal .checkbox {background-color: #f9f9f9;}
+#student-login-modal .close {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#student-login-modal .modal-header {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#student-login-modal .modal-body button {background-color: #fed136; color:black;}
+#student-login-modal .modal-footer {background-color: #f9f9f9;}
+#student-login-modal a {color:#668cff;}
+#student-login-modal a:hover, a:focus, a:active {color:#c2a47d;}
+#student-login-modal .actions {margin-top: 20px}
+#student-login-modal .actions > input {background-color: #fed136; color:black;}
+
+#student-signup-modal h4 {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#student-signup-modal .modal-header {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#student-signup-modal .modal-body button {background-color: #fed136; color:black;}
+#student-signup-modal .actions {margin-top: 20px}
+#student-signup-modal .actions > input {background-color: #fed136; color:black;}
 
 
 .vertical-align {

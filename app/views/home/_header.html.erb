@@ -36,25 +36,23 @@
               </li>
 
               <li>
-                <span class="fa fa-user" style="color:white">
-                  <%= link_to("注册",
-                    "#student_signup",
-                    class: "active",
-                    style: "color:white",
-                    data: { toggle: "modal", target: "#student-signup-modal" }
-                  )%>
-                </span>
+                <%= link_to("#student_signup",
+                  class: "active",
+                  data: { toggle: "modal", target: "#student-signup-modal", animation: "fadeInUp", delay: "0" }
+                ) do %>
+                  <span class="fa fa-user"></span> 注册
+                <% end %>
               </li>
+
               <li>
-                <span class="fa fa-sign-in" style="color:white">
-                  <%= link_to("登录",
-                    "#student_login",
-                    class: "active",
-                    style: "color:white",
-                    data: { toggle: "modal", target: "#student-login-modal" }
-                  )%>
-                </span>
+                <%= link_to("#student_login",
+                  class: "active",
+                  data: { toggle: "modal", target: "#student-login-modal", animation: "fadeInUp", delay: "0" }
+                ) do %>
+                  <span class="fa fa-sign-in"></span> 登录
+                <% end %>
               </li>
+
               <li><%= link_to "Apply to Teach", teacherhome_path, class: "link-header link-underline-brand", style: "text-transform:capitalize; font-size:13px;" %></li>
             </ul>
           </div>
