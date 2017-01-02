@@ -110,9 +110,7 @@ textarea:focus, input:focus{outline: 0;}
 
 /* -- Images on parallax blocks -- */
 .top-header-parallax {text-align:left;}
-/* TODO: we need to have this on our site */
-.image-family {background:url('http://placehold.it/1600x792') no-repeat left top; background-attachment: fixed;}
-
+/*.image-family {background:url('http://placehold.it/1600x792') no-repeat left top; background-attachment: fixed;}*/
 /* end of Images on parallax blocks */
 
 /* -- Default links -- */
@@ -477,7 +475,7 @@ nav.main-menu {display:none;}
 .purchase-button-alt .navbar-collapse > ul > li.menu-item-border a {border: 2px solid #000; color: #000;}
 .purchase-button-alt .navbar-collapse > ul > li.menu-item-border a:hover {color:#fff; background:#000; border: 2px solid #000;}
 
-.navbar-collapse > ul > li.menu-item-border a:hover {
+/*.navbar-collapse > ul > li.menu-item-border a:hover {
     background: none repeat scroll 0 0 #ffffff;
     border-color: #fff;
     color: #000;
@@ -491,7 +489,7 @@ header.sticky .navbar-collapse ul li.menu-item-border > a {
 header.sticky .navbar-collapse ul li.menu-item-border > a:hover {
     background: none repeat scroll 0 0 #000;
     color: #fff;
-}
+}*/
 
 header.sticky .navbar-collapse ul li > a {padding-bottom:0;}
 header.alt  ul li > a:hover {border-color:#fff;}
@@ -1080,10 +1078,9 @@ section.parallax-section {
     position: absolute;
     width: 100%;}
 
-/* TODO: We need to have these on our site */
-.family-1 {background-image:url('http://placehold.it/1600x792');}
+/*.family-1 {background-image:url('http://placehold.it/1600x792');}
 .family-2 {background-image:url('http://placehold.it/1600x800');}
-.family-3 {background-image:url('http://placehold.it/1600x1189');}
+.family-3 {background-image:url('http://placehold.it/1600x1189');}*/
 .overlay {background-position: center center; background-repeat: repeat; height: 100%; left: 0; opacity: 0.55; position: absolute; top: 0; width: 100%; z-index: 3; background:#000; overflow:hidden;}
 
 /* end of new parallax */
@@ -1546,6 +1543,18 @@ section#final {background-color:#c2a47d;background-image:url(/assets/home/map-im
 #student-signup-modal .modal-body button {background-color: #fed136; color:black;}
 #student-signup-modal .actions {margin-top: 20px}
 #student-signup-modal .actions > input {background-color: #fed136; color:black;}
+
+
+#teacher-login-modal h4 {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#teacher-login-modal .checkbox {background-color: #f9f9f9;}
+#teacher-login-modal .close {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#teacher-login-modal .modal-header {background-color: #fed136;color:black !important;text-align: center;font-size: 30px;}
+#teacher-login-modal .modal-body button {background-color: #fed136; color:black;}
+#teacher-login-modal .modal-footer {background-color: #f9f9f9;}
+#teacher-login-modal a {color:#668cff;}
+#teacher-login-modal a:hover, a:focus, a:active {color:#c2a47d;}
+#teacher-login-modal .actions {margin-top: 20px}
+#teacher-login-modal .actions > input {background-color: #fed136; color:black;}
 
 
 .vertical-align {

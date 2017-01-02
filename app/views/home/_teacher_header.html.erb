@@ -40,6 +40,16 @@
                   <span class="fa fa-user"></span> Join To Teach
                 <% end %>
               </li>
+
+              <li>
+                <%= link_to("#teacher_login",
+                  class: "active",
+                  data: { toggle: "modal", target: "#teacher-login-modal", animation: "fadeInUp", delay: "0" }
+                ) do %>
+                  <span class="fa fa-sign-in"></span> Log In
+                <% end %>
+              </li>
+
             </ul>
           </div>
         </div>
