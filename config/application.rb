@@ -12,10 +12,8 @@ module Mspan
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Load services
-    config.autoload_paths += %W(#{config.root}/app/services)
-    # Load libs
-    config.autoload_paths += %W(#{config.root}/lib)
+    # Load services and libs
+    config.autoload_paths += %W(#{config.root}/app/services #{config.root}/lib)
 
     # Set queue adapter for Delayed Job
     config.active_job.queue_adapter = :delayed_job
