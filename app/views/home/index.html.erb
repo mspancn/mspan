@@ -7,13 +7,18 @@
 
 		<!--Welcome section-->
         <section class="waypoint video-block fullscreen" data-hash="welcome">
-<!-- 				<video id="womanvideo" autoplay="autoplay" muted="muted" loop="loop" poster="img/woman_front.jpg" 
-				class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto"> -->
-				<video id="womanvideo" autoplay="autoplay" muted="muted" loop="loop" poster    ="assets/home/woman_front.jpg" 
-			 	    class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
-					<source data-src="assets/home/woman-small.mov" type="video/mp4">
-					<source data-src="assets/home/woman-small.ogm" type="video/ogm">
-			    </video>
+			<%= video_tag(
+				"home/woman-small.mov",
+				id: "womanvideo",
+				autoplay: "autoplay",
+				muted: "muted",
+				loop: "loop",
+				poster: "home/woman_front.jpg",
+				class: "background-video",
+				"x-webkit-airplay": true,
+				"webkit-playsinline": true,
+				preload: "auto"
+			) %>
 			<div class="text-inner">
 				<div class="container">
 					<div class="row">
@@ -81,11 +86,18 @@
 			</div> -->
 
 			<div class="video-block features-watch alt-bg" style="padding-top:189px; padding-bottom:173px;">
-			    <video id="manvideo" autoplay="autoplay" muted="muted" loop="loop" poster="assets/home/man_front.jpg" 
-			           class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
-				    <source type="video/mp4" data-src="assets/home/man-small.mov">
-				    <source type="video/ogm" data-src="assets/home/man-small.ogm">
-			    </video>
+					<%= video_tag(
+						"home/man-small.mov",
+						id: "manvideo",
+						autoplay: "autoplay",
+						muted: "muted",
+						loop: "loop",
+						poster: "home/man_front.jpg",
+						class: "background-video",
+						"x-webkit-airplay": true,
+						"webkit-playsinline": true,
+						preload: "auto"
+					) %>
 			    <div class="overlay color-2" style="opacity:0.5;"></div>
 		    </div>
 
@@ -262,7 +274,7 @@
 		                            </div>
 		                        </div>
 		                        
-		                        <img src="assets/home/dinning.jpg" class="img-responsive" alt="">
+		                        <%= image_tag "home/dinning.jpg", class: "img-responsive" %>
 		                    </a>
 		                    <div class="portfolio-caption"><h4>北美吃货</h4></div>
 	                    </div>
@@ -439,7 +451,7 @@
       <!--Clients section-->
 	  <section class="waypoint parallax-section" id="clients" data-hash="clients">
 			<div class="parallax-holder">
-				<div class="paralayer" data-paraspeed="0.5" style="background-image: url(assets/home/nyc.jpg);"></div>
+				<div class="paralayer nyc-paralayer" data-paraspeed="0.5"></div>
 			</div>
 			<div class="alt-testimonial testimonial-full alternative-arrows">
 				<div class="testimonials-slideshow" data-cycle-pause-on-hover="true" data-cycle-fx="fade" data-cycle-timeout="10000" data-cycle-slides="> div" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-prev=".prev" data-cycle-next=".next" data-cycle-log="false"  data-animation="fadeIn" data-delay="0">
