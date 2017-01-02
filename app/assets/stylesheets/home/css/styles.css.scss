@@ -1080,6 +1080,14 @@ section.parallax-section {
     position: absolute;
     width: 100%;}
 
+.paralayer.nyc-paralayer {
+    background-image: asset-data-url('home/nyc.jpg');
+}
+
+.paralayer.pc-paralayer {
+    background-image:asset-data-url('home/pc.jpg');
+}
+
 /* TODO: We need to have these on our site */
 .family-1 {background-image:url('http://placehold.it/1600x792');}
 .family-2 {background-image:url('http://placehold.it/1600x800');}
