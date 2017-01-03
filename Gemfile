@@ -61,6 +61,10 @@ gem 'delayed_job_active_record'
 # Daemons provides an easy way to wrap existing ruby scripts (for example a self-written server) to be run as a daemon and to be controlled by simple start/stop/restart commands.
 gem 'daemons'
 
+# unicorn is an HTTP server for Rack applications designed to only serve fast clients on low-latency,
+# high-bandwidth connections and take advantage of features in Unix/Unix-like kernels.
+gem 'unicorn'
+
 # AWS::SES is a Ruby library for Amazon's Simple Email Service's REST API (aws.amazon.com/ses).
 gem "aws-ses", "~> 0.6.0", :require => 'aws/ses'
 
