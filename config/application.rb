@@ -13,7 +13,7 @@ module Mspan
     # -- all .rb files in that directory are automatically loaded.
 
     # Load services and libs
-    config.autoload_paths += %W(#{config.root}/app/services #{config.root}/lib)
+    config.eager_load_paths += %W(#{config.root}/lib)
 
     # Set queue adapter for Delayed Job
     config.active_job.queue_adapter = :delayed_job
