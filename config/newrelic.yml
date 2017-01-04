@@ -45,6 +45,7 @@ test:
 ppe:
   <<: *default_settings
   app_name: MsPan (PPE)
+  monitor_mode: true
 
 production:
   <<: *default_settings
