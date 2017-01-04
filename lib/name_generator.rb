@@ -1,4 +1,4 @@
-class NameGenerator
+module NameGenerator
 
   FIRST_NAME_POOL = [
     'Abraham', 'George', 'Benjamin', 'Franklin', 'Helen', 'Thomas',
@@ -10,11 +10,7 @@ class NameGenerator
     'Sally', 'Jane', 'Emily', 'Katharine', 'Angelina', 'Alice'
   ]
 
-  def initialize
-    @first_name = FIRST_NAME_POOL.sample
-  end
-
-  def first_name
-    @first_name
+  def self.first_name
+    FIRST_NAME_POOL.sample
   end
 end

@@ -60,6 +60,6 @@ class Student < ApplicationRecord
 
     def set_defaults
       self.balance ||= 0
-      self.full_name ||= NameGenerator.new.first_name
+      self.full_name ||= NameGenerator.first_name
     end
 end
