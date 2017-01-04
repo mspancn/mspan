@@ -1,3 +1,3 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'no-reply@mspan.cn'
+  default from: '"MsPan" <no-reply@mspan.cn>'
 end
