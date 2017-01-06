@@ -71,6 +71,9 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   aws_ses_config = YAML.load_file(Rails.root.join('config/aws_ses.yml'))[Rails.env]
+  puts "======================="
+  p aws_ses_config
+  puts "======================="
   ActionMailer::Base.add_delivery_method :ses, AWS::SES::Base,
     :access_key_id     => aws_ses_config['access_key_id'],
     :secret_access_key => aws_ses_config['secret_access_key']
