@@ -12,6 +12,16 @@ if node[:opsworks][:instance][:layers].first == "rails-app"
     }.to_yaml)
   end
 
+  # NOTE: create aws s3 yml
+  ::File.open("#{release_path}/config/aws_s3.yml", "w") do |f|
+    f.write({
+      node[:deploy][:mspan_rails][:rails_env] => {
+        "access_key_id"     => node[:deploy][:mspan_rails][:aws_s3][:access_key_id],
+        "secret_access_key" => node[:deploy][:mspan_rails][:aws_s3][:secret_access_key]
+      }
+    }.to_yaml)
+  end
+
   execute "rake assets:precompile" do
     cwd release_path
     command "bundle exec rake assets:precompile"

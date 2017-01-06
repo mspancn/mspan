@@ -20,3 +20,4 @@
 
 public/*.html
 config/aws_ses.yml
+config/aws_s3.yml

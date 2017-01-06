@@ -38,11 +38,12 @@ Rails.application.configure do
   # Configuration for file/image upload
   Paperclip.options[:command_path] = "/usr/local/bin"
 
+  aws_s3_config = YAML.load_file(Rails.root.join('config/aws_s3.yml'))[Rails.env]
   config.attached_file_options = {
     :storage => :fog, :fog_credentials => {
       :provider => "AWS",
-      :aws_access_key_id => 'AKIAJAXPKBQZMSZQQ5IQ',
-      :aws_secret_access_key => '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',
+      :aws_access_key_id      => aws_s3_config['access_key_id'],
+      :aws_secret_access_key  => aws_s3_config['secret_access_key'],
       :region => 'ap-southeast-1',
       :scheme => 'https'
     },
