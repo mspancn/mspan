@@ -70,9 +70,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :ses
   config.action_mailer.perform_deliveries = true
 
+  aws_ses_config = YAML.load_file(Rails.root.join('config/aws_ses.yml'))[Rails.env]
   ActionMailer::Base.add_delivery_method :ses, AWS::SES::Base,
-    :access_key_id     => 'AKIAJOPGQ3KN6WK2IJSA',
-    :secret_access_key => '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'
+    :access_key_id     => aws_ses_config[Rails.env]['access_key_id'],
+    :secret_access_key => aws_ses_config[Rails.env]['secret_access_key']
 
   # Configuration for file/image upload
   Paperclip.options[:command_path] = "/usr/bin"
