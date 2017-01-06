@@ -4,6 +4,10 @@ if node[:opsworks][:instance][:layers].first == "rails-app"
 
   # NOTE: create aws ses yml
   ::File.open("#{release_path}/config/aws_ses.yml", "w") do |f|
+    puts "==========================="
+    p node[:deploy][:mspan_rails][:aws_ses][:access_key_id]
+    p node[:deploy][:mspan_rails][:aws_ses][:secret_access_key]
+    puts "==========================="
     f.write({
       node[:deploy][:mspan_rails][:rails_env] => {
         "access_key_id"     => node[:deploy][:mspan_rails][:aws_ses][:access_key_id],
