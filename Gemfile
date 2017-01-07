@@ -53,7 +53,7 @@ gem 'enumerize'
 # Audited (previously acts_as_audited) is an ORM extension that logs all changes to your models.
 # Audited can also record who made those changes, save comments and associate models related to the changes.
 gem "audited", "~> 4.3"
-gem "rails-observers", github: 'rails/rails-observers'
+gem "rails-observers", git: 'https://github.com/rails/rails-observers'
 
 # Delayed::Job (or DJ) encapsulates the common pattern of asynchronously executing longer tasks in the background.
 gem 'delayed_job_active_record'
@@ -71,11 +71,8 @@ gem "aws-ses", "~> 0.6.0", :require => 'aws/ses'
 # New Relic is a performance management system, developed by New Relic, Inc (http://www.newrelic.com).
 gem 'newrelic_rpm'
 
-# Static page caching for Action Pack (removed from core in Rails 4.0).
-# TODO: point to the main branch when it's merged
-gem "actionpack-page_caching",
-  git: "https://github.com/kord-as/actionpack-page_caching",
-  branch: "rails5"
+# Action caching for Action Pack (removed from core in Rails 4.0).
+gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
 
 # Easy file attachment management for ActiveRecord https://thoughtbot.com/open-source
 gem "paperclip", "~> 5.0.0"

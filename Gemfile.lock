@@ -1,17 +1,16 @@
 GIT
-  remote: git://github.com/rails/rails-observers.git
+  remote: https://github.com/rails/actionpack-action_caching.git
+  revision: 9044141824650138bf27741e8f0ed95ccd9ef26d
+  specs:
+    actionpack-action_caching (1.1.1)
+      actionpack (>= 4.0.0, < 6)
+
+GIT
+  remote: https://github.com/rails/rails-observers
   revision: 3fe157d6cbb5b5e767ded248009fc59443d63fa1
   specs:
     rails-observers (0.1.3.alpha)
       activemodel (>= 4.0, < 5.1)
-
-GIT
-  remote: https://github.com/kord-as/actionpack-page_caching
-  revision: 8b3fa423183dc6989623a0b88538b21e8a5915fc
-  branch: rails5
-  specs:
-    actionpack-page_caching (1.0.3)
-      actionpack (>= 4.0.0, < 5.1)
 
 GEM
   remote: https://rubygems.org/
@@ -370,7 +369,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack-page_caching!
+  actionpack-action_caching!
   audited (~> 4.3)
   aws-ses (~> 0.6.0)
   bootstrap-sass (~> 3.3.6)
