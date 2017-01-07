@@ -1,3 +1,5 @@
+$small-screen: 767px;
+
 .card-list-wrapper {
   margin-bottom: 60px;
 }
@@ -48,6 +50,19 @@
       padding-right: 15px;
       margin-top: 20px;
       margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: $small-screen) {
+    height: 120px;
+
+    .actions {
+      padding-top: 10px;
+
+      div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
