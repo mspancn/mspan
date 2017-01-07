@@ -1,12 +1,16 @@
 <div class="appointment-form-table">
   <table class="vertical-table">
-    <% @grouped_time_slots.each do |date, times| %>
-      <tr>
-        <th><%= date.to_s %></th>
-        <% times.each do |time| %>
-          <td><%= link_to(time.strftime("%H:%M"), student_appointments_path(teacher_id: @teacher.id, start: time), remote: true, method: :post, class: appointment_time_slot_classes(time, @appointments, current_student), data: { start: time.to_i }) %></td>
-        <% end %>
-      </tr>
+    <% if @grouped_time_slots.blank? %>
+      <p>教师未来七天没有可约时间。请选择其他教师或者稍后再来查看。</p>
+    <% else %>
+      <% @grouped_time_slots.each do |date, times| %>
+        <tr>
+          <th><%= date.to_s %></th>
+          <% times.each do |time| %>
+            <td><%= link_to(time.strftime("%H:%M"), student_appointments_path(teacher_id: @teacher.id, start: time), remote: true, method: :post, class: appointment_time_slot_classes(time, @appointments, current_student), data: { start: time.to_i }) %></td>
+          <% end %>
+        </tr>
+      <% end %>
     <% end %>
   </table>
 </div>
