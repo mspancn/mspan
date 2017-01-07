@@ -1,9 +1,9 @@
 module ExchangeService
 
   DOLLAR_TO_YUAN = {
-    20 => 138,
-    25 => 172,
-    30 => 208
+    20 => 168,
+    25 => 188,
+    30 => 218
   }
 
   def self.dollar_to_yuan(dollar)
