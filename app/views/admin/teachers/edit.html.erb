@@ -4,12 +4,12 @@
 
   <div class="field">
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, disabled: true %>
+    <%= f.text_field :first_name %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, disabled: true %>
+    <%= f.text_field :last_name %>
   </div>
 
   <div class="field">
@@ -75,29 +75,29 @@
 
   <div class="field">
     <%= f.label :teaching_experience, 'Do you have teaching/tutoring experience?' %><br />
-    <%= f.radio_button :teaching_experience, 'lot', disabled: true %>
+    <%= f.radio_button :teaching_experience, 'lot' %>
     <%= f.label :teaching_experience_lot, 'Yes. A lot.' %>
-    <%= f.radio_button :teaching_experience, 'some', disabled: true %>
+    <%= f.radio_button :teaching_experience, 'some' %>
     <%= f.label :teaching_experience_some, 'Yes. Some.' %>
-    <%= f.radio_button :teaching_experience, 'little', disabled: true %>
+    <%= f.radio_button :teaching_experience, 'little' %>
     <%= f.label :teaching_experience_little, 'Yes. Just a little.' %>
-    <%= f.radio_button :teaching_experience, 'little', disabled: true %>
+    <%= f.radio_button :teaching_experience, 'little' %>
     <%= f.label :teaching_experience_none, 'No' %>
   </div>
 
   <div class="field">
     <%= f.label :certificate, 'Do you have any English teaching Certificates?' %><br />
-    <%= f.radio_button :certificate, true, disabled: true %>
+    <%= f.radio_button :certificate, true %>
     <%= f.label :certificate_true, 'Yes' %>
-    <%= f.radio_button :certificate, false, disabled: true %>
+    <%= f.radio_button :certificate, false %>
     <%= f.label :certificate_false, 'No' %>
   </div>
 
   <div class="field">
     <%= f.label :mandarin, 'Do you speak Mandarin?' %><br />
-    <%= f.radio_button :mandarin, true, disabled: true %>
+    <%= f.radio_button :mandarin, true %>
     <%= f.label :mandarin_true, 'Yes' %>
-    <%= f.radio_button :mandarin, false, disabled: true %>
+    <%= f.radio_button :mandarin, false %>
     <%= f.label :mandarin_false, 'No' %>
   </div>
 

@@ -23,8 +23,8 @@ class Admin::TeachersController < AdminController
 
     def teacher_params
       params.require(:teacher).permit(
-        :time_zone, :phone, :major, :degree, :rate,
-        :speech_video, :intro, :notes, :active
+        :time_zone, :phone, :major, :degree, :rate, :first_name, :last_name, :mandarin,
+        :teaching_experience, :certificate, :speech_video, :intro, :notes, :active
       )
     end
 end
