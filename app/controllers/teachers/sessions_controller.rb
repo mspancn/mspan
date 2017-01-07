@@ -1,6 +1,7 @@
 class Teachers::SessionsController < Devise::SessionsController
   include Accessible
 
+  skip_before_filter :verify_authenticity_token
   before_action :check_user, only: [:new]
 
   # GET /resource/sign_in
