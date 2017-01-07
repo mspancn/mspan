@@ -46,6 +46,12 @@ $small-screen: 767px;
     background-color: $header-divider-color;
   }
 
+  .dropdown-toggle::after {
+    @media screen and (max-width: $small-screen) {
+      display: none;
+    }
+  }
+
   .navbar-toggle .icon-bar {
     background-color: $light-grey;
   }
