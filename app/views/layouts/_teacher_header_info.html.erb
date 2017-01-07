@@ -1,6 +1,6 @@
 <ul class="nav navbar-nav navbar-right">
-  <li><a href="#"><%= Time.current.strftime("%I:%M %P") %></a></li>
-  <li class="v-divider"><a id="balance" href="#"><%= number_to_currency(current_teacher.balance) %></a></li>
+  <li><%= link_to Time.current.strftime("%I:%M %P"), teacher_profile_path %></li>
+  <li class="v-divider"><%= link_to number_to_currency(current_teacher.balance), teacher_profile_path, id: 'balance' %></li>
   <li class="dropdown v-divider">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_teacher.full_name %> <span class="caret"></span></a>
     <ul class="dropdown-menu">
