@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  $(document).on('turbolinks:load', function() {
+  $(document).ready(function() {
     <% flash.each do |key, value| %>
       <% if key == "error" %>
         $.jGrowl('<%= escape_javascript error %>', { theme: 'error' });
