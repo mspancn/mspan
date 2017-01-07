@@ -1,8 +1,10 @@
-<div class="appointment-form-table">
-  <table class="vertical-table">
-    <% if @grouped_time_slots.blank? %>
-      <p>教师未来七天没有可约时间。请选择其他教师或者稍后再来查看。</p>
-    <% else %>
+<% if @grouped_time_slots.blank? %>
+  <div><%= @teacher.full_name %>未来七天没有可约时间。请选择其他教师或者稍后再来查看。</div>
+<% else %>
+  <div><%= @teacher.full_name %>未来7天可约时间</div>
+  <br />
+  <div class="appointment-form-table">
+    <table class="vertical-table">
       <% @grouped_time_slots.each do |date, times| %>
         <tr>
           <th><%= date.to_s %></th>
@@ -11,6 +13,6 @@
           <% end %>
         </tr>
       <% end %>
-    <% end %>
-  </table>
-</div>
+    </table>
+  </div>
+<% end %>
