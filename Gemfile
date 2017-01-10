@@ -80,6 +80,10 @@ gem "paperclip", "~> 5.0.0"
 # The Ruby cloud services library.
 gem "fog"
 
+# Exception tracking and logging from Ruby to Rollbar https://rollbar.com/docs/
+gem 'rollbar'
+gem 'oj', '~> 2.12.14'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
