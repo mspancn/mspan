@@ -11,7 +11,7 @@ class Student < ApplicationRecord
 
   before_create :set_defaults
 
-  AGE_RANGES = ["15岁以下", "15-18岁", "19-25岁", "26-30岁", "30岁以上"]
+  AGE_RANGES = ["0-15", "15-18", "19-25", "26-30", "30+"]
 
   def scheduled_appointments
     appointments.where(state: :new)
