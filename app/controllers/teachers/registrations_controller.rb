@@ -51,7 +51,8 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
           :degree, :student, :teaching_experience,
           :certificate, :mandarin, :referral,
           :internationalization_experience, :time_zone,
-          :age_range, :gender, :speech_video, :resume
+          :age_range, :gender, :speech_video, :resume,
+          :wechat, :zoom, :paypal
         ]
       )
     end

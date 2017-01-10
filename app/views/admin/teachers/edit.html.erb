@@ -160,6 +160,21 @@
   </div>
 
   <div class="field">
+    <%= f.label :zoom, "Zoom ID" %><br />
+    <%= f.number_field :zoom %>
+  </div>
+
+  <div class="field">
+    <%= f.label :paypal, "Paypal Account" %><br />
+    <%= f.text_field :paypal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wechat, "WeChat ID" %><br />
+    <%= f.text_field :wechat %>
+  </div>
+
+  <div class="field">
     <%= f.label :notes %><br />
     <%= f.text_area :notes %>
   </div>

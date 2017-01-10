@@ -123,6 +123,21 @@
   </div>
 
   <div class="field">
+    <%= f.label :zoom, "Zoom ID (Optional)" %><br />
+    <%= f.number_field :zoom %>
+  </div>
+
+  <div class="field">
+    <%= f.label :paypal, "Paypal Account (Optional)" %><br />
+    <%= f.text_field :paypal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wechat, "WeChat ID (Optional)" %><br />
+    <%= f.text_field :wechat %>
+  </div>
+
+  <div class="field">
     <%= f.label :referral, 'Where did you hear about MsPan?' %><br />
     <%= f.radio_button :referral, 'email' %>
     <%= f.label :referral_email, 'Email' %>
