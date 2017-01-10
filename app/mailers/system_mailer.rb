@@ -1,5 +1,5 @@
 class SystemMailer < ApplicationMailer
-  default to: "rbaggio018@gmail.com"
+  default to: "mspan@mspan.cn"
 
   def student_joined_email(student)
     @student = student
