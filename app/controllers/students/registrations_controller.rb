@@ -1,6 +1,7 @@
 class Students::RegistrationsController < Devise::RegistrationsController
   include Accessible
 
+  skip_before_filter :verify_authenticity_token, only: :create
   before_action :check_user, only: [:new]
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
