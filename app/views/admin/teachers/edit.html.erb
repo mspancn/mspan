@@ -1,3 +1,19 @@
+<h2>Teacher Availabilities</h2>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Next 7 Days</h3>
+  </div>
+  <div class="panel-body">
+    <div id="preview-calendar"
+      data-mintime=<%= time_from_hour(@earliest_hour) %>
+      data-maxtime=<%= time_from_hour(@latest_hour) %>
+      data-availabilities=<%= @availabilities_datetime.to_json %>
+      data-today=<%= Time.zone.today.wday %>
+    ></div>
+  </div>
+</div>
+
 <h2>Edit Teacher</h2>
 
 <%= form_for(@teacher, url: admin_teacher_path) do |f| %>

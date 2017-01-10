@@ -9,6 +9,8 @@ class Admin::TeachersController < AdminController
 
   def edit
     @teacher = Teacher.find(params[:id])
+    @earliest_hour, @latest_hour, @availabilities_datetime =
+      AvailabilityService.new(@teacher).calendar_info
   end
 
   def update
