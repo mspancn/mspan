@@ -9,15 +9,19 @@ if node[:opsworks][:instance][:layers].first == "rails-app"
 
     ::File.open("#{node[:apache][:dir]}/sites-available/mspan_rails.conf.d/rewrite", "w") do |f|
       if node[:deploy][:mspan_rails][:rails_env] == "ppe"
-        # Redirect *.mspan.cn to https://mspan.cn
+        # Redirect *.mspan.cn to http://mspan.cn
         f.write("RewriteCond %{HTTP_HOST} ^(.)+\\.mspan\\.cn$\n")
         f.write("RewriteRule ^(.*)$ http://mspan.cn$1 [R,L]\n")
 
-        # Redirect mspan.us to https://mspan.cn/teacherhome
+        # Redirect mspan.us to http://mspan.cn/teacherhome
         f.write("RewriteCond %{HTTP_HOST} ^mspan\\.us$\n")
         f.write("RewriteRule ^(.*)$ http://mspan.cn/teacherhome [R,L]\n")
 
-        # Redirect *.elb.amazonaws.com to https://mspan.cn
+        # Redirect *.mspan.us to http://mspan.cn/teacherhome
+        f.write("RewriteCond %{HTTP_HOST} ^(.)+\\.mspan\\.us$\n")
+        f.write("RewriteRule ^(.*)$ http://mspan.cn/teacherhome [R,L]\n")
+
+        # Redirect *.elb.amazonaws.com to http://mspan.cn
         f.write("RewriteCond %{HTTP_HOST} ^(.)+\\.elb\\.amazonaws\\.com$\n")
         f.write("RewriteRule ^(.*)$ http://mspan.cn$1 [R,L]\n")
       end
