@@ -19,11 +19,11 @@ class Appointment < ApplicationRecord
   end
 
   def not_started?
-    state.new? and scheduled_end > Time.current
+    state.new? and scheduled_start > 5.minutes.from_now
   end
 
-  def ongoing?
-    state.new? and scheduled_start <= Time.current and scheduled_end > Time.current
+  def joinable?
+    state.new? and scheduled_start <= 5.minutes.from_now and scheduled_end > Time.current
   end
 
   def uncompleted?

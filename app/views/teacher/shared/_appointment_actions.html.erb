@@ -13,10 +13,18 @@
   <% end %>
 <% end %>
 
-<% if appointment.ongoing? %>
-  <div class="text-center">
-    <span>Ongoing</span>
-  </div>
+<% if appointment.joinable? %>
+  <% if appointment.teacher.zoom.present? %>
+    <%= link_to "Join",
+      zoom_url(appointment.teacher.zoom),
+      target: "_blank",
+      class: "btn btn-default btn-raised"
+    %>
+  <% else %>
+    <div class="text-center">
+      <span>Ongoing</span>
+    </div>
+  <% end %>
 <% end %>
 
 <% if appointment.uncompleted? %>

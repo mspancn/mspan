@@ -27,6 +27,10 @@ module ApplicationHelper
     time.strftime("%m-%d %H:%M")
   end
 
+  def zoom_url(id)
+    "https://zoom.us/j/#{id}"
+  end
+
   def appointment_time_slot_classes(availability_start, appointments, current_student)
     classes = "btn btn-default appointment-time-slot"
 
