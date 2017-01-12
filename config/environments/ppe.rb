@@ -65,7 +65,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   # TODO Mailer
-  config.action_mailer.default_url_options = { host: 'mspan.cn' }
+  config.action_mailer.default_url_options = { host: 'www.mspan.cn' }
 
   config.action_mailer.delivery_method = :ses
   config.action_mailer.perform_deliveries = true
