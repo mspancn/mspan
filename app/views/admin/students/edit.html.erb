@@ -28,7 +28,7 @@
 
   <tr>
     <td class="field-name">Preferred Teacher Type:</td>
-    <td><%= @student.preferred_teacher_type %></td>
+    <td><%= student_preferred_teacher_type_mapping(@student.preferred_teacher_type) %></td>
   </tr>
 
   <tr>
@@ -38,7 +38,7 @@
 
   <tr>
     <td class="field-name">Purposes:</td>
-    <td><%= @student.purposes %></td>
+    <td><%= JSON.parse(@student.purposes).inject("") { |purposes, purpose| purposes + student_purpose_mapping(purpose) + "; " } %></td>
   </tr>
 </table>
 

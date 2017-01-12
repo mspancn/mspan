@@ -64,6 +64,30 @@ module ApplicationHelper
     end
   end
 
+  def student_preferred_teacher_type_mapping(type)
+    case type
+    when "student"
+      "常春藤名校在读大学生"
+    when "certified"
+      "拥有ESL专业认证的资深持证教师"
+    when "any"
+      "年龄不是问题"
+    end
+  end
+
+  def student_purpose_mapping(purpose)
+    case purpose
+    when "tests"
+      "雅思，托福口语专项训练"
+    when "aboard"
+      "出国留学将会面临的学习，日常交流"
+    when "business"
+      "工作需要，希望提高商务英语口语"
+    when "skill"
+      "提高英语口语素质"
+    end
+  end
+
   def google_analytics_js
     <<-EOS.html_safe
       <script>

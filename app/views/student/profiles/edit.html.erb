@@ -25,11 +25,11 @@
   <div class="field">
     <%= f.label :preferred_teacher_type, '理想外教的年龄段' %><br />
     <%= f.radio_button :preferred_teacher_type, 'student' %>
-    <%= f.label :preferred_teacher_type_student, '常春藤名校在读大学生' %>
+    <%= f.label :preferred_teacher_type_student, student_preferred_teacher_type_mapping('student') %>
     <%= f.radio_button :preferred_teacher_type, 'certified' %>
-    <%= f.label :preferred_teacher_type_certified, '拥有ESL专业认证的资深持证教师' %>
+    <%= f.label :preferred_teacher_type_certified, student_preferred_teacher_type_mapping('certified') %>
     <%= f.radio_button :preferred_teacher_type, 'any' %>
-    <%= f.label :preferred_teacher_type_any, '年龄不是问题' %>
+    <%= f.label :preferred_teacher_type_any, student_preferred_teacher_type_mapping('any') %>
   </div>
 
   <div class="field">
@@ -48,22 +48,22 @@
       multiple: true,
       checked: (@profile.purposes.present? and @profile.purposes.include?('tests'))
     }, 'tests', nil %>
-    <%= f.label :purposes_tests, '雅思，托福口语专项训练' %>
+    <%= f.label :purposes_tests, student_purpose_mapping('tests') %>
     <%= f.check_box :purposes, {
       multiple: true,
       checked: (@profile.purposes.present? and @profile.purposes.include?('aboard'))
     },'aboard', nil %>
-    <%= f.label :purposes_aboard, '出国留学将会面临的学习，日常交流' %>
+    <%= f.label :purposes_aboard, student_purpose_mapping('aboard') %>
     <%= f.check_box :purposes, {
       multiple: true,
       checked: (@profile.purposes.present? and @profile.purposes.include?('business'))
     }, 'business', nil %>
-    <%= f.label :purposes_business, '工作需要，希望提高商务英语口语' %>
+    <%= f.label :purposes_business, student_purpose_mapping('business') %>
     <%= f.check_box :purposes, {
       multiple: true,
       checked: (@profile.purposes.present? and @profile.purposes.include?('skill'))
     }, 'skill', nil %>
-    <%= f.label :purposes_skill, '提高英语口语素质' %>
+    <%= f.label :purposes_skill, student_purpose_mapping('skill') %>
   </div>
 
   <div class="actions">
