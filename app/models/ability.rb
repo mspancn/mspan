@@ -67,6 +67,9 @@ class Ability
 
         # Can read and update students
         can [:read, :update], Student
+
+        # Can read appointments
+        can [:read], Appointment
       end
     end
   end

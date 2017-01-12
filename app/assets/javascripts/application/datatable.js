@@ -40,3 +40,22 @@ $(document).on('turbolinks:load', function () {
     window.location.href = url + "/" + data["id"] + "/edit"
   });
 });
+
+$(document).on('turbolinks:load', function () {
+  const url = $('#appointments-table').data("ajax");
+
+  const table = $('#appointments-table').DataTable({
+    ajax: url,
+    columns: [
+      { data: 'student_email' },
+      { data: 'teacher_email' },
+      {
+        data: 'scheduled_start',
+        render: function(data, type, full, meta) {
+          return new Date(data).toLocaleString();
+        }
+      },
+      { data: 'state' }
+    ]
+  });
+});
