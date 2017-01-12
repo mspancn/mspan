@@ -37,10 +37,10 @@ class Appointment < ApplicationRecord
     end
   end
 
-  def complete
+  def complete(cost)
     self.with_lock do
       raise "Can't complete" unless uncompleted?
-      update_attributes!(state: :completed)
+      update_attributes!(state: :completed, cost: cost)
     end
   end
 
