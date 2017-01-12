@@ -22,3 +22,21 @@ $(document).on('turbolinks:load', function () {
     window.location.href = url + "/" + data["id"] + "/edit"
   });
 });
+
+$(document).on('turbolinks:load', function () {
+  const url = $('#students-table').data("ajax");
+
+  const table = $('#students-table').DataTable({
+    ajax: url,
+    columns: [
+      { data: 'full_name' },
+      { data: 'email' },
+      { data: 'notes' }
+    ]
+  });
+
+  $('#students-table tbody').on('click', 'tr', function() {
+    const data = table.row(this).data();
+    window.location.href = url + "/" + data["id"] + "/edit"
+  });
+});

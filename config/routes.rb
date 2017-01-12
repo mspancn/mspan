@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     root 'home#dashboard'
 
     resources :teachers, only: [:index, :edit, :update]
+    resources :students, only: [:index, :edit, :update]
   end
 
   match 'status', :to => 'home#status', via: :get

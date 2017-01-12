@@ -1,0 +1,57 @@
+<h2>Student Profile</h2>
+
+<table class="info">
+  <tr>
+    <td class="field-name">Name:</td>
+    <td><%= @student.full_name %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Balance:</td>
+    <td>$<%= @student.balance %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Email:</td>
+    <td><%= @student.email %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Time Zone:</td>
+    <td><%= @student.time_zone %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Age:</td>
+    <td><%= @student.age_range.present? ? @student.age_range : "(Not disclosed)" %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Preferred Teacher Type:</td>
+    <td><%= @student.preferred_teacher_type %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Preferred Teacher Gender:</td>
+    <td><%= @student.preferred_teacher_gender %></td>
+  </tr>
+
+  <tr>
+    <td class="field-name">Purposes:</td>
+    <td><%= @student.purposes %></td>
+  </tr>
+</table>
+
+<h2>Edit Student</h2>
+
+<%= form_for(@student, url: admin_student_path) do |f| %>
+
+  <div class="field">
+    <%= f.label :notes, "Notes only shown to Admin" %><br />
+    <%= f.text_area :notes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

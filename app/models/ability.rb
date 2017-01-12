@@ -64,6 +64,9 @@ class Ability
 
         # Can read and update teachers
         can [:read, :update], Teacher
+
+        # Can read and update students
+        can [:read, :update], Student
       end
     end
   end
