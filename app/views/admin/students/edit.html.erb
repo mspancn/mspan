@@ -38,7 +38,7 @@
 
   <tr>
     <td class="field-name">Purposes:</td>
-    <td><%= JSON.parse(@student.purposes).inject("") { |purposes, purpose| purposes + student_purpose_mapping(purpose) + "; " } %></td>
+    <td><%= JSON.parse(@student.purposes).inject("") { |purposes, purpose| purposes + student_purpose_mapping(purpose).to_s + "; " } %></td>
   </tr>
 </table>
 
