@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   match 'terms', :to => 'home#terms', via: :get
   match 'teacherhome', :to => 'home#teacherhome', via: :get
   match 'teacherfaq', :to => 'home#teacherfaq', via: :get
+  match 'video_requirement', :to => 'home#video_requirement', via: :get
 
   root to: 'home#index'
 end

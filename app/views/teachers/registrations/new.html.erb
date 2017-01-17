@@ -118,7 +118,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :speech_video, ("What is the YouTube address, Google Drive link OR DropBox link of your speech evaluation video? (For instructions of how to make this video, visit: #{link_to 'Video Requirements', 'https://docs.google.com/document/d/e/2PACX-1vR7l1sRjpDEPJhP6rYPA0GQB063DDpiaB80XVQiuJ5d6cPREUrmG2JGFZn_UwoLX1k1vjZ4W5B6iOF8/pub', target: '_blank'})").html_safe %><br />
+    <%= f.label :speech_video, ("What is the YouTube address, Google Drive link OR DropBox link of your speech evaluation video? (For instructions of how to make this video, visit: #{link_to 'Video Requirements', video_requirement_path, target: '_blank'})").html_safe %><br />
     <%= f.text_field :speech_video %>
   </div>
 
