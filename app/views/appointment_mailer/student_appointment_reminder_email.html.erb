@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>MsPan课程提醒</h1>
+    <p>
+      您和老师<%= @teacher.last_name %>有一个MsPan课程预约。课程时间是<%= @appointment.scheduled_start.in_time_zone(@student.time_zone).strftime("%m-%d %H:%M") %>。
+    </p>
+  </body>
+</html>

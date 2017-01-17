@@ -35,6 +35,12 @@ class Student::AppointmentsController < StudentController
     end
 
     AppointmentMailer.new_appointment_email(@appointment).deliver_later
+    AppointmentMailer
+      .delay(run_at: 12.hours.ago(@appointment.scheduled_start))
+      .teacher_appointment_reminder_email(@appointment)
+    AppointmentMailer
+      .delay(run_at: 12.hours.ago(@appointment.scheduled_start))
+      .student_appointment_reminder_email(@appointment)
   end
 
   def update

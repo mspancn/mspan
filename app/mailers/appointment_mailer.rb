@@ -17,4 +17,18 @@ class AppointmentMailer < ApplicationMailer
     @student = @appointment.student
     mail(to: @student.email, subject: 'MsPan课程被取消')
   end
+
+  def teacher_appointment_reminder_email(appointment)
+    @appointment = appointment
+    @teacher = @appointment.teacher
+    @student = @appointment.student
+    mail(to: @teacher.email, subject: 'MsPan Lesson In 12 Hours')
+  end
+
+  def student_appointment_reminder_email(appointment)
+    @appointment = appointment
+    @student = @appointment.student
+    @teacher = @appointment.teacher
+    mail(to: @student.email, subject: 'MsPan课程提醒')
+  end
 end

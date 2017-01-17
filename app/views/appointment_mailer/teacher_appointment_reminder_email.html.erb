@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>MsPan Lesson In 12 Hours</h1>
+    <p>
+      Just a kind reminder, you have a lesson with <%= @student.full_name %> scheduled on <%= @appointment.scheduled_start.in_time_zone(@teacher.time_zone).strftime("%a, %m/%d at %I:%M%P") %>.
+    </p>
+  </body>
+</html>
