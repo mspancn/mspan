@@ -73,6 +73,9 @@ class Ability
 
         # Can read and create teacher payments
         can [:read, :create], TeacherPayment
+
+        # Can read and create student payments
+        can [:read, :create], StudentPayment
       end
     end
   end

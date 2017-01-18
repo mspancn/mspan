@@ -1,0 +1,14 @@
+<h4>Student Payment Management</h4>
+
+<%= link_to 'Make Payment', new_admin_student_payment_path %>
+
+<table id="student-payments-table" class="main-data-table" data-ajax="<%= admin_student_payments_path %>">
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Creator</th>
+    </tr>
+  </thead>
+</table>

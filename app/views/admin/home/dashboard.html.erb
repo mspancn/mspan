@@ -2,9 +2,10 @@
 
 <% if current_admin.enabled? %>
   <ul>
-    <li><%= link_to "Teacher Management", admin_teachers_path %></li>
-    <li><%= link_to "Student Management", admin_students_path %></li>
     <li><%= link_to "Appointment Management", admin_appointments_path %></li>
+    <li><%= link_to "Student Management", admin_students_path %></li>
+    <li><%= link_to "Student Payment Management", admin_student_payments_path %></li>
+    <li><%= link_to "Teacher Management", admin_teachers_path %></li>
     <li><%= link_to "Teacher Payment Management", admin_teacher_payments_path %></li>
   </ul>
 <% end %>

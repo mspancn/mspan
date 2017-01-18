@@ -1,4 +1,4 @@
-class TeacherPaymentService
+class StudentPaymentService
 
   def initialize(payment)
     @payment = payment
@@ -6,12 +6,9 @@ class TeacherPaymentService
 
   def create
     begin
-      amount = @payment.teacher.balance
-
       ActiveRecord::Base.transaction do
-        @payment.amount = amount
         @payment.save!
-        @payment.teacher.withdrawal(amount)
+        @payment.student.deposit(@payment.amount)
       end
     rescue Exception => e
       return { error: "Error." }

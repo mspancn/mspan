@@ -78,3 +78,22 @@ $(document).on('turbolinks:load', function () {
     ]
   });
 });
+
+$(document).on('turbolinks:load', function () {
+  const url = $('#student-payments-table').data("ajax");
+
+  const table = $('#student-payments-table').DataTable({
+    ajax: url,
+    columns: [
+      { data: 'student_email' },
+      { data: 'amount' },
+      {
+        data: 'created_at',
+        render: function(data, type, full, meta) {
+          return new Date(data).toLocaleDateString("en-US");
+        }
+      },
+      { data: 'creator_email' }
+    ]
+  });
+});

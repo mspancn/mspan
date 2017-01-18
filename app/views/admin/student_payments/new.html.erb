@@ -1,0 +1,20 @@
+<h4>Make Student Payment</h4>
+
+<%= link_to 'To Student Payment', admin_student_payments_path %>
+
+<%= form_tag(admin_student_payments_path, method: 'POST') do %>
+
+  <div class="field">
+    <%= label_tag :email, "Student Email" %><br />
+    <%= text_field_tag :email %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :amount %><br />
+    <%= number_field_tag :amount %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "PAY" %>
+  </div>
+<% end %>
