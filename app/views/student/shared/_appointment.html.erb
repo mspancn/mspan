@@ -1,7 +1,7 @@
 <div class="card main-card">
   <div class="profile">
     <div class="pic">
-      <%= image_tag("no_profile_image.jpg") %>
+      <%= image_tag appointment.teacher.avatar.url(:medium) %>
     </div>
     <div class="info"><%= appointment.teacher.full_name %></div>
   </div>

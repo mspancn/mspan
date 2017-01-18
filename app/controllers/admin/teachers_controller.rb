@@ -14,11 +14,16 @@ class Admin::TeachersController < AdminController
   end
 
   def update
-    # TODO: handle error
     @teacher = Teacher.find(params[:id])
-    @teacher.update!(teacher_params)
-    flash[:notice] = "Updated successfully"
-    redirect_to edit_admin_teacher_path(@teacher)
+    if @teacher.update(teacher_params)
+      flash[:notice] = "Updated successfully"
+      redirect_to edit_admin_teacher_path(@teacher)
+    else
+      flash[:error] = "Failed to update"
+      @earliest_hour, @latest_hour, @availabilities_datetime =
+        AvailabilityService.new(@teacher).calendar_info
+      render 'edit'
+    end
   end
 
   private
@@ -27,7 +32,7 @@ class Admin::TeachersController < AdminController
       params.require(:teacher).permit(
         :time_zone, :phone, :major, :degree, :rate, :first_name, :last_name, :mandarin,
         :teaching_experience, :certificate, :speech_video, :intro, :notes, :active,
-        :zoom, :wechat, :paypal
+        :zoom, :wechat, :paypal, :avatar
       )
     end
 end

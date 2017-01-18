@@ -1,7 +1,7 @@
 <%= link_to teacher_profile_path, class: "no-decor" do %>
   <div class="profile">
     <div class="pic">
-      <%= image_tag("no_profile_image.jpg") %>
+      <%= image_tag current_teacher.avatar.url(:medium) %>
     </div>
     <div class="name">
       <%= current_teacher.full_name %>

@@ -23,6 +23,15 @@ class Teacher < ApplicationRecord
     content_type: { content_type: "application/pdf", message: "must be pdf" },
     size: { in: 0..1.megabytes, message: "must be less than 1 megabytes" }
 
+  has_attached_file :avatar, Rails.application.config.attached_file_options.merge({
+    styles: { medium: "150x150>" },
+    path: "avatar/teacher/:id/:basename.:extension",
+    default_url: "no_profile_image.jpg"
+  })
+  validates_attachment :avatar,
+    content_type: { content_type: ["image/jpeg", "image/png"], message: "must be jpeg/png" },
+    size: { in: 0..300.kilobytes, message: "must be less than 300 kilobytes" }
+
   before_validation :set_default_rate
   before_create :set_defaults
 

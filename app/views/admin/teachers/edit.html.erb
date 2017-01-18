@@ -17,6 +17,17 @@
 <h2>Edit Teacher</h2>
 
 <%= form_for(@teacher, url: admin_teacher_path) do |f| %>
+  <% if @teacher.errors.any? %>
+    <div>
+      <h2><%= pluralize(@teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
+
+      <ul>
+      <% @teacher.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= f.label :first_name %><br />
@@ -136,6 +147,14 @@
     <% else %>
       (None)
     <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar, "Avatar (png/jpeg only)" %><br />
+    <% if @teacher.avatar.present? %>
+      <%= link_to 'Avatar', @teacher.avatar.url, target: "_blank" %>
+    <% end %>
+    <%= f.file_field :avatar %>
   </div>
 
   <div class="field">
