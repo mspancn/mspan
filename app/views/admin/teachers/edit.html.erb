@@ -30,6 +30,14 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :avatar, "Avatar (png/jpeg only)" %><br />
+    <% if @teacher.avatar.present? %>
+      <%= image_tag @teacher.avatar.url(:medium) %>
+    <% end %>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
@@ -147,14 +155,6 @@
     <% else %>
       (None)
     <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :avatar, "Avatar (png/jpeg only)" %><br />
-    <% if @teacher.avatar.present? %>
-      <%= link_to 'Avatar', @teacher.avatar.url, target: "_blank" %>
-    <% end %>
-    <%= f.file_field :avatar %>
   </div>
 
   <div class="field">
