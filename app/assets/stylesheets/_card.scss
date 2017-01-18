@@ -24,6 +24,7 @@ $small-screen: 767px;
 
       img {
         height: 100%;
+        width: 150px; // TODO: make dynamic
       }
     }
 
@@ -62,6 +63,14 @@ $small-screen: 767px;
       div {
         margin-top: 10px;
         margin-bottom: 10px;
+      }
+    }
+
+    .profile {
+      .pic {
+        img {
+          width: 120px; // TODO: make dynamic
+        }
       }
     }
   }
