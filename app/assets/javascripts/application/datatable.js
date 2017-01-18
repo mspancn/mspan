@@ -59,3 +59,22 @@ $(document).on('turbolinks:load', function () {
     ]
   });
 });
+
+$(document).on('turbolinks:load', function () {
+  const url = $('#teacher-payments-table').data("ajax");
+
+  const table = $('#teacher-payments-table').DataTable({
+    ajax: url,
+    columns: [
+      { data: 'teacher_email' },
+      { data: 'amount' },
+      {
+        data: 'created_at',
+        render: function(data, type, full, meta) {
+          return new Date(data).toLocaleDateString("en-US");
+        }
+      },
+      { data: 'creator_email' }
+    ]
+  });
+});

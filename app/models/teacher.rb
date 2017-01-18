@@ -100,6 +100,14 @@ class Teacher < ApplicationRecord
     availabilities.where('start <= ? and end > ?', time.to_i, time.to_i).exists?
   end
 
+  def withdrawal(amount)
+    self.with_lock do
+      raise "Low Balance" if balance < amount
+      self.balance -= amount
+      save!
+    end
+  end
+
   def deposit(amount)
     self.with_lock do
       self.balance += amount

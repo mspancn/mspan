@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     resources :teachers, only: [:index, :edit, :update]
     resources :students, only: [:index, :edit, :update]
     resources :appointments, only: [:index]
+    resources :teacher_payments, only: [:index, :new, :create]
   end
 
   match 'status', :to => 'home#status', via: :get

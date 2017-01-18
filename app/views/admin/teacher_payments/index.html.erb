@@ -1,0 +1,14 @@
+<h4>Teacher Payment Management</h4>
+
+<%= link_to 'Make Payment', new_admin_teacher_payment_path %>
+
+<table id="teacher-payments-table" class="main-data-table" data-ajax="<%= admin_teacher_payments_path %>">
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Creator</th>
+    </tr>
+  </thead>
+</table>

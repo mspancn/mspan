@@ -70,6 +70,9 @@ class Ability
 
         # Can read appointments
         can [:read], Appointment
+
+        # Can read and create teacher payments
+        can [:read, :create], TeacherPayment
       end
     end
   end

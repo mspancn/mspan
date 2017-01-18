@@ -1,0 +1,32 @@
+<h4>Make Teacher Payment</h4>
+
+<%= link_to 'To Teacher Payment', admin_teacher_payments_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Balance</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teachers.each do |teacher| %>
+      <tr>
+        <td><%= teacher.email %></td>
+        <td><%= teacher.balance %></td>
+        <td>
+          <%= link_to('PAY',
+            admin_teacher_payments_path(teacher_id: teacher),
+            method: "post",
+            remote: true,
+            class: "btn btn-default btn-raised btn-sm",
+            id: "create-teacher-payment-#{teacher.id}",
+            data: { confirm: "Are you sure?" }
+          )%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
