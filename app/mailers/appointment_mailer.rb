@@ -19,6 +19,8 @@ class AppointmentMailer < ApplicationMailer
   end
 
   def teacher_appointment_reminder_email(appointment)
+    return unless appointment.state.new?
+
     @appointment = appointment
     @teacher = @appointment.teacher
     @student = @appointment.student
@@ -26,6 +28,8 @@ class AppointmentMailer < ApplicationMailer
   end
 
   def student_appointment_reminder_email(appointment)
+    return unless appointment.state.new?
+
     @appointment = appointment
     @student = @appointment.student
     @teacher = @appointment.teacher
