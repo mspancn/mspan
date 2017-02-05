@@ -51,7 +51,8 @@ class Student < ApplicationRecord
 
   def profile_completed?
     full_name.present? and preferred_teacher_type.present? and
-      preferred_teacher_gender.present? and purposes.present?
+      preferred_teacher_gender.present? and purposes.present? and
+      wechat.present?
   end
 
   def withdrawal(amount)
