@@ -1,3 +1,5 @@
+$small-screen: 767px;
+
 #editable-calendar {
   .fc-toolbar {
     .fc-left {
@@ -5,5 +7,10 @@
         font-size: 18px;
       }
     }
+  }
+
+  @media screen and (max-width: $small-screen) {
+    height: 300px;
+    overflow-y: scroll;
   }
 }
