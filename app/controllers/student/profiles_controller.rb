@@ -20,7 +20,7 @@ class Student::ProfilesController < StudentController
     def profile_params
       params.require(:student).permit(
         :full_name, :age_range, :time_zone, :preferred_teacher_type,
-        :avatar, :preferred_teacher_gender, purposes: []
+        :avatar, :wechat, :preferred_teacher_gender, purposes: []
       )
     end
 end
