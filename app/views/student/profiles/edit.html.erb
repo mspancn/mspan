@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :wechat, "微信号" %><br />
+    <%= f.text_field :wechat %>
+  </div>
+
+  <div class="field">
     <%= f.label :time_zone, "时区" %><br />
     <%= f.time_zone_select :time_zone, nil %>
   </div>
