@@ -7,6 +7,9 @@ class Student::HomeController < StudentController
   end
 
   def contact
-
   end
+
+  def follow
+  end
+
 end
