@@ -10,6 +10,16 @@ Rails.application.routes.draw do
     resources :teachers, only: [:index, :show, :create, :destroy]
     resources :appointments, only: [:index, :new, :create, :update]
     resource :profile, only: [:edit, :update]
+    
+    match 'about', :to => 'home#about', via: :get
+    match 'contact', :to => 'home#contact', via: :get
+    match 'follow', :to => 'home#follow', via: :get
+    match 'lesson', :to => 'home#lesson', via: :get
+    match 'tuition', :to => 'home#tuition', via: :get
+    match 'trial', :to => 'home#trial', via: :get
+    match 'zoom', :to => 'home#zoom', via: :get
+    match 'rule', :to => 'home#rule', via: :get
+    match 'terms', :to => 'home#terms', via: :get
   end
 
   namespace :teacher do
