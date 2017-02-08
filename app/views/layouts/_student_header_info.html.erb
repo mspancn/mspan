@@ -8,7 +8,7 @@
       <li><%= link_to "预约的课程", student_appointments_path(state: :new) %></li>
       <li><%= link_to "完成的课程", student_appointments_path(state: :completed) %></li>
       <li><%= link_to "取消的课程", student_appointments_path(state: :canceled) %></li>
-      <li><%= link_to('退出登录', destroy_teacher_session_path, method: :delete) %></li>
+      <li><%= link_to('退出登录', destroy_student_session_path, method: :delete) %></li>
     </ul>
   </li>
 </ul>
