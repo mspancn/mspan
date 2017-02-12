@@ -28,6 +28,16 @@ Rails.application.routes.draw do
     resources :availabilities, only: [:index, :create, :destroy]
     resources :appointments, only: [:index, :update]
     resource :profile, only: [:show]
+
+    match 'about', :to => 'home#about', via: :get
+    match 'contact', :to => 'home#contact', via: :get
+    match 'terms', :to => 'home#terms', via: :get
+    match 'lesson', :to => 'home#lesson', via: :get
+    match 'issue', :to => 'home#issue', via: :get
+    match 'pay', :to => 'home#pay', via: :get
+    match 'help', :to => 'home#contact', via: :get
+    match 'faq', :to => 'home#faq', via: :get
+
   end
 
   namespace :admin do
