@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     match 'terms', :to => 'home#terms', via: :get
     match 'lesson', :to => 'home#lesson', via: :get
     match 'issue', :to => 'home#issue', via: :get
+    match 'manual', :to => 'home#manual', via: :get
     match 'pay', :to => 'home#pay', via: :get
     match 'help', :to => 'home#contact', via: :get
     match 'faq', :to => 'home#faq', via: :get
