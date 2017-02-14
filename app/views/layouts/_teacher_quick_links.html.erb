@@ -1,12 +1,11 @@
 <div class="quick-links-label">Quick Links</div>
 
 <ul>
-  <li><a href="#">How to set up my calendar</a></li>
-  <li><a href="#">How to start a scheduled lesson</a></li>
-  <li><a href="#">How to cancel a lesson</a></li>
-  <li><a href="#">How to report an issue related to lesson</a></li>
-  <li><a href="#">When to expect earning</a></li>
-  <li><a href="#">How to update my profile</a></li>
-  <li><a href="#">How to qualify for more classes</a></li>
-  <li><a href="#">Ask help</a></li>
+  <li><%= link_to "Start/Cancel a lesson", teacher_lesson_path %></li>
+  <li><%= link_to "Report issues", teacher_issue_path %></li>
+  <li><%= link_to "Get paid", teacher_pay_path %></li>
+  <li><%= link_to "Teacher manual", teacher_manual_path %></li>
+  <li><%= link_to "Updating my profile", teacher_profile_path %></li>
+  <li><%= link_to "FAQ", teacher_faq_path %></li>
+  <li><%= link_to "Ask for help", teacher_contact_path %></li>
 </ul>
