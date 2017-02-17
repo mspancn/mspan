@@ -17,5 +17,8 @@ module Mspan
 
     # Set queue adapter for Delayed Job
     config.active_job.queue_adapter = :delayed_job
+
+    # For page caching
+    config.action_controller.page_cache_directory = "#{Rails.root}/public"
   end
 end
