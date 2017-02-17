@@ -38,7 +38,6 @@
 	.term_text .term_title {margin-top:20px;margin-left:13%;margin-right:13%;font-family:"Microsoft YaHei";font-size:23px;color:rgb(156, 12, 73);}
     .term_text .term_content {margin-top:5px;margin-left:13%;margin-right:13%;text-indent:2em;font-family:华文仿宋;font-size:18px;line-height:1.5; color:black}
     .faqContainer {max-width:80%}
-    #applyToTeach {visibility: hidden; display: none}
 }
 /* 
 	- (min-width: 480px) and (max-width: 991px) -
@@ -49,6 +48,7 @@
     margin-left: 0 !important;
     padding: 15px;
     width: 50% !important;}
+
 }
 
 /*
@@ -195,8 +195,6 @@
 
 	.big-left-bg-2.color-1 ul.info,ul.info.alt {width:auto;}
 	.faqContainer {max-width:96%}
-
-	#applyToTeach {visibility: visible; display: block}
 }
 
 /* 
@@ -306,4 +304,6 @@
     .term_text .term_content {margin-top:5px;margin-left:5%;margin-right:5%;text-indent:2em;font-family:华文仿宋;font-size:15px;line-height:1.5; color:black}
  
     .faqContainer {max-width:96%}
+
+    #extraspacer {visibility: hidden; display: none}
 }
