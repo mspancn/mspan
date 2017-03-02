@@ -7,7 +7,9 @@ class Admin::AppointmentsController < AdminController
         Appointment.joins(:teacher).joins(:student)
           .select("
             appointments.id,
+            students.full_name AS student_name,
             students.email AS student_email,
+            concat(teachers.first_name, ' ', teachers.last_name) AS teacher_name,
             teachers.email AS teacher_email,
             scheduled_start,
             state

@@ -47,7 +47,9 @@ $(document).on('turbolinks:load', function () {
   const table = $('#appointments-table').DataTable({
     ajax: url,
     columns: [
+      { data: 'student_name' },
       { data: 'student_email' },
+      { data: 'teacher_name' },
       { data: 'teacher_email' },
       {
         data: 'scheduled_start',
