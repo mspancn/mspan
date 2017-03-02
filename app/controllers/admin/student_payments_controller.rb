@@ -6,6 +6,7 @@ class Admin::StudentPaymentsController < AdminController
       render json: { data:
         StudentPayment.joins(:student).joins(:admin).select("
           student_payments.id,
+          students.full_name AS student_name,
           students.email AS student_email,
           student_payments.amount,
           student_payments.created_at,

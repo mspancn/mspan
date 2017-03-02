@@ -87,6 +87,7 @@ $(document).on('turbolinks:load', function () {
   const table = $('#student-payments-table').DataTable({
     ajax: url,
     columns: [
+      { data: 'student_name' },
       { data: 'student_email' },
       { data: 'amount' },
       {
