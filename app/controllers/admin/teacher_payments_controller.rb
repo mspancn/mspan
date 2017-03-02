@@ -6,6 +6,7 @@ class Admin::TeacherPaymentsController < AdminController
       render json: { data:
         TeacherPayment.joins(:teacher).joins(:admin).select("
           teacher_payments.id,
+          concat(teachers.first_name, ' ', teachers.last_name) AS teacher_name,
           teachers.email AS teacher_email,
           teacher_payments.amount,
           teacher_payments.created_at,

@@ -68,6 +68,7 @@ $(document).on('turbolinks:load', function () {
   const table = $('#teacher-payments-table').DataTable({
     ajax: url,
     columns: [
+      { data: 'teacher_name' },
       { data: 'teacher_email' },
       { data: 'amount' },
       {
