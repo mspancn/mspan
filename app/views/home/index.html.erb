@@ -7,18 +7,13 @@
 
 		<!--Welcome section-->
         <section class="waypoint video-block fullscreen" data-hash="welcome">
-			<%= video_tag(
-				"home/woman-small.mov",
-				id: "womanvideo",
-				autoplay: "autoplay",
-				muted: "muted",
-				loop: "loop",
-				poster: "home/woman_front.jpg",
-				class: "background-video",
-				"x-webkit-airplay": true,
-				"webkit-playsinline": true,
-				preload: "auto"
-			) %>
+
+			<video id="womanvideo" autoplay="autoplay" muted="muted" loop="loop" poster    ="assets/home/woman_front.jpg" 
+			 	    class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
+					<source data-src="assets/home/woman-small.mov" type="video/mp4">
+					<source data-src="assets/home/woman-small.ogm" type="video/ogm">
+			</video>
+
 			<div class="text-inner">
 				<div class="container">
 					<div class="row">
@@ -85,21 +80,14 @@
 			</div> -->
 
 			<div class="video-block features-watch alt-bg" style="padding-top:189px; padding-bottom:173px;">
-					<%= video_tag(
-						"home/man-small.mov",
-						id: "manvideo",
-						autoplay: "autoplay",
-						muted: "muted",
-						loop: "loop",
-						poster: "home/man_front.jpg",
-						class: "background-video",
-						"x-webkit-airplay": true,
-						"webkit-playsinline": true,
-						preload: "auto"
-					) %>
+			
+			    <video id="manvideo" autoplay="autoplay" muted="muted" loop="loop" poster="assets/home/man_front.jpg" 
+			           class="background-video" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
+				    <source type="video/mp4" data-src="assets/home/man-small.mov">
+				    <source type="video/ogm" data-src="assets/home/man-small.ogm">
+			    </video>
 			    <div class="overlay color-2" style="opacity:0.5;"></div>
 		    </div>
-
 
 		</section>
 
@@ -995,7 +983,6 @@
 				  sources_man[i].setAttribute('src', sources_man[i].getAttribute('data-src'));
 				}
 				video_man.load(); 
-
 				var sources_woman = document.querySelectorAll('video#womanvideo source');
 				var video_woman = document.querySelector('video#womanvideo');
 				for(var i = 0; i<sources_woman.length;i++) {
@@ -1003,4 +990,5 @@
 				}
 				video_woman.load(); 
 			}
+
 		</script>
