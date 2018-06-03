@@ -2,4 +2,8 @@
   tbody tr:hover {
     cursor: pointer;
   }
+
+  tbody tr td span {
+    display: none;
+  }
 }

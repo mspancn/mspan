@@ -54,7 +54,7 @@ $(document).on('turbolinks:load', function () {
       {
         data: 'scheduled_start',
         render: function(data, type, full, meta) {
-          return new Date(data).toLocaleString();
+          return '<span>' + new Date(data).getTime()/1000 + '</span>' + new Date(data).toLocaleString();
         }
       },
       { data: 'state' }
@@ -74,7 +74,7 @@ $(document).on('turbolinks:load', function () {
       {
         data: 'created_at',
         render: function(data, type, full, meta) {
-          return new Date(data).toLocaleDateString("en-US");
+          return '<span>' + new Date(data).getTime()/1000 + '</span>' + new Date(data).toLocaleDateString("en-US");
         }
       },
       { data: 'creator_email' }
@@ -94,7 +94,7 @@ $(document).on('turbolinks:load', function () {
       {
         data: 'created_at',
         render: function(data, type, full, meta) {
-          return new Date(data).toLocaleDateString("en-US");
+          return '<span>' + new Date(data).getTime()/1000 + '</span>' + new Date(data).toLocaleDateString("en-US");
         }
       },
       { data: 'creator_email' }
