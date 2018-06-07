@@ -17,7 +17,7 @@ class AppointmentService
     end
 
     teacher_rate = @appointment.teacher.rate
-    amount = ExchangeService.dollar_to_yuan(teacher_rate)
+    amount = 680
 
     if @appointment.student.balance <  amount
       return { error: "余额不足，请联系管理员。" }
